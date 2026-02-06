@@ -1,7 +1,7 @@
 ---
 title: 'Telegram 봇 만들고 Claude Code 연동하기 — 실전 세팅편'
 description: 'BotFather로 텔레그램 봇 만들고, Python으로 Claude Code CLI를 연동하는 과정. 블로그 자동화 명령까지 한 번에 세팅한다.'
-pubDate: '2026-02-06'
+pubDate: '2026-02-05'
 tags: ['claude-code', 'telegram', 'python', 'automation', 'vibe-coding']
 category: 'ai-automation'
 heroImage: '/images/blog/telegram-bot-1.png'

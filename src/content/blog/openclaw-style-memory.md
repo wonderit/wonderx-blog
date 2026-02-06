@@ -1,11 +1,11 @@
 ---
 title: 'OpenClaw 스타일 메모리 시스템 구현하기 — AI 비서가 기억하는 법'
 description: 'OpenClaw의 파일 기반 메모리를 분석하고, Claude Code 텔레그램 봇에 적용했다. MEMORY.md + 일일 노트로 대화 전체가 아닌 중요한 것만 기억한다.'
-pubDate: '2026-02-07'
+pubDate: '2026-02-06'
 tags: ['claude-code', 'telegram', 'openclaw', 'memory', 'automation', 'vibe-coding']
 category: 'ai-automation'
 heroImage: '/images/blog/openclaw-memory-1.png'
-draft: true
+draft: false
 ---
 
 ## 왜 메모리가 필요한가

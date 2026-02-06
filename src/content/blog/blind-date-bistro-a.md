@@ -1,7 +1,7 @@
 ---
 title: '소개팅 후기: 문정동 양식집에서의 저녁, 그리고 독서 같은 만남'
 description: '어느 파트너사 부사장님의 소개로 만난 동갑 이성. 친절했지만, 설렘이 없었던 소개팅.'
-pubDate: '2026-01-31'
+pubDate: '2026-02-05'
 tags: ['소개팅', '데이트', '후기', '인간관계']
 category: 'social'
 heroImage: '/images/blog/bistro-date-1.png'

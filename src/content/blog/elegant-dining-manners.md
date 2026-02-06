@@ -5,7 +5,7 @@ pubDate: 2026-02-07
 heroImage: "/images/blog/voice-83d68c-1.png"
 tags: ["일상", "식사예절", "문화"]
 category: "social"
-draft: true
+draft: false
 ---
 
 ## 뼈 바르기의 미학
