@@ -333,6 +333,7 @@ main {
 
 .article-content img {
   max-width: 100%;
+  height: auto;
   border-radius: 8px;
   margin: 2rem 0;
   border: 1px solid var(--wx-border);
@@ -355,8 +356,10 @@ main {
   padding: 1.5rem;
   margin: 2rem 0;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   font-size: 0.9rem;
   line-height: 1.65;
+  max-width: 100%;
 }
 
 .article-content pre code {
@@ -589,31 +592,154 @@ main {
   .sidebar-cta {
     display: none;
   }
-}
-
-@media (max-width: 640px) {
-  .header-inner {
-    padding: 0 1.25rem;
-  }
-
-  main {
-    padding: 0 1.25rem;
-  }
 
   .hero {
-    padding: 3.5rem 0 2.5rem;
+    padding: 4rem 0 2.5rem;
   }
 
-  .nav-links {
-    gap: 1.25rem;
+  .hero h1 {
+    font-size: 1.8rem;
   }
 
-  .post-card {
-    padding: 1.5rem;
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .post-tags {
+    flex-wrap: wrap;
+  }
+
+  .post-title {
+    font-size: 1.15rem;
+  }
+
+  .post-excerpt {
+    font-size: 0.88rem;
+  }
+
+  .article-header {
+    padding: 3rem 0 2rem;
+  }
+
+  .article-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .article-content p,
+  .article-content li {
+    font-size: 0.95rem;
+  }
+
+  .article-content pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+    margin: 1.5rem -1.25rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .article-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;
+  }
+
+  .article-content blockquote {
+    padding: 0.75rem 1rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
   }
 
   .footer-inner {
     flex-direction: column;
     gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    padding: 0 1rem;
+    height: 56px;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-label {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .post-card {
+    padding: 1.25rem;
+  }
+
+  .post-meta {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-title {
+    font-size: 1.05rem;
+  }
+
+  .post-tag {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.45rem;
+  }
+
+  .article-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .article-content pre {
+    margin: 1rem -1rem;
+    font-size: 0.75rem;
+  }
+
+  .site-footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+  }
+
+  .footer-links a {
+    font-size: 0.78rem;
   }
 }
