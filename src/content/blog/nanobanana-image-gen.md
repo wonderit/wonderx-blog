@@ -135,6 +135,63 @@ async def generate_blog_images(topic: str, count: int = 3) -> list:
 
 한 번의 명령으로 **글 + 이미지** 완성. 진짜 자동화된 블로깅이다.
 
+## 삽질기: AI Studio에서 Vertex AI로
+
+사실 위의 코드처럼 깔끔하게 된 건 아니었다. 삽질이 있었다.
+
+### AI Studio API 키의 한계
+
+처음엔 AI Studio에서 무료 API 키를 발급받아 사용하려 했다. 그런데 이미지 생성 모델들이 전부 **quota = 0**으로 막혀 있었다.
+
+```
+429 RESOURCE_EXHAUSTED: Quota exceeded for
+GenerateContent:imageGeneration
+```
+
+`gemini-2.0-flash-exp`, `gemini-2.5-flash-image` 등 여러 모델을 시도했지만, 전부 같은 에러. Google이 무료 티어에서 이미지 생성 API를 제한한 것이다.
+
+### Vertex AI로 전환
+
+해결책은 [Google Cloud Vertex AI Studio](https://console.cloud.google.com/vertex-ai/studio)였다. Vertex AI는 같은 Gemini 모델을 사용하지만, GCP 프로젝트 단위로 과금되는 구조라 quota 제한이 없다.
+
+전환 과정:
+
+```bash
+# 1. GCP 프로젝트에서 Vertex AI API 활성화
+# 2. Application Default Credentials 설정
+gcloud auth application-default login
+
+# 3. 브라우저에서 Google 계정 인증 → 완료
+```
+
+코드 변경은 딱 한 줄:
+
+```python
+# Before: AI Studio (API 키)
+client = genai.Client(api_key=GEMINI_API_KEY)
+
+# After: Vertex AI (ADC)
+client = genai.Client(
+    vertexai=True,
+    project="my-project-id",
+    location="us-central1"
+)
+```
+
+같은 `google-genai` SDK에서 `vertexai=True`만 추가하면 된다. 모델명도 `gemini-2.5-flash-image` 그대로. 이후 이미지 생성이 바로 동작했다.
+
+### 3단계 폴백 전략
+
+최종적으로 구현한 구조는 이렇다:
+
+```
+1순위: Vertex AI (ADC 인증) → 안정적, 과금 기반
+2순위: AI Studio (API 키) → 무료지만 quota 제한
+3순위: SVG 플레이스홀더 → 최후의 수단
+```
+
+Vertex AI가 되면 좋고, 안 되면 AI Studio, 그것도 안 되면 SVG로 자리를 잡아두는 구조다. 덕분에 어떤 환경에서든 블로그 생성이 멈추지 않는다.
+
 ## 비용 정리
 
 | 항목 | 월간 비용 |

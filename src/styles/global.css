@@ -331,12 +331,27 @@ main {
   font-size: 1.05rem;
 }
 
+/* Hero image (above article content) */
+.hero-image {
+  max-width: var(--content-width);
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--wx-border);
+  margin-bottom: 2rem;
+  object-fit: cover;
+  display: block;
+}
+
 .article-content img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 2rem 0;
   border: 1px solid var(--wx-border);
+  object-fit: cover;
+  display: block;
 }
 
 /* Code blocks */
@@ -656,6 +671,16 @@ main {
     font-size: 0.95rem;
   }
 
+  .hero-image {
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content img {
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+
   .footer-inner {
     flex-direction: column;
     gap: 1rem;
@@ -729,6 +754,16 @@ main {
   .article-content pre {
     margin: 1rem -1rem;
     font-size: 0.75rem;
+  }
+
+  .hero-image {
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  .article-content img {
+    border-radius: 4px;
+    margin: 1rem 0;
   }
 
   .site-footer {
