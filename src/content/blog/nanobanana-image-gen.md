@@ -4,11 +4,11 @@ description: 'Google Gemini의 나노바나나 이미지 생성을 텔레그램 
 pubDate: '2026-02-07'
 tags: ['nanobanana', 'gemini', 'image-generation', 'telegram', 'claude-code', 'automation', 'vibe-coding']
 category: 'ai-automation'
-heroImage: '/images/blog/nanobanana-1.svg'
+heroImage: '/images/blog/nanobanana-1.png'
 draft: false
 ---
 
-![히어로 이미지](/images/blog/nanobanana-1.svg)
+![히어로 이미지](/images/blog/nanobanana-1.png)
 
 ## 블로그에 이미지가 필요하다
 
@@ -31,7 +31,7 @@ draft: false
 
 핵심은 **무료 500장/일**. 블로그에 3장 넣으면 0.6% 사용이다. 사실상 무제한.
 
-![개념도](/images/blog/nanobanana-2.svg)
+![개념도](/images/blog/nanobanana-2.png)
 
 ## 구현: 10분 만에 끝나는 연동
 
@@ -115,7 +115,7 @@ async def generate_blog_images(topic: str, count: int = 3) -> list:
 ```
 → 이미지 3장 자동 생성 → Claude가 본문 작성할 때 이미지 경로 포함 → 완성된 초안 한 번에 생성.
 
-![결과 이미지](/images/blog/nanobanana-3.svg)
+![결과 이미지](/images/blog/nanobanana-3.png)
 
 ## 흐름 정리
 
