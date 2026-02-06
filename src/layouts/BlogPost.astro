@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Giscus from '@/components/Giscus.astro';
+import Comments from '@/components/Comments.astro';
 
 interface Props {
   frontmatter: {
@@ -48,5 +48,5 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('ko-KR', 
     </div>
   </article>
 
-  <Giscus />
+  <Comments title={frontmatter.title} />
 </BaseLayout>

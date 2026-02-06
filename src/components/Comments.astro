@@ -1,0 +1,37 @@
+---
+// Cusdis 댓글 컴포넌트 — 로그인 없이 누구나 댓글 가능
+// https://cusdis.com 에서 App ID 발급 필요
+const pageId = Astro.url.pathname;
+const pageTitle = Astro.props.title || '';
+---
+
+<div class="comments-wrapper">
+  <p class="comments-title">댓글</p>
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id=""
+    data-page-id={pageId}
+    data-page-url={Astro.url.href}
+    data-page-title={pageTitle}
+    data-theme="dark"
+  ></div>
+  <script is:inline defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</div>
+
+<style>
+  .comments-wrapper {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 3rem 0 4rem;
+    border-top: 1px solid var(--wx-border);
+  }
+
+  .comments-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--wx-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+  }
+</style>

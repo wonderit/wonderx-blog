@@ -559,23 +559,6 @@ main {
   color: var(--wx-black);
 }
 
-/* ===== GISCUS COMMENTS ===== */
-.giscus-wrapper {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 3rem 0 4rem;
-  border-top: 1px solid var(--wx-border);
-}
-
-.giscus-title {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--wx-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 1.5rem;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .content-layout {
