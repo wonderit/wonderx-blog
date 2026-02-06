@@ -78,7 +78,7 @@ const allCategories = [
               day: 'numeric',
             });
             return (
-              <a href={`/blog/${post.id}`} class="post-card">
+              <a href={`/blog/${post.id.replace(/\.md$/, '')}`} class="post-card">
                 <div class="post-meta">
                   <time class="post-date" datetime={post.data.pubDate.toISOString()}>
                     {formattedDate}
