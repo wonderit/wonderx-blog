@@ -1,21 +1,30 @@
 ---
-// Cusdis 댓글 컴포넌트 — 로그인 없이 누구나 댓글 가능
-// https://cusdis.com 에서 App ID 발급 필요
+// Disqus 댓글 컴포넌트 — 게스트 댓글 가능 (로그인 선택)
+// https://disqus.com/admin/create/ 에서 shortname 발급 필요
+const DISQUS_SHORTNAME = 'blog-wonderx-co-kr';
+const pageUrl = `https://blog.wonderx.co.kr${Astro.url.pathname}`;
 const pageId = Astro.url.pathname;
 const pageTitle = Astro.props.title || '';
 ---
 
 <div class="comments-wrapper">
   <p class="comments-title">댓글</p>
-  <div id="cusdis_thread"
-    data-host="https://cusdis.com"
-    data-app-id="18887195-5302-4de2-b31b-bdaff756d28d"
-    data-page-id={pageId}
-    data-page-url={Astro.url.href}
-    data-page-title={pageTitle}
-    data-theme="dark"
-  ></div>
-  <script is:inline defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  <div id="disqus_thread"></div>
+  <script is:inline define:vars={{ DISQUS_SHORTNAME, pageUrl, pageId, pageTitle }}>
+    var disqus_config = function () {
+      this.page.url = pageUrl;
+      this.page.identifier = pageId;
+      this.page.title = pageTitle;
+    };
+    (function() {
+      if (!DISQUS_SHORTNAME) return;
+      var d = document, s = d.createElement('script');
+      s.src = 'https://' + DISQUS_SHORTNAME + '.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>댓글을 보려면 JavaScript를 활성화해주세요.</noscript>
 </div>
 
 <style>
