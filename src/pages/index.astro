@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Blog">
+  <section class="hero">
+    <p class="hero-label">WonderX Engineering</p>
+    <h1>Build, Automate,<br />Share.</h1>
+    <p>
+      WonderX에서 만들고 있는 것들에 대한 기록.
+      AI, 자동화, 개발 그리고 스타트업 이야기.
+    </p>
+  </section>
+
+  <section class="posts-section">
+    {posts.length > 0 ? (
+      <div class="posts-grid">
+        {posts.map((post) => {
+          const formattedDate = post.data.pubDate.toLocaleDateString('ko-KR', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          });
+          return (
+            <a href={`/blog/${post.id}`} class="post-card">
+              <div class="post-meta">
+                <time class="post-date" datetime={post.data.pubDate.toISOString()}>
+                  {formattedDate}
+                </time>
+                {post.data.tags && (
+                  <div class="post-tags">
+                    {post.data.tags.map((tag: string) => (
+                      <span class="post-tag">{tag}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <h2 class="post-title">{post.data.title}</h2>
+              <p class="post-excerpt">{post.data.description}</p>
+            </a>
+          );
+        })}
+      </div>
+    ) : (
+      <p style="color: var(--wx-text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
+        아직 작성된 글이 없습니다. 첫 번째 글을 작성해보세요!
+      </p>
+    )}
+  </section>
+</BaseLayout>
