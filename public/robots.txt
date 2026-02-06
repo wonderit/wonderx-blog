@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blog.wonderx.co.kr/sitemap-index.xml

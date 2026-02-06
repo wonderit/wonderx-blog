@@ -2,36 +2,48 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
+const CATEGORIES = {
+  'ai-automation': { label: 'AI 자동화', icon: '🤖' },
+  'side-project': { label: '사이드 프로젝트', icon: '🚀' },
+  'dev-log': { label: '개발 일지', icon: '📝' },
+  'social': { label: '소셜링 / 소개팅', icon: '💬' },
+  'tutorial': { label: '튜토리얼', icon: '📖' },
+} as const;
+
+type CategoryKey = keyof typeof CATEGORIES;
+
+export function getStaticPaths() {
+  const cats = ['ai-automation', 'side-project', 'dev-log', 'social', 'tutorial'];
+  return cats.map((category) => ({
+    params: { category },
+  }));
+}
+
+const { category } = Astro.params as { category: CategoryKey };
+const catInfo = CATEGORIES[category];
+
 const posts = (await getCollection('blog'))
-  .filter((post) => !post.data.draft)
+  .filter((post) => !post.data.draft && post.data.category === category)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// 카테고리 설정
-const categories = [
-  { id: 'all', label: '전체 글', icon: '📋' },
-  { id: 'ai-automation', label: 'AI 자동화', icon: '🤖' },
-  { id: 'side-project', label: '사이드 프로젝트', icon: '🚀' },
-  { id: 'dev-log', label: '개발 일지', icon: '📝' },
-  { id: 'social', label: '소셜링 / 소개팅', icon: '💬' },
-  { id: 'tutorial', label: '튜토리얼', icon: '📖' },
-];
+const allPosts = (await getCollection('blog')).filter((post) => !post.data.draft);
 
-// 카테고리별 글 수
-const categoryCounts = categories.map((cat) => ({
-  ...cat,
-  count: cat.id === 'all'
-    ? posts.length
-    : posts.filter((p) => p.data.category === cat.id).length,
-}));
+const allCategories = [
+  { id: 'all', label: '전체 글', icon: '📋', count: allPosts.length },
+  ...Object.entries(CATEGORIES).map(([id, info]) => ({
+    id,
+    ...info,
+    count: allPosts.filter((p) => p.data.category === id).length,
+  })),
+];
 ---
 
-<BaseLayout title="Blog">
+<BaseLayout title={`${catInfo.label}`} description={`${catInfo.label} 관련 글 모음 — WonderX Blog`}>
   <section class="hero">
-    <p class="hero-label">WonderX Blog</p>
-    <h1>Build, Automate,<br />Relax.</h1>
+    <p class="hero-label">{catInfo.icon} {catInfo.label}</p>
+    <h1>{catInfo.label}</h1>
     <p>
-      게으른 개발자의 자동화 일지.
-      AI, Claude Code, Vibe 코딩으로 더 적게 일하고 더 많이 만드는 방법.
+      {catInfo.label} 관련 글 {posts.length}개
     </p>
   </section>
 
@@ -40,11 +52,11 @@ const categoryCounts = categories.map((cat) => ({
       <nav class="sidebar-nav">
         <p class="sidebar-title">카테고리</p>
         <ul class="category-list">
-          {categoryCounts.map((cat) => (
+          {allCategories.map((cat) => (
             <li>
               <a
                 href={cat.id === 'all' ? '/' : `/category/${cat.id}`}
-                class:list={['category-link', { active: cat.id === 'all' }]}
+                class:list={['category-link', { active: cat.id === category }]}
               >
                 <span class="category-icon">{cat.icon}</span>
                 <span class="category-name">{cat.label}</span>
@@ -54,12 +66,6 @@ const categoryCounts = categories.map((cat) => ({
           ))}
         </ul>
       </nav>
-
-      <div class="sidebar-cta">
-        <p class="sidebar-cta-title">연락하기</p>
-        <p class="sidebar-cta-desc">아이디어, 제안, 협업 제안 환영합니다.</p>
-        <a href="mailto:x@wonderx.co.kr" class="sidebar-cta-btn">이메일 보내기</a>
-      </div>
     </aside>
 
     <section class="posts-section">
@@ -93,7 +99,7 @@ const categoryCounts = categories.map((cat) => ({
         </div>
       ) : (
         <p style="color: var(--wx-text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
-          아직 작성된 글이 없습니다. 첫 번째 글을 작성해보세요!
+          아직 이 카테고리에 작성된 글이 없습니다.
         </p>
       )}
     </section>

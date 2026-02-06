@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Giscus from '@/components/Giscus.astro';
 
 interface Props {
   frontmatter: {
@@ -46,4 +47,6 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('ko-KR', 
       <slot />
     </div>
   </article>
+
+  <Giscus />
 </BaseLayout>

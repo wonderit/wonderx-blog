@@ -3,6 +3,7 @@ title: 'Claude Code + Telegram으로 24시간 AI 비서 만들기 — 시리즈 
 description: '맥북에 항상 켜져 있는 Claude Code를 Telegram 봇과 연동해서 개인 AI 비서를 만드는 프로젝트를 시작합니다.'
 pubDate: '2026-02-06'
 tags: ['claude-code', 'telegram', 'automation', 'ai']
+category: 'ai-automation'
 ---
 
 ## 왜 이 프로젝트를 시작했나
