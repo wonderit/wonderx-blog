@@ -1,0 +1,138 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).filter((p) => !p.data.draft);
+
+const categoryLabels: Record<string, string> = {
+  'ai-automation': 'AI 자동화',
+  'side-project': '사이드 프로젝트',
+  'dev-log': '개발 일지',
+  'social': '소셜링',
+  'tutorial': '튜토리얼',
+};
+
+// Group by category
+const grouped: Record<string, typeof posts> = {};
+posts.forEach((post) => {
+  const cat = post.data.category || 'uncategorized';
+  if (!grouped[cat]) grouped[cat] = [];
+  grouped[cat].push(post);
+});
+
+// Sort categories by post count
+const sortedCategories = Object.entries(grouped)
+  .sort((a, b) => b[1].length - a[1].length);
+---
+
+<BaseLayout title="Categories">
+  <div class="page-header">
+    <h1>Categories</h1>
+  </div>
+
+  <div class="categories-content">
+    {sortedCategories.map(([cat, catPosts]) => {
+      const sorted = catPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+      return (
+        <section class="category-group">
+          <h2 class="category-heading">
+            <span class="category-name">{categoryLabels[cat] || cat}</span>
+            <span class="category-badge">{catPosts.length}</span>
+          </h2>
+          <ul class="category-posts">
+            {sorted.map((post) => {
+              const slug = post.id.replace(/\.md$/, '');
+              const date = post.data.pubDate.toLocaleDateString('ko-KR', {
+                year: 'numeric', month: 'short', day: 'numeric',
+              });
+              return (
+                <li>
+                  <a href={`/blog/${slug}`} class="category-post-link">
+                    <span class="category-post-title">{post.data.title}</span>
+                    <time>{date}</time>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      );
+    })}
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: 2rem 0 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .categories-content {
+    padding-bottom: 4rem;
+  }
+
+  .category-group {
+    margin-bottom: 2.5rem;
+  }
+
+  .category-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .category-badge {
+    font-size: 0.75rem;
+    background: var(--accent-light);
+    color: var(--accent-primary);
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  .category-posts {
+    list-style: none;
+  }
+
+  .category-post-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 0;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+    gap: 1rem;
+  }
+
+  .category-post-link:hover {
+    color: var(--accent-primary);
+  }
+
+  .category-post-title {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .category-post-link time {
+    flex-shrink: 0;
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+  }
+</style>

@@ -1,111 +1,86 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PopularPosts from '@/components/PopularPosts.astro';
+import RightPanel from '@/components/RightPanel.astro';
+import SearchBar from '@/components/SearchBar.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// 카테고리 설정
-const categories = [
-  { id: 'all', label: '전체 글' },
-  { id: 'ai-automation', label: 'AI 자동화' },
-  { id: 'side-project', label: '사이드 프로젝트' },
-  { id: 'dev-log', label: '개발 일지' },
-  { id: 'social', label: '소셜링' },
-  { id: 'tutorial', label: '튜토리얼' },
-];
-
-// 카테고리별 글 수 (0건 제외)
-const categoryCounts = categories
-  .map((cat) => ({
-    ...cat,
-    count: cat.id === 'all'
-      ? posts.length
-      : posts.filter((p) => p.data.category === cat.id).length,
-  }))
-  .filter((cat) => cat.id === 'all' || cat.count > 0);
+const categoryLabels: Record<string, string> = {
+  'ai-automation': 'AI 자동화',
+  'side-project': '사이드 프로젝트',
+  'dev-log': '개발 일지',
+  'social': '소셜링',
+  'tutorial': '튜토리얼',
+};
 ---
 
 <BaseLayout title="Blog">
-  <section class="hero">
-    <p class="hero-label">WonderX Blog</p>
-    <h1>Build, Automate, Relax.</h1>
-    <p>
-      게으른 개발자의 자동화 일지.
-      AI, Claude Code, Vibe 코딩으로 더 적게 일하고 더 많이 만드는 방법.
-    </p>
-    <div class="site-stats">
-      <span class="stat-item">전체 방문 <strong id="total-views">-</strong></span>
-      <span class="stat-divider">·</span>
-      <span class="stat-item">오늘 <strong id="today-views">-</strong></span>
-    </div>
-  </section>
+  <SearchBar slot="topbar-right" />
 
-  <div class="content-layout">
-    <aside class="sidebar">
-      <nav class="sidebar-nav">
-        <p class="sidebar-title">카테고리</p>
-        <ul class="category-list">
-          {categoryCounts.map((cat) => (
-            <li>
-              <a
-                href={cat.id === 'all' ? '/' : `/category/${cat.id}`}
-                class:list={['category-link', { active: cat.id === 'all' }]}
-              >
-                <span class="category-name">{cat.label}</span>
-                <span class="category-count">{cat.count}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </aside>
-
-    <section class="posts-section">
-      <PopularPosts posts={posts} limit={5} />
-
-      <div class="recent-posts-header">
-        <h2 class="recent-title">최근 글</h2>
+  <div class="home-layout">
+    <div class="home-main">
+      <!-- Site Stats -->
+      <div class="site-stats">
+        <span class="stat-item">전체 방문 <strong id="total-views">-</strong></span>
+        <span class="stat-divider">·</span>
+        <span class="stat-item">오늘 <strong id="today-views">-</strong></span>
       </div>
 
-      {posts.length > 0 ? (
-        <div class="posts-grid">
-          {posts.map((post) => {
-            const slug = post.id.replace(/\.md$/, '');
-            const formattedDate = post.data.pubDate.toLocaleDateString('ko-KR', {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            });
-            return (
-              <a href={`/blog/${slug}`} class="post-card" data-path={`/blog/${slug}`}>
-                {post.data.heroImage && (
-                  <div class="post-thumbnail">
-                    <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
-                  </div>
-                )}
-                <div class="post-info">
-                  <div class="post-info-meta">
-                    <time class="post-date" datetime={post.data.pubDate.toISOString()}>
-                      {formattedDate}
-                    </time>
-                    <span class="post-views">-</span>
-                  </div>
-                  <h2 class="post-title">{post.data.title}</h2>
-                  <p class="post-excerpt">{post.data.description}</p>
-                </div>
-              </a>
-            );
-          })}
+      <!-- Popular Posts Carousel -->
+      <PopularPosts posts={posts} limit={5} />
+
+      <!-- Recent Posts -->
+      <section class="posts-section">
+        <div class="posts-section-header">
+          <h2 class="posts-section-title">최근 글</h2>
         </div>
-      ) : (
-        <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
-          아직 작성된 글이 없습니다. 첫 번째 글을 작성해보세요!
-        </p>
-      )}
-    </section>
+
+        {posts.length > 0 ? (
+          <div class="posts-grid">
+            {posts.map((post) => {
+              const slug = post.id.replace(/\.md$/, '');
+              const formattedDate = post.data.pubDate.toLocaleDateString('ko-KR', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              });
+              const catLabel = categoryLabels[post.data.category] || post.data.category || '';
+              return (
+                <a href={`/blog/${slug}`} class="post-card" data-path={`/blog/${slug}`}>
+                  <div class="post-info">
+                    <div class="post-info-meta">
+                      <time class="post-date" datetime={post.data.pubDate.toISOString()}>
+                        {formattedDate}
+                      </time>
+                      {catLabel && <span class="post-category">{catLabel}</span>}
+                      <span class="post-views">-</span>
+                    </div>
+                    <h2 class="post-title">{post.data.title}</h2>
+                    <p class="post-excerpt">{post.data.description}</p>
+                  </div>
+                  {post.data.heroImage && (
+                    <div class="post-thumbnail">
+                      <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
+                    </div>
+                  )}
+                </a>
+              );
+            })}
+          </div>
+        ) : (
+          <p style="color: var(--text-secondary); font-size: 0.9rem; padding: 2rem 0;">
+            아직 작성된 글이 없습니다. 첫 번째 글을 작성해보세요!
+          </p>
+        )}
+      </section>
+    </div>
+
+    <!-- Right Panel -->
+    <RightPanel posts={posts} />
   </div>
 </BaseLayout>
 
@@ -158,32 +133,6 @@ const categoryCounts = categories
 
 <style>
   .site-stats {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    color: var(--text-tertiary);
-  }
-
-  .stat-item strong {
-    color: var(--text-secondary);
-    font-weight: 600;
-  }
-
-  .stat-divider {
-    color: var(--text-muted);
-  }
-
-  .post-info-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.375rem;
-  }
-
-  .post-views {
-    font-size: 0.8125rem;
-    color: var(--text-tertiary);
+    padding: 1.25rem 0 0;
   }
 </style>

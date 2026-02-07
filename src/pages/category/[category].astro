@@ -25,80 +25,68 @@ const catInfo = CATEGORIES[category];
 const posts = (await getCollection('blog'))
   .filter((post) => !post.data.draft && post.data.category === category)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const allPosts = (await getCollection('blog')).filter((post) => !post.data.draft);
-
-const allCategories = [
-  { id: 'all', label: '전체 글', count: allPosts.length },
-  ...Object.entries(CATEGORIES).map(([id, info]) => ({
-    id,
-    ...info,
-    count: allPosts.filter((p) => p.data.category === id).length,
-  })),
-].filter((cat) => cat.id === 'all' || cat.count > 0);
 ---
 
 <BaseLayout title={`${catInfo.label}`} description={`${catInfo.label} 관련 글 모음 — WonderX Blog`}>
-  <section class="hero">
-    <p class="hero-label">{catInfo.label}</p>
+  <div class="page-header">
     <h1>{catInfo.label}</h1>
-    <p>
-      {catInfo.label} 관련 글 {posts.length}개
-    </p>
-  </section>
+    <p class="page-desc">{posts.length}개의 글</p>
+  </div>
 
-  <div class="content-layout">
-    <aside class="sidebar">
-      <nav class="sidebar-nav">
-        <p class="sidebar-title">카테고리</p>
-        <ul class="category-list">
-          {allCategories.map((cat) => (
-            <li>
-              <a
-                href={cat.id === 'all' ? '/' : `/category/${cat.id}`}
-                class:list={['category-link', { active: cat.id === category }]}
-              >
-                <span class="category-name">{cat.label}</span>
-                <span class="category-count">{cat.count}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </aside>
-
-    <section class="posts-section">
-      {posts.length > 0 ? (
-        <div class="posts-grid">
-          {posts.map((post) => {
-            const formattedDate = post.data.pubDate.toLocaleDateString('ko-KR', {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            });
-            return (
-              <a href={`/blog/${post.id.replace(/\.md$/, '')}`} class="post-card">
-                {post.data.heroImage && (
-                  <div class="post-thumbnail">
-                    <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
-                  </div>
-                )}
-                <div class="post-info">
+  <section class="posts-section">
+    {posts.length > 0 ? (
+      <div class="posts-grid">
+        {posts.map((post) => {
+          const slug = post.id.replace(/\.md$/, '');
+          const formattedDate = post.data.pubDate.toLocaleDateString('ko-KR', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          });
+          return (
+            <a href={`/blog/${slug}`} class="post-card">
+              <div class="post-info">
+                <div class="post-info-meta">
                   <time class="post-date" datetime={post.data.pubDate.toISOString()}>
                     {formattedDate}
                   </time>
-                  <h2 class="post-title">{post.data.title}</h2>
-                  <p class="post-excerpt">{post.data.description}</p>
                 </div>
-              </a>
-            );
-          })}
-        </div>
-      ) : (
-        <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
-          아직 이 카테고리에 작성된 글이 없습니다.
-        </p>
-      )}
-    </section>
-  </div>
+                <h2 class="post-title">{post.data.title}</h2>
+                <p class="post-excerpt">{post.data.description}</p>
+              </div>
+              {post.data.heroImage && (
+                <div class="post-thumbnail">
+                  <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
+                </div>
+              )}
+            </a>
+          );
+        })}
+      </div>
+    ) : (
+      <p style="color: var(--text-secondary); font-size: 0.9rem; padding: 2rem 0;">
+        아직 이 카테고리에 작성된 글이 없습니다.
+      </p>
+    )}
+  </section>
 </BaseLayout>
+
+<style>
+  .page-header {
+    padding: 2rem 0 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .page-desc {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+  }
+</style>

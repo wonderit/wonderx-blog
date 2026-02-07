@@ -1,0 +1,115 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Group by year-month
+const grouped: Record<string, typeof posts> = {};
+posts.forEach((post) => {
+  const key = post.data.pubDate.toLocaleDateString('ko-KR', {
+    year: 'numeric',
+    month: 'long',
+  });
+  if (!grouped[key]) grouped[key] = [];
+  grouped[key].push(post);
+});
+---
+
+<BaseLayout title="Archives">
+  <div class="page-header">
+    <h1>Archives</h1>
+    <p class="archive-total">{posts.length}개의 글</p>
+  </div>
+
+  <div class="timeline">
+    {Object.entries(grouped).map(([month, monthPosts]) => (
+      <section class="timeline-group">
+        <h2 class="timeline-month">{month}</h2>
+        <ul class="timeline-posts">
+          {monthPosts.map((post) => {
+            const slug = post.id.replace(/\.md$/, '');
+            const day = post.data.pubDate.toLocaleDateString('ko-KR', {
+              month: 'short', day: 'numeric',
+            });
+            return (
+              <li class="timeline-item">
+                <time class="timeline-date">{day}</time>
+                <a href={`/blog/${slug}`} class="timeline-link">{post.data.title}</a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: 2rem 0 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .archive-total {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+  }
+
+  .timeline {
+    padding-bottom: 4rem;
+  }
+
+  .timeline-group {
+    margin-bottom: 2rem;
+  }
+
+  .timeline-month {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid var(--accent-primary);
+  }
+
+  .timeline-posts {
+    list-style: none;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .timeline-date {
+    flex-shrink: 0;
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+    width: 60px;
+    text-align: right;
+  }
+
+  .timeline-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+    line-height: 1.5;
+  }
+
+  .timeline-link:hover {
+    color: var(--accent-primary);
+  }
+</style>

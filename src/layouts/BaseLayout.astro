@@ -1,6 +1,7 @@
 ---
 import '@/styles/global.css';
 import { inject } from '@vercel/analytics';
+import Sidebar from '@/components/Sidebar.astro';
 
 interface Props {
   title: string;
@@ -82,34 +83,39 @@ const GA4_ID = import.meta.env.PUBLIC_GA4_ID || 'G-J87KGPYQ58';
   })} />
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">
-        <span class="logo-mark">Wx</span>
-        WonderX
-      </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="/">Blog</a></li>
-          <li><a href="/about">About</a></li>
+  <!-- Left Sidebar -->
+  <Sidebar />
+
+  <!-- Main Wrapper -->
+  <div id="main-wrapper">
+    <!-- Top Bar -->
+    <header id="topbar">
+      <div class="topbar-inner">
+        <div id="breadcrumb" class="breadcrumb">
+          <span>Home</span>
+        </div>
+        <div class="topbar-right">
+          <slot name="topbar-right" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content-wrapper">
+      <slot />
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-copy">&copy; {new Date().getFullYear()} WonderX. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="mailto:x@wonderx.co.kr">x@wonderx.co.kr</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <slot />
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="footer-copy">&copy; {new Date().getFullYear()} WonderX. All rights reserved.</p>
-      <ul class="footer-links">
-        <li><a href="mailto:x@wonderx.co.kr">x@wonderx.co.kr</a></li>
-        <li><a href="/rss.xml">RSS</a></li>
-      </ul>
-    </div>
-  </footer>
+      </div>
+    </footer>
+  </div>
 
   <!-- Vercel Analytics -->
   <script>
