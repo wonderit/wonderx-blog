@@ -3,7 +3,7 @@ title: "OPIc 시험 보고 왔다. AI가 예측한 내 점수는?"
 description: "평소 영어 스터디만 하다가 문득 실력이 궁금해서 OPIc 시험 봤다. 역삼 시험장, CCTV 달린 칸막이 부스, 33분 녹음 파일. 그리고 AI가 분석한 예상 등급까지."
 pubDate: 2026-02-07
 heroImage: "/images/blog/opic-test-review-9279c4-1.png"
-category: "career"
+category: "hobby"
 tags: ["opic", "english", "career", "ai"]
 ---
 
