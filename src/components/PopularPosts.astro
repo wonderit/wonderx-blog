@@ -78,8 +78,9 @@ const recentPosts = posts
       });
     }
 
-    // Goatcounter 조회수 표시
-    if (window.goatcounter && window.goatcounter.visit_count) {
+    // Goatcounter 조회수 표시 (async 로드 대기)
+    function loadCarouselViews() {
+      if (!window.goatcounter || !window.goatcounter.visit_count) return false;
       var cards = track.querySelectorAll('.carousel-card[data-path]');
       cards.forEach(function(card) {
         var postPath = card.getAttribute('data-path');
@@ -93,6 +94,13 @@ const recentPosts = posts
           });
         }
       });
+      return true;
+    }
+    if (!loadCarouselViews()) {
+      var retries = 0;
+      var timer = setInterval(function() {
+        if (loadCarouselViews() || ++retries > 20) clearInterval(timer);
+      }, 500);
     }
   });
 </script>

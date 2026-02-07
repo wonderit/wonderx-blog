@@ -110,8 +110,10 @@ const categoryCounts = categories
 </BaseLayout>
 
 <script is:inline>
-  // 전체 방문자수
-  if (window.goatcounter && window.goatcounter.visit_count) {
+  function loadViewCounts() {
+    if (!window.goatcounter || !window.goatcounter.visit_count) return false;
+
+    // 전체 방문자수
     window.goatcounter.visit_count({
       append: '#total-views',
       path: 'TOTAL',
@@ -142,6 +144,15 @@ const categoryCounts = categories
         });
       }
     });
+    return true;
+  }
+
+  // Goatcounter 스크립트가 async로 로드되므로 retry
+  if (!loadViewCounts()) {
+    var retries = 0;
+    var timer = setInterval(function() {
+      if (loadViewCounts() || ++retries > 20) clearInterval(timer);
+    }, 500);
   }
 </script>
 

@@ -1,7 +1,7 @@
 ---
 title: "젓가락질로 보는 교양"
 description: "미용실에서 우연히 본 에세이 한 줄이 저녁 식사의 화두가 됐다. 젓가락질, 정말 교양일까?"
-pubDate: 2026-02-07
+pubDate: 2026-02-06
 heroImage: "/images/blog/voice-21b5ba-1.png"
 tags: ["일상", "매너", "식사예절"]
 category: "social"
