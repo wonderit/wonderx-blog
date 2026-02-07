@@ -6,50 +6,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
   <div class="about-container">
     <div class="about-hero">
       <div class="character-illustration">
-        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <!-- 배경 그라데이션 -->
-          <defs>
-            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
-              <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.2" />
-            </linearGradient>
-          </defs>
-          <rect width="400" height="400" fill="url(#bgGrad)"/>
-
-          <!-- 캐릭터 몸통 (후디) -->
-          <ellipse cx="200" cy="280" rx="80" ry="100" fill="#667eea"/>
-
-          <!-- 캐릭터 얼굴 -->
-          <circle cx="200" cy="160" r="60" fill="#FFD1A1"/>
-
-          <!-- 머리카락 -->
-          <path d="M 140 150 Q 140 100 200 100 Q 260 100 260 150 Q 260 120 240 110 Q 220 100 200 95 Q 180 100 160 110 Q 140 120 140 150" fill="#2D2D2D"/>
-
-          <!-- 눈 -->
-          <circle cx="180" cy="155" r="5" fill="#2D2D2D"/>
-          <circle cx="220" cy="155" r="5" fill="#2D2D2D"/>
-
-          <!-- 입 (미소) -->
-          <path d="M 180 175 Q 200 185 220 175" stroke="#2D2D2D" stroke-width="3" fill="none" stroke-linecap="round"/>
-
-          <!-- 노트북 -->
-          <rect x="140" y="240" width="120" height="80" rx="5" fill="#A5B4FC"/>
-          <rect x="145" y="245" width="110" height="60" fill="#312E81"/>
-          <line x1="140" y1="320" x2="260" y2="320" stroke="#6366F1" stroke-width="4"/>
-
-          <!-- AI 아이콘들 -->
-          <!-- 신경망 패턴 -->
-          <circle cx="80" cy="100" r="8" fill="#F97316" opacity="0.6"/>
-          <circle cx="320" cy="120" r="8" fill="#F97316" opacity="0.6"/>
-          <circle cx="90" cy="300" r="8" fill="#06B6D4" opacity="0.6"/>
-          <circle cx="310" cy="280" r="8" fill="#06B6D4" opacity="0.6"/>
-
-          <!-- 연결선 -->
-          <line x1="80" y1="100" x2="140" y2="160" stroke="#F97316" opacity="0.3" stroke-width="2"/>
-          <line x1="320" y1="120" x2="260" y2="160" stroke="#F97316" opacity="0.3" stroke-width="2"/>
-          <line x1="90" y1="300" x2="140" y2="280" stroke="#06B6D4" opacity="0.3" stroke-width="2"/>
-          <line x1="310" y1="280" x2="260" y2="280" stroke="#06B6D4" opacity="0.3" stroke-width="2"/>
-        </svg>
+        <img src="/images/about-character.png" alt="원석 캐릭터 일러스트" />
       </div>
 
       <div class="about-intro">
@@ -134,9 +91,10 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
     box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
   }
 
-  .character-illustration svg {
+  .character-illustration img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   .about-intro h1 {
