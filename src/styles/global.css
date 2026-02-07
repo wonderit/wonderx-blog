@@ -502,10 +502,6 @@ main {
   border-color: var(--accent-primary);
 }
 
-.category-icon {
-  font-size: 1rem;
-}
-
 .category-name {
   flex: 1;
 }

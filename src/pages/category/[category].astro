@@ -3,17 +3,18 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const CATEGORIES = {
-  'ai-automation': { label: 'AI 자동화', icon: '🤖' },
-  'side-project': { label: '사이드 프로젝트', icon: '🚀' },
-  'dev-log': { label: '개발 일지', icon: '📝' },
-  'social': { label: '소셜링 / 소개팅', icon: '💬' },
-  'tutorial': { label: '튜토리얼', icon: '📖' },
+  'ai-automation': { label: 'AI 자동화' },
+  'side-project': { label: '사이드 프로젝트' },
+  'dev-log': { label: '개발 일지' },
+  'social': { label: '소셜링 / 소개팅' },
+  'tutorial': { label: '튜토리얼' },
+  'career': { label: '커리어' },
 } as const;
 
 type CategoryKey = keyof typeof CATEGORIES;
 
 export function getStaticPaths() {
-  const cats = ['ai-automation', 'side-project', 'dev-log', 'social', 'tutorial'];
+  const cats = ['ai-automation', 'side-project', 'dev-log', 'social', 'tutorial', 'career'];
   return cats.map((category) => ({
     params: { category },
   }));
@@ -29,7 +30,7 @@ const posts = (await getCollection('blog'))
 const allPosts = (await getCollection('blog')).filter((post) => !post.data.draft);
 
 const allCategories = [
-  { id: 'all', label: '전체 글', icon: '📋', count: allPosts.length },
+  { id: 'all', label: '전체 글', count: allPosts.length },
   ...Object.entries(CATEGORIES).map(([id, info]) => ({
     id,
     ...info,
@@ -40,7 +41,7 @@ const allCategories = [
 
 <BaseLayout title={`${catInfo.label}`} description={`${catInfo.label} 관련 글 모음 — WonderX Blog`}>
   <section class="hero">
-    <p class="hero-label">{catInfo.icon} {catInfo.label}</p>
+    <p class="hero-label">{catInfo.label}</p>
     <h1>{catInfo.label}</h1>
     <p>
       {catInfo.label} 관련 글 {posts.length}개
@@ -58,7 +59,6 @@ const allCategories = [
                 href={cat.id === 'all' ? '/' : `/category/${cat.id}`}
                 class:list={['category-link', { active: cat.id === category }]}
               >
-                <span class="category-icon">{cat.icon}</span>
                 <span class="category-name">{cat.label}</span>
                 <span class="category-count">{cat.count}</span>
               </a>

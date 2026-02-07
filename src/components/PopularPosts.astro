@@ -6,7 +6,7 @@ interface Props {
   limit?: number;
 }
 
-const { posts, limit = 5 } = Astro.props;
+const { posts, limit = 3 } = Astro.props;
 
 // 클라이언트 사이드에서 인기글을 계산하기 위한 placeholder
 const recentPosts = posts
@@ -17,7 +17,6 @@ const recentPosts = posts
 
 <section class="popular-posts">
   <h2 class="popular-title">
-    <span class="popular-icon">🔥</span>
     인기 글
   </h2>
   <div class="popular-list" data-posts={JSON.stringify(recentPosts.map(p => ({ id: p.id, title: p.data.title, description: p.data.description, pubDate: p.data.pubDate })))}>
@@ -110,9 +109,6 @@ const recentPosts = posts
     letter-spacing: -0.02em;
   }
 
-  .popular-icon {
-    font-size: 1.5rem;
-  }
 
   .popular-list {
     display: flex;

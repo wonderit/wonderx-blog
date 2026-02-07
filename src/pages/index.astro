@@ -9,12 +9,13 @@ const posts = (await getCollection('blog'))
 
 // 카테고리 설정
 const categories = [
-  { id: 'all', label: '전체 글', icon: '📋' },
-  { id: 'ai-automation', label: 'AI 자동화', icon: '🤖' },
-  { id: 'side-project', label: '사이드 프로젝트', icon: '🚀' },
-  { id: 'dev-log', label: '개발 일지', icon: '📝' },
-  { id: 'social', label: '소셜링 / 소개팅', icon: '💬' },
-  { id: 'tutorial', label: '튜토리얼', icon: '📖' },
+  { id: 'all', label: '전체 글' },
+  { id: 'ai-automation', label: 'AI 자동화' },
+  { id: 'side-project', label: '사이드 프로젝트' },
+  { id: 'dev-log', label: '개발 일지' },
+  { id: 'social', label: '소셜링 / 소개팅' },
+  { id: 'tutorial', label: '튜토리얼' },
+  { id: 'career', label: '커리어' },
 ];
 
 // 카테고리별 글 수
@@ -47,7 +48,6 @@ const categoryCounts = categories.map((cat) => ({
                 href={cat.id === 'all' ? '/' : `/category/${cat.id}`}
                 class:list={['category-link', { active: cat.id === 'all' }]}
               >
-                <span class="category-icon">{cat.icon}</span>
                 <span class="category-name">{cat.label}</span>
                 <span class="category-count">{cat.count}</span>
               </a>
