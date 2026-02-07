@@ -2,42 +2,247 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About" description="게으른 개발자가 자동화로 세상을 바꾸는 이야기. AI와 자동화를 사랑하는 ENFP 개발자 블로그.">
-  <div class="article-header">
-    <p class="hero-label">About</p>
-    <h1>게으른 개발자가<br />자동화를 만드는 이유</h1>
-    <p class="description">부지런히 일 못하는 것보다, 빠르게 끝내고 자동화하는 게 낫다.</p>
-  </div>
+<BaseLayout title="About" description="AI 스타트업 CTO, ENFP 개발자가 자동화와 효율을 추구하는 이야기.">
+  <div class="about-container">
+    <div class="about-hero">
+      <div class="character-illustration">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- 배경 그라데이션 -->
+          <defs>
+            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
+              <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.2" />
+            </linearGradient>
+          </defs>
+          <rect width="400" height="400" fill="url(#bgGrad)"/>
 
-  <div class="article-content">
-    <h2>안녕하세요</h2>
-    <p>
-      ENFP 개발자입니다. 효율을 극도로 추구하는 편이에요.<br />
-      "개발자는 게을러야 한다"는 말을 좋아합니다.
-      게으르니까 자동화를 만들고, 자동화를 만드니까 더 게을러질 수 있거든요.
-    </p>
-    <p>
-      반복 작업? 귀찮은 일? 그런 건 코드한테 시키면 됩니다.<br />
-      부지런하고 성실한데 일 못하는 것보다, 빠르게 끝내고 남은 시간에 더 재밌는 걸 하는 게 낫다고 생각해요.
-    </p>
+          <!-- 캐릭터 몸통 (후디) -->
+          <ellipse cx="200" cy="280" rx="80" ry="100" fill="#667eea"/>
 
-    <h2>이 블로그에서 다루는 것들</h2>
-    <ul>
-      <li><strong>AI 자동화</strong> — Claude Code, Vibe 코딩으로 실제 서비스 만들기</li>
-      <li><strong>개인 AI 비서</strong> — Telegram + Claude Code로 24시간 비서 구축</li>
-      <li><strong>사이드 프로젝트</strong> — 소셜링, 소개팅 등 재미있는 서비스 실험</li>
-      <li><strong>개발 블로그 자동화</strong> — 글 쓰기부터 배포까지 전부 자동화</li>
-    </ul>
+          <!-- 캐릭터 얼굴 -->
+          <circle cx="200" cy="160" r="60" fill="#FFD1A1"/>
 
-    <h2>모토</h2>
-    <blockquote>
-      귀찮은 건 자동화하고, 자동화할 수 없으면 자동화할 수 있게 만들어라.
-    </blockquote>
+          <!-- 머리카락 -->
+          <path d="M 140 150 Q 140 100 200 100 Q 260 100 260 150 Q 260 120 240 110 Q 220 100 200 95 Q 180 100 160 110 Q 140 120 140 150" fill="#2D2D2D"/>
 
-    <h2>연락</h2>
-    <p>
-      궁금한 점이나 제안이 있으면 메일 주세요.<br />
-      <a href="mailto:x@wonderx.co.kr">x@wonderx.co.kr</a>
-    </p>
+          <!-- 눈 -->
+          <circle cx="180" cy="155" r="5" fill="#2D2D2D"/>
+          <circle cx="220" cy="155" r="5" fill="#2D2D2D"/>
+
+          <!-- 입 (미소) -->
+          <path d="M 180 175 Q 200 185 220 175" stroke="#2D2D2D" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+          <!-- 노트북 -->
+          <rect x="140" y="240" width="120" height="80" rx="5" fill="#A5B4FC"/>
+          <rect x="145" y="245" width="110" height="60" fill="#312E81"/>
+          <line x1="140" y1="320" x2="260" y2="320" stroke="#6366F1" stroke-width="4"/>
+
+          <!-- AI 아이콘들 -->
+          <!-- 신경망 패턴 -->
+          <circle cx="80" cy="100" r="8" fill="#F97316" opacity="0.6"/>
+          <circle cx="320" cy="120" r="8" fill="#F97316" opacity="0.6"/>
+          <circle cx="90" cy="300" r="8" fill="#06B6D4" opacity="0.6"/>
+          <circle cx="310" cy="280" r="8" fill="#06B6D4" opacity="0.6"/>
+
+          <!-- 연결선 -->
+          <line x1="80" y1="100" x2="140" y2="160" stroke="#F97316" opacity="0.3" stroke-width="2"/>
+          <line x1="320" y1="120" x2="260" y2="160" stroke="#F97316" opacity="0.3" stroke-width="2"/>
+          <line x1="90" y1="300" x2="140" y2="280" stroke="#06B6D4" opacity="0.3" stroke-width="2"/>
+          <line x1="310" y1="280" x2="260" y2="280" stroke="#06B6D4" opacity="0.3" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <div class="about-intro">
+        <h1>AI 스타트업 CTO<br />ENFP 개발자</h1>
+        <p class="about-tagline">
+          자동화를 만들고, 모임을 디자인하고, 효율을 추구한다.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <section class="about-section">
+        <h2>소개</h2>
+        <p>
+          AI 스타트업에서 CTO로 일하고 있다.<br />
+          ENFP 성향답게 여러 모임과 소셜링을 즐긴다기보다, 그런 걸 만들고 싶어하는 사람이다.
+        </p>
+        <p>
+          자동화에 집착한다. 반복 작업은 코드한테 시키고, 남은 시간엔 더 재미있는 걸 한다.<br />
+          효율을 극도로 추구하지만, 그게 게으름이 아니라 더 많은 걸 하기 위한 전략이다.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>관심사</h2>
+        <div class="interests-grid">
+          <div class="interest-card">
+            <span class="interest-icon">🤖</span>
+            <h3>AI 자동화</h3>
+            <p>Claude Code, Vibe 코딩으로 반복 작업 제거</p>
+          </div>
+          <div class="interest-card">
+            <span class="interest-icon">🎯</span>
+            <h3>소셜링 디자인</h3>
+            <p>모임, 소개팅 등 사회적 경험을 설계</p>
+          </div>
+          <div class="interest-card">
+            <span class="interest-icon">⚡</span>
+            <h3>효율 추구</h3>
+            <p>더 적게 일하고 더 많이 만드는 방법</p>
+          </div>
+          <div class="interest-card">
+            <span class="interest-icon">🚀</span>
+            <h3>사이드 프로젝트</h3>
+            <p>아이디어를 빠르게 실험하고 배포</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>연락</h2>
+        <p>
+          협업, 제안, 질문 환영한다.<br />
+          <a href="mailto:x@wonderx.co.kr" class="contact-link">x@wonderx.co.kr</a>
+        </p>
+      </section>
+    </div>
   </div>
 </BaseLayout>
+
+<style>
+  .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .about-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .character-illustration {
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+  }
+
+  .character-illustration svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-intro h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--wx-primary), #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .about-tagline {
+    font-size: 1.1rem;
+    color: var(--wx-text-secondary);
+    line-height: 1.6;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--wx-primary);
+  }
+
+  .about-section p {
+    line-height: 1.8;
+    color: var(--wx-text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .interest-card {
+    padding: 1.5rem;
+    background: var(--wx-bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--wx-border);
+    transition: all 0.2s ease;
+  }
+
+  .interest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.1);
+    border-color: var(--wx-primary);
+  }
+
+  .interest-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .interest-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--wx-text-primary);
+  }
+
+  .interest-card p {
+    font-size: 0.9rem;
+    color: var(--wx-text-secondary);
+    margin: 0;
+  }
+
+  .contact-link {
+    color: var(--wx-primary);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid var(--wx-primary);
+    transition: all 0.2s ease;
+  }
+
+  .contact-link:hover {
+    border-bottom-color: transparent;
+    background: var(--wx-primary);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .about-intro h1 {
+      font-size: 2rem;
+    }
+
+    .character-illustration {
+      width: 220px;
+      height: 220px;
+    }
+
+    .interests-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
