@@ -1,6 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Comments from '@/components/Comments.astro';
+import PageViews from '@/components/PageViews.astro';
+import PostNavigation from '@/components/PostNavigation.astro';
+import RelatedPosts from '@/components/RelatedPosts.astro';
+import { getCollection } from 'astro:content';
 
 interface Props {
   frontmatter: {
@@ -20,6 +24,11 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('ko-KR', 
   month: 'long',
   day: 'numeric',
 });
+
+// 현재 포스트와 전체 포스트 가져오기
+const allPosts = await getCollection('blog');
+const currentSlug = Astro.url.pathname.replace('/blog/', '').replace('/', '');
+const currentPost = allPosts.find((p) => p.id.replace(/\.md$/, '') === currentSlug);
 ---
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description}>
@@ -27,6 +36,7 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('ko-KR', 
     <div class="article-header">
       <div class="post-meta">
         <time class="post-date" datetime={frontmatter.pubDate}>{formattedDate}</time>
+        <PageViews slug={currentSlug} />
         {frontmatter.tags && (
           <div class="post-tags">
             {frontmatter.tags.map((tag: string) => (
@@ -47,6 +57,13 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('ko-KR', 
       <slot />
     </div>
   </article>
+
+  {currentPost && (
+    <>
+      <PostNavigation currentPost={currentPost} allPosts={allPosts} />
+      <RelatedPosts currentPost={currentPost} allPosts={allPosts} />
+    </>
+  )}
 
   <Comments title={frontmatter.title} />
 </BaseLayout>

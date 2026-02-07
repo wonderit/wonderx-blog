@@ -1,0 +1,183 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+  limit?: number;
+}
+
+const { posts, limit = 5 } = Astro.props;
+
+// 클라이언트 사이드에서 인기글을 계산하기 위한 placeholder
+const recentPosts = posts
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, limit);
+---
+
+<section class="popular-posts">
+  <h2 class="popular-title">
+    <span class="popular-icon">🔥</span>
+    인기 글
+  </h2>
+  <div class="popular-list" data-posts={JSON.stringify(recentPosts.map(p => ({ id: p.id, title: p.data.title, description: p.data.description, pubDate: p.data.pubDate })))}>
+    {recentPosts.map((post) => {
+      const formattedDate = post.data.pubDate.toLocaleDateString('ko-KR', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+      return (
+        <a href={`/blog/${post.id.replace(/\.md$/, '')}`} class="popular-item" data-slug={post.id.replace(/\.md$/, '')}>
+          <div class="popular-header">
+            <h3 class="popular-item-title">{post.data.title}</h3>
+            <span class="popular-views">-</span>
+          </div>
+          <p class="popular-desc">{post.data.description}</p>
+          <time class="popular-date" datetime={post.data.pubDate.toISOString()}>
+            {formattedDate}
+          </time>
+        </a>
+      );
+    })}
+  </div>
+</section>
+
+<script>
+  function getPageViews(slug: string): number {
+    const key = `pv_${slug}`;
+    return parseInt(localStorage.getItem(key) || '0', 10);
+  }
+
+  function getAllPageViews(): Record<string, number> {
+    const views: Record<string, number> = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key?.startsWith('pv_')) {
+        const slug = key.replace('pv_', '');
+        views[slug] = parseInt(localStorage.getItem(key) || '0', 10);
+      }
+    }
+    return views;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const popularList = document.querySelector('.popular-list') as HTMLElement;
+    if (!popularList) return;
+
+    const allViews = getAllPageViews();
+    const items = Array.from(document.querySelectorAll('.popular-item')) as HTMLElement[];
+
+    // 각 항목에 조회수 표시
+    items.forEach((item) => {
+      const slug = item.dataset.slug;
+      if (!slug) return;
+
+      const views = getPageViews(slug);
+      const viewsEl = item.querySelector('.popular-views') as HTMLElement;
+      if (viewsEl) {
+        viewsEl.textContent = `${views.toLocaleString()} 조회`;
+      }
+    });
+
+    // 조회수 기준으로 재정렬
+    items.sort((a, b) => {
+      const aViews = getPageViews(a.dataset.slug || '');
+      const bViews = getPageViews(b.dataset.slug || '');
+      return bViews - aViews;
+    });
+
+    // DOM 재배치
+    items.forEach((item) => popularList.appendChild(item));
+  });
+</script>
+
+<style>
+  .popular-posts {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--wx-border);
+  }
+
+  .popular-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--wx-text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .popular-icon {
+    font-size: 1.5rem;
+  }
+
+  .popular-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .popular-item {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--wx-border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: var(--wx-bg);
+  }
+
+  .popular-item:hover {
+    border-color: var(--wx-primary);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .popular-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popular-item-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--wx-text);
+    margin: 0;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .popular-views {
+    font-size: 0.75rem;
+    color: var(--wx-primary);
+    font-family: var(--font-mono);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .popular-desc {
+    font-size: 0.85rem;
+    color: var(--wx-text-secondary);
+    line-height: 1.5;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .popular-date {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--wx-text-secondary);
+    font-family: var(--font-mono);
+  }
+
+  @media (max-width: 768px) {
+    .popular-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

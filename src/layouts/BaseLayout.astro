@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import { inject } from '@vercel/analytics';
 
 interface Props {
   title: string;
@@ -16,6 +17,9 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// GA4 Measurement ID
+const GA4_ID = import.meta.env.PUBLIC_GA4_ID || 'G-XXXXXXXXXX';
 ---
 
 <!DOCTYPE html>
@@ -50,6 +54,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="naver-site-verification" content="" />
 
   <title>{title} | WonderX Blog</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
+  <script is:inline define:vars={{ GA4_ID }}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', GA4_ID);
+  </script>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -98,5 +111,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       </ul>
     </div>
   </footer>
+
+  <!-- Vercel Analytics -->
+  <script>
+    import { inject } from '@vercel/analytics';
+    inject();
+  </script>
 </body>
 </html>

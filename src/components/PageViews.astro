@@ -1,0 +1,79 @@
+---
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+---
+
+<div class="page-views">
+  <span class="view-icon">👁️</span>
+  <span class="view-count" data-slug={slug}>-</span>
+  <span class="view-label">조회</span>
+</div>
+
+<script>
+  function getPageViews(slug: string): number {
+    const key = `pv_${slug}`;
+    return parseInt(localStorage.getItem(key) || '0', 10);
+  }
+
+  function incrementPageViews(slug: string): number {
+    const key = `pv_${slug}`;
+    const current = getPageViews(slug);
+    const newCount = current + 1;
+    localStorage.setItem(key, newCount.toString());
+    return newCount;
+  }
+
+  function getAllPageViews(): Record<string, number> {
+    const views: Record<string, number> = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key?.startsWith('pv_')) {
+        const slug = key.replace('pv_', '');
+        views[slug] = parseInt(localStorage.getItem(key) || '0', 10);
+      }
+    }
+    return views;
+  }
+
+  // 전역 노출
+  (window as any).getBlogPageViews = getAllPageViews;
+
+  // 페이지 로드 시 카운트 증가 및 표시
+  document.addEventListener('DOMContentLoaded', () => {
+    const viewCountEl = document.querySelector('.view-count') as HTMLElement;
+    if (!viewCountEl) return;
+
+    const slug = viewCountEl.dataset.slug;
+    if (!slug) return;
+
+    const count = incrementPageViews(slug);
+    viewCountEl.textContent = count.toLocaleString();
+  });
+</script>
+
+<style>
+  .page-views {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--wx-text-secondary);
+    font-family: var(--font-mono);
+  }
+
+  .view-icon {
+    font-size: 1rem;
+  }
+
+  .view-count {
+    font-weight: 500;
+    color: var(--wx-primary);
+  }
+
+  .view-label {
+    font-size: 0.8rem;
+  }
+</style>

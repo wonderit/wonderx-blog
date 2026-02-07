@@ -6,6 +6,9 @@ tags: ['nanobanana', 'gemini', 'image-generation', 'telegram', 'claude-code', 'a
 category: 'ai-automation'
 heroImage: '/images/blog/nanobanana-1.png'
 draft: false
+external:
+  brunch: false
+  eoplanet: false
 ---
 
 ![히어로 이미지](/images/blog/nanobanana-1.png)

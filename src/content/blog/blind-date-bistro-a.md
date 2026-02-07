@@ -5,6 +5,9 @@ pubDate: '2026-02-05'
 tags: ['소개팅', '데이트', '후기', '인간관계']
 category: 'social'
 heroImage: '/images/blog/bistro-date-1.png'
+external:
+  brunch: false
+  eoplanet: false
 ---
 
 ## 소개 경로

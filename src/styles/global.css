@@ -170,6 +170,16 @@ main {
   padding: 2rem 0 6rem;
 }
 
+.recent-posts-header {
+  margin: 3rem 0 1.5rem;
+}
+
+.recent-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--wx-text);
+}
+
 .posts-grid {
   display: flex;
   flex-direction: column;

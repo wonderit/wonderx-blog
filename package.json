@@ -10,9 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.2.0",
     "@astrojs/mdx": "^4.0.0",
+    "@astrojs/rss": "^4.0.0",
     "@astrojs/sitemap": "^3.2.0",
-    "@astrojs/rss": "^4.0.0"
+    "@vercel/analytics": "^1.6.1",
+    "astro": "^5.2.0"
   }
 }

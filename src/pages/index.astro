@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import PopularPosts from '@/components/PopularPosts.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
@@ -63,6 +64,12 @@ const categoryCounts = categories.map((cat) => ({
     </aside>
 
     <section class="posts-section">
+      <PopularPosts posts={posts} limit={5} />
+
+      <div class="recent-posts-header">
+        <h2 class="recent-title">최근 글</h2>
+      </div>
+
       {posts.length > 0 ? (
         <div class="posts-grid">
           {posts.map((post) => {
