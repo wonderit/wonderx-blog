@@ -23,15 +23,16 @@ const recentPosts = posts
     </div>
   </div>
   <div class="carousel-wrapper">
-    <div class="carousel-track" data-posts={JSON.stringify(recentPosts.map(p => ({ id: p.id, title: p.data.title, description: p.data.description, pubDate: p.data.pubDate })))}>
+    <div class="carousel-track">
       {recentPosts.map((post) => {
+        const slug = post.id.replace(/\.md$/, '');
         const formattedDate = post.data.pubDate.toLocaleDateString('ko-KR', {
           year: 'numeric',
           month: 'short',
           day: 'numeric',
         });
         return (
-          <a href={`/blog/${post.id.replace(/\.md$/, '')}`} class="carousel-card" data-slug={post.id.replace(/\.md$/, '')}>
+          <a href={`/blog/${slug}`} class="carousel-card" data-path={`/blog/${slug}`}>
             {post.data.heroImage && (
               <div class="carousel-thumb">
                 <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
@@ -52,54 +53,45 @@ const recentPosts = posts
   </div>
 </section>
 
-<script>
-  function getPageViews(slug: string): number {
-    const key = `pv_${slug}`;
-    return parseInt(localStorage.getItem(key) || '0', 10);
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track') as HTMLElement;
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var track = document.querySelector('.carousel-track');
     if (!track) return;
 
-    const cards = Array.from(track.querySelectorAll('.carousel-card')) as HTMLElement[];
-
-    // 조회수 표시
-    cards.forEach((card) => {
-      const slug = card.dataset.slug;
-      if (!slug) return;
-      const views = getPageViews(slug);
-      const viewsEl = card.querySelector('.carousel-views') as HTMLElement;
-      if (viewsEl) {
-        viewsEl.textContent = `조회 ${views.toLocaleString()}`;
-      }
-    });
-
-    // 조회수 기준 정렬
-    cards.sort((a, b) => {
-      const aViews = getPageViews(a.dataset.slug || '');
-      const bViews = getPageViews(b.dataset.slug || '');
-      return bViews - aViews;
-    });
-    cards.forEach((card) => track.appendChild(card));
-
     // 캐러셀 네비게이션
-    const prevBtn = document.querySelector('.carousel-prev') as HTMLElement;
-    const nextBtn = document.querySelector('.carousel-next') as HTMLElement;
-    const wrapper = document.querySelector('.carousel-wrapper') as HTMLElement;
+    var prevBtn = document.querySelector('.carousel-prev');
+    var nextBtn = document.querySelector('.carousel-next');
+    var wrapper = document.querySelector('.carousel-wrapper');
 
     if (prevBtn && nextBtn && wrapper) {
-      const scrollAmount = () => {
-        const card = track.querySelector('.carousel-card') as HTMLElement;
+      var scrollAmount = function() {
+        var card = track.querySelector('.carousel-card');
         return card ? card.offsetWidth + 16 : 280;
       };
 
-      nextBtn.addEventListener('click', () => {
+      nextBtn.addEventListener('click', function() {
         wrapper.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
       });
 
-      prevBtn.addEventListener('click', () => {
+      prevBtn.addEventListener('click', function() {
         wrapper.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+      });
+    }
+
+    // Goatcounter 조회수 표시
+    if (window.goatcounter && window.goatcounter.visit_count) {
+      var cards = track.querySelectorAll('.carousel-card[data-path]');
+      cards.forEach(function(card) {
+        var postPath = card.getAttribute('data-path');
+        var viewsEl = card.querySelector('.carousel-views');
+        if (viewsEl && postPath) {
+          window.goatcounter.visit_count({
+            append: viewsEl,
+            path: postPath,
+            type: 'html',
+            no_branding: true,
+          });
+        }
       });
     }
   });
