@@ -5,7 +5,7 @@ date: 2026-02-04 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'automation', 'ai']
 categories: [ai-automation]
 image: /assets/img/blog/ai-assistant-intro-1.png
-author: wonderx
+author: wonder
 ---
 
 ## 왜 이 프로젝트를 시작했나

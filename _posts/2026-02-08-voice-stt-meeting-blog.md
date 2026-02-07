@@ -5,7 +5,7 @@ date: 2026-02-08 00:00:00 +0900
 tags: ['voice', 'stt', 'gemini', 'telegram', 'meeting-minutes', 'automation', 'claude-code']
 categories: [ai-automation]
 image: /assets/img/blog/voice-stt-telegram-1.png
-author: wonderx
+author: wonder
 ---
 
 ## 회의록 작성이 싫다

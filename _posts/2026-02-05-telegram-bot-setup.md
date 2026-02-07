@@ -5,7 +5,7 @@ date: 2026-02-05 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'python', 'automation', 'vibe-coding']
 categories: [ai-automation]
 image: /assets/img/blog/telegram-bot-1.png
-author: wonderx
+author: wonder
 ---
 
 ## 지난 글 요약

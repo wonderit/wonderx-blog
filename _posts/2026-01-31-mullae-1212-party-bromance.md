@@ -5,7 +5,7 @@ date: 2026-01-31 00:00:00 +0900
 tags: ['소개팅', '미팅파티', '문래동', '후기', '브로맨스']
 categories: [social]
 image: /assets/img/blog/mullae-party-1.png
-author: wonderx
+author: wonder
 ---
 
 ## 문래동으로 간 이유

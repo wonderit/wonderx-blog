@@ -5,7 +5,7 @@ date: 2026-02-06 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'openclaw', 'memory', 'automation', 'vibe-coding']
 categories: [ai-automation]
 image: /assets/img/blog/openclaw-memory-1.png
-author: wonderx
+author: wonder
 ---
 
 ## 왜 메모리가 필요한가

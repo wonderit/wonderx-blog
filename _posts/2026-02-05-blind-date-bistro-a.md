@@ -5,7 +5,7 @@ date: 2026-02-05 00:00:00 +0900
 tags: ['소개팅', '데이트', '후기', '인간관계']
 categories: [social]
 image: /assets/img/blog/bistro-date-1.png
-author: wonderx
+author: wonder
 ---
 
 ## 소개 경로

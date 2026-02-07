@@ -5,7 +5,7 @@ date: 2026-02-04 00:00:00 +0900
 tags: ['소개팅', '애프터', '후기', '데이트']
 categories: [social]
 image: /assets/img/blog/after-date-1.png
-author: wonderx
+author: wonder
 ---
 
 ## 당일, 만나기 전부터

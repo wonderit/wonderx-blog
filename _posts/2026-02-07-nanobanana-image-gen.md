@@ -5,7 +5,7 @@ date: 2026-02-07 00:00:00 +0900
 tags: ['nanobanana', 'gemini', 'image-generation', 'telegram', 'claude-code', 'automation', 'vibe-coding']
 categories: [ai-automation]
 image: /assets/img/blog/nanobanana-1.png
-author: wonderx
+author: wonder
 ---
 
 ## 블로그에 이미지가 필요하다

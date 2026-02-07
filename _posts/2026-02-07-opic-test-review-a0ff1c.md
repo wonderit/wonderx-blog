@@ -5,7 +5,7 @@ date: 2026-02-07 00:00:00 +0900
 image: /assets/img/blog/opic-test-review-a0ff1c-1.png
 categories: [social]
 tags: ["opic", "english", "career", "ai"]
-author: wonderx
+author: wonder
 ---
 
 ## 갑자기 OPIc을 본 이유
