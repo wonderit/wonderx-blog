@@ -7,9 +7,8 @@ const { slug } = Astro.props;
 ---
 
 <div class="page-views">
-  <span class="view-icon">👁️</span>
+  <span class="view-label">조회수</span>
   <span class="view-count" id="stats">-</span>
-  <span class="view-label">조회</span>
 </div>
 
 <script is:inline>
@@ -27,22 +26,17 @@ const { slug } = Astro.props;
   .page-views {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.85rem;
-    color: var(--wx-text-secondary);
-    font-family: var(--font-mono);
-  }
-
-  .view-icon {
-    font-size: 1rem;
+    gap: 0.25rem;
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
   }
 
   .view-count {
     font-weight: 500;
-    color: var(--wx-primary);
+    color: var(--text-secondary);
   }
 
   .view-label {
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
   }
 </style>

@@ -6,15 +6,14 @@ const CATEGORIES = {
   'ai-automation': { label: 'AI 자동화' },
   'side-project': { label: '사이드 프로젝트' },
   'dev-log': { label: '개발 일지' },
-  'social': { label: '소셜링 / 소개팅' },
+  'social': { label: '소셜링' },
   'tutorial': { label: '튜토리얼' },
-  'career': { label: '커리어' },
 } as const;
 
 type CategoryKey = keyof typeof CATEGORIES;
 
 export function getStaticPaths() {
-  const cats = ['ai-automation', 'side-project', 'dev-log', 'social', 'tutorial', 'career'];
+  const cats = ['ai-automation', 'side-project', 'dev-log', 'social', 'tutorial'];
   return cats.map((category) => ({
     params: { category },
   }));

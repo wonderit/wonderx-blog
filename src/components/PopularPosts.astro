@@ -75,7 +75,7 @@ const recentPosts = posts
       const views = getPageViews(slug);
       const viewsEl = item.querySelector('.popular-views') as HTMLElement;
       if (viewsEl) {
-        viewsEl.textContent = `${views.toLocaleString()} 조회`;
+        viewsEl.textContent = `조회 ${views.toLocaleString()}`;
       }
     });
 
