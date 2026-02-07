@@ -19,8 +19,6 @@ tags: ["opic", "english", "career", "ai"]
 측정하지 않으면 모른다.
 그래서 예약했다.
 
-![시험장 분위기](/images/blog/opic-test-review-a0ff1c-1.png)
-
 ## 시험장은 이랬다
 
 역삼 시험장.

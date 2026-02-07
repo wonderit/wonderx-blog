@@ -8,8 +8,6 @@ heroImage: '/images/blog/voice-stt-telegram-1.png'
 draft: false
 ---
 
-![히어로 이미지](/images/blog/voice-stt-telegram-1.png)
-
 ## 회의록 작성이 싫다
 
 회의를 하면 회의록을 써야 한다. 맥북에서 녹음 → Speech-to-Text → Gemini로 정리 → 노션에 복붙. 이 과정이 매번 반복된다.

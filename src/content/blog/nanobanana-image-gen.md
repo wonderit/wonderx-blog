@@ -11,8 +11,6 @@ external:
   eoplanet: false
 ---
 
-![히어로 이미지](/images/blog/nanobanana-1.png)
-
 ## 블로그에 이미지가 필요하다
 
 텍스트만 있는 블로그는 밋밋하다. 근데 매번 Canva 열어서 이미지 만드는 건 귀찮다.

@@ -17,13 +17,15 @@ const categories = [
   { id: 'tutorial', label: '튜토리얼' },
 ];
 
-// 카테고리별 글 수
-const categoryCounts = categories.map((cat) => ({
-  ...cat,
-  count: cat.id === 'all'
-    ? posts.length
-    : posts.filter((p) => p.data.category === cat.id).length,
-}));
+// 카테고리별 글 수 (0건 제외)
+const categoryCounts = categories
+  .map((cat) => ({
+    ...cat,
+    count: cat.id === 'all'
+      ? posts.length
+      : posts.filter((p) => p.data.category === cat.id).length,
+  }))
+  .filter((cat) => cat.id === 'all' || cat.count > 0);
 ---
 
 <BaseLayout title="Blog">
@@ -54,16 +56,10 @@ const categoryCounts = categories.map((cat) => ({
           ))}
         </ul>
       </nav>
-
-      <div class="sidebar-cta">
-        <p class="sidebar-cta-title">About</p>
-        <p class="sidebar-cta-desc">AI 스타트업 CTO, ENFP 개발자의 자동화 여정</p>
-        <a href="/about" class="sidebar-cta-btn">소개 보기</a>
-      </div>
     </aside>
 
     <section class="posts-section">
-      <PopularPosts posts={posts} limit={3} />
+      <PopularPosts posts={posts} limit={5} />
 
       <div class="recent-posts-header">
         <h2 class="recent-title">최근 글</h2>
@@ -79,26 +75,24 @@ const categoryCounts = categories.map((cat) => ({
             });
             return (
               <a href={`/blog/${post.id.replace(/\.md$/, '')}`} class="post-card">
-                <div class="post-meta">
+                {post.data.heroImage && (
+                  <div class="post-thumbnail">
+                    <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
+                  </div>
+                )}
+                <div class="post-info">
                   <time class="post-date" datetime={post.data.pubDate.toISOString()}>
                     {formattedDate}
                   </time>
-                  {post.data.tags && (
-                    <div class="post-tags">
-                      {post.data.tags.map((tag: string) => (
-                        <span class="post-tag">{tag}</span>
-                      ))}
-                    </div>
-                  )}
+                  <h2 class="post-title">{post.data.title}</h2>
+                  <p class="post-excerpt">{post.data.description}</p>
                 </div>
-                <h2 class="post-title">{post.data.title}</h2>
-                <p class="post-excerpt">{post.data.description}</p>
               </a>
             );
           })}
         </div>
       ) : (
-        <p style="color: var(--wx-text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
+        <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
           아직 작성된 글이 없습니다. 첫 번째 글을 작성해보세요!
         </p>
       )}

@@ -40,7 +40,7 @@ const currentPost = allPosts.find((p) => p.id.replace(/\.md$/, '') === currentSl
         {frontmatter.tags && (
           <div class="post-tags">
             {frontmatter.tags.map((tag: string) => (
-              <span class="post-tag">{tag}</span>
+              <a href={`/tag/${tag}`} class="post-tag">{tag}</a>
             ))}
           </div>
         )}
