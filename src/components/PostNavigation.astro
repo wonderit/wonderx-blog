@@ -39,23 +39,24 @@ const nextPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentInde
   .post-navigation {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 3rem 0;
-    padding: 1.5rem 0;
-    border-top: 1px solid var(--wx-border);
-    border-bottom: 1px solid var(--wx-border);
+    gap: 1.5rem;
+    margin: 4rem 0 3rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    max-width: var(--reading-width);
   }
 
   .nav-link {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem;
-    border: 1px solid var(--wx-border);
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.2s ease;
-    background: var(--wx-bg);
+    background: var(--bg-secondary);
   }
 
   .nav-link.prev {
@@ -67,39 +68,41 @@ const nextPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentInde
     grid-column: 2;
   }
 
-  /* 이전 글만 있을 때 */
   .nav-link.prev:only-child {
     grid-column: 1;
   }
 
-  /* 다음 글만 있을 때 */
   .nav-link.next:first-child {
     grid-column: 2;
   }
 
   .nav-link:hover {
-    border-color: var(--wx-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: var(--bg-tertiary);
+    border-color: var(--border-medium);
   }
 
   .nav-label {
-    font-size: 0.75rem;
-    color: var(--wx-text-secondary);
-    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
     font-weight: 500;
   }
 
   .nav-title {
-    font-size: 0.95rem;
-    color: var(--wx-text);
+    font-size: 1rem;
+    color: var(--text-primary);
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   @media (max-width: 768px) {
     .post-navigation {
       grid-template-columns: 1fr;
+      margin: 3rem 0 2rem;
+      padding: 2rem 0;
+    }
+
+    .nav-link {
+      padding: 1.25rem;
     }
 
     .nav-link.next {

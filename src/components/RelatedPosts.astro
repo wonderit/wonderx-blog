@@ -69,16 +69,18 @@ const relatedPosts = getRelatedPosts(currentPost, allPosts);
 
 <style>
   .related-posts {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--wx-border);
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border-light);
+    max-width: var(--reading-width);
   }
 
   .related-title {
-    font-size: 1.3rem;
+    font-size: 1.375rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: var(--wx-text);
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
   }
 
   .related-grid {
@@ -89,46 +91,57 @@ const relatedPosts = getRelatedPosts(currentPost, allPosts);
 
   .related-card {
     display: block;
-    padding: 1.25rem;
-    border: 1px solid var(--wx-border);
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.2s ease;
-    background: var(--wx-bg);
+    background: var(--bg-secondary);
   }
 
   .related-card:hover {
-    border-color: var(--wx-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: var(--bg-tertiary);
+    border-color: var(--border-medium);
   }
 
   .related-date {
     display: block;
-    font-size: 0.75rem;
-    color: var(--wx-text-secondary);
-    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
     margin-bottom: 0.5rem;
   }
 
   .related-card-title {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     font-weight: 600;
-    color: var(--wx-text);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
-    line-height: 1.4;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
   }
 
   .related-desc {
-    font-size: 0.85rem;
-    color: var(--wx-text-secondary);
-    line-height: 1.5;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
     margin: 0;
   }
 
   @media (max-width: 768px) {
     .related-grid {
       grid-template-columns: 1fr;
+    }
+
+    .related-card {
+      padding: 1.25rem;
+    }
+
+    .related-card-title {
+      font-size: 1rem;
+    }
+
+    .related-desc {
+      font-size: 0.875rem;
     }
   }
 </style>
