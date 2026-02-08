@@ -4,7 +4,7 @@ description: '토요일 오후 오픽 시험 후 신촌 그레이스 클럽 파�
 date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
 categories: [social]
-image: /images/blog/e20b29-1.png
+image: /images/blog/2f4e4b-1.png
 author: wonder
 ---
 
@@ -156,7 +156,7 @@ author: wonder
 흩날리던 다니엘 트루스 밤쉘 향,
 그리고 또 옆에 흔들거리던 디퓨저 고리.
 
-![차량 인테리어 디테일 — 네잎클로버 키링과 춘식이 거치대](/images/blog/tg-photo-8d4cba-edited-6bed.png)
+![차량 인테리어 디테일 — 네잎클로버 키링과 춘식이 거치대](/images/blog/grace-club-car-interior-illustrated.jpg)
 
 차 모니터에 걸어둔 라이언·어피치 방향제,
 춘식이 폰번호 거치대.
