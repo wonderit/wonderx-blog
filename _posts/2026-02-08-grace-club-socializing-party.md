@@ -154,7 +154,7 @@ author: wonder
 흩날리던 다니엘 트루스 밤쉘 향,
 그리고 또 옆에 흔들거리던 디퓨저 고리.
 
-![차량 인테리어 디테일 — 네잎클로버 키링과 춘식이 거치대](/images/blog/shinchon-socializing-car-interior.jpg)
+![차량 인테리어 디테일 — 네잎클로버 키링과 춘식이 거치대](/images/blog/shinchon-socializing-car-interior-edited-493e.png)
 
 차 모니터에 걸어둔 라이언·어피치 방향제,
 춘식이 폰번호 거치대.
