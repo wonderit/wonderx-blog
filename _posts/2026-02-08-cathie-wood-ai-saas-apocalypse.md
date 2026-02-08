@@ -11,6 +11,8 @@ author: wonder
 
 토요일 저녁. ARK Invest CEO 캐시 우드의 영상을 봤다. "Cathie Wood On Bitcoin Volatility And SaaSpocalypse Fears" — 2026년 거시경제 전망과 투자 전략을 담은 30분짜리 영상이었다.
 
+![Cathie Wood On Bitcoin Volatility And SaaSpocalypse Fears](/images/cathie-wood-youtube-thumb.jpg)
+
 ---
 
 ### AI 거품 논란 vs 진짜 수혜주
@@ -86,6 +88,8 @@ SaaS 도구는 대체 가능하다. 하지만 **GPU, 데이터센터, 클라우�
 젠슨 황이 인터뷰에서 한 말이 생각난다.
 
 > "AI가 발달하면서 가장 먼저 자동화된 게 코딩이다. 하지만 그 전엔 가장 똑똑한 사람이 코딩을 했다. 지금은 바뀌었다. **직관, 즉 바이브가 중요하다**."
+
+![Jensen Huang on Intelligence and Intuition](/images/jensen-huang-youtube-thumb.jpg)
 
 데이터는 과거를 말한다. 직관은 미래를 본다. 캐시 우드도 같은 맥락으로 AI 인프라 투자를 강조했다.
 
