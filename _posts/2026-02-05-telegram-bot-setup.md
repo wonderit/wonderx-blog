@@ -4,7 +4,7 @@ description: 'BotFather로 텔레그램 봇 만들고, Python으로 Claude Code 
 date: 2026-02-05 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'python', 'automation', 'vibe-coding']
 categories: [ai-automation]
-image: /assets/img/blog/telegram-bot-1.jpg
+image: /images/blog/telegram-bot-1.jpg
 author: wonder
 ---
 
@@ -52,7 +52,7 @@ wonderx-bot/
 
 심플하다. 파일 5개면 충분하다.
 
-![프로젝트 구조](/assets/img/blog/telegram-bot-2.jpg)
+![프로젝트 구조](/images/blog/telegram-bot-2.jpg)
 
 ## Step 3 — 핵심 코드
 
@@ -170,7 +170,7 @@ python -m bot.main
 
 이게 끝이다.
 
-![봇 실행 화면](/assets/img/blog/telegram-bot-3.jpg)
+![봇 실행 화면](/images/blog/telegram-bot-3.jpg)
 
 ## Step 5 — macOS 자동 시작 (launchd)
 

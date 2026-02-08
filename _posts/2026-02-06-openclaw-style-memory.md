@@ -4,7 +4,7 @@ description: 'OpenClaw의 파일 기반 메모리를 분석하고, Claude Code �
 date: 2026-02-06 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'openclaw', 'memory', 'automation', 'vibe-coding']
 categories: [ai-automation]
-image: /assets/img/blog/openclaw-memory-1.jpg
+image: /images/blog/openclaw-memory-1.jpg
 author: wonder
 ---
 
@@ -41,7 +41,7 @@ memory/2026-02-05.md   ← 어제 일일 노트
 벡터 DB도 아니고, 복잡한 RAG도 아니다. **그냥 마크다운 파일**이다.
 사람이 직접 열어서 편집할 수도 있다. 이게 핵심이다.
 
-![OpenClaw 메모리 구조](/assets/img/blog/openclaw-memory-2.jpg)
+![OpenClaw 메모리 구조](/images/blog/openclaw-memory-2.jpg)
 
 ## 우리 봇에 적용
 
@@ -162,7 +162,7 @@ Claude에게 보내는 프롬프트 구조:
 
 이렇게 하면 Claude가 **오늘 뭘 했는지 알고 있는 상태**에서 답변한다.
 
-![메모리 시스템 동작 화면](/assets/img/blog/openclaw-memory-3.jpg)
+![메모리 시스템 동작 화면](/images/blog/openclaw-memory-3.jpg)
 
 ## OpenClaw vs WonderX Bot 비교
 

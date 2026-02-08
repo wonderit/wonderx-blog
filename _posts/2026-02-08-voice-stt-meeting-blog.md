@@ -4,7 +4,7 @@ description: '텔레그램 봇에 음성 메시지를 보내면 Gemini가 전사
 date: 2026-02-08 00:00:00 +0900
 tags: ['voice', 'stt', 'gemini', 'telegram', 'meeting-minutes', 'automation', 'claude-code']
 categories: [ai-automation]
-image: /assets/img/blog/voice-stt-telegram-1.jpg
+image: /images/blog/voice-stt-telegram-1.jpg
 author: wonder
 ---
 
@@ -34,7 +34,7 @@ Gemini STT → 텍스트 전사
 
 버튼 하나로 회의록이든 블로그든 바로 나온다.
 
-![개념도](/assets/img/blog/voice-stt-telegram-2.jpg)
+![개념도](/images/blog/voice-stt-telegram-2.jpg)
 
 ## Gemini STT — 이미 있는 걸 쓰자
 
@@ -93,7 +93,7 @@ keyboard = [[
 reply_markup = InlineKeyboardMarkup(keyboard)
 ```
 
-![인라인 키보드 선택](/assets/img/blog/voice-stt-telegram-3.jpg)
+![인라인 키보드 선택](/images/blog/voice-stt-telegram-3.jpg)
 
 ## 회의록 모드 — 노션에 바로 복붙
 
@@ -139,7 +139,7 @@ reply_markup = InlineKeyboardMarkup(keyboard)
 
 소개팅 다녀와서 걸으면서 음성 녹음 → 텔레그램에 전송 → 블로그 버튼 탭 → 5분 후 이미지 포함된 블로그 초안이 완성된다.
 
-![결과 이미지](/assets/img/blog/voice-stt-telegram-4.jpg)
+![결과 이미지](/images/blog/voice-stt-telegram-4.jpg)
 
 ## 아키텍처 정리
 

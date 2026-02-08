@@ -4,7 +4,7 @@ description: '맥북에 항상 켜져 있는 Claude Code를 Telegram 봇과 연�
 date: 2026-02-04 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'automation', 'ai']
 categories: [ai-automation]
-image: /assets/img/blog/ai-assistant-intro-1.jpg
+image: /images/blog/ai-assistant-intro-1.jpg
 author: wonder
 ---
 
