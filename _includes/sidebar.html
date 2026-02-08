@@ -40,6 +40,51 @@
     </ul>
   </nav>
 
+  {% if site.analytics.goatcounter.id %}
+  <div class="sidebar-visitor-count w-100 text-center mb-2">
+    <div class="visitor-stats">
+      <span class="visitor-item">
+        <small class="text-muted">Today</small>
+        <strong id="gc-today">-</strong>
+      </span>
+      <span class="visitor-divider">|</span>
+      <span class="visitor-item">
+        <small class="text-muted">Total</small>
+        <strong id="gc-total">-</strong>
+      </span>
+    </div>
+    <script>
+    (function() {
+      var gcId = '{{ site.analytics.goatcounter.id }}';
+      var base = 'https://' + gcId + '.goatcounter.com';
+
+      // Total: fetch all-time count
+      var r1 = new XMLHttpRequest();
+      r1.addEventListener('load', function() {
+        try {
+          var d = JSON.parse(this.responseText);
+          document.getElementById('gc-total').textContent = d.count || '0';
+        } catch(e) { document.getElementById('gc-total').textContent = '0'; }
+      });
+      r1.open('GET', base + '/counter/TOTAL.json');
+      r1.send();
+
+      // Today: use the API with start/end date
+      var today = new Date().toISOString().slice(0, 10);
+      var r2 = new XMLHttpRequest();
+      r2.addEventListener('load', function() {
+        try {
+          var d = JSON.parse(this.responseText);
+          document.getElementById('gc-today').textContent = d.count || '0';
+        } catch(e) { document.getElementById('gc-today').textContent = '0'; }
+      });
+      r2.open('GET', base + '/counter/TOTAL.json?start=' + today);
+      r2.send();
+    })();
+    </script>
+  </div>
+  {% endif %}
+
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
