@@ -118,12 +118,22 @@ layout: default
                 {% endif %}
               </div>
 
-              {% if post.pin %}
-                <div class="pin ms-1">
-                  <i class="fas fa-thumbtack fa-fw"></i>
-                  <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
-                </div>
-              {% endif %}
+              <div class="d-flex align-items-center">
+                <!-- clap count on home list -->
+                <div class="lyket-home"
+                  data-lyket-type="clap"
+                  data-lyket-id="{{ post.slug | default: post.title | slugify }}"
+                  data-lyket-namespace="blog"
+                  data-lyket-template="medium"
+                ></div>
+
+                {% if post.pin %}
+                  <div class="pin ms-2">
+                    <i class="fas fa-thumbtack fa-fw"></i>
+                    <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
+                  </div>
+                {% endif %}
+              </div>
             </div>
             <!-- .post-meta -->
           </div>

@@ -15,8 +15,6 @@ script_includes:
 
 {% include toc-status.html %}
 
-<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_cc1579e1e32cb0415c5b073d571905"></script>
-
 <article class="px-1" data-toc="{{ enable_toc }}">
   <header>
     <h1 data-toc-skip>{{ page.title }}</h1>
@@ -30,14 +28,6 @@ script_includes:
         {{ site.data.locales[lang].post.posted }}
         {% include datetime.html date=page.date tooltip=true lang=lang %}
       </span>
-
-      <!-- lastmod date -->
-      {% if page.last_modified_at and page.last_modified_at != page.date %}
-        <span>
-          {{ site.data.locales[lang].post.updated }}
-          {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
-        </span>
-      {% endif %}
 
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
@@ -56,32 +46,44 @@ script_includes:
         </div>
       {% endif %}
 
-      <div class="d-flex justify-content-between">
-        <!-- author(s) -->
-        <span>
-          {% if page.author %}
-            {% assign authors = page.author %}
-          {% elsif page.authors %}
-            {% assign authors = page.authors %}
-          {% endif %}
-
-          {{ site.data.locales[lang].post.written_by }}
-
-          <em>
-            {% if authors %}
-              {% for author in authors %}
-                {% if site.data.authors[author].url -%}
-                  <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-                {%- else -%}
-                  {{ site.data.authors[author].name }}
-                {%- endif %}
-                {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
-              {% endfor %}
-            {% else %}
-              <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- author + clap (top) -->
+        <div class="d-flex align-items-center">
+          <span>
+            {% if page.author %}
+              {% assign authors = page.author %}
+            {% elsif page.authors %}
+              {% assign authors = page.authors %}
             {% endif %}
-          </em>
-        </span>
+
+            {{ site.data.locales[lang].post.written_by }}
+
+            <em>
+              {% if authors %}
+                {% for author in authors %}
+                  {% if site.data.authors[author].url -%}
+                    <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
+                  {%- else -%}
+                    {{ site.data.authors[author].name }}
+                  {%- endif %}
+                  {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
+                {% endfor %}
+              {% else %}
+                <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+              {% endif %}
+            </em>
+          </span>
+
+          <span class="mx-2">·</span>
+
+          <!-- clap button (top, inline) -->
+          <div class="lyket-inline"
+            data-lyket-type="clap"
+            data-lyket-id="{{ page.slug | default: page.title | slugify }}"
+            data-lyket-namespace="blog"
+            data-lyket-template="medium"
+          ></div>
+        </div>
 
         <div>
           <!-- pageviews -->
@@ -134,13 +136,13 @@ script_includes:
   {% include inarticle_ads.html %}
 
   <div class="post-tail-wrapper text-muted">
-    <!-- lyket clap button -->
-    <div class="lyket-wrapper text-center mb-3">
+    <!-- lyket clap button (bottom) -->
+    <div class="lyket-bottom d-flex align-items-center mb-3">
       <div
         data-lyket-type="clap"
         data-lyket-id="{{ page.slug | default: page.title | slugify }}"
         data-lyket-namespace="blog"
-        data-lyket-color-primary="rgb(79,177,186)"
+        data-lyket-template="medium"
       ></div>
     </div>
 

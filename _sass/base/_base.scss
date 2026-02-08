@@ -483,3 +483,33 @@ mjx-container {
   }
 }
 
+/* Lyket clap button — Medium style */
+.lyket-inline,
+.lyket-bottom,
+.lyket-home {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+
+  [data-lyket-type] {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.lyket-inline {
+  transform: scale(0.75);
+  transform-origin: left center;
+}
+
+.lyket-home {
+  transform: scale(0.65);
+  transform-origin: right center;
+}
+
+.lyket-bottom {
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--btn-border-color);
+  border-bottom: 1px solid var(--btn-border-color);
+}
+
