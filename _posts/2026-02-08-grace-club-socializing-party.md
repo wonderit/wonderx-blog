@@ -120,11 +120,11 @@ author: wonder
 
 뭔가 인정받은 느낌이 들어서 기분이 좋았다.
 
-## Don't reinvent the wheel
+## Better done than perfect
 
 영어로 비슷한 문장이 있다.
 
-**"Don't reinvent the wheel."**
+**"Better done than perfect."**
 
 완벽하게 준비하느라 시간 쓰지 말고, 일단 하는 게 낫다.
 

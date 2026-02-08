@@ -4,7 +4,7 @@ description: 'Google Gemini의 나노바나나 이미지 생성을 텔레그램 
 date: 2026-02-07 00:00:00 +0900
 tags: ['nanobanana', 'gemini', 'image-generation', 'telegram', 'claude-code', 'automation', 'vibe-coding']
 categories: [ai-automation]
-image: /assets/img/blog/nanobanana-1.png
+image: /assets/img/blog/nanobanana-1.jpg
 author: wonder
 ---
 
@@ -29,7 +29,7 @@ author: wonder
 
 핵심은 **무료 500장/일**. 블로그에 3장 넣으면 0.6% 사용이다. 사실상 무제한.
 
-![개념도](/assets/img/blog/nanobanana-2.png)
+![개념도](/assets/img/blog/nanobanana-2.jpg)
 
 ## 구현: 10분 만에 끝나는 연동
 
@@ -92,7 +92,7 @@ async def generate_blog_images(topic: str, count: int = 3) -> list:
 
     results = []
     for i, prompt in enumerate(prompts):
-        result = await generate_image(prompt, filename=f"{slug}-{i+1}.png")
+        result = await generate_image(prompt, filename=f"{slug}-{i+1}.jpg")
         results.append(result)
     return results
 ```
@@ -113,7 +113,7 @@ async def generate_blog_images(topic: str, count: int = 3) -> list:
 ```
 → 이미지 3장 자동 생성 → Claude가 본문 작성할 때 이미지 경로 포함 → 완성된 초안 한 번에 생성.
 
-![결과 이미지](/assets/img/blog/nanobanana-3.png)
+![결과 이미지](/assets/img/blog/nanobanana-3.jpg)
 
 ## 흐름 정리
 
@@ -121,9 +121,9 @@ async def generate_blog_images(topic: str, count: int = 3) -> list:
 텔레그램: /blog 주제
   │
   ├→ 나노바나나: 이미지 3장 생성 (무료)
-  │   ├→ hero.png (히어로)
-  │   ├→ concept.png (개념도)
-  │   └→ result.png (결과)
+  │   ├→ hero.jpg (히어로)
+  │   ├→ concept.jpg (개념도)
+  │   └→ result.jpg (결과)
   │
   ├→ Claude Code: 본문 작성 (이미지 경로 포함)
   │

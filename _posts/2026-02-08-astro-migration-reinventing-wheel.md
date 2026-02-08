@@ -4,7 +4,7 @@ description: 'Astro로 Chirpy 스타일 블로그를 직접 만들다가 안 되
 date: 2026-02-08 01:00:00 +0900
 tags: ['astro', 'jekyll', 'chirpy', 'migration', 'goatcounter', 'adsense', 'blog', 'dont-reinvent-wheel']
 categories: [dev]
-image: /assets/img/blog/astro-migration-1.png
+image: /assets/img/blog/astro-migration-1.jpg
 author: wonder
 ---
 

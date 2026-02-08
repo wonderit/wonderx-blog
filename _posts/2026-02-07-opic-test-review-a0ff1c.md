@@ -2,7 +2,7 @@
 title: "OPIc 시험 보고 왔다. AI가 예측한 내 점수는?"
 description: "평소 영어 스터디만 하다가 문득 실력이 궁금해서 OPIc 시험 봤다. 시험 끝나고 같은 질문에 다시 답변을 녹음해서 AI에게 채점을 맡겨봤다. 예상 등급은?"
 date: 2026-02-07 00:00:00 +0900
-image: /assets/img/blog/opic-test-review-a0ff1c-1.png
+image: /assets/img/blog/opic-test-review-a0ff1c-1.jpg
 categories: [social]
 tags: ["opic", "english", "career", "ai"]
 author: wonder
@@ -28,7 +28,7 @@ author: wonder
 흰색 책상, 칸막이로 딱딱 붙어 있는 부스.
 머리 위에는 CCTV.
 
-![시험 준비 중](/assets/img/blog/opic-test-review-a0ff1c-2.png)
+![시험 준비 중](/assets/img/blog/opic-test-review-a0ff1c-2.jpg)
 
 헤드셋 쓰고, 마이크 체크하고.
 모니터에 OPIc 인터페이스가 뜬다.
@@ -48,7 +48,7 @@ author: wonder
 5. **롤플레이** — 친구에게 태워달라고 부탁하기, 차 고장났을 때 대안 제시
 6. **자동차 산업 변화** — 과거/현재 비교, 전기차 경험
 
-![시험 보는 모습](/assets/img/blog/opic-test-review-a0ff1c-3.png)
+![시험 보는 모습](/assets/img/blog/opic-test-review-a0ff1c-3.jpg)
 
 생각보다 질문이 구체적이었다.
 "등산 준비 어떻게 해?" 같은 디테일까지 물어봤다.
@@ -90,7 +90,7 @@ ISA, IRP, 테슬라, 루나 코인까지 다 얘기했다.
 어떤 오류가 반복되는지 체크.
 다음번엔 의식적으로 교정.
 
-![결과 확인 중](/assets/img/blog/opic-test-review-a0ff1c-4.png)
+![결과 확인 중](/assets/img/blog/opic-test-review-a0ff1c-4.jpg)
 
 ## 소감
 
