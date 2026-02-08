@@ -481,3 +481,22 @@ mjx-container {
     margin-top: 3rem;
   }
 }
+
+// Applause button
+applause-button {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+
+  .count-container {
+    color: inherit;
+  }
+}
+
+applause-button .style-root {
+  gap: 0rem !important;
+}
+
+.clap-count {
+  font-size: 0.85rem !important;
+}
