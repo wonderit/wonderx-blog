@@ -2,6 +2,7 @@
 title: '캐시 우드가 말하는 AI와 SaaS의 종말 (그리고 내 투자 전략)'
 description: 'ARK Invest 캐시 우드의 2026년 전망 — AI 거품 논란, SaaS의 종말, 비트코인 vs 금, 그리고 젠슨 황이 말하는 직관(바이브). 내 투자 전략도 함께 정리했다.'
 date: 2026-02-08 17:30:00 +0900
+image: /images/cathie-wood-youtube-thumb.jpg
 tags: ['cathie-wood', 'ai-bubble', 'saaspocalypse', 'bitcoin', 'investment-strategy', 'jensen-huang']
 categories: [youtube]
 author: wonder
