@@ -4,7 +4,7 @@ description: '토요일 오후 오픽 시험 후 신촌 그레이스 클럽 파�
 date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
 categories: [social]
-image: /images/blog/shinchon-socializing-hero-illustrated.jpg
+image: /images/blog/shinchon-socializing-hero-illustrated-edited-d9d7.png
 author: wonder
 ---
 
