@@ -4,7 +4,7 @@ description: '토요일 오후 오픽 시험 후 신촌 그레이스 클럽 파�
 date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
 categories: [social]
-image: /images/blog/52e1e4-1.png
+image: /images/blog/e20b29-1.png
 author: wonder
 ---
 
@@ -108,7 +108,7 @@ author: wonder
 
 대화를 나누면 나눌수록 자꾸 나가는 얘기를 하게 되더라.
 
-영어 과외 이야기, 고대생 시절 이야기, 토익 감독 이야기...
+영어 과외 이야기, 대학생 시절 이야기, 토익 감독 이야기...
 
 그러다가 **실행력** 얘기가 나왔다.
 
