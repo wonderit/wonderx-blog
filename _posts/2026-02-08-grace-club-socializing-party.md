@@ -4,7 +4,7 @@ description: '토요일 오후 오픽 시험 → 신촌 그레이스 클럽 소�
 date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
 categories: [social]
-image: /assets/img/blog/grace-club-party-1.png
+image: /images/shinchon-socializing-1.png
 author: wonder
 ---
 
@@ -16,13 +16,13 @@ author: wonder
 
 입장료 10만 원. 장소는 노고산 스튜디오.
 
-![신촌 노고산 스튜디오 입구](/assets/img/blog/grace-club-party-2-new.png)
+![신촌 노고산 스튜디오 입구](/images/shinchon-socializing-2.png)
 
 ## 창천 공영주차장
 
-신촌에 차를 세워야 했다. 예전에 LST 영어스터디 모임 갈 때 한 번 와본 적 있는 **창천 공영주차장**을 찾았다. 1000원 빼주는 곳.
+신촌에 차를 세워야 했다. 예전에 LST 영어스터디 모임 갈 때 한 번 와본 적 있는 **창천 공영주차장**을 찾았다.
 
-두 번째 오는 곳이지만 익숙하진 않았다. 주차하고 나서 화장실에서 양치도 하고 정리했다.
+두 번째 오는 곳이지만 익숙하진 않았다. 주차하고 나서 화장실에서 양치도 하고 옷매무새도 정리했다. 핫팩도 챙겼다.
 
 춥더라. 5분 정도 걸어야 하는데 바람이 제법 차가웠다.
 
@@ -42,9 +42,7 @@ author: wonder
 
 방바닥에 도손도손 앉은 게 아니라, 스텐딩해서 테이블에 둘러서 서 있거나, 앤티크한 의자 여러 개 모아다가 앉아 있었다.
 
-![노고산 스튜디오 외관](/assets/img/blog/grace-club-party-3-new.png)
-
-![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/assets/img/blog/grace-club-party-4-new.png)
+![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/images/shinchon-socializing-3.png)
 
 ## 먼저 와 있던 사람들
 
@@ -92,7 +90,7 @@ author: wonder
 
 "지금 이차 갈 때가 아니라 그냥 둘이서 좀 얘기 안 하겠냐" 해서 이차를 갔다.
 
-![이차 — 송리단길 라운지의 두쫀쿠](/assets/img/blog/grace-club-party-5-new.png)
+![이차 — 송리단길 라운지의 디저트](/images/shinchon-socializing-4.png)
 
 ## 이차 — 송리단길
 
@@ -122,11 +120,11 @@ author: wonder
 
 뭔가 인정받은 느낌이 들어서 기분이 좋았다.
 
-## Better done than perfect
+## Don't reinvent the wheel
 
 영어로 비슷한 문장이 있다.
 
-**"Better done than perfect."**
+**"Don't reinvent the wheel."**
 
 완벽하게 준비하느라 시간 쓰지 말고, 일단 하는 게 낫다.
 
