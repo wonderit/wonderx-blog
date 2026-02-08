@@ -1,6 +1,6 @@
 ---
-title: '오픽 보고 신촌 소셜링 — 첫인상은 15초가 아니었다'
-description: '토요일 오후 오픽 시험 → 신촌 그레이스 클럽 소셜링 파티. 첫인상으로 판단할 줄 알았는데, 막상 여러 명과 대화하다 보니 생각이 바뀌었다.'
+title: '신촌 그레이스클럽 파티 후기 — 첫인상은 15초가 아니었다'
+description: '토요일 오후 오픽 시험 후 신촌 그레이스 클럽 파티. 첫인상으로 판단할 줄 알았는데, 막상 여러 명과 대화하다 보니 생각이 바뀌었다.'
 date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
 categories: [social]
@@ -42,7 +42,7 @@ author: wonder
 
 방바닥에 도손도손 앉은 게 아니라, 스텐딩해서 테이블에 둘러서 서 있거나, 앤티크한 의자 여러 개 모아다가 앉아 있었다.
 
-![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/images/blog/shinchon-socializing-3-illustrated.png)
+![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/images/blog/shinchon-socializing-3-illustrated-rotated.png)
 
 ## 먼저 와 있던 사람들
 
@@ -64,7 +64,7 @@ author: wonder
 
 2층에 올라가서 이야기 나누다가, 아래층에서 커플처럼 보이는 선남선녀가 대화하는 게 보였다.
 
-![파티장 2층에서 본 1층 전경](/images/blog/shinchon-socializing-party-interior.png)
+![파티장 2층에서 본 1층 전경](/images/blog/shinchon-socializing-party-interior-cartoon.png)
 
 "같이 이야기 나눠도 될까요?" 하니까 괜찮다고 해서 합류했다.
 
@@ -92,7 +92,7 @@ author: wonder
 
 "지금 이차 갈 때가 아니라 그냥 둘이서 좀 얘기 안 하겠냐" 해서 이차를 갔다.
 
-![이차 — 송리단길 라운지의 디저트](/images/blog/shinchon-socializing-dessert.png)
+![이차 — 송리단길 라운지의 디저트](/images/blog/shinchon-socializing-dessert-cartoon.png)
 
 ## 이차 — 송리단길
 
