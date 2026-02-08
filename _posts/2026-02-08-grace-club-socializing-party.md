@@ -16,7 +16,7 @@ author: wonder
 
 입장료 10만 원. 장소는 노고산 스튜디오.
 
-![신촌 노고산 스튜디오](/assets/img/blog/grace-club-party-2.png)
+![신촌 노고산 스튜디오 입구](/assets/img/blog/grace-club-party-2.jpg)
 
 ## 창천 공영주차장
 
@@ -42,7 +42,9 @@ author: wonder
 
 방바닥에 도손도손 앉은 게 아니라, 스텐딩해서 테이블에 둘러서 서 있거나, 앤티크한 의자 여러 개 모아다가 앉아 있었다.
 
-![파티 장소 내부](/assets/img/blog/grace-club-party-3.png)
+![노고산 스튜디오 외관](/assets/img/blog/grace-club-party-3.jpg)
+
+![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/assets/img/blog/grace-club-party-4.jpg)
 
 ## 먼저 와 있던 사람들
 
@@ -90,7 +92,7 @@ author: wonder
 
 "지금 이차 갈 때가 아니라 그냥 둘이서 좀 얘기 안 하겠냐" 해서 이차를 갔다.
 
-![이차 장소](/assets/img/blog/grace-club-party-4.png)
+![이차 — 송리단길 라운지의 두쫀쿠](/assets/img/blog/grace-club-party-5.jpg)
 
 ## 이차 — 송리단길
 
