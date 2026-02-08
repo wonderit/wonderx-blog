@@ -42,6 +42,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  image-orientation: from-image;
   transition: all 0.35s ease-in-out;
 
   .blur & {

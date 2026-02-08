@@ -80,6 +80,7 @@ main {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    image-orientation: from-image;
 
     @extend %rounded;
 
