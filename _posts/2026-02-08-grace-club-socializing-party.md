@@ -16,7 +16,7 @@ author: wonder
 
 입장료 10만 원. 장소는 노고산 스튜디오.
 
-![신촌 노고산 스튜디오 입구](/images/blog/shinchon-socializing-2-illustrated.png)
+![신촌 노고산 스튜디오 입구](/images/blog/shinchon-socializing-2-illustrated-rotated-180.png)
 
 ## 창천 공영주차장
 
@@ -42,7 +42,7 @@ author: wonder
 
 방바닥에 도손도손 앉은 게 아니라, 스텐딩해서 테이블에 둘러서 서 있거나, 앤티크한 의자 여러 개 모아다가 앉아 있었다.
 
-![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/images/blog/shinchon-socializing-3-illustrated-rotated.png)
+![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/images/blog/shinchon-socializing-3-original-cartoon.jpg)
 
 ## 먼저 와 있던 사람들
 
@@ -64,7 +64,7 @@ author: wonder
 
 2층에 올라가서 이야기 나누다가, 아래층에서 커플처럼 보이는 선남선녀가 대화하는 게 보였다.
 
-![파티장 2층에서 본 1층 전경](/images/blog/shinchon-socializing-party-interior-cartoon.png)
+![파티장 2층에서 본 1층 전경](/images/blog/shinchon-socializing-party-interior-v2.jpg)
 
 "같이 이야기 나눠도 될까요?" 하니까 괜찮다고 해서 합류했다.
 
@@ -92,7 +92,7 @@ author: wonder
 
 "지금 이차 갈 때가 아니라 그냥 둘이서 좀 얘기 안 하겠냐" 해서 이차를 갔다.
 
-![이차 — 송리단길 라운지의 디저트](/images/blog/shinchon-socializing-dessert-cartoon.png)
+![이차 — 송리단길 라운지의 디저트](/images/blog/shinchon-socializing-dessert-v2.jpg)
 
 ## 이차 — 송리단길
 
