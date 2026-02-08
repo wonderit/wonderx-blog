@@ -108,7 +108,6 @@ defaults:
       layout: post
       comments: true
       toc: true
-      applause_button: true
       permalink: /posts/:title/
   - scope:
       path: _drafts
