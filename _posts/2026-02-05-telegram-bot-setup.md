@@ -1,6 +1,6 @@
 ---
 title: 'Telegram 봇 만들고 Claude Code 연동하기 — 실전 세팅편'
-description: 'BotFather로 텔레그램 봇 만들고, Python으로 Claude Code CLI를 연동하는 과정. 블로그 자동화 명령까지 한 번에 세팅한다.'
+description: 'BotFather로 텔레그램 봇 만들고, Python으로 Claude Code CLI를 연동하는 과정을 정리했다. 삽질 포인트까지 솔직하게 털어놓는다.'
 date: 2026-02-05 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'python', 'automation', 'vibe-coding']
 categories: [ai-automation]
@@ -8,13 +8,16 @@ image: /images/blog/telegram-bot-1.jpg
 author: wonder
 ---
 
-## 지난 글 요약
+## 30분이면 끝난다
 
-[시리즈 소개편](/posts/telegram-ai-assistant-intro)에서 아키텍처를 설명했다.
-이번 글에서는 **실제로 동작하는 봇**을 만든다. 코드 전문 포함.
+[시리즈 소개편](/posts/telegram-ai-assistant-intro)에서 아키텍처를 그렸다.
+이번 글은 진짜 만드는 글이다. 코드 전문 포함.
 
-결론부터 말하면, Claude Code한테 시키니까 30분이면 끝났다.
-게으른 개발자의 승리다.
+나는 30분 만에 끝냈다.
+정확히 말하면, Claude Code가 끝냈다.
+나는 텔레그램에 명령어 치고 커피 한 잔 내렸다.
+
+게으름이 시스템을 만든다. 진심이다.
 
 ## Step 1 — Telegram 봇 생성
 
@@ -31,7 +34,7 @@ Use this token to access the HTTP API:
 8349xxxxx:AAGxxxxxxxxxxxxxxxxxx
 ```
 
-이 토큰이 봇의 열쇠다. 절대 공개하면 안 된다.
+이 토큰은 봇의 열쇠다. 유출되면 끝이다. 환경변수에 넣고 git에 올리지 마라.
 
 ## Step 2 — 프로젝트 구조
 
@@ -50,7 +53,8 @@ wonderx-bot/
 └── pyproject.toml
 ```
 
-심플하다. 파일 5개면 충분하다.
+파일 5개다. 더 필요 없다.
+나는 프로젝트 구조에 30분 쓰는 사람을 이해 못 한다. 일단 돌리고, 나중에 고치면 된다.
 
 ![프로젝트 구조](/images/blog/telegram-bot-2.jpg)
 
@@ -76,12 +80,15 @@ BLOG_PROJECT_PATH = Path(os.getenv("BLOG_PROJECT_PATH", ""))
 CLAUDE_TIMEOUT = 300  # 5분
 ```
 
-`ALLOWED_USER_IDS`가 중요하다. 이걸 안 넣으면 아무나 내 맥북에 명령을 날릴 수 있다.
-본인 Telegram User ID는 `@userinfobot`한테 물어보면 알려준다.
+여기서 `ALLOWED_USER_IDS`를 빼먹으면 어떻게 되냐고?
+아무나 내 맥북에 명령을 때릴 수 있다.
+나는 실제로 이걸 빈 값으로 두고 하루를 보냈다. 아무 일도 안 일어났지만, 등에 식은땀이 흘렀다.
+
+본인 Telegram User ID는 `@userinfobot`한테 물어보면 바로 알려준다.
 
 ### Claude Code 실행 래퍼 (claude.py)
 
-여기가 핵심이다. `claude -p "프롬프트"` 명령을 subprocess로 실행한다.
+이 파일이 심장이다. `claude -p "프롬프트"`를 subprocess로 실행하는 래퍼.
 
 ```python
 async def run_claude(prompt: str, cwd: Path | None = None) -> str:
@@ -106,10 +113,13 @@ async def run_claude(prompt: str, cwd: Path | None = None) -> str:
     return stdout.decode("utf-8").strip()
 ```
 
-포인트:
-- **`--allowedTools`**: 이걸 안 넣으면 Claude가 매번 "이 도구 실행해도 될까요?" 하고 물어본다. 봇은 대화형이 아니니까 자동 허용해야 한다.
-- **`cwd` 파라미터**: 블로그 프로젝트 폴더를 지정하면 그 안에서 작업한다.
-- **타임아웃 300초**: Claude가 복잡한 작업을 할 수 있으니 넉넉하게.
+세 가지만 기억하면 된다.
+
+- **`--allowedTools`**: 이거 안 넣으면 Claude가 매번 허락을 구한다. 봇은 대화형이 아니다. 자동 허용 필수.
+- **`cwd` 파라미터**: 블로그 폴더를 지정하면 그 안에서 작업한다. 이게 없으면 엉뚱한 데서 파일을 만든다.
+- **타임아웃 300초**: Claude가 삽질할 시간을 줘야 한다. 짧게 잡으면 복잡한 작업에서 잘린다.
+
+나는 처음에 타임아웃을 60초로 잡았다. 블로그 글 하나 쓰는데 매번 타임아웃이 터졌다. 멍청했다.
 
 ### Telegram 핸들러 (handlers.py)
 
@@ -129,7 +139,9 @@ async def cmd_blog(update, context):
     await update.message.reply_text(f"📝 완료:\n{result}")
 ```
 
-`/blog Claude Code 팁 모음` 이라고 보내면 Claude가 알아서 마크다운 파일을 만들고, frontmatter도 채우고, 내용도 쓴다.
+`/blog Claude Code 팁 모음`이라고 보내면 끝이다.
+Claude가 마크다운 파일 만들고, frontmatter 채우고, 내용까지 쓴다.
+나는 소파에 누워서 텔레그램만 쳤다.
 
 ### 진입점 (main.py)
 
@@ -168,13 +180,14 @@ python -m bot.main
 ✅ 봇 준비 완료. Polling 시작...
 ```
 
-이게 끝이다.
+끝이다. 진짜로 끝이다. 더 할 게 없다.
 
 ![봇 실행 화면](/images/blog/telegram-bot-3.jpg)
 
 ## Step 5 — macOS 자동 시작 (launchd)
 
-맥북 켜면 자동으로 봇이 실행되게 하려면 launchd plist를 등록한다.
+맥북 켤 때마다 터미널 열고 `python -m bot.main` 치는 건 인간이 할 짓이 아니다.
+launchd에 등록하면 부팅과 동시에 봇이 뜬다.
 
 ```xml
 <key>ProgramArguments</key>
@@ -194,7 +207,7 @@ python -m bot.main
 </dict>
 ```
 
-`KeepAlive`의 `SuccessfulExit: false`는 봇이 비정상 종료되면 자동 재시작한다는 뜻이다.
+`KeepAlive`의 `SuccessfulExit: false`는 봇이 죽으면 자동으로 다시 살린다는 뜻이다. 좀비처럼. 나는 이게 좋다.
 
 ```bash
 # 서비스 등록
@@ -217,37 +230,52 @@ launchctl list | grep wonderx
 
 ## 삽질 포인트
 
-### 1. `--allowedTools` 필수
+솔직하게 말한다. 나는 세 번 삽질했다.
 
-처음에 이걸 안 넣었더니 Claude가 "Bash 실행 승인이 필요합니다" 하면서 멈췄다.
-`-p` 모드에서는 대화형 승인이 안 되니까 반드시 `--allowedTools`로 허용할 도구를 지정해야 한다.
+### 1. `--allowedTools` 빼먹음
 
-### 2. ALLOWED_USER_IDS 설정
+처음에 이걸 안 넣었다. Claude가 "Bash 실행 승인이 필요합니다" 하면서 멈췄다.
+봇은 대화형이 아니다. 물어볼 사람이 없다. `-p` 모드에서는 반드시 `--allowedTools`로 도구를 미리 열어줘야 한다.
 
-처음에 예시 값(`123456789`)을 그대로 뒀다가 "🚫 권한이 없습니다" 세례를 받았다.
-본인 Telegram User ID를 꼭 확인해서 넣자.
+이걸 몰라서 30분을 날렸다. 로그를 안 본 내 잘못이다.
 
-### 3. Claude Code 경로
+### 2. ALLOWED_USER_IDS에 예시 값을 그대로 둠
 
-launchd로 실행할 때 `claude`가 PATH에 없을 수 있다.
-`.env`에 절대 경로를 넣거나, plist의 PATH에 `/opt/homebrew/bin`을 포함시켜야 한다.
+`123456789`를 그대로 뒀다. 당연히 "권한이 없습니다" 세례를 받았다.
+내 Telegram User ID를 넣어야 하는데, 예시 값을 왜 바꾸지 않았을까. 자동 완성의 저주다.
 
-## 블로그도 같이 업그레이드했다
+### 3. Claude Code 경로 문제
 
-이번에 봇만 만든 게 아니라 블로그도 좀 손봤다:
+launchd로 실행하면 PATH가 다르다. `claude`를 못 찾는다.
+`.env`에 절대 경로를 넣거나, plist에 `/opt/homebrew/bin`을 PATH로 추가해야 한다.
 
-- **SEO 최적화**: 메타태그 강화, JSON-LD 구조화 데이터, robots.txt 추가
+이건 macOS 개발자라면 한 번쯤 겪는 통과의례다. 피할 수 없다.
+
+## 블로그도 같이 뜯어고쳤다
+
+봇만 만들고 끝낸 게 아니다. 블로그도 손봤다.
+
+- **SEO 최적화**: 메타태그, JSON-LD 구조화 데이터, robots.txt
 - **카테고리 사이드바**: AI 자동화 / 사이드 프로젝트 / 개발 일지 / 소셜링 / 튜토리얼
-- **Giscus 댓글**: GitHub Discussions 기반 댓글 시스템 연동
+- **Giscus 댓글**: GitHub Discussions 기반 댓글 시스템
 - **익명화**: GitHub 링크 빼고 이메일 연락처로 전환
 - **About 리뉴얼**: "게으른 개발자가 자동화를 만드는 이유" 컨셉
 
-전부 Claude Code한테 시켰다. 하나하나 설명하고 요청하면 알아서 파일 만들고, CSS 쓰고, 빌드 테스트까지 해준다. 이게 바이브 코딩이다.
+전부 Claude Code가 했다. 나는 요청만 던졌다.
+"SEO 좀 해줘." "댓글 달아줘." "About 페이지 다시 써줘."
+이 세 마디에 Claude가 파일 만들고, CSS 쓰고, 빌드 테스트까지 돌렸다.
+
+이게 바이브 코딩이다. 의도를 말하면 코드가 나온다.
 
 ## 다음 편 예고
 
-- **대화 맥락 관리**: 지금은 메시지마다 새 세션이다. 이전 대화를 기억하게 만들 것이다.
-- **시스템 프롬프트**: Claude에게 "넌 게으른 개발자의 비서야" 라는 성격을 부여할 것이다.
+- **대화 맥락 관리**: 지금은 메시지마다 기억을 잃는다. 이전 대화를 이어가게 만들 거다.
+- **시스템 프롬프트**: Claude에게 성격을 심을 거다. "넌 게으른 개발자의 비서야."
+
+---
+
+자동화를 만드는 건 게으르기 위해서가 아니다.
+게으를 수 있는 자격을 얻기 위해서다.
 
 ---
 
