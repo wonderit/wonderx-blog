@@ -5,7 +5,7 @@ date: 2026-02-08 01:00:00 +0900
 tags: ['astro', 'jekyll', 'chirpy', 'migration', 'goatcounter', 'adsense', 'blog', 'dont-reinvent-wheel']
 categories: [dev]
 image:
-  path: /images/blog/astro-migration-1.jpg
+  path: /images/blog/astro-migration-1.webp
   width: 800
   height: 800
 author: wonder

@@ -5,7 +5,7 @@ date: 2026-02-04 00:00:00 +0900
 tags: ['소개팅', '애프터', '후기', '데이트']
 categories: [social]
 image:
-  path: /images/blog/after-date-1.jpg
+  path: /images/blog/after-date-1.webp
   width: 800
   height: 800
 author: wonder
@@ -31,7 +31,7 @@ author: wonder
 
 상대방은 조금 다른 걸 기대했던 것 같다. 표정이 미세하게 굳더라.
 
-![동네 샤브샤브집에서의 저녁](/images/blog/after-date-2.jpg)
+![동네 샤브샤브집에서의 저녁](/images/blog/after-date-2.webp)
 
 2인분에 고기 추가해서 식사를 했고, 내가 계산했다.
 
@@ -43,7 +43,7 @@ author: wonder
 
 식사를 내가 했으니, 카페 정도는 상대가 낼 줄 알았다. 꼭 내라는 게 아니라, "내가 낼게요" 한마디 정도의 제스처를 기대한 건데. 그런 게 없었다.
 
-![카페에서의 디저트](/images/blog/after-date-3.jpg)
+![카페에서의 디저트](/images/blog/after-date-3.webp)
 
 ### 타르트 위의 딸기
 
@@ -72,7 +72,7 @@ author: wonder
 
 그게 마지막이었다.
 
-![밤거리를 걷는 풍경](/images/blog/after-date-4.jpg)
+![밤거리를 걷는 풍경](/images/blog/after-date-4.webp)
 
 ## 돌아보며
 

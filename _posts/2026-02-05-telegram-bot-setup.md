@@ -5,7 +5,7 @@ date: 2026-02-05 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'python', 'automation', 'vibe-coding']
 categories: [ai-automation]
 image:
-  path: /images/blog/telegram-bot-1.jpg
+  path: /images/blog/telegram-bot-1.webp
   width: 800
   height: 800
 author: wonder
@@ -59,7 +59,7 @@ wonderx-bot/
 파일 5개다. 더 필요 없다.
 나는 프로젝트 구조에 30분 쓰는 사람을 이해 못 한다. 일단 돌리고, 나중에 고치면 된다.
 
-![프로젝트 구조](/images/blog/telegram-bot-2.jpg)
+![프로젝트 구조](/images/blog/telegram-bot-2.webp)
 
 ## Step 3 — 핵심 코드
 
@@ -185,7 +185,7 @@ python -m bot.main
 
 끝이다. 진짜로 끝이다. 더 할 게 없다.
 
-![봇 실행 화면](/images/blog/telegram-bot-3.jpg)
+![봇 실행 화면](/images/blog/telegram-bot-3.webp)
 
 ## Step 5 — macOS 자동 시작 (launchd)
 

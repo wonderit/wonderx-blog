@@ -5,7 +5,7 @@ date: 2026-02-08 00:00:00 +0900
 tags: ['voice', 'stt', 'gemini', 'telegram', 'meeting-minutes', 'automation', 'claude-code']
 categories: [ai-automation]
 image:
-  path: /images/blog/voice-stt-telegram-1.jpg
+  path: /images/blog/voice-stt-telegram-1.webp
   width: 800
   height: 800
 author: wonder
@@ -40,7 +40,7 @@ Gemini STT → 텍스트 전사
 버튼 하나로 회의록이든 블로그든 바로 나온다.
 녹음 끝나고 텔레그램에 보내면 5분 후에 결과가 온다. 중간 과정이 사라졌다.
 
-![개념도](/images/blog/voice-stt-telegram-2.jpg)
+![개념도](/images/blog/voice-stt-telegram-2.webp)
 
 ## Gemini STT — 이미 있는 걸 쓴다
 
@@ -101,7 +101,7 @@ reply_markup = InlineKeyboardMarkup(keyboard)
 
 버튼 두 개. 회의록이냐 블로그냐. 이게 전부다.
 
-![인라인 키보드 선택](/images/blog/voice-stt-telegram-3.jpg)
+![인라인 키보드 선택](/images/blog/voice-stt-telegram-3.webp)
 
 ## 회의록 모드 — 노션에 바로 복붙
 
@@ -151,7 +151,7 @@ reply_markup = InlineKeyboardMarkup(keyboard)
 
 이게 된다. 진짜로 된다. 내가 만들어놓고도 신기하다.
 
-![결과 이미지](/images/blog/voice-stt-telegram-4.jpg)
+![결과 이미지](/images/blog/voice-stt-telegram-4.webp)
 
 ## 전체 아키텍처
 

@@ -5,7 +5,7 @@ date: 2026-02-06 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'openclaw', 'memory', 'automation', 'vibe-coding']
 categories: [ai-automation]
 image:
-  path: /images/blog/openclaw-memory-1.jpg
+  path: /images/blog/openclaw-memory-1.webp
   width: 800
   height: 800
 author: wonder
@@ -48,7 +48,7 @@ memory/2026-02-05.md   ← 어제 일일 노트
 
 나는 복잡한 걸 싫어하는 사람이다. 이걸 보고 바로 따라하기로 했다.
 
-![OpenClaw 메모리 구조](/images/blog/openclaw-memory-2.jpg)
+![OpenClaw 메모리 구조](/images/blog/openclaw-memory-2.webp)
 
 ## 처음엔 대화 전체를 저장했다
 
@@ -172,7 +172,7 @@ Claude에게 보내는 구조는 이렇다:
 이렇게 하면 Claude가 **오늘 뭘 했는지 아는 상태**에서 답변한다.
 "아까 그 코드"가 뭔지 안다. 금붕어 탈출이다.
 
-![메모리 시스템 동작 화면](/images/blog/openclaw-memory-3.jpg)
+![메모리 시스템 동작 화면](/images/blog/openclaw-memory-3.webp)
 
 ## OpenClaw vs 내 봇 비교
 

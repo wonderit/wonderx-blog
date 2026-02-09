@@ -5,7 +5,7 @@ date: 2026-02-07 00:00:00 +0900
 tags: ['nanobanana', 'gemini', 'image-generation', 'telegram', 'claude-code', 'automation', 'vibe-coding']
 categories: [ai-automation]
 image:
-  path: /images/blog/nanobanana-1.jpg
+  path: /images/blog/nanobanana-1.webp
   width: 800
   height: 800
 author: wonder
@@ -35,7 +35,7 @@ author: wonder
 하루 500장 무료. 블로그에 3장 넣으면 0.6% 사용. 사실상 무제한이다.
 DALL-E한테 매번 돈 내가며 이미지 만들 이유가 없었다. 선택은 1초 만에 끝났다.
 
-![개념도](/images/blog/nanobanana-2.jpg)
+![개념도](/images/blog/nanobanana-2.webp)
 
 ## 구현: 10분이면 끝난다
 
@@ -119,7 +119,7 @@ async def generate_blog_images(topic: str, count: int = 3) -> list:
 ```
 → 이미지 3장 자동 생성 → Claude가 본문에 이미지 경로 포함 → 완성된 초안 한 방에 생성.
 
-![결과 이미지](/images/blog/nanobanana-3.jpg)
+![결과 이미지](/images/blog/nanobanana-3.webp)
 
 ## 전체 흐름
 

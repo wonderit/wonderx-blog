@@ -5,7 +5,7 @@ date: 2026-02-04 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'automation', 'ai']
 categories: [ai-automation]
 image:
-  path: /images/blog/ai-assistant-intro-1.jpg
+  path: /images/blog/ai-assistant-intro-1.webp
   width: 800
   height: 800
 author: wonder

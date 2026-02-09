@@ -5,7 +5,7 @@ date: 2026-02-05 00:00:00 +0900
 tags: ['소개팅', '데이트', '후기', '인간관계']
 categories: [social]
 image:
-  path: /images/blog/bistro-date-1.jpg
+  path: /images/blog/bistro-date-1.webp
   width: 800
   height: 800
 author: wonder
@@ -25,7 +25,7 @@ author: wonder
 
 그 소리가 들린다는 건, 집중이 안 된다는 뜻이다.
 
-![양식집 저녁 식사](/images/blog/bistro-date-2.jpg)
+![양식집 저녁 식사](/images/blog/bistro-date-2.webp)
 
 상대는 약속 미룬 게 미안하다며 자연스럽게 식사를 결제했다. 쿨했다.
 
@@ -37,7 +37,7 @@ author: wonder
 
 검은색 인테리어 카페로 갔다. 8시 46분 도착. "9시까지인데 괜찮아요?" 다음에 오겠다고 했다.
 
-![밤거리 카페 찾기](/images/blog/bistro-date-4.jpg)
+![밤거리 카페 찾기](/images/blog/bistro-date-4.webp)
 
 내심 차 세워둔 곳 근처로 가고 싶었다. 어차피 근처에 산다고 했으니 나중에 데려다 드릴 겸.
 
@@ -45,7 +45,7 @@ author: wonder
 
 자꾸 시선이 옆 테이블로 흘렀다. 문가 쪽 여성 4명, 다른 쪽 여성 둘. 집중이 안 된다.
 
-![카페에서의 조용한 대화](/images/blog/bistro-date-3.jpg)
+![카페에서의 조용한 대화](/images/blog/bistro-date-3.webp)
 
 ## 소개팅과 독서
 

@@ -5,7 +5,7 @@ date: 2026-01-31 00:00:00 +0900
 tags: ['소개팅', '미팅파티', '문래동', '후기', '브로맨스']
 categories: [social]
 image:
-  path: /images/blog/mullae-party-1.jpg
+  path: /images/blog/mullae-party-1.webp
   width: 800
   height: 800
 author: wonder
@@ -33,7 +33,7 @@ author: wonder
 
 공간은 비좁았다. 벽 뒤쪽으로 진행자분이 와따가따 이동하는 게 보일 정도였다.
 
-![미팅 파티 입장](/images/blog/mullae-party-2.jpg)
+![미팅 파티 입장](/images/blog/mullae-party-2.webp)
 
 ## 12:12 미팅 파티 시스템
 
@@ -73,7 +73,7 @@ author: wonder
 
 파전이랑 파스타를 시켜서 먹었다.
 
-![뒤풀이 술집](/images/blog/mullae-party-3.jpg)
+![뒤풀이 술집](/images/blog/mullae-party-3.webp)
 
 옆 테이블에선 여대생들이 생일파티를 하고 있었고, 우리는 그걸 구경하며 "소개팅 할 사람 없냐"며 한탄했다.
 
@@ -109,7 +109,7 @@ author: wonder
 
 **이게 문제의 시작이었다.** (이 이야기는 다음 포스팅에서 계속...)
 
-![매칭 성공](/images/blog/mullae-party-4.jpg)
+![매칭 성공](/images/blog/mullae-party-4.webp)
 
 ## 후기 정리
 
