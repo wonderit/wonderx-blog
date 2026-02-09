@@ -1,5 +1,5 @@
 ---
-title: '신촌 그레이스클럽 파티 후기 — 외향형인 나도 어색했지만, 결국 편하게 대화했다'
+title: '신촌 그레이스클럽 파티 후기 — ENFP도 떨었다. 근데 통했다.'
 description: '토요일 오후 오픽 시험 후 신촌 그레이스 클럽 파티. 첫인상으로 판단할 줄 알았는데, 막상 여러 명과 대화하다 보니 생각이 바뀌었다.'
 date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
