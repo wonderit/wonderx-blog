@@ -82,14 +82,15 @@
   </div>
   {% endif %}
 
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center justify-content-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center justify-content-center w-100 gap-1">
+    {%- assign icon_count = 0 -%}
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
       </button>
+      {%- assign icon_count = 1 -%}
     {% endunless %}
 
-    {%- assign rendered_count = 0 -%}
     {% for entry in site.data.contact %}
       {%- assign url = null -%}
 
@@ -116,7 +117,7 @@
       {% endcase %}
 
       {% if url %}
-        {% if rendered_count > 0 %}
+        {% if icon_count > 0 %}
           <span class="icon-border"></span>
         {% endif %}
         <a
@@ -139,7 +140,7 @@
         >
           <i class="{{ entry.icon }}"></i>
         </a>
-        {%- assign rendered_count = rendered_count | plus: 1 -%}
+        {%- assign icon_count = icon_count | plus: 1 -%}
       {% endif %}
     {% endfor %}
   </div>
