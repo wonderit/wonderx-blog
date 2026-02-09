@@ -2,13 +2,9 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-center">
   <header class="profile-wrapper">
-    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
-      {%- if site.avatar != empty and site.avatar -%}
-        {%- capture avatar_url -%}
-          {% include media-url.html src=site.avatar %}
-        {%- endcapture -%}
-        <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
-      {%- endif -%}
+    <a href="{{ '/' | relative_url }}" id="logo" class="sidebar-logo">
+      <img src="{{ '/assets/img/wonderx-logo-dark.svg' | relative_url }}" class="logo-dark" width="112" height="112" alt="WonderX Logo">
+      <img src="{{ '/assets/img/wonderx-logo-light.svg' | relative_url }}" class="logo-light" width="112" height="112" alt="WonderX Logo">
     </a>
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>

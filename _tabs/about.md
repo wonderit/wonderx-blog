@@ -4,6 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
+![Wonder](/assets/img/about-character.webp){: .about-avatar w="200" h="200" }
+
 ## 안녕하세요, Wonder입니다
 
 AI 스타트업 개발자. 기술로 일상을 자동화하고, 경험을 기록합니다.

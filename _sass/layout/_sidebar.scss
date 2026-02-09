@@ -76,6 +76,58 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     }
   }
 
+  #logo {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    margin: 0 auto;
+    transform: translateZ(0);
+
+    @include bp.sm {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    /* Default (dark mode): show dark logo (black bg + white X) */
+    .logo-dark {
+      display: block;
+    }
+
+    .logo-light {
+      display: none;
+    }
+  }
+
+  /* Light mode: swap logos */
+  @media (prefers-color-scheme: light) {
+    html:not([data-mode]) &,
+    html[data-mode='light'] & {
+      #logo {
+        .logo-dark { display: none; }
+        .logo-light { display: block; }
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html[data-mode='light'] & {
+      #logo {
+        .logo-dark { display: none; }
+        .logo-light { display: block; }
+      }
+    }
+  }
+
   .profile-wrapper {
     @include mx.mt-mb(2.5rem);
     @extend %clickable-transition;
