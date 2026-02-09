@@ -55,37 +55,34 @@
     </div>
     <script>
     (function() {
-      var gcId = '{{ site.analytics.goatcounter.id }}';
-      var base = 'https://' + gcId + '.goatcounter.com';
+      var base = 'https://{{ site.analytics.goatcounter.id }}.goatcounter.com';
+      var today = new Date();
+      var yyyy = today.getFullYear();
+      var mm = String(today.getMonth() + 1).padStart(2, '0');
+      var dd = String(today.getDate()).padStart(2, '0');
+      var dateStr = yyyy + '-' + mm + '-' + dd;
 
-      // Total: fetch all-time count
-      var r1 = new XMLHttpRequest();
-      r1.addEventListener('load', function() {
-        try {
-          var d = JSON.parse(this.responseText);
-          document.getElementById('gc-total').textContent = d.count || '0';
-        } catch(e) { document.getElementById('gc-total').textContent = '0'; }
-      });
-      r1.open('GET', base + '/counter/TOTAL.json');
-      r1.send();
+      function loadCount(url, elId) {
+        fetch(url)
+          .then(function(r) { return r.json(); })
+          .then(function(d) {
+            var el = document.getElementById(elId);
+            if (el) el.textContent = d.count || '0';
+          })
+          .catch(function() {
+            var el = document.getElementById(elId);
+            if (el) el.textContent = '0';
+          });
+      }
 
-      // Today: use the API with start/end date
-      var today = new Date().toISOString().slice(0, 10);
-      var r2 = new XMLHttpRequest();
-      r2.addEventListener('load', function() {
-        try {
-          var d = JSON.parse(this.responseText);
-          document.getElementById('gc-today').textContent = d.count || '0';
-        } catch(e) { document.getElementById('gc-today').textContent = '0'; }
-      });
-      r2.open('GET', base + '/counter/TOTAL.json?start=' + today);
-      r2.send();
+      loadCount(base + '/counter/TOTAL.json', 'gc-total');
+      loadCount(base + '/counter/TOTAL.json?start=' + dateStr, 'gc-today');
     })();
     </script>
   </div>
   {% endif %}
 
-  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center justify-content-center w-100">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
