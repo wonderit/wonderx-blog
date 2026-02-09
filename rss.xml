@@ -1,0 +1,33 @@
+---
+layout: none
+permalink: /rss.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | strip_newlines | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/rss.xml" rel="self" type="application/rss+xml"/>
+    <language>{{ site.lang | default: 'ko' }}</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% for post in site.posts limit: 20 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description>{{ post.content | strip_html | truncatewords: 200 | xml_escape }}</description>
+      {% if post.image %}
+        {% assign img_path = post.image.path | default: post.image %}
+        {% unless img_path contains '://' %}
+          {% assign img_path = site.url | append: site.baseurl | append: img_path %}
+        {% endunless %}
+      {% endif %}
+      {% for category in post.categories %}
+      <category>{{ category | xml_escape }}</category>
+      {% endfor %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
