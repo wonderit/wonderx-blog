@@ -4,7 +4,10 @@ description: 'Google Gemini의 나노바나나 이미지 생성을 텔레그램 
 date: 2026-02-07 00:00:00 +0900
 tags: ['nanobanana', 'gemini', 'image-generation', 'telegram', 'claude-code', 'automation', 'vibe-coding']
 categories: [ai-automation]
-image: /images/blog/nanobanana-1.jpg
+image:
+  path: /images/blog/nanobanana-1.jpg
+  width: 800
+  height: 800
 author: wonder
 ---
 

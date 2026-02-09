@@ -4,7 +4,10 @@ description: 'BotFather로 텔레그램 봇 만들고, Python으로 Claude Code 
 date: 2026-02-05 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'python', 'automation', 'vibe-coding']
 categories: [ai-automation]
-image: /images/blog/telegram-bot-1.jpg
+image:
+  path: /images/blog/telegram-bot-1.jpg
+  width: 800
+  height: 800
 author: wonder
 ---
 

@@ -4,7 +4,10 @@ description: '토요일 오후 오픽 시험 후 신촌 그레이스 클럽 파�
 date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
 categories: [social]
-image: /images/blog/0841-Gemini_Generated_Image_2i1v62i1v62i1v62-edited-4a6e-edited-1a52-edited-9fb3.png
+image:
+  path: /images/blog/0841-Gemini_Generated_Image_2i1v62i1v62i1v62-edited-4a6e-edited-1a52-edited-9fb3.png
+  width: 896
+  height: 1200
 author: wonder
 ---
 

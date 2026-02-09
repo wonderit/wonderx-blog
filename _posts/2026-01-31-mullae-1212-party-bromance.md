@@ -4,7 +4,10 @@ description: '토요일 오후를 반납하고 다녀온 솔로 파티. 로맨�
 date: 2026-01-31 00:00:00 +0900
 tags: ['소개팅', '미팅파티', '문래동', '후기', '브로맨스']
 categories: [social]
-image: /images/blog/mullae-party-1.jpg
+image:
+  path: /images/blog/mullae-party-1.jpg
+  width: 800
+  height: 800
 author: wonder
 ---
 

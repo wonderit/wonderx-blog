@@ -4,7 +4,10 @@ description: '텔레그램 봇에 음성 메시지를 보내면 Gemini가 전사
 date: 2026-02-08 00:00:00 +0900
 tags: ['voice', 'stt', 'gemini', 'telegram', 'meeting-minutes', 'automation', 'claude-code']
 categories: [ai-automation]
-image: /images/blog/voice-stt-telegram-1.jpg
+image:
+  path: /images/blog/voice-stt-telegram-1.jpg
+  width: 800
+  height: 800
 author: wonder
 ---
 

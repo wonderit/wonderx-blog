@@ -4,7 +4,10 @@ description: '어느 파트너사 부사장님의 소개로 만난 동갑 이성
 date: 2026-02-05 00:00:00 +0900
 tags: ['소개팅', '데이트', '후기', '인간관계']
 categories: [social]
-image: /images/blog/bistro-date-1.jpg
+image:
+  path: /images/blog/bistro-date-1.jpg
+  width: 800
+  height: 800
 author: wonder
 ---
 

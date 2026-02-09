@@ -4,7 +4,10 @@ description: 'OpenClaw의 파일 기반 메모리를 분석하고, Claude Code �
 date: 2026-02-06 00:00:00 +0900
 tags: ['claude-code', 'telegram', 'openclaw', 'memory', 'automation', 'vibe-coding']
 categories: [ai-automation]
-image: /images/blog/openclaw-memory-1.jpg
+image:
+  path: /images/blog/openclaw-memory-1.jpg
+  width: 800
+  height: 800
 author: wonder
 ---
 

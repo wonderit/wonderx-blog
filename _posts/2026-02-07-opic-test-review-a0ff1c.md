@@ -2,7 +2,10 @@
 title: "OPIc 시험 보고 왔다. AI가 예측한 내 점수는?"
 description: "평소 영어 스터디만 하다가 문득 실력이 궁금해서 OPIc 시험 봤다. 시험 끝나고 같은 질문에 다시 답변을 녹음해서 AI에게 채점을 맡겨봤다. 예상 등급은?"
 date: 2026-02-07 00:00:00 +0900
-image: /images/blog/opic-test-review-a0ff1c-1.jpg
+image:
+  path: /images/blog/opic-test-review-a0ff1c-1.jpg
+  width: 800
+  height: 800
 categories: [social]
 tags: ["opic", "english", "career", "ai"]
 author: wonder

@@ -4,7 +4,10 @@ description: '미팅 파티에서 만난 운동 강사님과의 애프터. 기�
 date: 2026-02-04 00:00:00 +0900
 tags: ['소개팅', '애프터', '후기', '데이트']
 categories: [social]
-image: /images/blog/after-date-1.jpg
+image:
+  path: /images/blog/after-date-1.jpg
+  width: 800
+  height: 800
 author: wonder
 ---
 

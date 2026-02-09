@@ -28,6 +28,11 @@ social:
   links:
     - https://github.com/wonderit
 
+# Webmaster verification
+webmaster_verifications:
+  naver: "" # 네이버 서치어드바이저 인증코드 입력
+  bing: ""  # Bing 웹마스터 인증코드 입력
+
 # Web Analytics Settings
 analytics:
   google:
