@@ -109,6 +109,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     margin-top: 1.25rem;
     margin-bottom: 0.5rem;
     width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--site-title-color);
   }
 
