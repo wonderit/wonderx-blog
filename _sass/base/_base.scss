@@ -513,39 +513,35 @@ mjx-container {
   padding: 1rem 0;
 }
 
-/* Sidebar visitor count */
-.sidebar-visitor-count {
-  padding: 0 1.5rem;
+/* Sidebar visitor count (inside .sidebar-bottom) */
+.visitor-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
 
-  .visitor-stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.75rem;
-    line-height: 1.2;
+.visitor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  small {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
-  .visitor-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    small {
-      font-size: 0.6rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    strong {
-      font-size: 0.85rem;
-      color: var(--text-color);
-    }
+  strong {
+    font-size: 0.85rem;
+    color: var(--text-color);
   }
+}
 
-  .visitor-divider {
-    color: var(--text-muted-color);
-    font-size: 0.7rem;
-  }
+.visitor-divider {
+  color: var(--text-muted-color);
+  font-size: 0.7rem;
 }
 
