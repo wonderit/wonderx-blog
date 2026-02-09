@@ -156,9 +156,13 @@
       {% assign _wrapper_class = _wrapper_class | append: ' shimmer' %}
     {% endif %}
 
-    <!-- lazy-load images -->
+    <!-- lazy-load images (skip for LCP images with fetchpriority) -->
     {% if _lazyload %}
-      {% assign _left = _left | append: ' loading="lazy"' %}
+      {% if _left contains 'fetchpriority' %}
+        <!-- LCP image: skip lazy loading -->
+      {% else %}
+        {% assign _left = _left | append: ' loading="lazy"' %}
+      {% endif %}
     {% endif %}
 
     {% if page.layout == 'home' %}
