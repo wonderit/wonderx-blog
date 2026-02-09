@@ -28,7 +28,7 @@ Jekyll 기반 개인 블로그 (jekyll-theme-chirpy). GitHub Pages 배포.
   author: wonder
   ---
   ```
-- categories: youtube, social, dev-log, ai-automation, side-project, tutorial
+- categories: youtube, social, dev-log, ai-automation, side-project, tutorial, thoughts
 - image: frontmatter에 썸네일 경로 (홈 리스트에 표시됨)
 - 본문 이미지: `![설명](/images/blog/파일명.jpg)` 형식으로 3장 삽입
 - 이미지 파일 저장: `images/blog/` 폴더
