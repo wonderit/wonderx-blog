@@ -132,8 +132,8 @@ script_includes:
   {% include inarticle_ads.html %}
 
   <div class="post-tail-wrapper text-muted">
-    <!-- lyket clap button (bottom) -->
-    <div class="lyket-bottom d-flex align-items-center mb-3">
+    <!-- lyket clap button (bottom, centered circle) -->
+    <div class="lyket-bottom-center d-flex justify-content-center mb-4">
       <div
         data-lyket-type="clap"
         data-lyket-id="{{ page.slug | default: page.title | slugify }}"

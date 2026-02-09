@@ -485,7 +485,7 @@ mjx-container {
 
 /* Lyket clap button — Medium style */
 .lyket-inline,
-.lyket-bottom,
+.lyket-bottom-center,
 .lyket-home {
   display: inline-flex;
   align-items: center;
@@ -507,10 +507,10 @@ mjx-container {
   transform-origin: right center;
 }
 
-.lyket-bottom {
-  padding: 0.5rem 0;
-  border-top: 1px solid var(--btn-border-color);
-  border-bottom: 1px solid var(--btn-border-color);
+.lyket-bottom-center {
+  transform: scale(1.3);
+  transform-origin: center center;
+  padding: 1rem 0;
 }
 
 /* Sidebar visitor count */
