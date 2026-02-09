@@ -80,6 +80,21 @@
 
   {% include_cached favicons.html %}
 
+  <!-- LCP Preload: first post image on home page -->
+  {% if page.layout == 'home' %}
+    {% assign first_post = site.posts | first %}
+    {% if first_post.image %}
+      {% assign lcp_img = first_post.image.path | default: first_post.image %}
+      <link rel="preload" as="image" href="{{ lcp_img | relative_url }}">
+    {% endif %}
+  {% endif %}
+
+  <!-- Preload: post hero image -->
+  {% if page.layout == 'post' and page.image %}
+    {% assign hero_img = page.image.path | default: page.image %}
+    <link rel="preload" as="image" href="{{ hero_img | relative_url }}">
+  {% endif %}
+
   <!-- Resource Hints -->
   {% unless site.assets.self_host.enabled %}
     {% for hint in site.data.origin.cors.resource_hints %}

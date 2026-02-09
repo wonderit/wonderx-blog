@@ -5,7 +5,7 @@ date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
 categories: [social]
 image:
-  path: /images/blog/0841-Gemini_Generated_Image_2i1v62i1v62i1v62-edited-4a6e-edited-1a52-edited-9fb3.png
+  path: /images/blog/0841-Gemini_Generated_Image_2i1v62i1v62i1v62-edited-4a6e-edited-1a52-edited-9fb3.webp
   width: 896
   height: 1200
 author: wonder
@@ -19,7 +19,7 @@ author: wonder
 
 입장료 10만 원. 장소는 노고산 스튜디오.
 
-![신촌 노고산 스튜디오 입구](/images/blog/IMG_0838-edited-5b2f.png)
+![신촌 노고산 스튜디오 입구](/images/blog/IMG_0838-edited-5b2f.webp)
 
 ## 창천 공영주차장
 
@@ -45,7 +45,7 @@ author: wonder
 
 방바닥에 도손도손 앉은 게 아니라, 스텐딩해서 테이블에 둘러서 서 있거나, 앤티크한 의자 여러 개 모아다가 앉아 있었다.
 
-![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/images/blog/IMG_0839-edited-b65e.png)
+![파티 장소 내부 — 앤티크 샹들리에와 스텐딩 테이블](/images/blog/IMG_0839-edited-b65e.webp)
 
 ## 먼저 와 있던 사람들
 
@@ -67,7 +67,7 @@ author: wonder
 
 2층에 올라가서 이야기 나누다가, 아래층에서 커플처럼 보이는 선남선녀가 대화하는 게 보였다.
 
-![파티장 2층에서 본 1층 전경](/images/blog/IMG_0841-edited-02df.png)
+![파티장 2층에서 본 1층 전경](/images/blog/IMG_0841-edited-02df.webp)
 
 "같이 이야기 나눠도 될까요?" 하니까 괜찮다고 해서 합류했다.
 
@@ -95,7 +95,7 @@ author: wonder
 
 "지금 이차 갈 때가 아니라 그냥 둘이서 좀 얘기 안 하겠냐" 해서 이차를 갔다.
 
-![이차 — 송리단길 라운지의 디저트](/images/blog/IMG_0842-edited-150a.png)
+![이차 — 송리단길 라운지의 디저트](/images/blog/IMG_0842-edited-150a.webp)
 
 ## 이차 — 송리단길
 
@@ -161,7 +161,7 @@ author: wonder
 흩날리던 다니엘 트루스 밤쉘 향,
 그리고 또 옆에 흔들거리던 디퓨저 고리.
 
-![차량 인테리어 디테일 — 네잎클로버 키링과 춘식이 거치대](/images/blog/IMG_0848-edited-6b02.png)
+![차량 인테리어 디테일 — 네잎클로버 키링과 춘식이 거치대](/images/blog/IMG_0848-edited-6b02.webp)
 
 차 모니터에 걸어둔 라이언·어피치 방향제,
 춘식이 폰번호 거치대.
