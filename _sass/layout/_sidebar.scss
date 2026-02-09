@@ -211,14 +211,6 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       @extend %button;
       @extend %sidebar-link-hover;
       @extend %clickable-transition;
-
-      &:not(:last-child) {
-        margin-right: v.$sb-btn-gap;
-
-        @include bp.xxxl {
-          margin-right: v.$sb-btn-gap-lg;
-        }
-      }
     }
 
     i {
