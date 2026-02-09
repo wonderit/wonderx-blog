@@ -30,7 +30,7 @@ social:
 
 # Webmaster verification
 webmaster_verifications:
-  naver: "" # 네이버 서치어드바이저 인증코드 입력
+  naver: "a698515baae95585f288e5fe85a9c5d23a3cd431"
   bing: ""  # Bing 웹마스터 인증코드 입력
 
 # Web Analytics Settings
