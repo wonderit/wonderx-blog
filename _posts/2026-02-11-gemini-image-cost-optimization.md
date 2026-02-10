@@ -83,19 +83,68 @@ response = client.models.generate_content(
 
 Imagen Fast가 **장당 $0.02**다. Gemini 3 Pro의 **6.7분의 1**. 품질도 블로그 이미지로 쓰기에 충분하다. 사실적인 사진 스타일은 Imagen이 오히려 Gemini보다 낫다.
 
+### 실제 사용법 — Gemini API 콘솔에서 설정
+
+Google AI Studio에서 Imagen 모델을 직접 테스트해볼 수 있다:
+
+1. [Google AI Studio](https://aistudio.google.com/) 접속
+2. 왼쪽 메뉴에서 **Image generation** 선택
+3. 모델 드롭다운에서 `imagen-4.0-fast-generate-001` 선택
+4. 프롬프트 입력 후 Generate 클릭
+
+Python SDK로는 이렇게 사용한다:
+
 ```python
-# Imagen Fast로 이미지 생성 ($0.02/장)
+import google.generativeai as genai
+from google.generativeai import types
+
+# 1. API 키 설정
+genai.configure(api_key="YOUR_API_KEY")
+
+# 2. Imagen Fast로 이미지 생성 ($0.02/장)
 response = client.models.generate_images(
     model="imagen-4.0-fast-generate-001",
-    prompt=enhanced_prompt,
-    config=types.GenerateImagesConfig(number_of_images=1),
+    prompt="A vibrant illustration of a developer analyzing cost metrics on a laptop",
+    config=types.GenerateImagesConfig(
+        number_of_images=1,
+        aspect_ratio="1:1",  # 1:1, 3:4, 4:3, 9:16, 16:9 지원
+    ),
 )
+
+# 3. 이미지 저장
+image_data = response.images[0]._image_data
+with open("output.jpg", "wb") as f:
+    f.write(image_data)
 ```
+
+**generateContent vs generate_images 차이**:
+- `generateContent` (Gemini 3 Pro): 텍스트와 이미지를 동시에 분석/생성. 복잡한 프롬프트 해석에 강함. 하지만 비쌈 ($0.134/장)
+- `generate_images` (Imagen Fast): 순수 이미지 생성 전용. 프롬프트 단순해도 품질 우수. 사진 사실성은 오히려 더 좋음. ($0.02/장)
 
 블로그 이미지 4장 기준:
 - **Before**: Gemini 3 Pro × 4장 = **$0.536**
 - **After**: Imagen Fast × 4장 = **$0.08**
 - **절감**: **85% 비용 절감**, 포스트당 $0.456 절약
+
+### Gemini Pro vs Imagen Fast — 품질 비교
+
+실제 사용해보면 차이는 이렇다:
+
+**Gemini 3 Pro Image**:
+- ✅ 복잡한 프롬프트 해석력 우수 (추상적 개념, 은유 표현)
+- ✅ 텍스트 생성 시도 (이미지 내 텍스트, 하지만 깨지는 경우 많음)
+- ❌ 토큰 기반 과금이라 비쌈 ($0.134/장)
+- 🎯 **추천 용도**: 복잡한 컨셉 아트, 스토리텔링이 필요한 이미지
+
+**Imagen 4.0 Fast**:
+- ✅ 사진 사실성 탁월 (인물, 풍경, 제품 사진)
+- ✅ 빠른 생성 속도 (7초)
+- ✅ 저렴한 고정 비용 ($0.02/장)
+- ❌ 텍스트 생성 약함 (이미지 내 글자는 거의 못 씀)
+- ❌ 추상적 프롬프트 해석은 다소 약함
+- 🎯 **추천 용도**: 블로그 썸네일, 일러스트, 배경 이미지
+
+결론: **텍스트가 들어가야 하면 Gemini, 사진/일러스트만 필요하면 Imagen**. 내 블로그는 텍스트 없는 이미지만 쓰니 Imagen Fast가 정답이었다.
 
 ![모델별 비용 비교](/images/blog/gemini-image-cost-optimization-3.webp)
 

@@ -84,19 +84,68 @@ This is the real game-changer. There are two main ways to generate images with G
 
 Imagen Fast is **$0.02 per image**. That's **1/6.7th** of Gemini 3 Pro. Quality is perfectly adequate for blog images. For photorealistic styles, Imagen actually outperforms Gemini.
 
+### How to Use — Setting Up in Gemini API Console
+
+You can test Imagen models directly in Google AI Studio:
+
+1. Go to [Google AI Studio](https://aistudio.google.com/)
+2. Select **Image generation** from the left menu
+3. Choose `imagen-4.0-fast-generate-001` from the model dropdown
+4. Enter your prompt and click Generate
+
+With the Python SDK:
+
 ```python
-# Imagen Fast image generation ($0.02/image)
+import google.generativeai as genai
+from google.generativeai import types
+
+# 1. Configure API key
+genai.configure(api_key="YOUR_API_KEY")
+
+# 2. Generate with Imagen Fast ($0.02/image)
 response = client.models.generate_images(
     model="imagen-4.0-fast-generate-001",
-    prompt=enhanced_prompt,
-    config=types.GenerateImagesConfig(number_of_images=1),
+    prompt="A vibrant illustration of a developer analyzing cost metrics on a laptop",
+    config=types.GenerateImagesConfig(
+        number_of_images=1,
+        aspect_ratio="1:1",  # Supports 1:1, 3:4, 4:3, 9:16, 16:9
+    ),
 )
+
+# 3. Save the image
+image_data = response.images[0]._image_data
+with open("output.jpg", "wb") as f:
+    f.write(image_data)
 ```
+
+**generateContent vs generate_images**:
+- `generateContent` (Gemini 3 Pro): Analyzes/generates both text and images. Excels at complex prompt interpretation. But expensive ($0.134/image)
+- `generate_images` (Imagen Fast): Pure image generation. Excellent quality even with simple prompts. Better photorealism. ($0.02/image)
 
 For 4 blog images:
 - **Before**: Gemini 3 Pro × 4 = **$0.536**
 - **After**: Imagen Fast × 4 = **$0.08**
 - **Savings**: **85% cost reduction**, $0.456 saved per post
+
+### Gemini Pro vs Imagen Fast — Quality Comparison
+
+In practice, here's how they differ:
+
+**Gemini 3 Pro Image**:
+- ✅ Excellent complex prompt interpretation (abstract concepts, metaphors)
+- ✅ Attempts text generation (text in images, though often garbled)
+- ❌ Token-based pricing makes it expensive ($0.134/image)
+- 🎯 **Best for**: Complex concept art, images requiring storytelling
+
+**Imagen 4.0 Fast**:
+- ✅ Exceptional photorealism (people, landscapes, products)
+- ✅ Fast generation (7s)
+- ✅ Low fixed cost ($0.02/image)
+- ❌ Weak at text generation (barely handles in-image text)
+- ❌ Slightly weaker at abstract prompts
+- 🎯 **Best for**: Blog thumbnails, illustrations, backgrounds
+
+Bottom line: **Use Gemini for text-in-images, Imagen for photos/illustrations**. Since my blog only needs text-free images, Imagen Fast was the clear winner.
 
 ![Model cost comparison](/images/blog/gemini-image-cost-optimization-3.webp)
 
