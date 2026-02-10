@@ -1,0 +1,40 @@
+<!-- Language suggestion banner for English browsers on Korean pages -->
+{% unless include.lang == 'en' %}
+<div id="lang-banner" class="lang-banner" style="display:none;">
+  <span class="lang-banner-text">
+    <i class="fas fa-globe me-1"></i>
+    This page is available in English
+  </span>
+  <a href="{{ '/en/' | relative_url }}" class="lang-banner-btn" id="lang-banner-go">View in English</a>
+  <button type="button" class="lang-banner-close" id="lang-banner-close" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </button>
+</div>
+<script>
+(function() {
+  var KEY = 'wonderx-lang-pref';
+  var pref = localStorage.getItem(KEY);
+
+  // If user already chose, don't show again
+  if (pref) return;
+
+  // Check browser language
+  var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var isEnglish = browserLang.startsWith('en');
+
+  if (!isEnglish) return;
+
+  var banner = document.getElementById('lang-banner');
+  if (banner) banner.style.display = '';
+
+  document.getElementById('lang-banner-go').addEventListener('click', function() {
+    localStorage.setItem(KEY, 'en');
+  });
+
+  document.getElementById('lang-banner-close').addEventListener('click', function() {
+    localStorage.setItem(KEY, 'ko');
+    banner.style.display = 'none';
+  });
+})();
+</script>
+{% endunless %}
