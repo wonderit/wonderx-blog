@@ -9,6 +9,7 @@ image:
   width: 896
   height: 1200
 author: wonder
+twin: grace-club-socializing-party-en
 ---
 
 ## 토요일 일정

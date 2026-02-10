@@ -9,6 +9,7 @@ image:
   width: 800
   height: 800
 author: wonder
+twin: telegram-ai-assistant-intro-en
 ---
 
 ## 맥북이 놀고 있었다

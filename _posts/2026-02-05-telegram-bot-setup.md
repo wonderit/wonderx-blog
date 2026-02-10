@@ -9,6 +9,7 @@ image:
   width: 800
   height: 800
 author: wonder
+twin: telegram-bot-setup-en
 ---
 
 ## 30분이면 끝난다

@@ -9,6 +9,7 @@ image:
   width: 800
   height: 800
 author: wonder
+twin: blind-date-bistro-a-en
 ---
 
 ## 소개 경로

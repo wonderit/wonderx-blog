@@ -9,6 +9,7 @@ image:
 categories: [social]
 tags: ["opic", "english", "career", "ai"]
 author: wonder
+twin: opic-test-review-en
 ---
 
 ## 갑자기 OPIc을 본 이유

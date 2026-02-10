@@ -9,6 +9,7 @@ image:
   width: 800
   height: 800
 author: wonder
+twin: openclaw-style-memory-en
 ---
 
 ## 내 비서는 금붕어였다

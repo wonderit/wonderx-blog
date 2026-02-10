@@ -9,6 +9,7 @@ image:
 tags: ['cathie-wood', 'ai-bubble', 'saaspocalypse', 'bitcoin', 'investment-strategy', 'jensen-huang']
 categories: [youtube]
 author: wonder
+twin: cathie-wood-ai-saas-apocalypse-en
 ---
 
 ## 토요일 저녁, 유튜브를 틀었다

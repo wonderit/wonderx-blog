@@ -9,6 +9,7 @@ image:
 tags: ["daily-life", "manners", "dining-etiquette"]
 categories: [social]
 author: wonder
+twin: chopsticks-manner-en
 ---
 
 미용실에서 책 한 권을 봤다. "마흔을 우아하게 먹는 법" 같은 제목의 에세이였다. 우아하게, 먹는 법. 뭔가 마음가짐에 대한 이야기일 거라 생각했는데, 저녁 식사 자리에서 이 '우아함'은 예상치 못한 방향으로 흘러갔다.

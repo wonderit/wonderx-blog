@@ -9,6 +9,7 @@ image:
   width: 800
   height: 800
 author: wonder
+twin: nanobanana-image-gen-en
 ---
 
 ## 이미지 만들기 귀찮다

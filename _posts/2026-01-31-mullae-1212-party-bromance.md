@@ -9,6 +9,7 @@ image:
   width: 800
   height: 800
 author: wonder
+twin: mullae-1212-party-bromance-en
 ---
 
 ## 문래동으로 간 이유

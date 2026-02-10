@@ -9,6 +9,7 @@ image:
   width: 800
   height: 800
 author: wonder
+twin: voice-stt-meeting-blog-en
 ---
 
 ## 회의록을 쓰기 싫었다

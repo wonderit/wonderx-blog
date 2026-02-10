@@ -9,6 +9,7 @@ image:
   width: 800
   height: 800
 author: wonder
+twin: astro-migration-reinventing-wheel-en
 ---
 
 ## 처음에는 Astro였다
