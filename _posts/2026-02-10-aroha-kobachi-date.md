@@ -2,7 +2,7 @@
 title: '챕터 2를 기다리며 — 잠실에서의 기록'
 description: '결혼정보회사를 통한 잠실 일식집 소개팅. 곽범 vs 비비, 안광의 중요성, 그리고 결혼이라는 인생의 다음 챕터에 대한 단상.'
 date: 2026-02-10 23:00:00 +0900
-image: /images/blog/aroha-kobachi-hero.webp
+image: /images/blog/aroha-kobachi-hero-edited-0fb3.webp
 tags: ['결정사', '소개팅', '결혼관', '안광', '잠실']
 categories: [social]
 author: wonder
@@ -144,7 +144,7 @@ RPG 게임으로 치면 챕터 1의 모든 서브 퀘스트를 다 깨고, 레�
 
 '로와이드가 여기까지 진출했네.'
 
-![잠실 지하 조명 터널](/images/blog/aroha-kobachi-hero.webp)
+![롯데타워 밑 우중충한 날씨](/images/blog/aroha-kobachi-4.webp)
 
 ---
 
