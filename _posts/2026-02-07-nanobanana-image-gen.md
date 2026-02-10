@@ -2,7 +2,7 @@
 title: '나노바나나로 블로그 이미지 자동 생성 — API 비용 $0의 비밀'
 description: 'Google Gemini의 나노바나나 이미지 생성을 텔레그램 봇에 연동했다. 무료 API로 블로그 이미지를 자동 생성한다.'
 date: 2026-02-07 00:00:00 +0900
-tags: ['nanobanana', 'gemini', 'image-generation', 'telegram', 'claude-code', 'automation', 'vibe-coding']
+tags: ['Gemini', 'AI이미지생성', '텔레그램봇', 'Claude-Code', '자동화', '바이브코딩', '나노바나나']
 categories: [ai-automation]
 image:
   path: /images/blog/nanobanana-1.webp

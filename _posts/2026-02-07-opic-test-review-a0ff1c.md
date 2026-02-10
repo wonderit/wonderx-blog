@@ -7,7 +7,7 @@ image:
   width: 800
   height: 800
 categories: [social]
-tags: ["opic", "english", "career", "ai"]
+tags: ['OPIc', '오픽', '오픽후기', '영어시험', 'AI채점', '영어공부']
 author: wonder
 twin: opic-test-review-en
 ---

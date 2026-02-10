@@ -2,7 +2,7 @@
 title: 'Astro에서 다시 Jekyll로 — 바퀴를 다시 발명하지 말라'
 description: 'Astro로 Chirpy 스타일 블로그를 직접 만들다가 안 되는 게 너무 많아서, 결국 진짜 Chirpy(Jekyll) 테마로 돌아왔다. 이미 잘 만들어진 건 그냥 쓰자.'
 date: 2026-02-08 01:00:00 +0900
-tags: ['astro', 'jekyll', 'chirpy', 'migration', 'goatcounter', 'adsense', 'blog', 'dont-reinvent-wheel']
+tags: ['Jekyll', 'Astro', 'Chirpy테마', '블로그이전', 'GitHub-Pages', 'GoatCounter']
 categories: [dev]
 image:
   path: /images/blog/astro-migration-1.webp

@@ -2,7 +2,7 @@
 title: '문래동 12:12 미팅 파티 후기: 여자보다 남자들이랑 눈맞은 썰'
 description: '토요일 오후를 반납하고 다녀온 솔로 파티. 로맨스는 없고 브로맨스만 남았다. (feat. 흑백요리사 지인)'
 date: 2026-01-31 00:00:00 +0900
-tags: ['blind-date', 'meeting-party', 'mullae', 'review', 'bromance']
+tags: ['미팅파티', '소개팅', '문래동', '솔로파티', '브로맨스', '파티후기']
 categories: [social]
 image:
   path: /images/blog/mullae-party-1.webp

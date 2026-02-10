@@ -2,7 +2,7 @@
 title: '나의 이상형은 미래에서 온 사람이다'
 description: '강남 영어 스터디에서 던져진 질문, 이상형이 뭐에요? 안광, 하이데거, 그리고 미래에서 온 사람들에 대한 단상.'
 date: 2026-02-09 21:00:00 +0900
-tags: ['essay', 'ideal-type', 'philosophy', 'heidegger', 'dating', 'self-love']
+tags: ['에세이', '이상형', '하이데거', '연애', '자기사랑', '영어스터디']
 categories: [essay]
 image:
   path: /images/blog/ideal-type-from-future-hero.webp

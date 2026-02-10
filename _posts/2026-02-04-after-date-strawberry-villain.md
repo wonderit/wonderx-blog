@@ -2,7 +2,7 @@
 title: '소개팅 애프터 후기: 딸기 타르트와 매너에 대하여'
 description: '미팅 파티에서 만난 운동 강사님과의 애프터. 기대와 달랐던 저녁, 그리고 매너에 대해 생각하게 된 밤.'
 date: 2026-02-04 00:00:00 +0900
-tags: ['blind-date', 'after-date', 'review', 'date']
+tags: ['소개팅', '애프터', '소개팅후기', '매너', '테이블매너']
 categories: [social]
 image:
   path: /images/blog/after-date-1.webp

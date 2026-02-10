@@ -2,7 +2,7 @@
 title: 'OpenClaw 스타일 메모리 시스템 구현하기 — AI 비서가 기억하는 법'
 description: 'OpenClaw의 파일 기반 메모리를 분석하고, Claude Code 텔레그램 봇에 적용했다. MEMORY.md + 일일 노트로 중요한 것만 기억한다.'
 date: 2026-02-06 00:00:00 +0900
-tags: ['claude-code', 'telegram', 'openclaw', 'memory', 'automation', 'vibe-coding']
+tags: ['Claude-Code', '텔레그램봇', 'AI메모리', '자동화', '바이브코딩', 'OpenClaw']
 categories: [ai-automation]
 image:
   path: /images/blog/openclaw-memory-1.webp

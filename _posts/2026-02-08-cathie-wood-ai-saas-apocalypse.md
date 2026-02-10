@@ -6,7 +6,7 @@ image:
   path: /images/cathie-wood-youtube-thumb.webp
   width: 1280
   height: 720
-tags: ['cathie-wood', 'ai-bubble', 'saaspocalypse', 'bitcoin', 'investment-strategy', 'jensen-huang']
+tags: ['캐시우드', 'ARK-Invest', 'AI투자', 'SaaS', '비트코인', '투자전략']
 categories: [youtube]
 author: wonder
 twin: cathie-wood-ai-saas-apocalypse-en

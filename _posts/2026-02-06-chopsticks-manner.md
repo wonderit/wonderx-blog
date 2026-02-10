@@ -1,12 +1,12 @@
 ---
-title: "젓가락질로 보는 교양"
-description: "미용실에서 우연히 본 에세이 한 줄이 저녁 식사의 화두가 됐다. 젓가락질, 정말 교양일까?"
+title: "젓가락질이 교양이라고? — 미용실에서 시작된 저녁 식사의 화두"
+description: "미용실에서 우연히 본 에세이 한 줄이 저녁 식사의 화두가 됐다. 젓가락질, 정말 교양일까? 식사매너와 테이블매너에 대한 솔직한 생각."
 date: 2026-02-06 00:00:00 +0900
 image:
   path: /images/blog/voice-21b5ba-1.webp
   width: 800
   height: 800
-tags: ["daily-life", "manners", "dining-etiquette"]
+tags: ['에세이', '젓가락질', '교양', '식사매너', '테이블매너']
 categories: [social]
 author: wonder
 twin: chopsticks-manner-en

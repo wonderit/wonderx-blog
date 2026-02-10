@@ -2,7 +2,7 @@
 title: '음성 메시지 하나로 회의록 + 블로그 자동 생성 — Gemini STT의 힘'
 description: '텔레그램 봇에 음성 메시지를 보내면 Gemini가 전사하고, 회의록이나 블로그로 자동 변환한다. 아이폰에서 녹음만 하면 끝이다.'
 date: 2026-02-08 00:00:00 +0900
-tags: ['voice', 'stt', 'gemini', 'telegram', 'meeting-minutes', 'automation', 'claude-code']
+tags: ['음성인식', 'STT', 'Gemini', '텔레그램봇', '회의록자동화', '자동화', 'Claude-Code']
 categories: [ai-automation]
 image:
   path: /images/blog/voice-stt-telegram-1.webp
