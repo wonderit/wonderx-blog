@@ -85,20 +85,27 @@
   }
 }
 
-/* Language toggle in topbar */
+/* Language toggle in topbar — flag icon in circle */
 .lang-toggle {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  padding: 0.15rem 0.5rem;
-  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
   text-decoration: none;
-  color: var(--text-muted-color);
   border: 1px solid var(--btn-border-color);
   transition: all 0.2s;
+  margin-left: 0.25rem;
+  flex-shrink: 0;
+
+  .flag-emoji {
+    font-size: 0.85rem;
+    line-height: 1;
+  }
 
   &:hover {
-    color: var(--link-color);
     border-color: var(--link-color);
+    background-color: var(--sidebar-hover-bg, rgba(0, 0, 0, 0.05));
   }
 }

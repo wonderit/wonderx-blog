@@ -94,7 +94,7 @@
     </script>
     {% endif %}
 
-    <div class="d-flex flex-wrap align-items-center justify-content-center gap-1">
+    <div class="sidebar-icons d-flex flex-wrap align-items-center justify-content-center gap-1">
       {%- assign icon_count = 0 -%}
       {% unless site.theme_mode %}
         <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
@@ -155,6 +155,20 @@
           {%- assign icon_count = icon_count | plus: 1 -%}
         {% endif %}
       {% endfor %}
+
+      <!-- Language switch flag icon -->
+      {% if icon_count > 0 %}
+        <span class="icon-border"></span>
+      {% endif %}
+      {% if include.lang == 'en' %}
+        <a href="{{ '/' | relative_url }}" aria-label="한국어로 전환" class="lang-flag-btn">
+          <span class="flag-emoji">🇰🇷</span>
+        </a>
+      {% else %}
+        <a href="{{ '/en/' | relative_url }}" aria-label="Switch to English" class="lang-flag-btn">
+          <span class="flag-emoji">🇺🇸</span>
+        </a>
+      {% endif %}
     </div>
   </div>
   <!-- .sidebar-bottom -->
