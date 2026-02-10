@@ -17,34 +17,31 @@ twin: opic-test-review-a0ff1c
 
 Saturday, 3:40 PM. Yeoksam, Seoul.
 
-I'd been doing pair sessions and study groups in English communities for a while.
-Then one day, the question hit me.
+The light was draining from the sky. I stood in front of the testing center building and thought. For months, I'd been doing pair sessions and study groups in English communities. Chatting in English with strangers had become easy. But a question crept in, quiet and persistent.
 
 *"Am I actually getting better at this?"*
 
-If you don't measure it, you'll never know.
+Feeling isn't knowing. You have to measure it.
+
 So I booked the test.
 
-## What the Test Center Looked Like
+## The Temperature of the Test Room
 
-Yeoksam test center.
-Somewhere between a cram school and a study cafe vibe.
+Yeoksam test center. Somewhere between a cram school and a study cafe.
 
-White desks, cubicles crammed right next to each other.
-CCTV cameras overhead.
+White desks, cubicles pressed together. CCTV cameras watching silently from above.
 
 ![Getting ready for the test](/images/blog/opic-test-review-a0ff1c-2.webp)
 
-Put on the headset, did the mic check.
-The OPIc interface appeared on the monitor.
+I put on the headset. Checked the mic. The OPIc interface blinked onto the screen.
 
-It was quieter than I expected.
-All I could hear was my own voice.
+It was quieter than I expected. A faint murmur from the next booth, barely there. Most of the time, the only voice I heard was my own.
+
+There's something strangely lonely about talking to yourself.
 
 ## What Questions Came Up
 
-I recorded for about 33 minutes total.
-The questions roughly followed this flow:
+I recorded for about 33 minutes total. The questions roughly followed this flow:
 
 1. **Self-introduction** — job, where I live, hobbies
 2. **Hobbies (hiking)** — where I go, what I wear, what I eat
@@ -55,17 +52,15 @@ The questions roughly followed this flow:
 
 ![During the test](/images/blog/opic-test-review-a0ff1c-3.webp)
 
-The questions were more specific than I expected.
-They went as deep as "How do you prepare for a hike?"
+The questions were more specific than I expected. They went as deep as "How do you prepare for a hike?" — as if a close friend were genuinely curious.
 
-The finance questions were right in my wheelhouse, so the words just flowed.
-I talked about ISA accounts, IRP, Tesla, even the Luna coin crash.
+The finance questions were right in my wheelhouse. ISA accounts, IRP, Tesla, even the Luna coin crash came pouring out. I surprised myself. When you care about the topic, the language barrier lowers itself.
 
-## AI's Analysis of My Answers
+## Letting AI Grade Me
 
-Obviously, you can't record during the actual test.
-So after I got home, I re-recorded my answers to the same questions from memory.
-Then I ran them through Gemini STT for transcription and had AI grade them against OPIc scoring criteria.
+Obviously, you can't record during the actual test. So I went home and re-recorded my answers to the same questions from memory. A reconstruction built on recall. Then I ran them through Gemini STT for transcription and had AI grade them against OPIc scoring criteria.
+
+Reading my own words transcribed into text brought on an odd wave of embarrassment.
 
 ### Predicted Level: AL (Advanced Low)
 
@@ -79,8 +74,7 @@ Then I ran them through Gemini STT for transcription and had AI grade them again
 ### AI's Top 3 Areas for Improvement
 
 **1. Grammar Accuracy Training**
-Too many errors with articles (a/an/the), prepositions (in/on/at), and tenses.
-When constructing long sentences, practice locking in the core structure first, then adding details on top.
+Too many errors with articles (a/an/the), prepositions (in/on/at), and tenses. When constructing long sentences, practice locking in the core structure first, then layering details on top.
 
 **2. Learning Natural English Expressions**
 Some expressions came out as direct Korean-to-English translations:
@@ -91,43 +85,31 @@ Some expressions came out as direct Korean-to-English translations:
 Recommendation: shadow native-speaker podcasts and TV shows.
 
 **3. Build a Habit of Recording and Self-Evaluating**
-Record my answers and listen back.
-Identify which errors keep repeating.
-Consciously correct them next time.
+Record my answers and listen back. Identify which errors keep repeating. Consciously correct them next time.
 
 ![Checking the results](/images/blog/opic-test-review-a0ff1c-4.webp)
 
-## My Takeaway
+## What Stayed With Me
 
-Of course, the real test and the home re-recording are different conditions.
-The test center nerves, the time pressure, the shock of seeing questions for the first time.
-Still, it was more than enough to map out my strengths and weaknesses in English.
+Of course, the real test and the home re-recording lived under different conditions. The test center nerves, the time pressure, the jolt of seeing a question for the first time. Still, it was enough to sketch the outline of my English — where the lines were strong and where they blurred.
 
-I used to listen to the All Ears English podcast a lot, and they once said something that stuck with me.
+I used to listen to the All Ears English podcast a lot. They once said something that lodged itself in my memory.
 
 > English is connection, not perfection.
 
-Taking the OPIc made me feel the truth of that statement.
-Willingness to communicate and confidence mattered more than perfect grammar.
-And honestly, the OPIc scoring rubric reflects the same philosophy.
+Taking the OPIc brought that sentence back. The willingness to communicate, the confidence to keep talking even when the grammar buckled — those mattered more than getting every article right. The OPIc scoring rubric itself seemed to agree.
 
-Here's a fun detail about the difficulty selection.
-Mid-test, you get to choose the difficulty level of your questions. I deliberately picked the harder ones.
-Easy questions led to short answers. Hard questions gave me more to think about, which actually got me talking more.
-If you want to draw words out of yourself, harder questions beat easy ones every time.
+Here's the part that surprised me: the difficulty selection. Mid-test, you get to choose how hard your questions will be. I deliberately picked the harder ones. Easy questions made my answers shrink. Hard questions gave me more to chew on, and the words came pouring out.
 
-My fluency and vocabulary are in decent shape,
-but I'm losing points on grammatical details.
-Articles, tenses, prepositions — the basics. Words come out easily enough, but accuracy is lacking.
+It's not the easy questions that draw me out. It's the hard ones. People are the same way, I think. I say more to someone who asks me something difficult than to someone who keeps things comfortable.
 
-Looking back, I think I've been doing mostly networking-style English.
-English communities, pair sessions, free talking. All output, no input.
-Now I realize I need to fill up the input side too.
-Vocabulary, grammar, reading — the fundamentals.
+Fluency and vocabulary held up fine. Grammar is where the score bled. Articles, tenses, prepositions — the small, invisible scaffolding. The words flowed, but accuracy didn't follow. All those moments I'd let mistakes slide because the meaning got through — they'd piled up quietly.
 
-And as for my next goal — rather than just leveling up my English score,
-maybe it'd be fun to try learning an entirely new language.
-Japanese? German? Not sure yet.
+Looking back, I'd been doing networking-style English all along. Communities, pair sessions, free talking. All output, no input. Now I realize I need to fill the other side. Vocabulary, grammar, reading. Boring, but necessary.
+
+And the next goal? Maybe not raising an English score at all. Maybe picking up an entirely new language. Japanese? German? I don't know yet.
+
+Not knowing feels exciting.
 
 ---
 

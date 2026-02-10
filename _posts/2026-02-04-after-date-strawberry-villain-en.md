@@ -15,23 +15,23 @@ twin: after-date-strawberry-villain
 
 ## Before We Even Met
 
-I set up a Wednesday dinner with the fitness instructor I'd matched with at the [Mullae-dong 12:12 mixer party](/posts/mullae-1212-party-bromance-en/). She lives around Songpa, so we agreed to meet somewhere near her area.
+It was a Wednesday evening. I had an after-date lined up with the fitness instructor I'd matched with at the [Mullae-dong 12:12 mixer party](/posts/mullae-1212-party-bromance-en/). She lived near Songpa, so we agreed to meet somewhere in her neighborhood.
 
-I rearranged my existing plans for this date.
+I'd rearranged my existing plans for this. That's how much I was looking forward to it.
 
-We'd agreed on 6:30, but she messaged me in the afternoon asking if 7 o'clock would be okay. Sure, no problem.
+We'd agreed on 6:30. In the afternoon, she texted — could she push it to 7? Sure, no problem.
 
-Then, close to 7, another message. She'd accidentally fallen asleep. She'd get ready quickly and be there soon — about 15 minutes, she said.
+Close to 7, another message. She'd fallen asleep. She'd hurry and get ready. Fifteen minutes, she said.
 
-I was already standing in front of the restaurant, so I ducked into a nearby cafe to wait.
+I was already standing in front of the restaurant. I walked into a nearby cafe, sat down, and took a sip of americano. The sun was setting through the window.
 
-Seems like nothing, right? But these small things add up, and they shift the vibe.
+It seems like nothing. But these small things accumulate, and with each one, the temperature of expectation drops by a degree. She didn't know that.
 
 ## Round 1: The Neighborhood Shabu-Shabu Spot
 
-I like small, local gems. Doesn't need to be famous — just good food. So I suggested a shabu-shabu and kalguksu (knife-cut noodle) place nearby.
+I like small, unassuming places. No need to be famous — just good food. So I suggested a shabu-shabu and noodle spot nearby.
 
-She seemed to have been expecting something... different. Her expression tightened just slightly.
+Her expression tightened. Half a second. I caught it. She'd been expecting something different.
 
 ![Dinner at the neighborhood shabu-shabu place](/images/blog/after-date-2.webp)
 
@@ -39,47 +39,51 @@ We ordered two servings with extra meat. I paid.
 
 ## Round 2: The Cafe and the Strawberry Tart
 
-We found a trendy-looking cafe nearby. Raw concrete interior, beanbag sofas — that kind of vibe.
+We found a trendy-looking cafe nearby. Raw concrete walls. Beanbag sofas. Indirect lighting bouncing off exposed surfaces.
 
-I ordered drinks and a strawberry tart. When it came time to pay, she just stood quietly behind me, so I paid for this too.
+I ordered drinks and a strawberry tart. At the register, she stood quietly behind me.
 
-I'd covered dinner, so I'd expected at least a gesture at the cafe — not necessarily paying, but just a simple "Oh, let me get this one." Something. Anything. There was nothing.
+I paid for this too.
+
+I'd covered dinner. I figured she'd at least offer at the cafe — not necessarily pay, but just the gesture. "Oh, let me get this one." That's all it would have taken. There was nothing.
 
 ![Dessert at the cafe](/images/blog/after-date-3.webp)
 
 ### The Strawberries on the Tart
 
-We sat down and started eating the tart. She picked off the strawberries one by one, eating only those.
+We sat down. She started eating the tart. Or rather — she started eating the strawberries. One by one, her fork lifted the red berries from the top while the cream and crust sat untouched below.
 
-It's a small thing. But in that moment, something clicked. I just knew.
+A small thing. But in that moment, something became clear. I can't explain it. I just knew.
 
-The conversation felt like two different temperatures colliding. I wasn't particularly interested in her stories either. We kept exchanging surface-level talk that never went deeper, so naturally, it wasn't fun.
+The conversation ran at two different temperatures. I wasn't drawn to her stories either. We kept exchanging words that never broke the surface. It wasn't fun.
 
-Awkward silences crept in. She seemed uncomfortable, but I didn't bother filling them.
+Silences crept in. She seemed uncomfortable. I didn't try to fill them. There was no reason to.
 
 ## Comparisons Come Naturally
 
-A few days earlier, I'd met [someone through a different blind date](/posts/blind-date-bistro-a-en/). There was no romantic spark, but she'd said, "I feel bad for rescheduling on you," and naturally picked up the dinner check.
+I thought about the woman I'd met [on a different blind date](/posts/blind-date-bistro-a-en/) a few days earlier. No romantic spark between us, but she'd said, "I feel bad for rescheduling," and naturally picked up the dinner check.
 
-Regardless of whether there's attraction, manners become the standard by which you judge a person.
+Whether there's attraction or not, manners are how a person faces the world. It's not about the other person. It's about the standard you hold for yourself.
 
 ## A Short Goodbye
 
-We both must have felt that the evening wasn't going anywhere. We didn't linger. Just wrapped things up.
+We both felt it — the evening wasn't going anywhere. We didn't stay long.
 
 "Get home safe."
 
-That was it.
+That was the last thing said. My footsteps felt light walking away.
 
 ![Walking through the night streets](/images/blog/after-date-4.webp)
 
 ## Looking Back
 
-Dating is a process of meeting all kinds of people. Even a bad match teaches you something.
+Dating is a process of meeting many people. Even the wrong ones leave something behind.
 
-Here's what I took away from this one:
+What this one left me with is simple.
 
-The right person for me is someone who can genuinely enjoy a humble neighborhood restaurant together. Someone who prefers a cozy, low-key spot over a fancy restaurant. Because that's just who I am.
+I want someone who can enjoy a humble neighborhood restaurant with me. Someone who'd rather eat comfortably at a small place tucked in an alley than perform at a fancy dinner. That's who I am.
+
+And someone who picks only the strawberries off the tart — I probably can't sit across from them for very long.
 
 ---
 

@@ -13,19 +13,17 @@ lang: en
 twin: voice-stt-meeting-blog
 ---
 
-## I Hated Writing Meeting Notes
+## How Many Steps Does It Take to Turn a Voice Recording Into a Finished Document?
 
-Meetings are fine. Writing meeting notes after? That I hate.
+Here's the answer: **one.** Send a voice message to Telegram, and 5 minutes later you get either polished meeting notes or a complete blog post. No new services added. The same Gemini API I was already using handles everything. Additional cost: $0.
 
-Record on the MacBook, run STT, organize with Gemini, copy-paste into Notion. I kept repeating this process every time. Same thing when writing blog posts about dates or meetup reviews. Record a voice memo while the memory is fresh, transcribe it later, polish it into blog format.
+I don't hate meetings. I hate the 30 minutes after every meeting spent organizing notes. The four-step routine: record on MacBook, run STT, organize with Gemini, copy-paste into Notion. Blog posts are the same story -- record voice while the experience is fresh, transcribe later, polish into blog format.
 
-**Every single step in between is manual labor.**
+**Every single one of those middle steps is an automation target.** So I eliminated them.
 
-I'm the kind of person who can't tolerate repetitive work. Time to automate.
+## Design — Adding Voice Input to an Existing Pipeline
 
-## The Idea Was Simple
-
-The existing bot already had text → blog functionality. What if I just added **voice input** on top?
+The core idea is straightforward. The bot already had text-to-blog functionality. All I needed was a **voice-to-text** conversion layer on top.
 
 ```
 Record voice on iPhone
@@ -39,16 +37,15 @@ Gemini STT → Text transcription
 Notion-ready markdown  Blog post + 3 images
 ```
 
-One button press and you get either meeting notes or a blog post.
-Send the recording to Telegram after a meeting and the result arrives in 5 minutes. All the middle steps just disappear.
+From the user's perspective: send a recording to Telegram, get a transcription preview with two buttons. Tap one button, and either meeting notes or a blog post is done. The entire middle process vanishes.
 
 ![Concept diagram](/images/blog/voice-stt-telegram-2.webp)
 
-## Gemini STT — Using What I Already Have
+## Gemini STT — Solving It Without Adding a New Service
 
-I didn't want to add a new service. The **Gemini API I'm already using for image generation also handles audio**.
+I didn't want to add a dedicated STT service. More dependencies mean more maintenance overhead and more failure points.
 
-It's multimodal — it understands text, images, and audio simultaneously. Just feed it an audio file and say "transcribe this" and you're done. Zero additional dependencies.
+Fortunately, the **Gemini API I was already using for image generation also processes audio**. Gemini is a multimodal model -- it understands text, images, and audio simultaneously. Feed it an audio binary with the instruction "transcribe this" and you're done. Zero additional dependencies, zero additional API keys.
 
 ```python
 # bot/stt.py — core section
@@ -71,15 +68,16 @@ async def transcribe_audio(audio_data: bytes, mime_type: str = "audio/ogg") -> d
     return {"text": response.candidates[0].content.parts[0].text}
 ```
 
-Key points:
-- Uses `types.Blob` to pass the audio binary directly. Inline, no file upload needed.
-- Telegram voice messages use OGG Opus format, which Gemini supports natively.
-- `gemini-2.5-flash` is the primary, `gemini-2.0-flash` is the fallback. Same pattern as image generation.
-- Uses the existing `google-genai` SDK. Nothing new to install.
+Four technical points worth noting:
 
-## Telegram Voice Handler
+- **`types.Blob` passes the audio binary inline** -- no separate file upload API call required.
+- Telegram voice messages use **OGG Opus** format, which Gemini supports natively. No format conversion needed.
+- **`gemini-2.5-flash` is the primary model**, with `gemini-2.0-flash` as fallback. Same resilience pattern as image generation.
+- Uses the existing `google-genai` SDK. No new packages to install.
 
-To receive voice messages, use the `filters.VOICE | filters.AUDIO` filter.
+## Telegram Voice Handler — Implementation Details
+
+To receive voice messages, register the `filters.VOICE | filters.AUDIO` filter.
 
 ```python
 # bot/main.py
@@ -87,11 +85,11 @@ app.add_handler(MessageHandler(filters.VOICE | filters.AUDIO, handle_voice))
 app.add_handler(CallbackQueryHandler(handle_voice_callback, pattern="^voice_"))
 ```
 
-When a voice message arrives:
+The processing flow when a voice message arrives has three stages:
 
-1. **Download** — `media.get_file()` → `download_as_bytearray()`
-2. **Gemini STT** — Pass the audio binary to Gemini
-3. **Preview** — Show 300-character transcription preview + inline keyboard
+1. **Download** -- `media.get_file()` then `download_as_bytearray()` to get the binary
+2. **Gemini STT** -- pass the audio binary to Gemini for transcription
+3. **Preview + Selection** -- display a 300-character transcription preview with an inline keyboard
 
 ```python
 keyboard = [[
@@ -101,13 +99,13 @@ keyboard = [[
 reply_markup = InlineKeyboardMarkup(keyboard)
 ```
 
-Two buttons. Meeting notes or blog. That's all there is to it.
+The interface is just two buttons. Meeting notes or blog. The downstream pipeline branches based on this single selection.
 
 ![Inline keyboard selection](/images/blog/voice-stt-telegram-3.webp)
 
-## Meeting Notes Mode — Copy-Paste Straight to Notion
+## Meeting Notes Mode — Structured Output Ready for Notion
 
-Hit the "📋 Meeting Notes" button and Claude transforms the transcription into structured markdown.
+Tapping "📋 Meeting Notes" triggers Claude to transform the transcription into structured markdown. The output format was designed specifically for Notion compatibility.
 
 ```markdown
 ## Meeting Notes — 2026-02-08
@@ -136,22 +134,18 @@ Hit the "📋 Meeting Notes" button and Claude transforms the transcription into
 | John | Influencer list | 2/12 |
 ```
 
-Copy this straight into Notion and it renders perfectly. Checkboxes, tables — everything just works.
+Paste this directly into Notion and everything renders cleanly -- checkboxes, tables, the works. Send one recording after a meeting and your notes are done. The 30 minutes you used to spend organizing? Gone.
 
-Send one recording file after a meeting and the notes are done. No more spending 30 minutes organizing after every meeting.
+## Blog Mode — From Voice to a Full Post With Images, One Shot
 
-## Blog Mode — Images Included in One Shot
+Tapping "📝 Blog" routes through the existing `/blog` pipeline. This is where the system really shows its power.
 
-Hit the "📝 Blog" button and it flows through the existing `/blog` pipeline.
-
-1. Nanobanana (Gemini) generates 3 images
+1. **Nanobanana** (Gemini) auto-generates 3 images
 2. Claude restructures the transcription into a blog post
 3. Generates a markdown file with frontmatter + embedded images
-4. Saved as `draft: true` → Publish with `/publish`
+4. Saved as `draft: true`, then publish with `/publish`
 
-Walk home after a date, record a voice memo while walking → send to Telegram → tap the Blog button → 5 minutes later, a complete blog draft with images.
-
-This works. It actually works. I built it and I'm still amazed.
+Here's a real scenario: walk home after a meetup, record voice notes while walking. Send to Telegram. Tap the Blog button. Five minutes later, a complete blog draft with 3 images is waiting. This actually works. I built it and I'm still surprised every time.
 
 ![Result image](/images/blog/voice-stt-telegram-4.webp)
 
@@ -173,7 +167,7 @@ This works. It actually works. I built it and I'm still amazed.
                 → /publish → git push → deployed
 ```
 
-Only one new file: `bot/stt.py`. Everything else was just adding handlers to existing code.
+Only one new file was created: `bot/stt.py`. Everything else was just adding handlers to existing code. This was possible because the pipeline was modularized from the start.
 
 ## Code Changes Summary
 
@@ -183,7 +177,7 @@ Only one new file: `bot/stt.py`. Everything else was just adding handlers to exi
 | `bot/handlers.py` | Added | Voice handler + callback handler (170 lines) |
 | `bot/main.py` | Added | Handler registration (6 lines) |
 
-Additional dependencies: **None**. Everything was done with the `google-genai` and `python-telegram-bot` packages I was already using.
+Additional dependencies: **zero.** Everything was accomplished with the `google-genai` and `python-telegram-bot` packages already in use. The fact that a new feature required no new libraries validates the original architecture choices.
 
 ## Series Progress
 
@@ -195,6 +189,4 @@ Additional dependencies: **None**. Everything was done with the `google-genai` a
 
 ---
 
-One voice message becomes a full article. Additional cost: $0. Laziness created yet another feature.
-
-In the end, the best automation is the kind that eliminates the steps in between.
+One voice message becomes a finished article. Additional cost: $0. Additional dependencies: zero. The best automation eliminates the middle steps entirely.

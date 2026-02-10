@@ -15,99 +15,101 @@ twin: mullae-1212-party-bromance
 
 ## Why I Went to Mullae-dong
 
-Saturday afternoon. I headed to a "Begin Again" 12:12 mixer party in Mullae-dong.
+Saturday afternoon. Mullae-dong was quiet. The factories had shut their doors for the weekend, and the streets smelled like nothing — just cold wind pushing through empty lots.
 
-The venue was called "Hongyeon," tucked away in Mullae's industrial district. The only perk? On weekends, you can park literally anywhere because all the factories are closed.
+The venue was called "Hongyeon," somewhere deep in the industrial zone. The only upside to this location? Free parking everywhere, because nothing else was open.
 
 ## My Mental State, Shaken from the Start
 
-I arrived and went looking for the restroom. The public bathroom was ancient — the water didn't even run. I couldn't wash my hands, so I ended up walking all the way back to Mullae Station just to use a proper restroom.
+I found the public restroom. Turned the faucet. Nothing came out. Just a dry rattle from rusted pipes. I ended up walking all the way back to Mullae Station. To wash my hands.
 
-My energy was already draining fast.
+My energy drained before the party even started.
 
-When I walked in, the male attendees didn't seem like my crowd, and the women didn't give off any "come talk to me" vibes either.
+When I walked in, I scanned the room. The men didn't feel like my people. The women didn't feel like anyone I wanted to approach. The temperature in the room was wrong — not the air, but the mood.
 
-I knew it right then. **"Today is a bust."**
+I knew it instantly. **"Today is a bust."**
 
 ## The Party Atmosphere
 
-Inside, the walls were covered in red wallpaper with white tables scattered around. Heaters were blasting under the tables, making the air painfully dry. Each table had wine glasses set up. I don't drink, so I went with grape juice.
+Red wallpaper. White tables. Heaters running under the floor, sucking every drop of moisture from the air. Wine glasses were set at every seat, but I don't drink. I poured myself grape juice. Imagine being the grape juice guy at a singles mixer.
 
-The space was cramped. You could literally see the MC shuffling back and forth behind the wall.
+The space was cramped. I could hear the MC shuffling behind the partition wall.
 
 ![Entering the mixer party](/images/blog/mullae-party-2.webp)
 
 ## How the 12:12 System Works
 
-Three men and three women sit at each table, then rotate every 30 minutes. Pretty standard mixer format.
+Three men, three women per table. Rotate every thirty minutes.
 
-### First Table: The Subtle Age Gap Wall
+### First Table: The Wall Called Age
 
-There was a woman who looked like Kim Minji. I wanted to chat more, but she was two years younger than me. These days, I feel like there needs to be a four-to-five-year age gap for the conversation to really click, so I passed.
+There she was — a woman who looked like Kim Minji. I wanted to talk to her. But she was two years younger than me. Lately, I've felt like I need a four-to-five-year gap for conversation to really flow. I don't know why. It just is.
 
-There was also a fitness instructor who lives in Songpa. I mentally bookmarked her. (This decision would come back to haunt me later...)
+There was also a fitness instructor living in Songpa. I mentally bookmarked her. I had no idea what that bookmark would cost me later.
 
 ### The Other Tables: Zero Chemistry
 
-Nurses, office workers... plenty of people, but none who caught my eye in terms of looks or conversation.
+Nurses. Office workers. Plenty of people, but nothing caught — not in their faces, not in their words.
 
-As the tables kept rotating, I found myself bonding more and more with the guys instead.
+And here's the strange thing. With every rotation, I found myself getting closer to the guys instead.
 
 ## Birth of the Bromance
 
-We kept getting asked "What's your ideal type?" To keep things interesting, the three of us guys coordinated our answers each round, making sure to give different responses every time.
+"What's your ideal type?"
 
-Through this teamwork, a natural bromance was born.
+The question came around at every table. To keep things from getting stale, the three of us started coordinating. A quick glance to set the order. One guy answers seriously, another riffs off it. We became a unit.
+
+At some point, I realized — we actually clicked.
 
 ### The Pharmacist (Same Age)
 
-Hamster-faced. First impression was average, but the more I looked, the more charming he got — a classic "grows on you" type. We clicked right away.
+Hamster face. Unremarkable at first glance. But the longer we talked, the more charm surfaced. The kind of person who grows on you. Our conversation had rhythm — the kind you only get when you're on the same wavelength.
 
 ### The Chef
 
-He seemed to know some of the cast from the TV show *Black & White Chef*. He was an MC-type personality himself — funny, outgoing, and great at keeping the mood alive.
+He knew people from the TV show *Black & White Chef*. Natural entertainer, mood-maker, the kind of laugh that opens a room.
 
 ## The After-Party Bromance
 
-When the party ended, the three of us decided to grab food together.
+The party ended. The three of us, without discussion, decided to keep going.
 
-Since I don't drink, we tried to find a chicken place but struck out. We ended up at a cozy bar nearby with warm yellow lighting and antique furniture.
-
-We ordered pajeon (Korean pancake) and pasta.
+I don't drink, so we tried to find a fried chicken place. Failed. We ended up at a bar nearby instead — warm yellow lighting, antique furniture. We ordered pajeon and pasta. Pasta at a bar. But somehow it worked.
 
 ![After-party bar](/images/blog/mullae-party-3.webp)
 
-The table next to us had college girls throwing a birthday party. We watched them with envy, half-joking: "Anyone got someone to set us up with?"
+At the next table, college girls were throwing a birthday party. I watched the candle on their cake flicker. Someone muttered, "Anyone know a girl who's single?"
 
-We chatted for about an hour, then called it a night.
+We talked for about an hour. Then called it a night.
 
-I drove the chef home, and on the way, we discovered something:
+I drove the chef home. On the way, we discovered something.
 
 **All three of us had picked the same women.**
 
-- No. 12: The one who looks like Karina/Kim Minji
+- No. 12: The one who looked like Karina/Kim Minji
 - No. 9: Another one we all liked
 - No. 11: The fitness instructor
 
+We looked at each other and laughed. It was a bitter kind of laugh.
+
 ## Matching Results
 
-For my final picks, I chose No. 9, No. 11, and No. 12.
+I submitted my final picks: No. 9, No. 11, No. 12.
 
-No. 9 had something in her eyes — a brightness, a certain clarity. No. 11 was the fitness instructor.
+No. 9 had something in her eyes — a sharpness, a clarity. No. 11 was the fitness instructor.
 
-Lately, when people ask me my ideal type, I say "someone soft and warm." When they ask why I prefer younger women, it's because in my experience, they tend to have a sense of wonder about new things and genuine gratitude for small gestures of kindness.
+When people ask me my ideal type these days, I say "someone soft." When they ask why I prefer younger women, it's because I've noticed something in people with less experience. A sense of wonder at new things. Genuine gratitude for small kindnesses. That softness.
 
-That's why with No. 9, I sensed something slightly different — not that softness, but more of a "I want to fit the man into my framework" kind of energy.
+With No. 9, I sensed something different. Not softness — more of a quiet insistence on fitting me into her framework. Subtle, but unmistakable.
 
-A few days later, the matching results came in via text.
+A few days later, a text arrived.
 
 > **You've been matched with No. 9, No. 11, and No. 12!**
 
-For a brief moment, I felt like the most popular guy at the party.
+For a moment, I felt like the most popular guy at the party. Just a moment.
 
 ## But Then...
 
-Out of the three, I ended up going on an after-date with No. 11, the fitness instructor...
+Out of the three, I ended up going on an after-date with No. 11, the fitness instructor.
 
 **And that's where the trouble began.** (To be continued in the next post...)
 
@@ -115,13 +117,13 @@ Out of the three, I ended up going on an after-date with No. 11, the fitness ins
 
 ## Final Thoughts
 
-The Mullae-dong 12:12 mixer party — no romance, but I definitely walked away with a solid bromance.
+The Mullae-dong 12:12 mixer party. No romance. But bromance — that, I got.
 
-The pharmacist and the chef? We still keep in touch. Maybe this is the kind of connection that actually lasts.
+The pharmacist and the chef? We still text sometimes. Maybe the real connection that day was never across the table. It was beside me the whole time.
 
-**So which of the three matches worked out?**
+Which of the three matches worked out, you ask?
 
-(Spoiler: None of them did.)
+None of them. Not a single one.
 
 ---
 

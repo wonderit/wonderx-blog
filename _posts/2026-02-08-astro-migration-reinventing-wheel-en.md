@@ -13,81 +13,77 @@ lang: en
 twin: astro-migration-reinventing-wheel
 ---
 
-## It Started with Astro
+## Can You Recreate the Chirpy Theme in Astro? Yes. Should You? Absolutely Not.
 
-This blog was originally built with **Astro v5**.
+Here's the verdict upfront: **I spent a day trying to recreate the Chirpy blog theme in Astro v5, then switched to the actual Chirpy (Jekyll) theme and had everything working in 2 hours.** Build time: 0.8 seconds. Features that would have taken days to implement myself came for free with a single theme.
 
-I wrote components from scratch, designed layouts, styled everything. Added SEO, hooked up Giscus comments, integrated GoatCounter for page views.
+This isn't a criticism of Astro. It's a **real-world case study on why reinventing the wheel is a bad engineering decision** when a mature, battle-tested solution already exists.
 
-It was working pretty well, honestly.
+## Starting Point — A Blog Built with Astro v5
 
-## Then I Found the Benchmark
+This blog was originally built with **Astro v5**. I wrote components from scratch, designed layouts, styled everything. Added SEO, hooked up Giscus comments, integrated GoatCounter for page views. It was working reasonably well.
 
-One day I stumbled upon [otzslayer.github.io](https://otzslayer.github.io/). A Jekyll blog running the **Chirpy theme**.
+## Finding the Benchmark — Chirpy's Level of Polish
 
-Even at a glance, the polish was on another level.
+Then I stumbled upon [otzslayer.github.io](https://otzslayer.github.io/). A Jekyll blog running the **Chirpy theme**. The difference in polish was immediately apparent.
 
 - Fixed left sidebar (profile, navigation, social links)
 - Right panel (recent updates, trending tags)
 - Page view counters on every single post
 - AdSense ads placed naturally throughout the layout
 - Dark/light mode toggle
-- Search, table of contents, related posts — the works
+- Search, table of contents, related posts -- the works
 
-"I want all of this on my blog."
+My Astro blog had less than half of these features. The thought was inevitable: "I want all of this on my blog."
 
-## Building Chirpy-Style Inside Astro
+## First Attempt — Building Chirpy-Style Inside Astro
 
-My first instinct was to **recreate the Chirpy layout inside Astro**.
+My initial instinct was to **recreate the Chirpy layout within Astro**. I had Claude Code build it, and the output looked promising:
 
-I had Claude Code build it. Here's what came out:
-
-- `Sidebar.astro` — Left sidebar (profile, nav, social icons)
-- `RightPanel.astro` — Right panel (recent updates, trending tags, ads)
-- `SearchBar.astro` — Client-side search
-- `global.css` fully rewritten — 1,235 lines
+- `Sidebar.astro` -- Left sidebar (profile, nav, social icons)
+- `RightPanel.astro` -- Right panel (recent updates, trending tags, ads)
+- `SearchBar.astro` -- Client-side search
+- `global.css` fully rewritten -- 1,235 lines
 - Brand new Categories, Tags, and Archives pages
 
-Build succeeded. 48 pages generated. Committed and pushed.
+Build succeeded. 48 pages generated. Committed and pushed. So far, so good.
 
-## But So Many Things Were Broken
+## Reality Check — Layout Similarity Is Not Feature Parity
 
-After deploying, the list of missing features was... not short.
+After deploying and actually using it, **the list of missing pieces was substantial:**
 
 - Page views not showing on individual posts
-- Right sidebar not appearing on post pages
+- Right sidebar disappearing on post pages
 - Ad placement completely off
 - No like/reaction functionality
 - Search was flaky
-- Dark mode transition broke half the styles
+- Dark mode transitions broke half the styles
 
-Chirpy had been refined over **years**. Recreating all of that in Astro components in a single day? **Not happening.**
+Here's what I learned: **making the layout look similar and making every feature work with production-level polish are completely different problems.** Chirpy had been refined over years with community feedback. Recreating all of that in Astro components in a single day was not happening.
 
-## So I Went with the Real Chirpy
+## The Decision — Switch to Real Chirpy
 
-I had a choice to make.
+The deliberation was brief.
 
 > "Do I keep patching things one by one in Astro, or just use the Chirpy theme?"
 
-The answer was obvious. **Use what's already built.**
+The answer was obvious. **Use what's already built.** I forked `cotes2020/jekyll-theme-chirpy` and replaced the entire repo.
 
-I forked `cotes2020/jekyll-theme-chirpy` and replaced the entire repo.
+### Migration — 7 Steps, 2 Hours Total
 
-### The Migration Process
+1. **Clone the Chirpy theme** -- delete all Astro files
+2. **Configure `_config.yml`** -- Korean locale, GA4, GoatCounter, Giscus comments, avatar
+3. **Migrate 10 blog posts** -- convert frontmatter (`pubDate` to `date`, `heroImage` to `image`, `category` to `categories`)
+4. **Fix image paths** -- `public/images/blog/` to `assets/img/blog/`
+5. **Update internal links** -- `/blog/slug` to `/posts/slug/`
+6. **Set up AdSense** -- sidebar + in-article ads
+7. **GitHub Actions deployment** -- Ruby 3.3 + Jekyll build
 
-1. **Clone the Chirpy theme** — delete all Astro files
-2. **Configure `_config.yml`** — Korean locale, GA4, GoatCounter, Giscus comments, avatar
-3. **Migrate 10 blog posts** — convert frontmatter (`pubDate` to `date`, `heroImage` to `image`, `category` to `categories`)
-4. **Fix image paths** — `public/images/blog/` to `assets/img/blog/`
-5. **Update internal links** — `/blog/slug` to `/posts/slug/`
-6. **Set up AdSense** — sidebar + in-article ads
-7. **GitHub Actions deployment** — Ruby 3.3 + Jekyll build
+Build time: **0.8 seconds**. Total time to deploy: **50 seconds**. The build was actually faster than Astro.
 
-Build time: **0.8 seconds**. Total time to deploy: **50 seconds**.
+## What Chirpy Gives You — The "It Just Works" Checklist
 
-## What Chirpy Gives You Out of the Box
-
-With the theme, all of this **just worked:**
+With the theme applied, all of the following features worked **with configuration alone:**
 
 - Left sidebar (profile, navigation, dark/light toggle)
 - Right panel (recent updates, trending tags)
@@ -102,24 +98,31 @@ With the theme, all of this **just worked:**
 - PWA support
 - SEO optimization (og:image, twitter:card, etc.)
 
-**Build it yourself: days. Use the theme: 2 hours.**
+Features that would take days to build from scratch were all included in a single theme. **Build it yourself: days. Use the theme: 2 hours.** That gap is the essence of "don't reinvent the wheel."
 
-## Don't Reinvent the Wheel
+## The Core Lesson — "Can Build" vs "Should Build"
 
-There's a trap developers fall into all the time.
+There's a trap developers fall into constantly.
 
 **"I could totally build this myself."**
 
 Sure. You can. But **should you?**
 
-Trying to recreate Chirpy in Astro taught me something. Making the layout look similar? Easy. Making every feature actually **work** with the same level of polish? Completely different problem.
+Trying to recreate Chirpy in Astro made this crystal clear. Getting the layout to look similar? Easy. But page view integration, dark mode transition animations, search indexing, ad placement optimization, responsive sidebars -- building each of these to production quality is an entirely different scale of work.
 
-Page view integration, dark mode transitions, search indexing, ad placement optimization, responsive sidebars... Instead of spending time implementing each of these from scratch, **just use a theme that's been refined over years.**
+| Comparison | Custom Astro Build | Chirpy Theme |
+|---|---|---|
+| **Time invested** | Multiple days (estimated) | 2 hours |
+| **Feature completeness** | 60-70% | 100% |
+| **Maintenance** | All on you | Community + updates |
+| **Build time** | ~1.5s | 0.8s |
+
+With numbers like these, there's nothing to debate.
 
 > **Don't reinvent the wheel.**
 
-A well-made off-the-shelf solution beats a half-baked custom build. Spend that time **writing one more post instead.**
+A well-made off-the-shelf solution beats a half-baked custom build every time. The time you save is better spent **writing one more post** -- which is, after all, the entire point of having a blog.
 
 ---
 
-*P.S. Astro isn't bad. It's a great framework. But in a space like blogging, where polished solutions already exist, there's no reason to build from scratch.*
+*Astro isn't a bad framework. It's a great one. But in a domain like blogging, where polished solutions already exist, there's no reason to build from scratch. Save your energy for where you can actually differentiate.*

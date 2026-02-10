@@ -13,20 +13,17 @@ lang: en
 twin: telegram-bot-setup
 ---
 
-## 30 Minutes. That's It.
+## Bottom Line Up Front: A Working Bot in 30 Minutes
 
-In the [series intro](/posts/telegram-ai-assistant-intro-en), I laid out the architecture.
-This post is the one where we actually build it. Full code included.
+In the [series intro](/posts/telegram-ai-assistant-intro-en), I laid out the architecture. This post is the implementation. Full code included.
 
-I finished it in 30 minutes.
-To be precise, Claude Code finished it in 30 minutes.
-I typed a command into Telegram and went to make coffee.
+Total time: 30 minutes. To be precise, I sent a request to Telegram and went to make coffee. Claude Code set up the project structure, wrote the code, and ran the tests. My contribution was communicating the intent.
 
-Laziness creates systems. I mean that.
+This is the essence of vibe coding: delegate implementation details to the AI, and as a developer, focus on direction.
 
-## Step 1 — Create the Telegram Bot
+## Step 1 — Create the Telegram Bot (3 Minutes)
 
-Go to BotFather and make a bot. 3 minutes.
+Create a bot through BotFather. Every Telegram bot is registered through this official bot.
 
 1. Search for **@BotFather** on Telegram
 2. Type `/newbot`
@@ -39,7 +36,7 @@ Use this token to access the HTTP API:
 8349xxxxx:AAGxxxxxxxxxxxxxxxxxx
 ```
 
-This token is the key to your bot. If it leaks, you're done. Put it in an environment variable and don't commit it to git.
+This token is the bot's authentication key. If it leaks, a third party gains full control over the bot. Store it as an environment variable and make sure `.env` is in your `.gitignore`.
 
 ## Step 2 — Project Structure
 
@@ -58,12 +55,11 @@ wonderx-bot/
 └── pyproject.toml
 ```
 
-5 files. That's all you need.
-I don't understand people who spend 30 minutes on project structure. Just get it running first, refactor later.
+Five core files. The design principle here is "get it running first, refine the structure later." Spending time perfecting directory layout upfront is less efficient than shipping a fast MVP and iterating on feedback.
 
 ![Project structure](/images/blog/telegram-bot-2.webp)
 
-## Step 3 — Core Code
+## Step 3 — Core Code Breakdown
 
 ### Config (config.py)
 
@@ -85,15 +81,15 @@ BLOG_PROJECT_PATH = Path(os.getenv("BLOG_PROJECT_PATH", ""))
 CLAUDE_TIMEOUT = 300  # 5 minutes
 ```
 
-What happens if you forget `ALLOWED_USER_IDS`?
-Anyone can fire commands at your MacBook.
-I actually left it blank for a whole day. Nothing happened, but I was drenched in cold sweat after I realized it.
+`ALLOWED_USER_IDS` is the critical security layer here. Without it, anyone can send commands to your bot — and those commands execute directly on your MacBook. It is functionally equivalent to opening your local terminal to the outside world.
 
-To find your Telegram User ID, just message `@userinfobot` — it'll tell you instantly.
+I actually ran the bot with this value empty for an entire day during initial testing. Nothing happened, but the moment I reviewed the logs and realized what was exposed, the implications were clear.
 
-### Claude Code Execution Wrapper (claude.py)
+To find your Telegram User ID, message `@userinfobot` — it responds instantly.
 
-This file is the heart. It's a subprocess wrapper that runs `claude -p "prompt"`.
+### Claude Code Execution Wrapper (claude.py) — The System's Core
+
+This file is the architectural centerpiece. It is an async wrapper that executes `claude -p "prompt"` via subprocess.
 
 ```python
 async def run_claude(prompt: str, cwd: Path | None = None) -> str:
@@ -118,13 +114,11 @@ async def run_claude(prompt: str, cwd: Path | None = None) -> str:
     return stdout.decode("utf-8").strip()
 ```
 
-Three things to remember:
+Three parameters matter here:
 
-- **`--allowedTools`**: Skip this and Claude will ask for permission every single time. A bot isn't interactive. Auto-allow is mandatory.
-- **`cwd` parameter**: Point it to the blog folder and Claude works inside it. Without this, it'll create files in random places.
-- **300-second timeout**: You need to give Claude time to figure things out. Set it too short and complex tasks get cut off.
-
-I started with a 60-second timeout. Every blog post generation timed out. That was dumb.
+- **`--allowedTools`**: In `-p` (pipe) mode, interactive approval is impossible. Without this flag, Claude requests tool-use confirmation and stalls. Since a bot cannot interactively approve actions, you must pre-authorize the tools it can use.
+- **`cwd` parameter**: Specifies the working directory for Claude Code. For blog tasks, point it to the blog repo. For bot tasks, point it to the bot repo. Without this, Claude operates from the home directory and creates files in unexpected locations.
+- **300-second timeout**: Claude Code reads files, analyzes code, makes changes, and runs tests during complex operations. A 60-second timeout caused every blog post generation to fail. 300 seconds (5 minutes) proved adequate for the vast majority of tasks.
 
 ### Telegram Handler (handlers.py)
 
@@ -144,9 +138,7 @@ async def cmd_blog(update, context):
     await update.message.reply_text(f"📝 완료:\n{result}")
 ```
 
-Send `/blog Claude Code tips collection` and you're done.
-Claude creates the markdown file, fills in the frontmatter, writes the content.
-I was lying on the couch the whole time, just typing into Telegram.
+Send `/blog Claude Code tips collection` on Telegram, and Claude generates the markdown file, fills in the frontmatter, and writes the body content. The entire pipeline completes from a single command.
 
 ### Entry Point (main.py)
 
@@ -185,14 +177,13 @@ python -m bot.main
 ✅ Bot ready. Polling started...
 ```
 
-Done. Really done. Nothing else to do.
+At this point, any message sent on Telegram triggers a Claude Code response. A fully functional AI assistant running on your local machine is now operational.
 
 ![Bot running](/images/blog/telegram-bot-3.webp)
 
 ## Step 5 — macOS Auto-Start (launchd)
 
-Opening a terminal and typing `python -m bot.main` every time the MacBook boots is not something a human should have to do.
-Register it with launchd and the bot starts at boot.
+Manually starting the bot after every reboot defeats the purpose of automation. Register it with macOS's launchd, and the bot starts automatically at boot.
 
 ```xml
 <key>ProgramArguments</key>
@@ -212,7 +203,7 @@ Register it with launchd and the bot starts at boot.
 </dict>
 ```
 
-The `KeepAlive` with `SuccessfulExit: false` means if the bot dies, it automatically comes back. Like a zombie. I like that.
+The critical setting is `KeepAlive` with `SuccessfulExit: false`. If the bot process terminates abnormally, launchd automatically restarts it. This provides daemon-level reliability without a separate process monitoring tool.
 
 ```bash
 # Register the service
@@ -222,7 +213,7 @@ The `KeepAlive` with `SuccessfulExit: false` means if the bot dies, it automatic
 launchctl list | grep wonderx
 ```
 
-## Available Commands
+## Available Commands Summary
 
 | Command | Function |
 |------|------|
@@ -233,54 +224,51 @@ launchctl list | grep wonderx
 | `/status` | MacBook system status |
 | `/git status` | Git command on blog repo |
 
-## Gotchas
+## Three Gotchas I Actually Hit
 
-I'll be honest. I messed up three times.
+Here are the problems I encountered during development, documented so that anyone attempting the same setup can avoid these pitfalls.
 
-### 1. Forgot `--allowedTools`
+### 1. Missing `--allowedTools`
 
-Didn't include it at first. Claude would say "Bash execution approval required" and freeze.
-A bot isn't interactive. There's no one to ask. In `-p` mode, you absolutely must pre-authorize tools with `--allowedTools`.
+The initial version omitted this flag. Claude returned "Bash execution approval required" and stopped. In `-p` mode, the process is non-interactive — there is no approval prompt. Without pre-authorized tools, Claude cannot perform any operations.
 
-Lost 30 minutes on this. My fault for not reading the logs.
+Took 30 minutes to diagnose. Would have been instant if I had checked stderr first.
 
-### 2. Left the example value in ALLOWED_USER_IDS
+### 2. Unchanged Example Value in ALLOWED_USER_IDS
 
-Left `123456789` as-is. Obviously got hit with "Permission denied" non-stop.
-I needed my Telegram User ID in there, but I never changed the placeholder. The curse of auto-complete.
+Left the `123456789` placeholder from `.env.example` unchanged. Every message returned "Permission denied." When copying environment files, verify that all placeholders are replaced with actual values. A basic step, but a surprisingly common oversight.
 
-### 3. Claude Code Path Issue
+### 3. PATH Resolution in launchd
 
-Running via launchd means a different PATH. It can't find `claude`.
-Either put the absolute path in `.env`, or add `/opt/homebrew/bin` to the PATH in the plist file.
+launchd does not inherit the user shell's PATH. The `claude` binary becomes unfindable. Two solutions:
 
-If you've done macOS development, you've been through this rite of passage. There's no avoiding it.
+1. Specify the absolute path to Claude Code in `.env` (e.g., `/opt/homebrew/bin/claude`)
+2. Add PATH to the plist file's `EnvironmentVariables` section
 
-## Revamped the Blog Too
+A familiar issue for anyone who has run daemons on macOS. Understanding the difference between shell environment and launchd environment is key.
 
-I didn't stop at building the bot. I gave the blog a makeover too.
+## Blog Improvements, Also Via the Bot
+
+I did not stop at building the bot. Using the same workflow, I also improved the blog.
 
 - **SEO optimization**: Meta tags, JSON-LD structured data, robots.txt
 - **Category sidebar**: AI Automation / Side Projects / Dev Log / Social / Tutorial
 - **Giscus comments**: Comment system powered by GitHub Discussions
-- **Anonymization**: Removed GitHub links, switched to email contact
-- **About page renewal**: "Why a lazy developer builds automation" concept
+- **Anonymization**: Removed GitHub profile links, switched to email contact
+- **About page renewal**: Page concept redesign
 
-Claude Code did all of it. I just made requests.
-"Do some SEO." "Add comments." "Rewrite the About page."
-Three sentences, and Claude created files, wrote CSS, and even ran build tests.
+All done by sending requests to Claude Code via Telegram. "Optimize SEO," "add a comment system," "rewrite the About page" — these three messages resulted in file creation, CSS authoring, and build test execution.
 
-That's vibe coding. State your intent and code appears.
+Communicating intent and receiving implementation — that is what vibe coding looks like in practice.
 
 ## Next Episode Preview
 
-- **Conversation context management**: Right now it loses its memory with every message. I'm going to make it continue previous conversations.
-- **System prompt**: I'm going to give Claude a personality. "You are a lazy developer's assistant."
+- **Conversation context management**: The bot currently loses context with every message. I will implement a memory system that maintains conversation continuity.
+- **System prompt design**: Prompt engineering to give Claude a defined role and personality.
 
 ---
 
-Building automation isn't about being lazy.
-It's about earning the right to be lazy.
+Building automation is not about being lazy. It is about freeing yourself from repetitive tasks to focus on work that matters.
 
 ---
 

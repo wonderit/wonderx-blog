@@ -13,103 +13,91 @@ lang: en
 twin: grace-club-socializing-party
 ---
 
-## Saturday Schedule
+## The Temperature of a Saturday
 
-Around 4:30 PM. I left the OPIc testing center near Gangnam Station.
+4:30 PM. I walked out of the OPIc testing center near Gangnam Station. My head was still cluttered with half-formed English sentences.
 
-Straight from the exam, I headed to Sinchon. There was a Grace Club socializing party at 6 PM.
+After an exam, the instinct is to go home. But I drove to Sinchon instead. There was a Grace Club socializing party at 6. Entry fee: 100,000 KRW. Venue: Nogosan Studio.
 
-Entry fee: 100,000 KRW. Venue: Nogosan Studio.
+The drive to meet strangers felt more nerve-wracking than the drive to take a test.
 
 ![Entrance to Nogosan Studio in Sinchon](/images/blog/IMG_0838-edited-5b2f.webp)
 
 ## Changcheon Public Parking Lot
 
-I needed to park in Sinchon. I remembered a place I'd been to once before when I attended an LST English study group — **Changcheon Public Parking Lot**.
+I needed to park in Sinchon. I found my way to **Changcheon Public Parking Lot** — a place I'd been once before for an LST English study meetup.
 
-Second time here, but it still didn't feel familiar. After parking, I brushed my teeth in the restroom and straightened out my outfit. Grabbed some hand warmers too.
+Second visit, still unfamiliar. I parked and stood in front of the restroom mirror. Brushed my teeth. Straightened my coat. Slipped hand warmers into my pockets.
 
-It was cold. The five-minute walk to the venue cut right through me.
+The wind hit my face the moment I stepped outside. Five minutes of walking. February in Sinchon felt colder than any number could describe.
 
 I arrived at 5:55 PM.
 
-Coming alone, I had nobody to share my pre-party heart rate with.
-
-Maybe it was the cold. The nervousness actually felt kind of warming.
+Coming alone meant there was nobody to share my pre-party heartbeat with. Maybe it was the cold. The nerves felt strangely like warmth.
 
 ## The Venue — A Renovated House
 
-Finding the place was tricky. Naver Maps wasn't much help.
+Finding the place wasn't easy. Naver Maps couldn't quite locate it.
 
-Turns out it was **a regular house converted into a studio**. A small two-story home with antique-style decor throughout.
+Turns out it was **a regular house converted into a studio**. A small two-story home dressed in antique decor. It could fit 30 to 40, but only about 20 showed up.
 
-It could probably fit 30 to 40 people. In reality, about 20 showed up.
+The quirky part: **you had to take your shoes off**. Natural for a residential house, but the sight of formally dressed adults piling coats and heels in a corner was quietly funny.
 
-The quirky part? **You had to take your shoes off.** Makes sense for a residential house, but the sight of everyone's coats and shoes piled up in one corner was pretty funny.
+The dress code was **formal, business**. Everyone arrived in coats, skirts, polished and put-together. But standing there in stockinged feet, elegance and intimacy coexisted in a strange way.
 
-The dress code was basically **formal, business casual**. Everyone showed up in coats, skirts, looking elegant and put-together.
-
-Instead of sitting on the floor, people were either standing around tall tables or gathered on clusters of antique chairs.
+Some stood around tall tables. Others gathered on clusters of antique chairs.
 
 ![Inside the party venue — antique chandelier and standing tables](/images/blog/IMG_0839-edited-b65e.webp)
 
 ## The Early Birds
 
-When I walked in, there were about 6 men and 2 women.
+When I walked in, about 6 men and 2 women were already there.
 
-Classic party rule: showing up early always feels awkward. I just stood there, not sure what to do with myself.
+The unwritten rule of parties: arriving early means enduring awkwardness. I was on the awkward side.
 
-The tall guy next to me turned out to work in **manufacturing**. His major was electrical engineering — pretty similar to mine.
+The tall man beside me turned out to work in **manufacturing**. His major was electrical engineering, close to mine. Without a word, we reached a silent agreement — "let's stick together" — and drifted one step away from the main table.
 
-We silently agreed to "stick together" and drifted away from the main table to hang on the side.
+As more people trickled in, my ears started going numb. By then, I'd given my self-introduction **at least six times**. With each repetition, the introduction got shorter.
 
-After a while, my ears started going numb. By that point, I'd given my self-introduction **at least six times**.
+"Want to head upstairs?" Someone pointed to the second floor. Just as I was about to move, another person threw out the ideal type question.
 
-Just as someone said "Wanna head upstairs?", someone else threw out the ideal type question.
-
-I answered: "I like someone with bright, sharp eyes."
+I said, "I like someone with bright, sharp eyes." Even as the words left my mouth, I wasn't sure I meant them.
 
 ## The Whisper Game
 
-We went upstairs and started chatting. From the second floor, I could see a good-looking pair downstairs — a man and a woman deep in conversation, looking like a couple already.
+Upstairs, we were talking. Over the railing, I could see the first floor below. A man and a woman who looked like a couple were deep in conversation.
 
 ![View of the first floor from the second-floor party area](/images/blog/IMG_0841-edited-02df.webp)
 
-"Mind if we join?" They said sure, so we pulled up.
+"Mind if we join?" They said sure.
 
-The group quickly grew to 8+ people, and somehow we ended up playing a **whisper game**.
+The group swelled past eight. A **whisper game** started naturally. Someone picked me, handed over a sip, and leaned in close: "Who here do you think has the best vibe?"
 
-Someone picked me and slipped me a sip of a drink, then whispered something like: "Who here do you think has the best vibe?" That kind of question.
+I hadn't expected party games at a socializing event. But a stranger's whisper hits the chest harder than you'd think.
 
-I didn't expect party games at a socializing event, but honestly? It was more fun than I thought.
-
-## Someone Caught My Eye
+## Someone Who Caught My Eye
 
 Then a new person walked in.
 
-Honestly? **No initial attraction.**
+Honestly? **No initial attraction.** Not my type, looks-wise.
 
-Not my type, looks-wise.
+But her self-introduction changed something. Young, studious, clearly sharp. There was a steadiness in the way she spoke, word by word.
 
-But when she introduced herself, I noticed she was quite young and clearly studious — she came across as sharp and grounded.
+"Maybe I'll talk to her."
 
-Something solid about her.
+She'd picked me during the whisper game, so courage came easier. I asked where she lived.
 
-"Might as well talk to her."
+**Same neighborhood — Songpa.**
 
-She'd picked me during the whisper game, so I worked up the courage to start a conversation.
-
-I asked where she lived. **Same neighborhood — Songpa.**
-
-"Instead of doing the whole group second-round thing, why don't we just talk, the two of us?" And just like that, we headed to a second location.
+"Instead of doing the big group thing, why don't we just talk, the two of us?" And just like that, we slipped out of the party.
 
 ![Second round — dessert at a lounge in Songri-dan-gil](/images/blog/IMG_0842-edited-150a.webp)
 
 ## Round Two — Songri-dan-gil
 
-The second spot was a **cafe-lounge in Songri-dan-gil**.
+The second spot was a **cafe-lounge in Songri-dan-gil**. Low lighting, quiet music. Comfortable.
 
-It was chill and comfortable. They had **petit fours** on the menu, and I thought, "Definitely coming back for those."
+They had **petit fours** on the menu. "I'm coming back for those," I thought. That kind of idle resolution is proof of comfort.
 
 We ordered:
 - Butter potato bites
@@ -117,27 +105,21 @@ We ordered:
 - Non-alcoholic sangria (for her)
 - Zero Coke (for me)
 
-The longer we talked, the more the conversation kept veering into random tangents.
+The longer we talked, the more the conversation branched sideways. English tutoring stories, college days, TOEIC exams. One topic kept splitting into the next.
 
-English tutoring stories, college days, TOEIC exam stories...
+Then the topic of **execution** came up.
 
-And then we got to the topic of **execution**.
+## "You Have Real Execution Power"
 
-## "Execution Is Everything"
+She was telling me about her tutoring experiences, so I offered mine.
 
-She was telling me about her tutoring experiences, so I shared mine.
+At 20, I walked out of the TOEIC exam hall and scribbled on the desk: **"[University] student was here. 010-XXXX-XXXX."** Someone actually called. That's how I ended up tutoring English for students two years younger.
 
-When I was 20, after finishing the TOEIC exam, I wrote on the desk on my way out: **"[University name] student was here. 010-XXXX-XXXX"** — just like that.
+When something enters my head, I can't rest until I act on it. The OPIc test itself — I signed up two days before, on a Thursday, thinking "I've got nothing this weekend, what should I do?"
 
-Someone actually called.
+After hearing that, she said: **"You have real execution power."**
 
-I ended up tutoring English for students two years younger than me.
-
-When something pops into my head, I just do it. That's the same reason I signed up for the OPIc exam — two days before, on a Thursday, I was thinking "I've got nothing going on this weekend, what should I do?" and just registered.
-
-She told me I had **"real execution power."**
-
-It felt good to be recognized for that.
+That single sentence stayed with me longer than it should have. Being recognized felt good.
 
 ## Better Done Than Perfect
 
@@ -145,37 +127,39 @@ There's a phrase in English that captures this:
 
 **"Better done than perfect."**
 
-Don't waste time trying to prepare perfectly. Just do it.
+Don't spend time preparing perfectly. Just do it.
 
-It's something I tell my team all the time, and hearing it validated in this context reinforced it once more.
+It's something I tell my team all the time. Sitting there in that lounge, I saw it confirmed again. While you wait for perfect, the moment passes.
 
 ## Home at 1 AM
 
-We wrapped up at 1 AM.
+We finished at 1 AM.
 
-Talked until then, then headed home.
+I sat in the car for a moment. One exam, one party, one person. A full Saturday.
 
 ## But the 15-Second Rule Was Right After All
 
 There's a saying: **"You can judge a person in the first 15 seconds."**
 
-I used to think that was wrong.
+I used to think that was wrong. That you should look deeper. That first impressions lie.
 
-This time, I confirmed it. **It's right.**
+This time, I confirmed it. **It was right.**
 
-Looks get you past the first screening round. After that, personality, background, career — those come into focus.
+Looks get you past the first round. After that, personality, background, career — those come into view.
 
-That night, the conversation flowed easily. I thought we were clicking.
+That night, the conversation flowed easily. I thought we were clicking. The laughter came naturally. The silence wasn't uncomfortable.
 
 But my heart wasn't racing.
 
+Comfort and spark were different doors.
+
 ## We Met One More Time
 
-After that night, we met up once more.
+After that night, we met once more. Just in case. Maybe time would change things.
 
-Just in case, I forced myself to give it another shot.
+I forced myself to give it another shot.
 
-But still — no heartbeat.
+But my heart stayed quiet.
 
 **The 15-second rule was right all along.**
 
@@ -183,8 +167,8 @@ But still — no heartbeat.
 
 ## The Little Things
 
-During our conversations, she noticed the little details — the four-leaf clover keyring on my car mount, the Daniel Troost Bombshell fragrance, the diffuser ring.
+During our conversations, she noticed my small details — the four-leaf clover keyring on the car mount, the Daniel Troost Bombshell fragrance, the diffuser ring.
 
-I liked that she paid attention to the small stuff.
+A person who notices the small things is a good person. That much is clear.
 
-But I never found myself thinking about her when she wasn't around.
+But in the hours when she wasn't there, I didn't think of her.

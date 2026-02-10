@@ -13,39 +13,36 @@ lang: en
 twin: nanobanana-image-gen
 ---
 
-## Making Images Is Annoying
+## Do You Really Need to Create Blog Images Manually?
 
-A text-only blog looks bland. I know that.
-But opening Canva every time to make images is even worse.
+Here's the bottom line: **Google Gemini's Nanobanana image generation API gives you 500 images per day for free.** Put 3 images in a blog post and that's 0.6% of the daily quota. No per-image billing like DALL-E. No credit card required.
 
-I'm a lazy developer. Wouldn't it be nice if images just appeared automatically when I say "write me a blog post"?
-So I built it.
+I know text-only blogs look bland. But I also know I don't want to open Canva every time I publish a post. I'm a lazy developer -- if I type "write a blog post" and the images don't generate themselves, that's not real automation. So I built it.
 
-## Nanobanana vs DALL-E
+## Nanobanana vs DALL-E — The Numbers Speak for Themselves
 
-I had to pick an image generation API. Two candidates.
+I needed to pick an image generation API. Two candidates, one comparison table, and the decision was already made.
 
-| Item | Nanobanana (Gemini Flash) | DALL-E 3 |
+| Feature | Nanobanana (Gemini Flash) | DALL-E 3 |
 |---|---|---|
 | **Price** | **Free** (500/day) | $0.04~$0.12/image |
 | **Credit card** | Not required | Required |
-| **Korean** | Native support | Internal translation |
-| **Quality** | Good enough for blogs | Good |
+| **Korean prompts** | Native support | Internal translation |
+| **Blog-quality output** | Good enough | Good |
 
-**Nanobanana = Google Gemini's image generation feature**. Set `response_modalities=["IMAGE"]` and it spits out images.
+**Nanobanana** is Google Gemini's built-in image generation capability. Add `response_modalities=["IMAGE"]` to your API call, and it returns images instead of text. That's the entire integration surface.
 
-500 free images per day. Put 3 in a blog post and that's 0.6% usage. Practically unlimited.
-No reason to pay DALL-E for every image. The decision took 1 second.
+500 free images per day is effectively unlimited for individual bloggers -- unless you're publishing 166 posts a day. Paying DALL-E $0.04-$0.12 per image suddenly makes no sense. The decision took about one second.
 
 ![Concept diagram](/images/blog/nanobanana-2.webp)
 
-## Implementation: 10 Minutes
+## Implementation — 10 Minutes of Code
 
 ### 1. Get an API Key
 
-Grab one for free at [Google AI Studio](https://aistudio.google.com/apikey). No credit card needed. That's the key point.
+Grab one for free at [Google AI Studio](https://aistudio.google.com/apikey). No credit card needed. This is the single biggest barrier-to-entry difference compared to DALL-E.
 
-### 2. Image Generation Module
+### 2. Image Generation Module — Core Code
 
 ```python
 # bot/image_gen.py — core section only
@@ -78,14 +75,15 @@ async def generate_image(prompt: str, filename: str = None) -> dict:
     return {"path": str(save_path), "blog_path": f"/images/blog/{filename}"}
 ```
 
-Three key points:
-- Uses the `gemini-2.0-flash-exp` model. Free tier.
-- `response_modalities=["IMAGE"]` is the magic spell. This single setting activates image generation mode.
-- The Gemini SDK is synchronous, so I wrapped it with `asyncio.to_thread` for async support.
+Three things worth noting here:
+
+- **`gemini-2.0-flash-exp`** is the model that supports image generation on the free tier.
+- **`response_modalities=["IMAGE"]`** is the key parameter. This single line switches Gemini from a text model to an image generation model.
+- The Gemini SDK only provides a synchronous API, so I wrapped it with **`asyncio.to_thread`** for async compatibility. Essential since the Telegram bot runs on an async event loop.
 
 ### 3. Batch Image Generation for Blog Posts
 
-3 images per post. Each with a different vibe.
+Each post gets 3 images, each serving a different purpose.
 
 ```python
 async def generate_blog_images(topic: str, count: int = 3) -> list:
@@ -105,25 +103,23 @@ async def generate_blog_images(topic: str, count: int = 3) -> list:
     return results
 ```
 
-### 4. Telegram Bot Integration
-
-Two modes.
+### 4. Telegram Bot Integration — Two Modes
 
 **Standalone image generation (`/image`):**
 ```
 /image illustration of a Telegram bot chatting with AI
 ```
-→ Generates 1 image, shows preview in Telegram, saves to blog folder.
+Generates 1 image, shows a preview in Telegram, and saves it to the blog folder simultaneously.
 
 **Automated blog generation (`/blog`):**
 ```
 /blog nanobanana image generation integration
 ```
-→ Auto-generates 3 images → Claude writes the body with image paths included → Complete draft in one shot.
+Auto-generates 3 images, then Claude writes the body with embedded image paths, producing a complete draft in one shot.
 
 ![Result image](/images/blog/nanobanana-3.webp)
 
-## The Full Flow
+## The Full Pipeline — One Command, Done
 
 ```
 Telegram: /blog topic
@@ -139,30 +135,28 @@ Telegram: /blog topic
        └→ /publish → git push → deployed
 ```
 
-One command to get a **complete post + images**. That's automation. Real automation.
+One Telegram command produces a **complete post with images**. Zero human intervention in between. That's the core of automation -- eliminating the middle steps.
 
-## The Struggle: From AI Studio to Vertex AI
+## The Detour — Why I Had to Switch from AI Studio to Vertex AI
 
-The code above didn't work cleanly from the start. There were struggles. Honestly, it took quite a while.
+The code above didn't work on the first try. There was a significant debugging detour, and documenting it here might save someone else two hours.
 
-### AI Studio API Key Was Blocked
+### The AI Studio API Key Trap — quota = 0
 
-I initially got a free API key from AI Studio. But all the image generation models had **quota = 0**.
+I started with a free API key from AI Studio. The documentation clearly stated that free image generation was available. But when I actually made the call:
 
 ```
 429 RESOURCE_EXHAUSTED: Quota exceeded for
 GenerateContent:imageGeneration
 ```
 
-Tried `gemini-2.0-flash-exp`, `gemini-2.5-flash-image` — same error everywhere. Google had restricted image generation on the free tier.
+`gemini-2.0-flash-exp`, `gemini-2.5-flash-image` -- same error across the board. After digging into it, I found that Google had set the image generation quota to 0 on the free tier. A classic case of documentation not matching reality.
 
-Free, they said? Felt like a scam.
+### Switching to Vertex AI — Same Model, Different Infrastructure
 
-### Vertex AI Was the Answer
+The solution was [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/studio). Same Gemini models, but billed per GCP project, which means no arbitrary quota restrictions.
 
-The solution was [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/studio). Same Gemini model, but billed per GCP project, so there are no quota restrictions.
-
-The switch was easy:
+The migration was surprisingly straightforward:
 
 ```bash
 # 1. Enable Vertex AI API in GCP project
@@ -172,7 +166,7 @@ gcloud auth application-default login
 # 3. Authenticate Google account in browser → done
 ```
 
-One line of code changed:
+The code change was exactly one line:
 
 ```python
 # Before: AI Studio (API key)
@@ -186,22 +180,21 @@ client = genai.Client(
 )
 ```
 
-Just added `vertexai=True`. Same model name. Worked immediately after that.
-2 hours of struggle, 2 minutes to fix. Always goes like this.
+Added `vertexai=True`. That's it. Same model name. Worked immediately. Two hours of debugging, two minutes to fix. Software engineering in a nutshell.
 
-### 3-Tier Fallback Strategy
+### 3-Tier Fallback Strategy — The Service Must Never Stop
 
-The final architecture looks like this:
+Here's the final fallback architecture I settled on:
 
 ```
 Priority 1: Vertex AI (ADC auth) → Stable, billing-based
-Priority 2: AI Studio (API key) → Free but quota-limited
+Priority 2: AI Studio (API key) → Free but potentially quota-limited
 Priority 3: SVG placeholder → Last resort
 ```
 
-No matter what, blog generation never stops. If images can't be generated, at least hold the spot with an SVG. Shipping beats perfection.
+No matter what happens, the blog generation pipeline never stops. If image generation fails, an SVG placeholder holds the spot. Shipping beats perfection -- a philosophy I picked up from production environments.
 
-## Cost Summary
+## Cost Breakdown — $0 Additional When You Build It Yourself
 
 | Item | Monthly Cost |
 |---|---|
@@ -211,8 +204,7 @@ No matter what, blog generation never stops. If images can't be generated, at le
 | GitHub Pages hosting | **$0** |
 | **Total** | **Additional cost $0** |
 
-Services like OpenClaw cost $20+/month. Build it yourself and it's $0.
-That difference is why I build things myself.
+Third-party blog image services run $20+/month. Building it yourself costs $0. Yes, the initial implementation takes time, but once built, you can generate hundreds of images indefinitely for free. In terms of ROI, it's not even close.
 
 ## Series Progress
 
@@ -222,8 +214,8 @@ That difference is why I build things myself.
 4. Nanobanana Image Generation ← **This post**
 5. Voice → Meeting Notes/Blog Auto-Generation (next)
 
-Type one line in Telegram and a blog with images pops out automatically. Almost there.
+Type one line in Telegram and a complete blog post with images appears. The final puzzle piece of the full pipeline is almost in place.
 
 ---
 
-There's no end to automation. But that's what makes it fun.
+There's no end to automation. But image generation? That part is done -- nothing left to touch.

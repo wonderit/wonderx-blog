@@ -15,52 +15,54 @@ twin: blind-date-bistro-a
 
 ## How We Got Connected
 
-Random encounter at a conference -> VP at a partner company -> a woman my age.
+A chance encounter at a conference. A VP at a partner company. A woman my age.
 
-Same age. I hesitated. But I'd already declared to myself: "I'll meet anyone." So I went.
+Same age. I hesitated. But I'd already made a promise to myself — meet anyone. The hesitation was brief.
 
 ## The Western Restaurant in Munjeong-dong
 
-She naturally sat on the wall side, and I took the seat facing the wall. That's just how couples — or potential couples — always sit at Western restaurants.
+I stepped inside. She sat against the wall, naturally, as if it were already decided. I took the seat facing the aisle. This is how people always sit at Western restaurants on a date. Nobody arranged it. It just happens.
 
-To my right were two women in their 40s-50s. They'd clearly noticed we were on a blind date and snuck a glance. To my left, two men who looked mid-40s, deep in conversation about AI, automation tools, stocks, and Samsung Electronics.
+To my right, two women in their 40s or 50s. They glanced over once. They'd figured out what this was. To my left, two men who looked mid-40s, talking about AI, automation tools, stocks, Samsung Electronics.
 
-The fact that I could hear their conversation meant one thing: I wasn't focused on mine.
+I could hear their entire conversation. That told me everything I needed to know about my focus.
 
 ![Dinner at the Western restaurant](/images/blog/bistro-date-2.webp)
 
-She said she felt bad for rescheduling our date, and smoothly picked up the check. Cool move.
+She said she felt bad about rescheduling and smoothly picked up the check. Cool. That single gesture — the apology and the action together — said something about who she was.
 
-We were too full for dessert, so we decided to find a cafe instead.
+We were too full for dessert. We decided to find a cafe.
 
 ## The Cafe Hunt
 
-I searched around and found two promising cafes. One had great decor but also a dog running around and some kind of party vibe going on. Pass. We walked a bit further to the other one — already closed. Turns out everything shuts down by 9 PM around there.
+I searched and found two promising spots nearby. One had lovely decor, but a dog was running around inside and the energy felt like a house party. Pass. We walked further to the next one. Already closed.
 
-We tried a cafe with a dark interior. Arrived at 8:46 PM. "We close at 9, is that okay?" We said we'd come back another time.
+So this is a neighborhood where everything shuts down at 9 PM.
+
+We reached a cafe with a dark interior. 8:46 PM. "We close at nine — is that okay?" We said we'd come back another time.
 
 ![Searching for a cafe at night](/images/blog/bistro-date-4.webp)
 
-Secretly, I was hoping to wander toward where I'd parked my car. She said she lived nearby anyway, so I could drop her off.
+Secretly, I was hoping to drift toward where I'd parked. She lived nearby, she'd said, so I could offer a ride home later.
 
-We finally found a place. It had floor-to-ceiling windows but kept the old front door completely intact — like they renovated everything except that one thing. Inside, there were about 14 petit fours left on display. I almost ordered some, but I'd already blown past my calorie limit for the day. We settled on two iced americanos.
+We finally found a place. Floor-to-ceiling windows, but the old front door had been left completely intact — as if the renovation had forgotten it, or chosen not to touch it. Inside, about fourteen petit fours sat in a display case. I almost ordered some. Then I remembered I'd already exceeded my calorie budget for the day. Two iced americanos. That was it.
 
-My eyes kept drifting to the other tables. Four women near the entrance, two more at another table. I couldn't focus.
+My eyes kept wandering. Four women near the door. Two more at another table. I wasn't paying attention to my date. There's always a reason when you can't focus. The reason is simple — you're not interested.
 
 ![A quiet conversation at the cafe](/images/blog/bistro-date-3.webp)
 
 ## Blind Dates and Reading Books
 
-You can tell within the first few minutes whether there's romantic attraction. While making surface-level conversation, I brought this up:
+You know within the first few minutes whether there's romantic attraction. While the conversation skated along the surface, I said this:
 
 > "I think blind dates are a lot like reading books.
 > When you go on a bad one, just think of it as reading a book."
 
-To find the right person, you need to meet many people. That's why I actively ask people around me to set me up, and I always make sure to thank whoever made the introduction.
+To find someone who fits, you have to meet many people. So I ask around. I actively request introductions. And I always thank whoever set it up, regardless of how the date went.
 
 ## Wrapping Up
 
-When I got home, I sent her a thank-you message. She mentioned she'd be hanging out with a friend at home over the weekend, so I sent a gift card for delivery food.
+I got home and sent a thank-you message. She mentioned she'd be spending the weekend with a friend at home, so I sent a delivery gift card. Nothing behind it. Just wishing her a good time.
 
 The next day, I messaged the VP who'd set us up:
 
@@ -68,9 +70,11 @@ The next day, I messaged the VP who'd set us up:
 > We had a great conversation, but I didn't feel a romantic spark.
 > Still, thank you so much for connecting us!"
 
-Even when there's no chemistry, you still show respect. You always thank the matchmaker. And then you wait for the next one.
+Even when there's no chemistry, you show respect. You thank the matchmaker. And you wait for the next one.
 
-Meeting the right person means going through plenty of wrong ones first. That's just how it works.
+Meeting the right person is like reading many books. Most of them blur in your memory. But every once in a while, you find one with a sentence that stays.
+
+I haven't found that sentence yet.
 
 ---
 
