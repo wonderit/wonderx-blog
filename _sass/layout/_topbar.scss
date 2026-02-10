@@ -85,14 +85,14 @@
   }
 }
 
-/* Language toggle in topbar — KO / EN text in pill */
+/* Language toggle in topbar — match icon button size (46×38) */
 .lang-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1.6rem;
-  padding: 0 0.5rem;
-  border-radius: 0.8rem;
+  width: 46px;
+  height: 38px;
+  border-radius: 0.5rem;
   text-decoration: none;
   border: 1px solid var(--btn-border-color);
   transition: all 0.2s;

@@ -10,17 +10,32 @@ layout: page
 
 {% assign group_index = 0 %}
 
+{% assign current_lang = page.lang | default: 'ko' %}
+{% assign lang_posts = site.posts | where: "lang", current_lang %}
+
 {% assign sort_categories = site.categories | sort %}
 
 {% for category in sort_categories %}
   {% assign category_name = category | first %}
   {% assign posts_of_category = category | last %}
-  {% assign first_post = posts_of_category | first %}
+
+  <!-- Filter posts in this category by language -->
+  {% assign lang_posts_of_category = '' | split: '' %}
+  {% for post in posts_of_category %}
+    {% if post.lang == current_lang %}
+      {% assign lang_posts_of_category = lang_posts_of_category | push: post %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign lang_posts_size = lang_posts_of_category | size %}
+  {% if lang_posts_size == 0 %}{% continue %}{% endif %}
+
+  {% assign first_post = lang_posts_of_category | first %}
 
   {% if category_name == first_post.categories[0] %}
     {% assign sub_categories = '' | split: '' %}
 
-    {% for post in posts_of_category %}
+    {% for post in lang_posts_of_category %}
       {% assign second_category = post.categories[1] %}
       {% if second_category %}
         {% unless sub_categories contains second_category %}
@@ -44,8 +59,8 @@ layout: page
           {% capture _category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
           <a href="{{ _category_url | relative_url }}" class="mx-2">{{ category_name }}</a>
 
-          <!-- content count -->
-          {% assign top_posts_size = site.categories[category_name] | size %}
+          <!-- content count (language-filtered) -->
+          {% assign top_posts_size = lang_posts_size %}
           <span class="text-muted small font-weight-light">
             {% if sub_categories_size > 0 %}
               {{ sub_categories_size }}
@@ -109,7 +124,8 @@ layout: page
                 {% capture _sub_ctg_url %}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
                 <a href="{{ _sub_ctg_url | relative_url }}" class="mx-2">{{ sub_category }}</a>
 
-                {% assign posts_size = site.categories[sub_category] | size %}
+                {% assign sub_cat_posts = site.categories[sub_category] | where: "lang", current_lang %}
+                {% assign posts_size = sub_cat_posts | size %}
                 <span class="text-muted small font-weight-light">
                   {{ posts_size }}
 

@@ -3,19 +3,30 @@ layout: page
 # All the Tags of posts.
 ---
 
+{% assign current_lang = page.lang | default: 'ko' %}
+{% assign lang_posts = site.posts | where: "lang", current_lang %}
+
 <div id="tags" class="d-flex flex-wrap mx-xl-2">
   {% assign tags = '' | split: '' %}
+  {% assign tag_counts = '' | split: '' %}
+
   {% for t in site.tags %}
-    {% assign tags = tags | push: t[0] %}
+    {% assign tag_name = t[0] %}
+    {% assign tag_posts = t[1] | where: "lang", current_lang %}
+    {% assign tag_post_count = tag_posts | size %}
+    {% if tag_post_count > 0 %}
+      {% assign tags = tags | push: tag_name %}
+    {% endif %}
   {% endfor %}
 
   {% assign sorted_tags = tags | sort_natural %}
 
   {% for t in sorted_tags %}
+    {% assign filtered_posts = site.tags[t] | where: "lang", current_lang %}
     <div>
       <a class="tag" href="{{ t | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}">
         {{ t -}}
-        <span class="text-muted">{{ site.tags[t].size }}</span>
+        <span class="text-muted">{{ filtered_posts | size }}</span>
       </a>
     </div>
   {% endfor %}
