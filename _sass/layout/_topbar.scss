@@ -118,9 +118,8 @@
     margin-left: 0.75rem;
   }
 
-  /* Mobile: reorder before search-trigger */
+  /* Mobile: right end, after search-trigger */
   @include bp.lt(bp.get(lg)) {
-    order: -1;
-    margin-right: 0.25rem;
+    margin-left: 0.25rem;
   }
 }
