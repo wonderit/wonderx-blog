@@ -2,7 +2,7 @@
 title: 'From Voice Message to Meeting Notes + Blog Post — The Power of Gemini STT'
 description: 'Send a voice message to the Telegram bot and Gemini transcribes it, then auto-converts it into meeting notes or a blog post. Just record on your iPhone and you are done.'
 date: 2026-02-08 00:00:00 +0900
-tags: ['voice', 'stt', 'gemini', 'telegram', 'meeting-notes', 'automation', 'claude-code']
+tags: ['voice', 'STT', 'Gemini', 'Telegram', 'meeting-notes', 'automation', 'Claude-Code']
 categories: [ai-automation]
 image:
   path: /images/blog/voice-stt-telegram-1.webp

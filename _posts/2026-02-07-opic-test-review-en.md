@@ -7,7 +7,7 @@ image:
   width: 800
   height: 800
 categories: [social]
-tags: ['opic', 'english', 'career', 'ai']
+tags: ['OPIc', 'English', 'career', 'AI']
 author: wonder
 lang: en
 twin: opic-test-review-a0ff1c

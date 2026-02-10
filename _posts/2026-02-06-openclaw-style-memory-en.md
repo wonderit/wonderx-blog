@@ -2,7 +2,7 @@
 title: "Implementing OpenClaw-Style Memory — Teaching My AI to Remember"
 description: 'Analyzed OpenClaw''s file-based memory system and applied it to my Claude Code Telegram bot. MEMORY.md + daily notes — only remembering what matters.'
 date: 2026-02-06 00:00:00 +0900
-tags: ['claude-code', 'telegram', 'openclaw', 'memory', 'automation', 'vibe-coding']
+tags: ['Claude-Code', 'Telegram', 'OpenClaw', 'memory', 'automation', 'vibe-coding']
 categories: [ai-automation]
 image:
   path: /images/blog/openclaw-memory-1.webp

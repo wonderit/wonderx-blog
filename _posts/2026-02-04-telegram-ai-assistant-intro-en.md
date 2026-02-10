@@ -2,7 +2,7 @@
 title: 'Building a 24/7 AI Assistant with Claude Code + Telegram — Series Intro'
 description: 'My MacBook is always on. Claude Code Max plan is $100/month. Connecting them to a Telegram bot to build a personal AI assistant — here is how this project begins.'
 date: 2026-02-04 00:00:00 +0900
-tags: ['claude-code', 'telegram', 'automation', 'ai']
+tags: ['Claude-Code', 'Telegram', 'automation', 'AI']
 categories: [ai-automation]
 image:
   path: /images/blog/ai-assistant-intro-1.webp
