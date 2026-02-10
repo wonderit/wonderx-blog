@@ -45,14 +45,14 @@
     </button>
 
     <div id="topbar-title">
-      {% if page.layout == 'home' or page.layout == 'home-en' %}
-        {{- site.data.locales[include.lang].title | default: site.title -}}
-      {% elsif page.collection == 'tabs' or page.layout == 'page' %}
-        {%- capture tab_key -%}{{ page.url | split: '/' }}{%- endcapture -%}
-        {{- site.data.locales[include.lang].tabs[tab_key] | default: page.title -}}
+      {% if include.lang == 'en' %}
+        {% assign home_url = '/en/' | relative_url %}
       {% else %}
-        {{- site.data.locales[include.lang].layout[page.layout] | default: page.layout | capitalize -}}
+        {% assign home_url = '/' | relative_url %}
       {% endif %}
+      <a href="{{ home_url }}">
+        {{- site.data.locales[include.lang].title | default: site.title -}}
+      </a>
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
