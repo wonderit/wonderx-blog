@@ -156,17 +156,17 @@
         {% endif %}
       {% endfor %}
 
-      <!-- Language switch flag icon -->
+      <!-- Language switch text -->
       {% if icon_count > 0 %}
         <span class="icon-border"></span>
       {% endif %}
       {% if include.lang == 'en' %}
-        <a href="{{ '/' | relative_url }}" aria-label="한국어로 전환" class="lang-flag-btn">
-          <span class="flag-emoji">🇰🇷</span>
+        <a href="{{ '/' | relative_url }}" aria-label="한국어로 전환" class="lang-flag-btn" title="한국어">
+          <span class="lang-label">KO</span>
         </a>
       {% else %}
-        <a href="{{ '/en/' | relative_url }}" aria-label="Switch to English" class="lang-flag-btn">
-          <span class="flag-emoji">🇺🇸</span>
+        <a href="{{ '/en/' | relative_url }}" aria-label="Switch to English" class="lang-flag-btn" title="English">
+          <span class="lang-label">EN</span>
         </a>
       {% endif %}
     </div>

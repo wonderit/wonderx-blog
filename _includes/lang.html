@@ -1,10 +1,17 @@
 {% comment %}
   Detect appearance language and return it through variable "lang"
+  Supports short codes: 'ko' maps to 'ko-KR' locale file
 {% endcomment %}
-{% if site.data.locales[page.lang] %}
-  {% assign lang = page.lang %}
-{% elsif site.data.locales[site.lang] %}
-  {% assign lang = site.lang %}
+{% assign _page_lang = page.lang %}
+{% assign _site_lang = site.lang %}
+
+{% if _page_lang == 'ko' %}{% assign _page_lang = 'ko-KR' %}{% endif %}
+{% if _site_lang == 'ko' %}{% assign _site_lang = 'ko-KR' %}{% endif %}
+
+{% if site.data.locales[_page_lang] %}
+  {% assign lang = _page_lang %}
+{% elsif site.data.locales[_site_lang] %}
+  {% assign lang = _site_lang %}
 {% else %}
   {% assign lang = 'en' %}
 {% endif %}

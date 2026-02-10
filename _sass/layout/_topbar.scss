@@ -85,27 +85,41 @@
   }
 }
 
-/* Language toggle in topbar — flag icon in circle */
+/* Language toggle in topbar — KO / EN text in pill */
 .lang-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: 50%;
+  height: 1.6rem;
+  padding: 0 0.5rem;
+  border-radius: 0.8rem;
   text-decoration: none;
   border: 1px solid var(--btn-border-color);
   transition: all 0.2s;
-  margin-left: 0.25rem;
   flex-shrink: 0;
+  color: var(--text-muted-color);
 
-  .flag-emoji {
-    font-size: 0.85rem;
+  .lang-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     line-height: 1;
   }
 
   &:hover {
     border-color: var(--link-color);
+    color: var(--link-color);
     background-color: var(--sidebar-hover-bg, rgba(0, 0, 0, 0.05));
+    text-decoration: none;
+  }
+
+  /* Mobile: show between sidebar-trigger and search-trigger */
+  @include bp.lt(bp.get(lg)) {
+    margin-right: 0.25rem;
+  }
+
+  /* Desktop: positioned near the search bar */
+  @include bp.lg {
+    margin-right: 0.5rem;
   }
 }
