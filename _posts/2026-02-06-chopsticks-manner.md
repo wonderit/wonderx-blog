@@ -6,7 +6,7 @@ image:
   path: /images/blog/voice-21b5ba-1.webp
   width: 800
   height: 800
-tags: ["일상", "매너", "식사예절"]
+tags: ["daily-life", "manners", "dining-etiquette"]
 categories: [social]
 author: wonder
 ---
