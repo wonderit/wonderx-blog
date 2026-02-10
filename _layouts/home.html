@@ -8,44 +8,41 @@ layout: default
 {% assign all_pinned = ko_posts | where: 'pin', 'true' %}
 {% assign all_normal = ko_posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
 
+<!-- Build ordered list: pinned first, then normal -->
+{% assign ordered_posts = '' | split: '' %}
+{% for post in all_pinned %}
+  {% assign ordered_posts = ordered_posts | push: post %}
+{% endfor %}
+{% for post in all_normal %}
+  {% assign ordered_posts = ordered_posts | push: post %}
+{% endfor %}
+
+<!-- Custom pagination based on Korean posts only -->
+{% assign per_page = paginator.per_page | default: 5 %}
+{% assign current_page = paginator.page | default: 1 %}
+{% assign total_ko = ordered_posts | size %}
+{% assign total_ko_pages = total_ko | divided_by: per_page %}
+{% assign remainder = total_ko | modulo: per_page %}
+{% if remainder > 0 %}
+  {% assign total_ko_pages = total_ko_pages | plus: 1 %}
+{% endif %}
+
+<!-- Redirect if page exceeds Korean post pages -->
+{% if current_page > total_ko_pages and total_ko_pages > 0 %}
+  <script>window.location.replace('{{ "/" | relative_url }}');</script>
+  <meta http-equiv="refresh" content="0;url={{ '/' | relative_url }}">
+{% endif %}
+
+<!-- Slice posts for current page -->
+{% assign page_start = current_page | minus: 1 | times: per_page %}
 {% assign posts = '' | split: '' %}
-
-<!-- Get pinned posts on current page -->
-
-{% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign visible_end = visible_start | plus: paginator.per_page %}
-
-{% if all_pinned.size > visible_start %}
-  {% if all_pinned.size > visible_end %}
-    {% assign pinned_size = paginator.per_page %}
-  {% else %}
-    {% assign pinned_size = all_pinned.size | minus: visible_start %}
+{% for post in ordered_posts %}
+  {% if forloop.index0 >= page_start %}
+    {% assign posts = posts | push: post %}
   {% endif %}
-
-  {% for i in (visible_start..all_pinned.size) limit: pinned_size %}
-    {% assign posts = posts | push: all_pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_size = 0 %}
-{% endif %}
-
-<!-- Get normal posts on current page -->
-
-{% assign normal_size = paginator.posts | size | minus: pinned_size %}
-
-{% if normal_size > 0 %}
-  {% if pinned_size > 0 %}
-    {% assign normal_start = 0 %}
-  {% else %}
-    {% assign normal_start = visible_start | minus: all_pinned.size %}
-  {% endif %}
-
-  {% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
-
-  {% for i in (normal_start..normal_end) %}
-    {% assign posts = posts | push: all_normal[i] %}
-  {% endfor %}
-{% endif %}
+  {% assign posts_count = posts | size %}
+  {% if posts_count >= per_page %}{% break %}{% endif %}
+{% endfor %}
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
@@ -150,6 +147,65 @@ layout: default
 </div>
 <!-- #post-list -->
 
-{% if paginator.total_pages > 1 %}
-  {% include post-paginator.html %}
+{% if total_ko_pages > 1 and current_page <= total_ko_pages %}
+  <!-- Custom paginator for Korean-only posts -->
+  <nav aria-label="Page Navigation">
+    <ul class="pagination align-items-center mt-4 mb-0">
+      <!-- left arrow -->
+      {% if current_page > 1 %}
+        {% assign prev_page = current_page | minus: 1 %}
+        {% if prev_page == 1 %}
+          {% assign prev_url = '/' | relative_url %}
+        {% else %}
+          {% assign prev_url = '/page' | append: prev_page | append: '/' | relative_url %}
+        {% endif %}
+        <li class="page-item">
+          <a class="page-link" href="{{ prev_url }}" aria-label="previous-page">
+            <i class="fas fa-angle-left"></i>
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <a class="page-link" href="#" aria-label="previous-page">
+            <i class="fas fa-angle-left"></i>
+          </a>
+        </li>
+      {% endif %}
+
+      <!-- page numbers -->
+      {% for i in (1..total_ko_pages) %}
+        {% if i == 1 %}
+          {% assign page_url = '/' | relative_url %}
+        {% else %}
+          {% assign page_url = '/page' | append: i | append: '/' | relative_url %}
+        {% endif %}
+        <li class="page-item{% if i == current_page %} active{% endif %}">
+          <a class="page-link" href="{{ page_url }}">{{ i }}</a>
+        </li>
+      {% endfor %}
+
+      <!-- mobile pagination -->
+      <li class="page-index align-middle">
+        <span>{{ current_page }}</span>
+        <span class="text-muted">/ {{ total_ko_pages }}</span>
+      </li>
+
+      <!-- right arrow -->
+      {% if current_page < total_ko_pages %}
+        {% assign next_page = current_page | plus: 1 %}
+        {% assign next_url = '/page' | append: next_page | append: '/' | relative_url %}
+        <li class="page-item">
+          <a class="page-link" href="{{ next_url }}" aria-label="next-page">
+            <i class="fas fa-angle-right"></i>
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <a class="page-link" href="#" aria-label="next-page">
+            <i class="fas fa-angle-right"></i>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
 {% endif %}
