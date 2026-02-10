@@ -22,6 +22,18 @@ script_includes:
       <p class="post-desc fw-light mb-4">{{ page.description }}</p>
     {% endif %}
 
+    {% if page.twin %}
+      {% for p in site.posts %}
+        {% if p.slug == page.twin %}
+          <a href="{{ p.url | relative_url }}" class="btn btn-sm btn-outline-secondary mb-3 translation-link">
+            <i class="fas fa-language me-1"></i>
+            {% if page.lang == 'en' %}한국어로 읽기{% else %}Read in English{% endif %}
+          </a>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
     <div class="post-meta text-muted">
       <!-- published date -->
       <span>

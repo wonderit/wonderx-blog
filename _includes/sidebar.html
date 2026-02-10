@@ -14,27 +14,51 @@
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
-      <!-- home -->
-      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-        <a href="{{ '/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
-        </a>
-      </li>
-      <!-- the real tabs -->
-      {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-          <a href="{{ tab.url | relative_url }}" class="nav-link">
-            <i class="fa-fw {{ tab.icon }}"></i>
-            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-
-            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+      {% if include.lang == 'en' %}
+        <!-- English: home -->
+        <li class="nav-item{% if page.layout == 'home-en' %}{{ " active" }}{% endif %}">
+          <a href="{{ '/en/' | relative_url }}" class="nav-link">
+            <i class="fa-fw fas fa-home"></i>
+            <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
           </a>
         </li>
-        <!-- .nav-item -->
-      {% endfor %}
+        <!-- English: tabs from en_tabs.yml -->
+        {% for tab in site.data.en_tabs %}
+          <li class="nav-item{% if page.url == tab.url %}{{ " active" }}{% endif %}">
+            <a href="{{ tab.url | relative_url }}" class="nav-link">
+              <i class="fa-fw {{ tab.icon }}"></i>
+              <span>{{ tab.title | upcase }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+        <!-- Korean: home -->
+        <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+          <a href="{{ '/' | relative_url }}" class="nav-link">
+            <i class="fa-fw fas fa-home"></i>
+            <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
+          </a>
+        </li>
+        <!-- Korean: tabs -->
+        {% for tab in site.tabs %}
+          <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+            <a href="{{ tab.url | relative_url }}" class="nav-link">
+              <i class="fa-fw {{ tab.icon }}"></i>
+              {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+              <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      {% endif %}
     </ul>
   </nav>
+
+  <!-- Language Switcher -->
+  <div class="lang-switcher d-flex justify-content-center my-2">
+    <a href="{{ '/' | relative_url }}" class="lang-btn{% if include.lang != 'en' %} active{% endif %}">KO</a>
+    <span class="lang-divider">|</span>
+    <a href="{{ '/en/' | relative_url }}" class="lang-btn{% if include.lang == 'en' %} active{% endif %}">EN</a>
+  </div>
 
   <div class="sidebar-bottom d-flex flex-column align-items-center w-100">
     {% if site.analytics.goatcounter.id %}

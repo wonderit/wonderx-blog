@@ -1,0 +1,12 @@
+- title: Categories
+  url: /en/categories/
+  icon: fas fa-stream
+- title: Tags
+  url: /en/tags/
+  icon: fas fa-tags
+- title: Archives
+  url: /en/archives/
+  icon: fas fa-archive
+- title: About
+  url: /en/about/
+  icon: fas fa-info-circle

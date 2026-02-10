@@ -64,7 +64,7 @@
   {% endif %}
 
   <title>
-    {%- unless page.layout == 'home' -%}
+    {%- unless page.layout == 'home' or page.layout == 'home-en' -%}
       {%- capture title -%}
         {%- if page.collection == 'tabs' -%}
           {%- assign tab_key = page.title | downcase -%}
@@ -126,7 +126,7 @@
     <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
   {% endif %}
 
-  {% if page.layout == 'post' or page.layout == 'page' or page.layout == 'home' %}
+  {% if page.layout == 'post' or page.layout == 'page' or page.layout == 'home' or page.layout == 'home-en' %}
     <link rel="preload" href="{{ site.data.origin[type]['lazy-polyfill'].css | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ site.data.origin[type]['lazy-polyfill'].css | relative_url }}"></noscript>
   {% endif %}
@@ -163,6 +163,29 @@
 
   <!-- Lyket Clap Button (deferred for performance) -->
   <script defer src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_cc1579e1e32cb0415c5b073d571905"></script>
+
+  <!-- Hreflang for multilingual SEO -->
+  {% if page.twin %}
+    {% for p in site.posts %}
+      {% if p.slug == page.twin %}
+        {% if page.lang == 'en' %}
+          <link rel="alternate" hreflang="en" href="{{ page.url | absolute_url }}">
+          <link rel="alternate" hreflang="ko" href="{{ p.url | absolute_url }}">
+        {% else %}
+          <link rel="alternate" hreflang="ko" href="{{ page.url | absolute_url }}">
+          <link rel="alternate" hreflang="en" href="{{ p.url | absolute_url }}">
+        {% endif %}
+        <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if page.layout == 'home' or page.layout == 'home-en' %}
+    <link rel="alternate" hreflang="ko" href="{{ '/' | absolute_url }}">
+    <link rel="alternate" hreflang="en" href="{{ '/en/' | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+  {% endif %}
 
   {% include metadata-hook.html %}
 </head>

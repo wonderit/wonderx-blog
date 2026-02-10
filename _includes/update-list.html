@@ -1,10 +1,14 @@
-<!-- Get 5 last posted/updated posts -->
+<!-- Get 5 last posted/updated posts (filtered by language) -->
 
 {% assign MAX_SIZE = 5 %}
 
+{% assign current_lang = include.lang | default: 'ko' %}
+{% if current_lang == 'ko-KR' %}{% assign current_lang = 'ko' %}{% endif %}
+{% assign lang_posts = site.posts | where: "lang", current_lang %}
+
 {% assign all_list = '' | split: '' %}
 
-{% for post in site.posts %}
+{% for post in lang_posts %}
   {% assign datetime = post.last_modified_at | default: post.date %}
 
   {% capture elem %}

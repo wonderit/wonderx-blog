@@ -113,6 +113,7 @@ defaults:
       layout: post
       comments: true
       toc: true
+      lang: ko
       permalink: /posts/:title/
   - scope:
       path: _drafts
