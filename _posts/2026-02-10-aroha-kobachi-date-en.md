@@ -185,3 +185,5 @@ The problem is, the clearer that filter gets, the less I want to explore. And ev
 ## I've Lost Count of Which Page of Chapter 1 This Is
 
 Waiting for Chapter 2, I write yet another page of Chapter 1 — not even sure which page number this is anymore.
+
+![Waiting for Chapter 2](/images/blog/aroha-kobachi-hero-edited-0fb3.webp)
