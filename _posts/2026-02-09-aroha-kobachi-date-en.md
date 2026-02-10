@@ -2,7 +2,7 @@
 title: 'Waiting for Chapter 2 — Jamsil Aroha Matchmaking Date Review'
 description: 'A matchmaking date at a Japanese restaurant in Jamsil through Aroha. Kwak Beom vs Bibi, the importance of eye spark, and thoughts on marriage as the next chapter of life.'
 date: 2026-02-09 18:00:00 +0900
-image: /images/blog/aroha-kobachi-hero.jpg
+image: /images/blog/aroha-kobachi-hero.webp
 tags: ['matchmaking', 'dating', 'aroha', 'marriage', 'eye-spark']
 categories: [social]
 author: wonder
@@ -24,7 +24,7 @@ I had two boxes of heat packs left at home, so I stuffed two in my pocket to use
 
 When I arrived, I spotted the woman near the restroom. **She looked exactly like her photo, so I recognized her immediately**. But I pretended not to notice and went in. A cautious message came shortly after, and we sat together.
 
-![Kobachi Japanese restaurant exterior in Jamsil](/images/blog/aroha-kobachi-1.jpg)
+![Kobachi Japanese restaurant exterior in Jamsil](/images/blog/aroha-kobachi-1.webp)
 
 ---
 
@@ -34,7 +34,7 @@ I was comfortable enough to slurp my egg custard. But she was gripping her chops
 
 'Ah, not much dating experience.'
 
-![Japanese course meal](/images/blog/aroha-kobachi-2.jpg)
+![Japanese course meal](/images/blog/aroha-kobachi-2.webp)
 
 ---
 
@@ -68,7 +68,7 @@ Actually, I get stressed by people who just whine about quitting their job but n
 
 In RPG terms, I've cleared all side quests in Chapter 1 and leveled up sufficiently. Now I want to move to the next chapter, but I need a partner to start the **main quest (marriage)**.
 
-![Jamsil Lotte Tower night view](/images/blog/aroha-kobachi-3.jpg)
+![Jamsil Lotte Tower night view](/images/blog/aroha-kobachi-3.webp)
 
 ---
 

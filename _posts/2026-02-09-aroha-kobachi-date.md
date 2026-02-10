@@ -2,7 +2,7 @@
 title: '챕터 2를 기다리며 — 잠실 아로하 결정사 소개팅 후기'
 description: '알로하 결정사를 통한 잠실 일식집 소개팅. 곽범 vs 비비, 안광의 중요성, 그리고 결혼이라는 인생의 다음 챕터에 대한 단상.'
 date: 2026-02-09 18:00:00 +0900
-image: /images/blog/aroha-kobachi-hero.jpg
+image: /images/blog/aroha-kobachi-hero.webp
 tags: ['결정사', '소개팅', '아로하', '결혼관', '안광']
 categories: [social]
 author: wonder
@@ -23,7 +23,7 @@ twin: aroha-kobachi-date-en
 
 도착해서 화장실 근처에서 상대 여성분을 먼저 발견했다. **사진과 똑같아서 바로 알아봤다**. 하지만 모른 척하고 입장. 조금 뒤 조심스러운 연락이 왔고 합석했다.
 
-![잠실 일식집 코바치 외관](/images/blog/aroha-kobachi-1.jpg)
+![잠실 일식집 코바치 외관](/images/blog/aroha-kobachi-1.webp)
 
 ---
 
@@ -33,7 +33,7 @@ twin: aroha-kobachi-date-en
 
 '아, 연애 경험이 적구나.'
 
-![일식 코스 요리](/images/blog/aroha-kobachi-2.jpg)
+![일식 코스 요리](/images/blog/aroha-kobachi-2.webp)
 
 ---
 
@@ -67,7 +67,7 @@ twin: aroha-kobachi-date-en
 
 RPG 게임으로 치면 챕터 1의 모든 서브 퀘스트를 다 깨고, 레벨도 충분히 올렸다. 이제 다음 챕터로 넘어가고 싶은데, **메인 퀘스트(결혼)**를 시작할 파트너가 필요한 상황이랄까.
 
-![잠실 롯데타워 야경](/images/blog/aroha-kobachi-3.jpg)
+![잠실 롯데타워 야경](/images/blog/aroha-kobachi-3.webp)
 
 ---
 
