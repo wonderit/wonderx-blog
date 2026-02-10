@@ -147,10 +147,41 @@ Why do I remember the Byredo and Café Lowaide pop-ups more?
 
 ---
 
-## When Will Chapter 2 Begin?
+## Blind Dates Are Like Reading Books
 
-Matchmaking dates have become a **routine** now.
+People ask me. Isn't it exhausting, going on all these blind dates?
 
-The meeting itself wasn't bad, but it was more about **observation** than excitement.
+I've thought about it before, and blind dates are a lot like **reading books**.
 
-Waiting for Chapter 2, I turn another page at the end of Chapter 1 today.
+Some books have stunning covers but turn out to be hollow inside, so you put them down. Others look plain on the outside, but once you start reading, they're overflowing with insight — the kind you can't put down.
+
+Going through new introductions every time,
+asking about ideal types,
+aligning hobbies —
+isn't that exhausting?
+
+It is. It is, but it isn't.
+
+Because it's a journey of exploring **universes that don't exist in mine**. A space-time expedition into parallel worlds where I wonder — if I'd made different choices years ago, could I have entered that universe?
+
+And if it were easy to find her, I might take the meeting lightly. But I know the reward that comes after this struggle.
+
+---
+
+## Optimal Stopping Theory: The 37% Rule
+
+There's something called **Optimal Stopping Theory**. Also known as the 'Secretary Problem' in mathematics.
+
+If I need to hire a secretary and plan to interview 10 candidates, I should automatically pass on the first **1/e ≈ roughly 37% (3.7 people)** — no matter how good they are. Instead, this phase is for calibrating my standards. After that, I pick the first person who exceeds those standards — and mathematically, this gives the **highest probability of making the optimal choice**.
+
+That's how you calibrate your baseline. No regrets, sharper eyes.
+
+But me… I've recalibrated way too many times. My standards are clear. The 37% I passed on? Try 300. Just kidding. Anyway, I do have a clear **filter** now.
+
+The problem is, the clearer that filter gets, the less I want to explore. And even when I do explore, I keep making the same mistake — **not trusting the first 15 seconds, looking deeper, and then confirming what I already knew**.
+
+---
+
+## I've Lost Count of Which Page of Chapter 1 This Is
+
+Waiting for Chapter 2, I write yet another page of Chapter 1 — not even sure which page number this is anymore.
