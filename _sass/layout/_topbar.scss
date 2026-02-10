@@ -113,13 +113,14 @@
     text-decoration: none;
   }
 
-  /* Mobile: show between sidebar-trigger and search-trigger */
-  @include bp.lt(bp.get(lg)) {
-    margin-right: 0.25rem;
+  /* Desktop: after search bar, right end */
+  @include bp.lg {
+    margin-left: 0.75rem;
   }
 
-  /* Desktop: positioned near the search bar */
-  @include bp.lg {
-    margin-right: 0.5rem;
+  /* Mobile: reorder before search-trigger */
+  @include bp.lt(bp.get(lg)) {
+    order: -1;
+    margin-right: 0.25rem;
   }
 }

@@ -55,17 +55,6 @@
       {% endif %}
     </div>
 
-    <!-- Language Switch (text: EN / KO) -->
-    {% if include.lang == 'en' %}
-      <a href="{{ '/' | relative_url }}" class="lang-toggle" aria-label="한국어로 전환" title="한국어">
-        <span class="lang-label">KO</span>
-      </a>
-    {% else %}
-      <a href="{{ '/en/' | relative_url }}" class="lang-toggle" aria-label="Switch to English" title="English">
-        <span class="lang-label">EN</span>
-      </a>
-    {% endif %}
-
     <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
       <i class="fas fa-search fa-fw"></i>
     </button>
@@ -84,5 +73,16 @@
     <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">
       {{- site.data.locales[include.lang].search.cancel -}}
     </button>
+
+    <!-- Language Switch (text: EN / KO) — desktop: after search, mobile: before search -->
+    {% if include.lang == 'en' %}
+      <a href="{{ '/' | relative_url }}" class="lang-toggle" aria-label="한국어로 전환" title="한국어">
+        <span class="lang-label">KO</span>
+      </a>
+    {% else %}
+      <a href="{{ '/en/' | relative_url }}" class="lang-toggle" aria-label="Switch to English" title="English">
+        <span class="lang-label">EN</span>
+      </a>
+    {% endif %}
   </div>
 </header>
