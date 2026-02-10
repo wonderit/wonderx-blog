@@ -53,13 +53,6 @@
     </ul>
   </nav>
 
-  <!-- Language Switcher -->
-  <div class="lang-switcher d-flex justify-content-center my-2">
-    <a href="{{ '/' | relative_url }}" class="lang-btn{% if include.lang != 'en' %} active{% endif %}">KO</a>
-    <span class="lang-divider">|</span>
-    <a href="{{ '/en/' | relative_url }}" class="lang-btn{% if include.lang == 'en' %} active{% endif %}">EN</a>
-  </div>
-
   <div class="sidebar-bottom d-flex flex-column align-items-center w-100">
     {% if site.analytics.goatcounter.id %}
     <div class="visitor-stats mb-2">

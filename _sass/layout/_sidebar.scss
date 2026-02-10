@@ -231,48 +231,14 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     }
   }
 
-  .lang-switcher {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-
-    .lang-btn {
-      color: var(--sidebar-muted-color, var(--text-muted-color));
-      text-decoration: none;
-      padding: 0.2rem 0.5rem;
-      border-radius: 0.35rem;
-      transition: all 0.2s;
-
-      &:hover {
-        color: var(--sidebar-active-color);
-        background-color: var(--sidebar-hover-bg);
-      }
-
-      &.active {
-        color: var(--sidebar-active-color);
-        background-color: var(--sidebar-hover-bg);
-      }
-    }
-
-    .lang-divider {
-      color: var(--sidebar-muted-color, var(--text-muted-color));
-      font-size: 0.7rem;
-      user-select: none;
-    }
-  }
-
   .sidebar-bottom {
-    padding-left: 2rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     margin-bottom: 1.5rem;
 
     @include bp.xxxl {
-      padding-left: 2.75rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
       margin-bottom: 1.75rem;
     }
 

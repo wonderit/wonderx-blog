@@ -55,6 +55,17 @@
       {% endif %}
     </div>
 
+    <!-- Language Switch -->
+    {% if include.lang == 'en' %}
+      <a href="{{ '/' | relative_url }}" class="btn btn-link lang-toggle" aria-label="한국어로 전환" title="한국어">
+        KO
+      </a>
+    {% else %}
+      <a href="{{ '/en/' | relative_url }}" class="btn btn-link lang-toggle" aria-label="Switch to English" title="English">
+        EN
+      </a>
+    {% endif %}
+
     <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
       <i class="fas fa-search fa-fw"></i>
     </button>
