@@ -1,6 +1,6 @@
 ---
-title: "Grace Club Party Recap — Even an ENFP Gets Nervous. The 15-Second Rule Was Right."
-description: "Saturday evening after the OPIc test, headed to a socializing party in Sinchon. Tried to push past first impressions, but the heart doesn't lie."
+title: "Sinchon Wine Party Review — Grace Club Socializing, Even an ENFP Gets Nervous"
+description: "Honest review of Grace Club socializing wine party in Sinchon. 100K KRW entry, went solo. The 15-second first impression rule was right, but the heart doesn't lie."
 date: 2026-02-08 02:00:00 +0900
 tags: ['socializing', 'grace-club', 'dating', 'first-impression', 'execution']
 categories: [social]

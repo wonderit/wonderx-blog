@@ -1,8 +1,8 @@
 ---
-title: '신촌 그레이스클럽 파티 후기 — ENFP도 떨었다. 역시 15초가 맞았다.'
-description: '토요일 오후 오픽 시험 후 신촌 그레이스 클럽 파티. 첫인상으로 판단할 줄 알았는데, 억지로 한 번 더 도전해봤다. 근데 심장이 안 뛰더라.'
+title: '신촌 소셜링 파티 후기 — 그레이스클럽 와인파티, ENFP도 떨었다'
+description: '신촌 그레이스클럽 소셜링 와인파티 솔직 후기. 입장료 10만원, 혼자 참석. 첫인상 15초의 법칙은 맞았다. 근데 심장이 안 뛰더라.'
 date: 2026-02-08 02:00:00 +0900
-tags: ['socializing', 'grace-club', 'opic', 'dating', 'first-impression', 'execution']
+tags: ['소셜링', '와인파티', '그레이스클럽', '신촌파티', '소개팅', '파티후기']
 categories: [social]
 image:
   path: /images/blog/0841-Gemini_Generated_Image_2i1v62i1v62i1v62-edited-4a6e-edited-1a52-edited-9fb3.webp
