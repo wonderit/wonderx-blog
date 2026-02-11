@@ -90,9 +90,12 @@ layout: default
 
               <div class="d-flex align-items-center">
                 <!-- clap count on home list -->
-                <div class="clap-btn-compact">
-                  {% include supabase-clap.html slug=post.slug %}
-                </div>
+                <div class="lyket-home"
+                  data-lyket-type="clap"
+                  data-lyket-id="{{ post.slug | default: post.title | slugify }}"
+                  data-lyket-namespace="blog"
+                  data-lyket-template="medium"
+                ></div>
 
                 {% if post.pin %}
                   <div class="pin ms-2">

@@ -7,7 +7,8 @@ tail_includes:
   - adsense
   - related-posts
   - post-nav
-script_includes: []
+script_includes:
+  - comment
 ---
 
 {% include lang.html %}
@@ -86,7 +87,12 @@ script_includes: []
 
         <div class="d-flex align-items-center gap-3">
           <!-- clap button (top) -->
-          {% include supabase-clap.html slug=page.slug %}
+          <div class="lyket-inline"
+            data-lyket-type="clap"
+            data-lyket-id="{{ page.slug | default: page.title | slugify }}"
+            data-lyket-namespace="blog"
+            data-lyket-template="medium"
+          ></div>
 
           <!-- pageviews -->
           {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
@@ -139,8 +145,13 @@ script_includes: []
 
   <div class="post-tail-wrapper text-muted">
     <!-- clap button (bottom, centered) -->
-    <div class="d-flex justify-content-center mb-4">
-      {% include supabase-clap.html slug=page.slug %}
+    <div class="lyket-bottom-center d-flex justify-content-center mb-4">
+      <div
+        data-lyket-type="clap"
+        data-lyket-id="{{ page.slug | default: page.title | slugify }}"
+        data-lyket-namespace="blog"
+        data-lyket-template="medium"
+      ></div>
     </div>
 
     <!-- categories -->
@@ -193,8 +204,6 @@ script_includes: []
   </div>
   <!-- div.post-tail-wrapper -->
 
-  <!-- Supabase Comments -->
-  {% include supabase-comments.html slug=page.slug %}
 </article>
 
 <script src="{{ '/assets/js/supabase-social.js' | relative_url }}" defer></script>
