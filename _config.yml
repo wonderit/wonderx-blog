@@ -60,17 +60,13 @@ social_preview_image: "/assets/img/about-character.webp"
 toc: true
 
 comments:
-  provider: giscus
-  giscus:
-    repo: wonderit/wonderx-blog
-    repo_id: R_kgDONx6EWg
-    category: Announcements
-    category_id: DIC_kwDONx6EWs4CnGDY
-    mapping: pathname
-    strict: 0
-    input_position: bottom
-    lang: ko
-    reactions_enabled: 1
+  provider: # disabled (using Supabase comments)
+  # giscus config kept for reference:
+  # giscus:
+  #   repo: wonderit/wonderx-blog
+  #   repo_id: R_kgDONx6EWg
+  #   category: Announcements
+  #   category_id: DIC_kwDONx6EWs4CnGDY
 
 # Self-hosted static assets
 assets:

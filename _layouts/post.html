@@ -7,8 +7,7 @@ tail_includes:
   - adsense
   - related-posts
   - post-nav
-script_includes:
-  - comment
+script_includes: []
 ---
 
 {% include lang.html %}
@@ -87,12 +86,7 @@ script_includes:
 
         <div class="d-flex align-items-center gap-3">
           <!-- clap button (top) -->
-          <div class="lyket-inline"
-            data-lyket-type="clap"
-            data-lyket-id="{{ page.slug | default: page.title | slugify }}"
-            data-lyket-namespace="blog"
-            data-lyket-template="medium"
-          ></div>
+          {% include supabase-clap.html slug=page.slug %}
 
           <!-- pageviews -->
           {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
@@ -144,14 +138,9 @@ script_includes:
   {% include inarticle_ads.html %}
 
   <div class="post-tail-wrapper text-muted">
-    <!-- lyket clap button (bottom, centered circle) -->
-    <div class="lyket-bottom-center d-flex justify-content-center mb-4">
-      <div
-        data-lyket-type="clap"
-        data-lyket-id="{{ page.slug | default: page.title | slugify }}"
-        data-lyket-namespace="blog"
-        data-lyket-template="medium"
-      ></div>
+    <!-- clap button (bottom, centered) -->
+    <div class="d-flex justify-content-center mb-4">
+      {% include supabase-clap.html slug=page.slug %}
     </div>
 
     <!-- categories -->
@@ -203,4 +192,9 @@ script_includes:
     <!-- .post-tail-bottom -->
   </div>
   <!-- div.post-tail-wrapper -->
+
+  <!-- Supabase Comments -->
+  {% include supabase-comments.html slug=page.slug %}
 </article>
+
+<script src="{{ '/assets/js/supabase-social.js' | relative_url }}" defer></script>
