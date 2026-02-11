@@ -20,16 +20,15 @@
     return id;
   }
 
-  // Clap hand SVG (matches Lyket's clap icon style)
-  var CLAP_SVG = '<svg viewBox="0 0 24 24" width="22" height="22"><path d="M8.005 6.435l-.768-2.869a1.5 1.5 0 0 1 2.898-.776l1.345 5.023M11.48 7.813l-.939-3.507a1.5 1.5 0 0 1 2.898-.776l.94 3.507M14.379 8.59l-.47-1.753a1.5 1.5 0 0 1 2.899-.776l.47 1.753M7.022 14.615L5.237 7.953a1.5 1.5 0 0 1 2.898-.776l1.785 6.662M16.778 10.36a1.5 1.5 0 0 1 1.061 1.837l-1.785 6.662a5 5 0 0 1-6.124 3.537l-2.07-.555a5 5 0 0 1-3.537-6.124" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-  var CLAP_SVG_FILLED = '<svg viewBox="0 0 24 24" width="22" height="22"><path d="M8.005 6.435l-.768-2.869a1.5 1.5 0 0 1 2.898-.776l1.345 5.023M11.48 7.813l-.939-3.507a1.5 1.5 0 0 1 2.898-.776l.94 3.507M14.379 8.59l-.47-1.753a1.5 1.5 0 0 1 2.899-.776l.47 1.753M7.022 14.615L5.237 7.953a1.5 1.5 0 0 1 2.898-.776l1.785 6.662M16.778 10.36a1.5 1.5 0 0 1 1.061 1.837l-1.785 6.662a5 5 0 0 1-6.124 3.537l-2.07-.555a5 5 0 0 1-3.537-6.124" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  // Lyket official clap hand SVG (from @lyket/widget)
+  var CLAP_SVG = '<svg viewBox="0 0 29 29" width="22" height="22" aria-label="clap" fill="currentColor"><path d="M13.74 1l.76 2.97.76-2.97zM18.63 2.22l-1.43-.47-.4 3.03zM11.79 1.75l-1.43.47 1.84 2.56zM24.47 14.3L21.45 9c-.29-.43-.69-.7-1.12-.78a1.16 1.16 0 0 0-.91.22c-.3.23-.48.52-.54.84l.05.07 2.85 5c1.95 3.56 1.32 6.97-1.85 10.14a8.46 8.46 0 0 1-.55.5 5.75 5.75 0 0 0 3.36-1.76c3.26-3.27 3.04-6.75 1.73-8.91M14.58 10.89c-.16-.83.1-1.57.7-2.15l-2.5-2.49c-.5-.5-1.38-.5-1.88 0-.18.18-.27.4-.33.63l4.01 4z"/><path d="M17.81 10.04a1.37 1.37 0 0 0-.88-.6.81.81 0 0 0-.64.15c-.18.13-.71.55-.24 1.56l1.43 3.03a.54.54 0 1 1-.87.61L9.2 7.38a.99.99 0 1 0-1.4 1.4l4.4 4.4a.54.54 0 1 1-.76.76l-4.4-4.4L5.8 8.3a.99.99 0 0 0-1.4 0 .98.98 0 0 0 0 1.39l1.25 1.24 4.4 4.4a.54.54 0 0 1 0 .76.54.54 0 0 1-.76 0l-4.4-4.4a1 1 0 0 0-1.4 0 .98.98 0 0 0 0 1.4l1.86 1.85 2.76 2.77a.54.54 0 0 1-.76.76L4.58 15.7a.98.98 0 0 0-1.4 0 .99.99 0 0 0 0 1.4l5.33 5.32c3.37 3.37 6.64 4.98 10.49 1.12 2.74-2.74 3.27-5.54 1.62-8.56l-2.8-4.94z"/></svg>';
 
   function renderClapButton(container, slug) {
     var clapped = localStorage.getItem('clap_' + slug);
     var btn = document.createElement('button');
     btn.className = 'sb-clap-btn' + (clapped ? ' clapped' : '');
     btn.setAttribute('aria-label', 'Clap');
-    btn.innerHTML = '<span class="sb-clap-icon">' + (clapped ? CLAP_SVG_FILLED : CLAP_SVG) + '</span>' +
+    btn.innerHTML = '<span class="sb-clap-icon">' + CLAP_SVG + '</span>' +
       '<span class="sb-clap-count">-</span>';
 
     container.innerHTML = '';
@@ -56,14 +55,14 @@
       }).then(function (r) {
         if (r.ok || r.status === 201) {
           btn.classList.add('clapped', 'sb-clap-pop');
-          btn.querySelector('.sb-clap-icon').innerHTML = CLAP_SVG_FILLED;
+          btn.querySelector('.sb-clap-icon').innerHTML = CLAP_SVG;
           localStorage.setItem('clap_' + slug, '1');
           var countEl = btn.querySelector('.sb-clap-count');
           countEl.textContent = parseInt(countEl.textContent || '0', 10) + 1;
           setTimeout(function () { btn.classList.remove('sb-clap-pop'); }, 500);
         } else if (r.status === 409) {
           btn.classList.add('clapped');
-          btn.querySelector('.sb-clap-icon').innerHTML = CLAP_SVG_FILLED;
+          btn.querySelector('.sb-clap-icon').innerHTML = CLAP_SVG;
           localStorage.setItem('clap_' + slug, '1');
         }
       }).catch(function () {});
