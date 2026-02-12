@@ -2,7 +2,7 @@
 title: 'Am I a Coder, a Planner, or an Executor?'
 description: 'Developers who manage Claude agents, and managers who manage those developers. In the age of AI, where does my identity lie?'
 date: 2026-02-12 17:35:27 +0900
-image: /images/blog/ai-coding-manager-developer-identity-en-1.webp
+image: /images/blog/ai-coding-manager-developer-identity-1.webp
 tags: ['AI', 'Developer', 'Manager', 'Identity', 'Claude']
 categories: [essay]
 author: wonder
@@ -25,7 +25,7 @@ What am I, exactly?
 Every time I meet someone new, these questions.
 People who took Python bootcamps, built websites on Bubble, attend every startup seminar with earnest self-improvement energy.
 
-![Hero image](/images/blog/ai-coding-manager-developer-identity-en-2.webp)
+![Hero image](/images/blog/ai-coding-manager-developer-identity-2.webp)
 
 I never know what to say.
 "Yes, AI does it all" feels wrong somehow,
@@ -42,7 +42,7 @@ Waiting days for a response, feeling euphoric when it arrives—only to suddenly
 
 The gap between developers who've been through this ritual and those who haven't—vibe coders, non-developers—is immense.
 
-![Process image](/images/blog/ai-coding-manager-developer-identity-en-3.webp)
+![Process image](/images/blog/ai-coding-manager-developer-identity-3.webp)
 
 Like the difference between virtual travel on Google Earth and actually boarding a plane.
 
@@ -75,7 +75,7 @@ Like God watching from above, a message in a framed box appeared out of nowhere.
 
 That phrase kept circling in my head.
 
-![Concept image](/images/blog/ai-coding-manager-developer-identity-en-4.webp)
+![Concept image](/images/blog/ai-coding-manager-developer-identity-4.webp)
 
 ## Am I Now a Manager?
 
@@ -101,6 +101,8 @@ Another friend was building a custom HWP document parsing API.
 
 Everyone was making something.
 But what was I making?
+
+![People making things](/images/blog/ai-coding-manager-developer-identity-5.webp)
 
 ## The CEO's Call, and What a Company Means
 
@@ -144,6 +146,8 @@ Some companies are good at securing government grants.
 Some companies are good at making money.
 
 If you can be both, isn't that best?
+
+![Two faces](/images/blog/ai-coding-manager-developer-identity-6.webp)
 
 ## Does the Venture Spirit Still Remain?
 

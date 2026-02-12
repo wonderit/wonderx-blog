@@ -174,6 +174,8 @@ The key UX pattern is **"Generate fast first → Regenerate as Pro if needed"**.
 
 In practice, 8-9 out of 10 images are fine with Fast. Pro regeneration happens only 10-20% of the time. At this ratio, the **average cost drops to $0.03-0.04 per image**.
 
+![Quality system flow](/images/blog/gemini-image-cost-optimization-5.webp)
+
 ## Fallback Strategy — Never Stop at Failure
 
 API quota exhaustion, authentication failures, model outages — production brings all kinds of failures. So I built a **fallback chain**.
@@ -184,6 +186,8 @@ Pro mode:   Gemini 3 Pro → Gemini Flash → Imagen Fast → SVG placeholder
 ```
 
 Each model rotates through multiple API keys. If the first key hits quota limits, it tries the second. If that fails too, it moves to the next model. In the worst case, an SVG placeholder ensures the blog build never breaks.
+
+![Fallback strategy diagram](/images/blog/gemini-image-cost-optimization-6.webp)
 
 ## Results — $0.54 → $0.08 Per Post
 

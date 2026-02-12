@@ -2,7 +2,7 @@
 title: '나는 이제 코더인가, 기획자인가, 실행자인가'
 description: '클로드 에이전트를 다루는 개발자와, 그런 개발자를 다루는 매니저. AI 시대, 내 정체성은 어디쯤 있을까.'
 date: 2026-02-12 17:35:27 +0900
-image: /images/blog/ai-coding-manager-developer-identity-en-1.webp
+image: /images/blog/ai-coding-manager-developer-identity-1.webp
 tags: ['AI', '개발자', '매니저', '정체성', 'Claude']
 categories: [essay]
 author: wonder
@@ -24,7 +24,7 @@ twin: ai-coding-manager-developer-identity-en
 새로운 사람을 만날 때마다 듣는 질문들이다.
 파이썬 학원 다녔다는 사람, 러버블로 홈페이지 만들었다는 사람, 세미나에 열심히 다니며 자기계발에 진심인 분들.
 
-![히어로 이미지](/images/blog/ai-coding-manager-developer-identity-en-2.webp)
+![히어로 이미지](/images/blog/ai-coding-manager-developer-identity-2.webp)
 
 그들에게 뭐라 답해야 할지 모르겠다.
 "맞아요, AI가 다 해줘요"라고 하긴 뭔가 찜찜하고,
@@ -41,7 +41,7 @@ twin: ai-coding-manager-developer-identity-en
 
 그 일련의 과정을 겪어본 개발자와, 그렇지 않은 바이브코더, 그리고 비개발자와의 차이는 천지차이 아닐까.
 
-![과정 이미지](/images/blog/ai-coding-manager-developer-identity-en-3.webp)
+![과정 이미지](/images/blog/ai-coding-manager-developer-identity-3.webp)
 
 구글어스로 여행하는 것과 직접 비행기 타고 가는 것만큼이나.
 
@@ -74,7 +74,7 @@ twin: ai-coding-manager-developer-identity-en
 
 그 말이 계속 맴돌았다.
 
-![개념 이미지](/images/blog/ai-coding-manager-developer-identity-en-4.webp)
+![개념 이미지](/images/blog/ai-coding-manager-developer-identity-4.webp)
 
 ## 나는 이제 매니저인가
 
@@ -100,6 +100,8 @@ twin: ai-coding-manager-developer-identity-en
 
 다들 무언가를 만들고 있었다.
 그런데 정작 '나'는 무엇을 만들고 있나.
+
+![무언가를 만드는 사람들](/images/blog/ai-coding-manager-developer-identity-5.webp)
 
 ## 대표님의 전화, 그리고 기업의 의미
 
@@ -143,6 +145,8 @@ twin: ai-coding-manager-developer-identity-en
 돈을 잘 버는 기업이 있다.
 
 둘 다 될 수 있다면 그게 최선 아닐까.
+
+![양면성](/images/blog/ai-coding-manager-developer-identity-6.webp)
 
 ## 벤처 스피릿은 아직 남아 있을까
 
