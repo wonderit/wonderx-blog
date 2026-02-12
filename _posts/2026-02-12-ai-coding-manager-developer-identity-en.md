@@ -2,7 +2,7 @@
 title: 'Am I a Coder, a Planner, or an Executor?'
 description: 'Developers who manage Claude agents, and managers who manage those developers. In the age of AI, where does my identity lie?'
 date: 2026-02-12 17:35:27 +0900
-image: /images/blog/ai-coding-manager-developer-identity-1.webp
+image: /images/blog/ai-coding-manager-developer-identity-en-1.webp
 tags: ['AI', 'Developer', 'Manager', 'Identity', 'Claude']
 categories: [essay]
 author: wonder
@@ -10,7 +10,7 @@ lang: en
 twin: ai-coding-manager-developer-identity
 ---
 
-Thursday evening. Over drinks with developer friends, I suddenly went quiet.
+Wednesday night. One of my developer friends works at WeWork, so we met in the lobby for coffee. Mid-conversation, I suddenly went quiet.
 
 They were discussing Claude Code's sub-agents. Something about LSP, delegate mode. I nodded along, but inside, a strange unfamiliarity was growing.
 
@@ -25,7 +25,7 @@ What am I, exactly?
 Every time I meet someone new, these questions.
 People who took Python bootcamps, built websites on Bubble, attend every startup seminar with earnest self-improvement energy.
 
-![Hero image](/images/blog/ai-coding-manager-developer-identity-2.webp)
+![Hero image](/images/blog/ai-coding-manager-developer-identity-en-2.webp)
 
 I never know what to say.
 "Yes, AI does it all" feels wrong somehow,
@@ -42,7 +42,7 @@ Waiting days for a response, feeling euphoric when it arrives—only to suddenly
 
 The gap between developers who've been through this ritual and those who haven't—vibe coders, non-developers—is immense.
 
-![Process image](/images/blog/ai-coding-manager-developer-identity-3.webp)
+![Process image](/images/blog/ai-coding-manager-developer-identity-en-3.webp)
 
 Like the difference between virtual travel on Google Earth and actually boarding a plane.
 
@@ -75,7 +75,7 @@ Like God watching from above, a message in a framed box appeared out of nowhere.
 
 That phrase kept circling in my head.
 
-![Concept image](/images/blog/ai-coding-manager-developer-identity-4.webp)
+![Concept image](/images/blog/ai-coding-manager-developer-identity-en-4.webp)
 
 ## Am I Now a Manager?
 
@@ -95,12 +95,66 @@ It's a question of identity.
 
 ## So I'm Still Here
 
-That night, we kept drinking and talking.
-Someone bragged about building a magic notepad app.
-Someone else was building a custom HWP document parsing API.
+That night, we kept drinking coffee and talking.
+I demoed the magic notepad app I built with Claude Code. The response was better than expected.
+Another friend was building a custom HWP document parsing API.
 
 Everyone was making something.
 But what was I making?
+
+## The CEO's Call, and What a Company Means
+
+This morning, my CEO called.
+
+"Can I put your name as CTO on another company's TIPS proposal? They don't have much technical edge..."
+
+Of course. Go ahead.
+
+In that moment, I remembered a question from an old VC interview.
+
+**"What do you think a company is?"**
+
+Fresh out of my PhD, working as a research scientist at a research-oriented company, I answered:
+
+"I think a company should take responsibility not just for each employee, but for their families too."
+
+What a naive answer.
+
+Now my answer would be:
+
+**"A company is an organization that provides goods or services to pursue profit."**
+
+Not quite "employees are a cost"—but the employee-oriented mindset has faded.
+Looking at myself now, with more of a business owner mindset, maybe I've grown colder.
+
+## The Two Faces of Government Grants
+
+I used to hate government grants.
+Felt like they weren't "real business."
+
+But now I think differently.
+
+**"If someone else is going to get it anyway, why not me?"**
+
+Improving cash flow isn't bad.
+Of course, becoming a zombie company that only chases grants in unrelated domains—that's not ideal.
+But if the direction aligns? Why not.
+
+Some companies are good at securing government grants.
+Some companies are good at making money.
+
+If you can be both, isn't that best?
+
+## Does the Venture Spirit Still Remain?
+
+That tremor I felt in the startup club, getting our first payment for the LoveShot speed dating service.
+
+I feel like I've come this far on that venture spirit,
+but does that tremor still remain?
+
+To feel that tremor again, I keep talking to Claude today.
+
+## So I'm Still Here
 
 In the taxi home, watching lights stream past the window, I thought:
 
