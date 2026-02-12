@@ -2,12 +2,12 @@
 title: 'If You Suggest an Escape Room on the Second Date'
 description: 'Is it selfish to speed up the honeymoon phase, or just realistic? A dating conversation from English study night.'
 date: 2026-02-11 20:38:52 +0900
-image: /images/blog/voice-af9502-1.webp
+image: /images/blog/escape-room-second-date-1.webp
 tags: ['relationships', 'dating', 'romance', 'essay']
 categories: [essay]
 author: wonder
 lang: en
-twin: voice-af9502
+twin: escape-room-second-date
 ---
 
 Tuesday evening. English study group.
@@ -30,7 +30,7 @@ Then someone replied.
 
 I paused. Selfish? Rude?
 
-![process image](/images/blog/voice-af9502-2.webp)
+![process image](/images/blog/escape-room-second-date-2.webp)
 
 They continued.
 
@@ -42,7 +42,7 @@ And more than anything.
 
 I sensed insecurity in those words.
 
-![concept image](/images/blog/voice-af9502-3.webp)
+![concept image](/images/blog/escape-room-second-date-3.webp)
 
 "I prefer being single anyway. I'm focused on my career."
 
@@ -54,7 +54,7 @@ Time crawled.
 
 I glanced at my phone and realized there were still 30 minutes left. I wanted to go home.
 
-![closing image](/images/blog/voice-af9502-4.webp)
+![closing image](/images/blog/escape-room-second-date-4.webp)
 
 ---
 
@@ -64,7 +64,7 @@ The conversation continued.
 
 It was one of the printed discussion questions. I already knew the answer.
 
-![The question](/images/blog/voice-af9502-5.webp)
+![The question](/images/blog/escape-room-second-date-5.webp)
 
 Being hurt is scarier than being alone. So we defend ourselves first. We hide our bare faces, mask our flaws, and say "I prefer being single."
 
@@ -80,6 +80,6 @@ And if that's selfish, maybe being selfish from the start is more honest.
 
 That's what I thought, Tuesday evening.
 
-![Walking home](/images/blog/voice-af9502-6.webp)
+![Walking home](/images/blog/escape-room-second-date-6.webp)
 
 On the way home, I bought an Americano from a convenience store. It was cold, and the bitterness slid down my throat.

@@ -2,11 +2,11 @@
 title: '두 번째 데이트에 방탈출을 가자고 하면'
 description: '콩깍지를 빨리 벗기려는 전략은 이기적인가, 현실적인가. 영어 스터디에서 나눈 데이팅 이야기.'
 date: 2026-02-11 20:38:52 +0900
-image: /images/blog/voice-af9502-1.webp
+image: /images/blog/escape-room-second-date-1.webp
 tags: ['연애', '데이팅', '관계', '에세이']
 categories: [essay]
 author: wonder
-twin: voice-af9502-en
+twin: escape-room-second-date-en
 ---
 
 화요일 저녁, 영어 스터디 모임.
@@ -29,7 +29,7 @@ twin: voice-af9502-en
 
 나는 잠시 멈췄다. 이기적? rude?
 
-![과정 이미지](/images/blog/voice-af9502-2.webp)
+![과정 이미지](/images/blog/escape-room-second-date-2.webp)
 
 그 사람은 계속 말했다.
 
@@ -41,7 +41,7 @@ twin: voice-af9502-en
 
 그 말투 안에 자격지심이 느껴졌다.
 
-![개념 이미지](/images/blog/voice-af9502-3.webp)
+![개념 이미지](/images/blog/escape-room-second-date-3.webp)
 
 "난 싱글이 더 좋아. 커리어를 쫓을 거야."
 
@@ -53,7 +53,7 @@ twin: voice-af9502-en
 
 나는 핸드폰을 슬쩍 봤고, 아직 30분이나 남았다는 걸 알았다. 집에 가고 싶었다.
 
-![마무리 이미지](/images/blog/voice-af9502-4.webp)
+![마무리 이미지](/images/blog/escape-room-second-date-4.webp)
 
 ---
 
@@ -63,7 +63,7 @@ twin: voice-af9502-en
 
 질문지에 적힌 질문이었다. 나는 답을 알고 있었다.
 
-![질문](/images/blog/voice-af9502-5.webp)
+![질문](/images/blog/escape-room-second-date-5.webp)
 
 외로움보다 상처가 더 무섭다. 그래서 우리는 먼저 방어한다. 쌩얼을 숨기고, 안 좋은 모습을 가리고, "나 혼자가 더 좋아"라고 말한다.
 
@@ -79,6 +79,6 @@ twin: voice-af9502-en
 
 화요일 저녁, 나는 그렇게 생각했다.
 
-![귀갓길](/images/blog/voice-af9502-6.webp)
+![귀갓길](/images/blog/escape-room-second-date-6.webp)
 
 집에 가는 길에, 편의점에서 아메리카노를 샀다. 차가웠고, 쓴맛이 목구멍을 타고 내려갔다.

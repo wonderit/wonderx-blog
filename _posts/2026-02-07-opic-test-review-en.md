@@ -3,14 +3,14 @@ title: "I Took the OPIc Test. Here's What AI Predicted My Score Would Be."
 description: "Wondered if my English was actually improving from all those study sessions. Took the OPIc test, re-recorded answers at home, and had AI grade me. Predicted level: AL."
 date: 2026-02-07 00:00:00 +0900
 image:
-  path: /images/blog/opic-test-review-a0ff1c-1.webp
+  path: /images/blog/opic-test-review-1.webp
   width: 800
   height: 800
 categories: [social]
 tags: ['OPIc', 'English', 'career', 'AI']
 author: wonder
 lang: en
-twin: opic-test-review-a0ff1c
+twin: opic-test-review
 ---
 
 ## Why I Suddenly Took the OPIc
@@ -31,7 +31,7 @@ Yeoksam test center. Somewhere between a cram school and a study cafe.
 
 White desks, cubicles pressed together. CCTV cameras watching silently from above.
 
-![Getting ready for the test](/images/blog/opic-test-review-a0ff1c-2.webp)
+![Getting ready for the test](/images/blog/opic-test-review-2.webp)
 
 I put on the headset. Checked the mic. The OPIc interface blinked onto the screen.
 
@@ -50,7 +50,7 @@ I recorded for about 33 minutes total. The questions roughly followed this flow:
 5. **Role-play** — asking a friend for a ride, suggesting alternatives when a car breaks down
 6. **Changes in the auto industry** — past vs. present, electric vehicle experience
 
-![During the test](/images/blog/opic-test-review-a0ff1c-3.webp)
+![During the test](/images/blog/opic-test-review-3.webp)
 
 The questions were more specific than I expected. They went as deep as "How do you prepare for a hike?" — as if a close friend were genuinely curious.
 
@@ -87,7 +87,7 @@ Recommendation: shadow native-speaker podcasts and TV shows.
 **3. Build a Habit of Recording and Self-Evaluating**
 Record my answers and listen back. Identify which errors keep repeating. Consciously correct them next time.
 
-![Checking the results](/images/blog/opic-test-review-a0ff1c-4.webp)
+![Checking the results](/images/blog/opic-test-review-4.webp)
 
 ## What Stayed With Me
 

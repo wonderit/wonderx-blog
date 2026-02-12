@@ -3,7 +3,7 @@ title: "OPIc 시험 보고 왔다. AI가 예측한 내 점수는?"
 description: "평소 영어 스터디만 하다가 문득 실력이 궁금해서 OPIc 시험 봤다. 시험 끝나고 같은 질문에 다시 답변을 녹음해서 AI에게 채점을 맡겨봤다. 예상 등급은?"
 date: 2026-02-07 00:00:00 +0900
 image:
-  path: /images/blog/opic-test-review-a0ff1c-1.webp
+  path: /images/blog/opic-test-review-1.webp
   width: 800
   height: 800
 categories: [social]
@@ -30,7 +30,7 @@ twin: opic-test-review-en
 
 흰색 책상, 칸막이로 딱딱 붙어 있는 부스. 머리 위에는 CCTV가 조용히 내려다보고 있었다.
 
-![시험 준비 중](/images/blog/opic-test-review-a0ff1c-2.webp)
+![시험 준비 중](/images/blog/opic-test-review-2.webp)
 
 헤드셋을 쓰고, 마이크를 체크했다. 모니터에 OPIc 인터페이스가 떴다.
 
@@ -49,7 +49,7 @@ twin: opic-test-review-en
 5. **롤플레이** — 친구에게 태워달라고 부탁하기, 차 고장났을 때 대안 제시
 6. **자동차 산업 변화** — 과거/현재 비교, 전기차 경험
 
-![시험 보는 모습](/images/blog/opic-test-review-a0ff1c-3.webp)
+![시험 보는 모습](/images/blog/opic-test-review-3.webp)
 
 생각보다 질문이 구체적이었다. "등산 준비 어떻게 해?" 같은 디테일까지 물어봤다. 마치 친한 친구가 진짜 궁금해서 묻는 것처럼.
 
@@ -87,7 +87,7 @@ twin: opic-test-review-en
 **3. 녹음 후 자기 평가 습관화**
 내 답변을 녹음해서 다시 듣기. 어떤 오류가 반복되는지 체크. 다음번엔 의식적으로 교정.
 
-![결과 확인 중](/images/blog/opic-test-review-a0ff1c-4.webp)
+![결과 확인 중](/images/blog/opic-test-review-4.webp)
 
 ## 소감
 
