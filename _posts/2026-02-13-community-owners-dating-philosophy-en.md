@@ -1,6 +1,6 @@
 ---
 title: 'In Your 30s, Between Love and Growth — Thursday Evening in Gangnam'
-description: 'A conversation about dating with people from the LST community. When someone who seeks growth meets someone who doesn't, is what fills the gap love or illusion?'
+description: "A conversation about dating with people from the LST community. When someone who seeks growth meets someone who doesn't, is what fills the gap love or illusion?"
 date: 2026-02-13 00:19:27 +0900
 image: /images/blog/community-owners-dating-philosophy-1.webp
 tags: ['dating', 'self-growth', 'psychology', 'community']
