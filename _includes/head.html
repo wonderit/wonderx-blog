@@ -58,6 +58,16 @@
 
   {{ seo_tags }}
 
+  <!-- WebSite structured data: tells Google the official site name -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}"
+  }
+  </script>
+
   {%- if site.social.fediverse_handle %}
     <!-- Fediverse handle/creator -->
     <meta name="fediverse:creator" content="{{ site.social.fediverse_handle }}">
