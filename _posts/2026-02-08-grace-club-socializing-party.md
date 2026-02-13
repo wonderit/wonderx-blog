@@ -2,7 +2,7 @@
 title: '신촌 소셜링 파티 후기 — 그레이스클럽 와인파티, ENFP도 떨었다'
 description: '신촌 그레이스클럽 소셜링 와인파티 솔직 후기. 입장료 10만원, 혼자 참석. 첫인상 15초의 법칙은 맞았다. 근데 심장이 안 뛰더라.'
 date: 2026-02-08 02:00:00 +0900
-tags: ['소셜링', '와인파티', '그레이스클럽', '신촌파티', '소개팅', '파티후기']
+tags: ['소셜링', '와인파티', '그레이스클럽', '신촌파티', '소개팅', '파티후기', '매칭파티']
 categories: [social]
 image:
   path: /images/blog/0841-Gemini_Generated_Image_2i1v62i1v62i1v62-edited-4a6e-edited-1a52-edited-9fb3.webp

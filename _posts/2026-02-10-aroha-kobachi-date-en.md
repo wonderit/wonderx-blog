@@ -1,9 +1,9 @@
 ---
-title: 'Matchmaking Agency Date Review — Waiting for Chapter 2 at a Jamsil Restaurant'
-description: 'Honest review of a matchmaking agency date at a Japanese restaurant in Jamsil. The importance of eye spark, and thoughts on marriage as the next chapter of life.'
+title: 'Aroha Matchmaking Agency Date Review — Waiting for Chapter 2 at a Jamsil Restaurant'
+description: 'Honest Aroha matchmaking agency date review. From someone who tried Duo, Clenberry, Best Club, and more — on eye spark and finding the right match.'
 date: 2026-02-10 23:00:00 +0900
 image: /images/blog/aroha-kobachi-hero-edited-0fb3.webp
-tags: ['matchmaking', 'dating', 'marriage', 'eye-spark', 'jamsil']
+tags: ['matchmaking', 'aroha', 'dating', 'marriage', 'eye-spark', 'jamsil', 'duo', 'clenberry', 'best-club']
 categories: [social]
 author: wonder
 lang: en

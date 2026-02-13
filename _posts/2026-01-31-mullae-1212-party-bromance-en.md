@@ -1,8 +1,8 @@
 ---
-title: "Mullae-dong 12:12 Group Date Recap: Came for Romance, Left with Bromance"
-description: "Spent a Saturday afternoon at a singles mixer. No romance, but unexpected bromance. (feat. someone who knows a Black & White Chef contestant)"
+title: "Begin Again Mullae-dong 12:12 Group Date Recap: Came for Romance, Left with Bromance"
+description: "Begin Again 12:12 mixer party review in Mullae-dong. Spent a Saturday afternoon at a singles mixer — no romance, but unexpected bromance."
 date: 2026-01-31 00:00:00 +0900
-tags: ['blind-date', 'group-date', 'mullae', 'review', 'bromance']
+tags: ['blind-date', 'begin-again', 'group-date', 'mullae', 'review', 'bromance', 'mixer-party']
 categories: [social]
 image:
   path: /images/blog/mullae-party-1.webp

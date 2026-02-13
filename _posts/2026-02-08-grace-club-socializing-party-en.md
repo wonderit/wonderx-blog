@@ -2,7 +2,7 @@
 title: "Sinchon Wine Party Review — Grace Club Socializing, Even an ENFP Gets Nervous"
 description: "Honest review of Grace Club socializing wine party in Sinchon. 100K KRW entry, went solo. The 15-second first impression rule was right, but the heart doesn't lie."
 date: 2026-02-08 02:00:00 +0900
-tags: ['socializing', 'grace-club', 'dating', 'first-impression', 'execution']
+tags: ['socializing', 'grace-club', 'dating', 'first-impression', 'wine-party', 'mixer-party']
 categories: [social]
 image:
   path: /images/blog/0841-Gemini_Generated_Image_2i1v62i1v62i1v62-edited-4a6e-edited-1a52-edited-9fb3.webp

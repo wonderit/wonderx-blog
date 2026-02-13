@@ -2,7 +2,7 @@
 title: "Blind Date Diary: Dinner at a Bistro, and Dates Like Reading Books"
 description: "Set up by a partner company VP. She was the same age — kind but no spark. Some dates are like reading: not exciting, but you learn something."
 date: 2026-02-05 00:00:00 +0900
-tags: ['blind-date', 'dating', 'review', 'relationships']
+tags: ['blind-date', 'dating', 'review', 'relationships', 'matchmaking']
 categories: [social]
 image:
   path: /images/blog/bistro-date-1.webp

@@ -1,8 +1,8 @@
 ---
-title: "After-Date Review: On Strawberry Tarts and Table Manners"
-description: "Met the fitness instructor from the mixer for dinner. The evening didn't go as expected, and it made me think about what manners really mean."
+title: "Begin Again Mixer After-Date Review: On Strawberry Tarts and Table Manners"
+description: "After-date with the fitness instructor from Begin Again mixer party. The evening didn't go as expected — thoughts on what manners really mean."
 date: 2026-02-04 00:00:00 +0900
-tags: ['blind-date', 'after-date', 'review', 'dating']
+tags: ['blind-date', 'begin-again', 'after-date', 'review', 'dating', 'mixer-party']
 categories: [social]
 image:
   path: /images/blog/after-date-1.webp
