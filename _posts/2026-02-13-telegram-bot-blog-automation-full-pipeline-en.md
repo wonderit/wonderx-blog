@@ -1,7 +1,7 @@
 ---
 title: 'Full Blog Automation with a Telegram Bot — From Voice to Deployment'
 description: 'Send a voice message on Telegram and it handles everything: transcription → writing → image generation → git push → deployment verification. The full architecture of a blog automation system built in one week.'
-date: 2026-02-13 14:00:00 +0900
+date: 2026-02-13 00:30:00 +0900
 tags: ['telegram-bot', 'Claude-Code', 'Gemini', 'blog-automation', 'AI-automation', 'Python', 'Jekyll']
 categories: [ai-automation]
 image:
