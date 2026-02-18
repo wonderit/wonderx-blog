@@ -3,7 +3,7 @@ title: 'How I Cut AI Image Generation Costs by 6.7x — Gemini API Optimization 
 description: 'When generating images with Gemini API, 98% of the cost comes from output tokens. By switching from PNG to JPEG, using Imagen Fast as default, and building a quality selection UI, I reduced per-image cost from $0.134 to $0.02.'
 date: 2026-02-11 00:00:00 +0900
 tags: ['Gemini-API', 'Imagen', 'cost-optimization', 'image-generation', 'AI-automation', 'Python']
-categories: [ai-automation]
+categories: [tech]
 image:
   path: /images/blog/gemini-image-cost-optimization-1.webp
   width: 800

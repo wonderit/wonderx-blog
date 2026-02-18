@@ -3,7 +3,7 @@ title: 'Auto-Generating Blog Images with Nanobanana — The $0 API Secret'
 description: 'Integrated Google Gemini''s Nanobanana image generation into the Telegram bot. Automatically generating blog images with a free API.'
 date: 2026-02-07 00:00:00 +0900
 tags: ['Nanobanana', 'Gemini', 'image-generation', 'Telegram', 'Claude-Code', 'automation', 'vibe-coding']
-categories: [ai-automation]
+categories: [tech]
 image:
   path: /images/blog/nanobanana-1.webp
   width: 800

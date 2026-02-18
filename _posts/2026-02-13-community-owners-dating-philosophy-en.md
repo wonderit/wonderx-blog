@@ -4,7 +4,7 @@ description: "A conversation about dating with people from the LST community. Wh
 date: 2026-02-13 00:19:27 +0900
 image: /images/blog/community-owners-dating-philosophy-1.webp
 tags: ['dating', 'self-growth', 'psychology', 'community']
-categories: [life]
+categories: [social]
 author: wonder
 lang: en
 twin: community-owners-dating-philosophy

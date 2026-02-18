@@ -3,7 +3,7 @@ title: 'Setting Up a Telegram Bot with Claude Code — The Practical Guide'
 description: 'Creating a Telegram bot with BotFather, connecting it to Claude Code CLI with Python — the full setup walkthrough. Including the gotchas I ran into.'
 date: 2026-02-05 00:00:00 +0900
 tags: ['Claude-Code', 'Telegram', 'Python', 'automation', 'vibe-coding']
-categories: [ai-automation]
+categories: [tech]
 image:
   path: /images/blog/telegram-bot-1.webp
   width: 800

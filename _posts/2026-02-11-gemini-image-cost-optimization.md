@@ -3,7 +3,7 @@ title: 'AI 이미지 생성 비용을 6.7배 줄인 방법 — Gemini API 실전
 description: 'Gemini API로 이미지를 생성할 때 비용의 98%가 출력 토큰에서 발생한다. PNG를 JPEG로 바꾸고, Imagen Fast를 기본으로 쓰고, 품질 선택 UI를 만들어서 장당 $0.134를 $0.02로 줄인 과정.'
 date: 2026-02-11 00:00:00 +0900
 tags: ['Gemini-API', 'Imagen', '비용최적화', 'AI이미지생성', '자동화', 'Python']
-categories: [ai-automation]
+categories: [tech]
 image:
   path: /images/blog/gemini-image-cost-optimization-1.webp
   width: 800

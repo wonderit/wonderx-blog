@@ -3,7 +3,7 @@ title: 'AI가 글을 읽고 이미지를 그리게 만든 방법 — Gemini 블�
 description: '블로그 글 내용을 분석해서 장면별 이미지를 자동 생성하는 시스템. 참고 사진 분위기 반영, 히어로 이미지 전략, 모델 fallback까지.'
 date: 2026-02-12 14:00:00 +0900
 tags: ['Gemini-API', 'AI이미지생성', '텔레그램봇', '자동화', 'Python', 'Imagen']
-categories: [ai-automation]
+categories: [tech]
 image:
   path: /images/blog/gemini-blog-image-pipeline-1.webp
   width: 800

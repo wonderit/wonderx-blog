@@ -3,7 +3,7 @@ title: 'How I Made AI Read My Blog and Draw the Images — Gemini Blog Image Pip
 description: 'A system that analyzes blog content and auto-generates scene-specific images. Reference photo mood matching, hero image strategy, and model fallbacks.'
 date: 2026-02-12 14:00:00 +0900
 tags: ['Gemini-API', 'AI-image-generation', 'telegram-bot', 'automation', 'Python', 'Imagen']
-categories: [ai-automation]
+categories: [tech]
 image:
   path: /images/blog/gemini-blog-image-pipeline-1.webp
   width: 800

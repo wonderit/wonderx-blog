@@ -3,7 +3,7 @@ title: '텔레그램 봇 하나로 블로그 전자동화 — 음성부터 배�
 description: '텔레그램에 음성 메시지 하나 보내면 전사 → 글 작성 → 이미지 생성 → git push → 배포 검증까지 알아서 끝난다. 1주일간 만든 블로그 자동화 시스템의 전체 아키텍처.'
 date: 2026-02-13 00:30:00 +0900
 tags: ['텔레그램봇', 'Claude-Code', 'Gemini', '블로그자동화', 'AI자동화', 'Python', 'Jekyll']
-categories: [ai-automation]
+categories: [tech]
 image:
   path: /images/blog/telegram-bot-blog-automation-full-pipeline-1.webp
   width: 800

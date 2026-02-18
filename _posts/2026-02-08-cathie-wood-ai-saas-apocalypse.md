@@ -7,7 +7,7 @@ image:
   width: 1280
   height: 720
 tags: ['캐시우드', 'ARK-Invest', 'AI투자', 'SaaS', '비트코인', '투자전략']
-categories: [youtube]
+categories: [social]
 author: wonder
 twin: cathie-wood-ai-saas-apocalypse-en
 ---

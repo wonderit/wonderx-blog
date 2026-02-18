@@ -4,7 +4,7 @@ description: 'LST 커뮤니티에서 만난 사람들과 나눈 연애 이야기
 date: 2026-02-13 00:19:27 +0900
 image: /images/blog/community-owners-dating-philosophy-1.webp
 tags: ['연애', '자기성장', '심리', '커뮤니티']
-categories: [life]
+categories: [social]
 author: wonder
 twin: community-owners-dating-philosophy-en
 ---

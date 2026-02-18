@@ -3,7 +3,7 @@ title: "From Astro Back to Jekyll — Don't Reinvent the Wheel"
 description: "Tried to recreate the Chirpy theme in Astro. Too many missing pieces. Switched to the real Chirpy (Jekyll) and got everything working in 2 hours. Use what's already built."
 date: 2026-02-08 01:00:00 +0900
 tags: ['Astro', 'Jekyll', 'Chirpy', 'migration', 'blog', 'dont-reinvent-wheel']
-categories: [dev]
+categories: [tech]
 image:
   path: /images/blog/astro-migration-1.webp
   width: 800

@@ -7,7 +7,7 @@ image:
   width: 1280
   height: 720
 tags: ['cathie-wood', 'ai-bubble', 'saas-apocalypse', 'bitcoin', 'investment-strategy', 'jensen-huang']
-categories: [youtube]
+categories: [social]
 author: wonder
 lang: en
 twin: cathie-wood-ai-saas-apocalypse
