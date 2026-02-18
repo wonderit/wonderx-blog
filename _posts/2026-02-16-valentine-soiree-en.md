@@ -56,6 +56,10 @@ The thought came before the words did.
 
 ---
 
+![Valentine's Day blind date, café near Hangangjin Station](/images/blog/valentine-soiree-1.webp)
+
+---
+
 She came back from the restroom holding something.
 
 Two Deux Chocolat choux.

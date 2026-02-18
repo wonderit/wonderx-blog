@@ -55,6 +55,10 @@ twin: valentine-soiree-en
 
 ---
 
+![발렌타인데이 소개팅, 한강진역 카페](/images/blog/valentine-soiree-1.webp)
+
+---
+
 화장실에 다녀온 그녀가 손에 무언가를 들고 왔다.
 
 두쫀쿠 두 개.
