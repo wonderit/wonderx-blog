@@ -1,5 +1,5 @@
 ---
-title: "Valentine's Day Blind Date and the 10:10 Rotation Party"
+title: "The May 10:10 Party — Valentine's Day, Choco, and Five Tables to Remember"
 description: "February 14th. A first meeting in a café near Hangangjin Station, and a night at The May's rotation matchmaking party."
 date: 2026-02-16 23:00:00 +0900
 image: /images/blog/tg-photo-27cc78-edited-5110.webp
