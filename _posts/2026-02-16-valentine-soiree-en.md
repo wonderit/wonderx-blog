@@ -70,6 +70,8 @@ I was moved. Quietly, but completely.
 
 ---
 
+![Rotation matchmaking party](/images/blog/valentine-soiree-2.webp)
+
 5 PM. A Western restaurant near Apgujeong Rodeo Station.
 
 The May's 10:10 rotation matchmaking party. We'd connected through a previous networking event called 'Luca', and were invited here.
@@ -97,6 +99,8 @@ By then, I'd given up filtering. I just talked. It came out more naturally. She 
 After the event, someone proposed a second round. We had prior commitments. When we bowed out, one of the women said, "Then let's just go, us two." We'd been rejected together.
 
 ---
+
+![After the party](/images/blog/valentine-soiree-3.webp)
 
 On the way home, I selected two: the first table and the second.
 
