@@ -9,6 +9,8 @@ image:
   width: 800
   height: 800
 author: wonder
+lang: ko
+twin: pm-agent-pdca-ai-planning-en
 ---
 
 ## 기획서 쓰기가 싫었다
