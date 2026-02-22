@@ -39,6 +39,8 @@ Concrete example: an OpenAI alumni lab doing superconductor materials science. T
 
 Pull this down to the AI application layer, and it's the Wild West.
 
+![From frontier model competition to last-mile competition](/images/blog/ai-kills-b2b-saas-2.webp)
+
 ---
 
 ## Why SaaS Really Dies — The Last Mile
@@ -74,6 +76,20 @@ Customers began automating their own workflows with AI. They'd buy a vibe-coded 
 Every time a big tech company hosts an AI developer event, thousands of startups collapse in the background. This cycle is now measured in weeks, not months.
 
 The old startup advantage — hoarding good engineers, building technical assets — was the equivalent of owning more factories, more electricity, more workers in the industrial age. That advantage is evaporating.
+
+---
+
+## The End of Outsourced Development
+
+I've been feeling this too. The era of handing off features to a dev team or calling an SI vendor when you need something built — it's ending.
+
+What Jensen Huang called "vibe" — the intuition to know which direction solves a problem most efficiently — now matters more than coding ability. In a world where AI handles the coding, the real bottleneck is the judgment of *what* to build.
+
+Think about it from the company side. Obviously they'll want people who are good with AI *and* have sharp intuition. From the job seeker's perspective? **Being a one-person's-worth employee isn't competitive anymore.** The new baseline expectation is someone who can deliver 2-3x output by leveraging AI effectively.
+
+As Noh puts it, "the cost of communicating with people is dramatically higher than communicating with AI." So the rational move? Work directly with AI. Cut out the middle layers.
+
+![The shifting job market — 2-3x output as the new baseline](/images/blog/ai-kills-b2b-saas-3.webp)
 
 ---
 
@@ -122,6 +138,8 @@ Synthesizing Noh's perspective into action items:
 4. **Don't sell vibe coding as a service** — Customers will do it themselves soon. Instead, target the tacit knowledge in last-mile processes that customers can't access
 
 The end of B2B SaaS also means **the golden age of solo founders and micro-teams** is beginning. The tools are already sufficient. The only thing missing is the willpower to choose a direction.
+
+![The age of solo founders coding their own last mile](/images/blog/ai-kills-b2b-saas-4.webp)
 
 ---
 
