@@ -12,7 +12,7 @@
   {% assign datetime = post.last_modified_at | default: post.date %}
 
   {% capture elem %}
-    {{- datetime | date: "%Y%m%d%H%M%S" -}}::{{- forloop.index0 -}}
+    {{- datetime | date: "%Y%m%d%H%M%S" -}}::{{- post.url -}}
   {% endcapture %}
 
   {% assign all_list = all_list | push: elem %}
@@ -31,12 +31,13 @@
     <h2 class="panel-heading">{{- site.data.locales[include.lang].panel.lastmod -}}</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
       {% for item in update_list %}
-        {% assign index = item | split: '::' | last | plus: 0 %}
-        {% assign post = site.posts[index] %}
-        {% assign url = post.url | relative_url %}
-        <li class="text-truncate lh-lg">
-          <a href="{{ url }}">{{ post.title }}</a>
-        </li>
+        {% assign post_url = item | split: '::' | last %}
+        {% assign post = lang_posts | where: "url", post_url | first %}
+        {% if post %}
+          <li class="text-truncate lh-lg">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </section>
