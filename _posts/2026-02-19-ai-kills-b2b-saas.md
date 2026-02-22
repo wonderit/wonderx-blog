@@ -7,7 +7,7 @@ image:
   width: 1200
   height: 630
 tags: ['AI', 'B2B SaaS', '창업', '노정석', '바이브코딩', 'AI에이전트', '라스트마일', '자율경영']
-categories: [ai-automation]
+categories: [tech]
 author: wonder
 lang: ko
 twin: ai-kills-b2b-saas-en

@@ -7,7 +7,7 @@ image:
   width: 1200
   height: 630
 tags: ['AI', 'B2B SaaS', 'Startup', 'Vibe Coding', 'AI Agents', 'Last Mile', 'Autonomous Company']
-categories: [ai-automation]
+categories: [tech]
 author: wonder
 lang: en
 twin: ai-kills-b2b-saas
