@@ -1,136 +1,128 @@
 ---
-title: 'The End of B2B SaaS — The One Skill That Survives the AI Era'
-description: 'Jensen Huang declared at Davos: "If you have AI, you don't need SaaS." It wasn't an exaggeration. Here's what's actually happening to the B2B SaaS market, and what capabilities matter now.'
+title: 'The Death of B2B SaaS — Only Founders Who Do the Work Will Survive'
+description: 'Serial entrepreneur Noh Jung-seok on the AI reality: The SaaS playbook is dead. The last mile belongs to founders who code their own operations. Key insights transcribed from a D-Times interview.'
 date: 2026-02-19 09:00:00 +0900
 image:
-  path: /images/blog/ai-kills-b2b-saas-1.jpg
+  path: /images/blog/ai-kills-b2b-saas-hero.webp
   width: 1200
   height: 630
-tags: ['AI', 'B2B SaaS', 'Career', 'Skills', 'Jensen Huang', 'Vibe Coding', 'AI Agents']
+tags: ['AI', 'B2B SaaS', 'Startup', 'Vibe Coding', 'AI Agents', 'Last Mile', 'Autonomous Company']
 categories: [ai-automation]
 author: wonder
 lang: en
 twin: ai-kills-b2b-saas
 ---
 
-Take a look at your monthly subscription list.
+There's someone who watched the B2B SaaS playbook die from the inside. Noh Jung-seok, a six-time founder currently running a beauty tech company. Google veteran, successful exit with Five Rocks (mobile analytics), and famously the protagonist of a college hacking incident at POSTECH. His recent interview on D-Times cut right to the bone.
 
-Notion, Slack, HubSpot, Jira, Salesforce, Figma, Zendesk... A lightweight startup stack alone can run into millions of won per month. We treated this as the cost of doing business — until Jensen Huang flipped the table.
+> "The B2B SaaS formula — package it up, charge monthly — it's not going to work anymore. Customers already know they don't need it."
 
-> "If a company has AI, it doesn't need SaaS."
-> — Jensen Huang, Davos 2025
-
-At the time, it sounded like the typical bold talk from a tech titan. Less than two years later, it's playing out in concrete terms.
+We've all heard the "SaaS is dying" narrative. But this person is actively replacing SaaS functions inside his own company. This isn't theory. It's a field report.
 
 ---
 
-## What Has SaaS Actually Been Doing?
+## The Frontier Model Game Is Over
 
-Strip away the marketing and B2B SaaS is simple: **replacing specific workflows with software.**
+Let's start with Noh's diagnosis of where AI stands.
 
-- Salesforce → sales team manages customer data
-- HubSpot → marketing automation + CRM
-- Jira → engineering project management
-- Zendesk → customer support ticketing
+Last year, the market obsession was simple: how far can frontier LLM performance go? Tracking datasets, algorithms, and compute infrastructure was what mattered.
 
-These products dominated for decades for good reason. No developers needed, rich feature sets, and they became de facto global standards. But that foundation is cracking.
+That game is over. The direction shifted this year.
 
----
+The key concept is **RLVR** (Reinforcement Learning with Verifiable Rewards). Domains where you can automatically verify if an answer is right or wrong — coding, math — the models already absorbed those. Physics, chemistry, and biology are expected to fall this year.
 
-## How AI Agents Are Eating SaaS
+So where did people run? To **domains where the reward signal can be monopolized**.
 
-Here's what's actually happening on the ground.
+Concrete example: an OpenAI alumni lab doing superconductor materials science. The LLM generates candidate materials. A cloud lab with robots runs actual experiments. Results feed back as rewards. They're building an evaluation pipeline that connects the digital world to the physical world — and monopolizing it.
 
-**Scenario 1: Custom CRM**
+> "The only remaining frontier is domains where you can monopolize the evaluation pipeline."
 
-Old way → Sign an enterprise Salesforce contract. Customization requires separate consulting fees.
-AI way → Tell an agent "manage customer data according to our sales pipeline" and you're done. A CRM tailored to your exact workflow, built on demand.
-
-**Scenario 2: Customer Support Automation**
-
-Old way → Zendesk subscription + manual ticket routing rules.
-AI way → An AI agent reads customer messages, categorizes them, and drafts responses. No Zendesk required.
-
-**Scenario 3: Internal Documentation**
-
-Old way → Notion team plan.
-AI way → AI auto-generates meeting notes, searches documents, summarizes. It often does this better than the SaaS it replaces.
-
-Here's the key insight. What SaaS has done = **process work through a fixed, predetermined interface**. AI agents have no fixed interface. They understand context and adapt to how your organization actually works. No subscription required.
+Pull this down to the AI application layer, and it's the Wild West.
 
 ---
 
-## The Skill That Matters — Vibe
+## Why SaaS Really Dies — The Last Mile
 
-This is where Jensen Huang's point lands. The ability to use AI tools is already table stakes. The real differentiator now is **the intuition to know which direction to go.**
+Here's what Noh is actually doing inside his company. **Turning it into an autonomous operation.**
 
-Say your team gets this request:
+He calls it an "autonomous company." This year he refined the term: FSM — Full Self Management.
 
-> "Our onboarding process is too complicated. Can we automate it?"
+The method is brutally simple. When someone quits, he used to hire a replacement. Now he steps in himself. He maps the process and invariably finds: **80% is fetching, sending, or organizing data from other systems.** The core value-creating work is less than 20%.
 
-How do you solve it?
+He codes the 80% himself. Vibe coding, Codex, Claude — whatever works. The remaining 20% of judgment calls he handles directly.
 
-- Buy a new HR SaaS? → Monthly fees, migration cost from existing workflows
-- Add an AI bot to existing Slack? → Fast, keeps familiar environment
-- Build a dedicated AI agent? → Fully custom, upfront cost but better long-term
-- Just document it as a checklist? → Honestly, sometimes this is the right answer
+> "Companies where the CEO does the actual work will be incredibly powerful in the AI era. Companies where the CEO doesn't — they'll disappear."
 
-**The people who win are the ones who find the right answer fast.** Not the ones who know how to use every tool — the ones who know which tool to use and when. That's vibe.
+The crucial concept is the **last mile**. Every company's operational processes are different. Financial connections, customer support flows, marketing pipelines — these details are invisible unless you're the one doing the work.
 
-For developers specifically: the old bottleneck was "how do I implement this?" The new bottleneck is "should I implement this at all, or is there a smarter direction?"
+Packaging this as SaaS? Impossible. The last mile is different for every company. Consulting? Doesn't scale. You just give away your knowledge.
 
----
-
-## It's Already Showing Up in the Job Market
-
-Think about it from the company's perspective.
-
-If one engineer with strong AI skills can build what three engineers used to in a fraction of the time — obviously you hire that one. Even at a premium, it's a better deal.
-
-This isn't abstract. Silicon Valley job postings now routinely list "AI tool proficiency" as a hard requirement. Some startups are doing take-home challenges that amount to: **"Build us a working MVP using AI. Solo. Come back in a week."**
-
-For job seekers, the reality is blunt.
-
-**One person's worth of output isn't enough anymore.** The people who survive are the ones who can deliver two or three times the results in the same hours. And that doesn't just mean "prompting ChatGPT well." It means knowing what to delegate to AI and what needs a human brain.
+What remains? **Founders who code their own last mile.**
 
 ---
 
-## Capabilities: What Survives vs. What Gets Replaced
+## The Vibe Coding Reality — It Didn't Even Last 3 Months
 
-| Role | Status | Why |
-|------|--------|-----|
-| Repetitive coding, CRUD implementation | High risk | AI is faster and more consistent |
-| Writing specs and documentation | High risk | Structured tasks are AI's strength |
-| Setting problem direction (vibe) | Essential | AI can't judge this |
-| System design and architecture | Essential | Requires context + tradeoff reasoning |
-| Team coordination and trust-building | Essential | Relationship-based by nature |
-| Designing and operating AI agents | Growth area | The new core skill |
+There was a vibe coding startup boom late last year. "Use AI to code SaaS products!" Thousands jumped in.
 
-The skill of *using* SaaS → losing value.
-The skill of *designing AI that replaces* SaaS → becoming central.
+Less than three months later, reality hit.
 
----
+> "The customers started doing their own work themselves."
 
-## Conclusion: What Should You Actually Do Right Now
+Customers began automating their own workflows with AI. They'd buy a vibe-coded product, then layer their own customizations on top, gradually becoming independent. Prices kept dropping. Products became commodities.
 
-One sentence: **Don't just become someone who uses AI. Become someone who knows what AI should do.**
+Every time a big tech company hosts an AI developer event, thousands of startups collapse in the background. This cycle is now measured in weeks, not months.
 
-Concretely:
-
-1. **List everything in your work that AI could replace** — then actually replace it
-2. **Pick one SaaS subscription and try replacing it with an AI agent** — direct experience builds vibe
-3. **Think in outputs, not hours** — not "I work 8 hours a day" but "this is what I can ship"
-
-The B2B SaaS market will look completely different in 5 to 10 years. More than half of current players will either disappear or transform beyond recognition. Whether that's a crisis or an opportunity depends entirely on which direction you start moving today.
+The old startup advantage — hoarding good engineers, building technical assets — was the equivalent of owning more factories, more electricity, more workers in the industrial age. That advantage is evaporating.
 
 ---
 
-![How AI agents replace SaaS architecture](/images/blog/ai-kills-b2b-saas-2.jpg)
+## The Last Surviving Job: Entrepreneur
+
+When asked which jobs would disappear and which would survive in the AI era, Noh's answer was crystal clear.
+
+> "The only thing humans can do is exercise willpower. 'I need to do this' — that's the only role left for humans. It's the entrepreneur. That's our last remaining profession."
+
+And the follow-up was even more striking.
+
+> "We're entering a society where only people who don't need a job are the ones who succeed at getting one."
+
+Translation: people who can independently create value anywhere — only they survive in the job market. The paradox is that companies want to hire exactly the kind of person who doesn't need to be hired.
+
+Elon Musk's stubborn insistence is why rockets land, electric cars drive, and autonomous vehicles exist. Without that one person's pure willpower, none of that future would have arrived. Technology doesn't create the future. Willpower does.
 
 ---
 
-What I'm watching most closely right now is how the boundary between developers and non-developers is dissolving. When AI lets non-engineers build their own tools, what companies start demanding from developers shifts — from coding ability to systems thinking.
+## Noh's Operational Playbook
 
-That systems thinking — vibe — is the most valuable thing you can develop right now.
+Here's how Noh actually runs his company (Amelie & Keep):
 
-![How required skills are shifting in the AI era](/images/blog/ai-kills-b2b-saas-3.jpg)
+| Area | Method |
+|------|--------|
+| Replacing departures | CEO enters the process directly instead of hiring |
+| Task analysis | Separate into 80% transaction/organizing + 20% value judgment |
+| Automating the 80% | Vibe coding + Codex, built by the CEO |
+| The 20% judgment | CEO handles directly |
+| External channels | Barely used. Built internal pipeline |
+| Internal AI | Built 'Nova' — autonomous management system |
+
+The core insight is about communication cost. Communicating with people costs dramatically more than communicating with AI. The rational choice is for the founder to work directly with AI.
+
+> "The cost of communicating with people — explaining to someone, having them delegate — is too high. My communication cost with AI is radically lower."
+
+---
+
+## What to Do Right Now
+
+Synthesizing Noh's perspective into action items:
+
+1. **Code your own last mile** — Don't outsource to SaaS. Automate it yourself. You'll discover the real operational details in the process
+2. **Calculate your communication cost** — If explaining something to a person takes 30 minutes but an AI can do it in 5, the answer is already obvious
+3. **Install the entrepreneur mindset** — Jobs aren't disappearing; the definition of a job is changing. Only people with the conviction "I need to do this" survive
+4. **Don't sell vibe coding as a service** — Customers will do it themselves soon. Instead, target the tacit knowledge in last-mile processes that customers can't access
+
+The end of B2B SaaS also means **the golden age of solo founders and micro-teams** is beginning. The tools are already sufficient. The only thing missing is the willpower to choose a direction.
+
+---
+
+*This post was written based on a transcription of Noh Jung-seok's interview on [D-Times — "Can't Help Being Curious" with Jeon Jin-su](https://youtu.be/BP65IKzU8jU).*
