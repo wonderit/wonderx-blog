@@ -7,7 +7,7 @@ tags: ['AI', 'GPT', 'Karpathy', 'deep learning', 'Python', 'transformer']
 categories: [tech]
 author: wonder
 lang: en
-twin: -243-lines-are-all-you-n
+twin: 243-lines-are-all-you-need
 ---
 
 You're fine-tuning GPT-4o, wiring up RAG pipelines, building agents with LangChain — but can you actually explain **how a GPT works under the hood?**
