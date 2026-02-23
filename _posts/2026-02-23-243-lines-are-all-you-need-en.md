@@ -1,5 +1,5 @@
 ---
-title: '243 Lines Are All You Need: What Karpathy's Minimalism Is Really Telling Us'
+title: "243 Lines Are All You Need: What Karpathy's Minimalism Is Really Telling Us"
 description: "Andrej Karpathy built a fully working GPT in 243 lines of Python — no fancy frameworks, no abstractions. Reading through it line by line, you can't help but ask: did I actually understand GPT all along?"
 date: 2026-02-23 09:25:44 +0900
 image: /images/blog/-243-lines-are-all-you-n-1.webp
