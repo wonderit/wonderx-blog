@@ -18,7 +18,7 @@ layout: default
 {% endfor %}
 
 <!-- Custom pagination based on Korean posts only -->
-{% assign per_page = paginator.per_page | default: 5 %}
+{% assign per_page = 5 %}
 {% assign current_page = paginator.page | default: 1 %}
 {% assign total_ko = ordered_posts | size %}
 {% assign total_ko_pages = total_ko | divided_by: per_page %}
