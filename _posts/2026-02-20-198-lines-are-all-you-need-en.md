@@ -1,32 +1,32 @@
 ---
-title: "243 Lines Are All You Need: What Karpathy's Minimalism Is Really Telling Us"
-description: "Andrej Karpathy built a fully working GPT in 243 lines of pure Python — no PyTorch, no NumPy, zero dependencies. Reading through it line by line forces a question: did I actually understand GPT all along?"
+title: "198 Lines Are All You Need: What Karpathy's Minimalism Is Really Telling Us"
+description: "Andrej Karpathy built a fully working GPT in 198 lines of pure Python — no PyTorch, no NumPy, zero dependencies. Reading through it line by line forces a question: did I actually understand GPT all along?"
 date: 2026-02-20 09:00:00 +0900
-image: /images/blog/-243-lines-are-all-you-n-1.webp
+image: /images/blog/-198-lines-are-all-you-n-1.webp
 tags: ['AI', 'GPT', 'Karpathy', 'deep learning', 'Python', 'transformer']
 categories: [tech]
 author: wonder
 lang: en
-twin: 243-lines-are-all-you-need
+twin: 198-lines-are-all-you-need
 ---
 
 You're fine-tuning GPT-4o, wiring up RAG pipelines, building agents with LangChain — but can you actually explain **how a GPT works under the hood?**
 
-Reading the "Attention Is All You Need" paper doesn't count. Recognizing the equations isn't the same as understanding them. Andrej Karpathy just proved the point — by building the whole thing in 243 lines.
+Reading the "Attention Is All You Need" paper doesn't count. Recognizing the equations isn't the same as understanding them. Andrej Karpathy just proved the point — by building the whole thing in 198 lines.
 
 ---
 
 ## Karpathy Did It Again
 
-On February 11, 2026, Andrej Karpathy dropped a single Python file. 243 lines. **Zero dependencies.** No PyTorch, no TensorFlow, not even NumPy. Just `os`, `math`, `random`, and `argparse` — standard library only.
+On February 11, 2026, Andrej Karpathy dropped a single Python file. 198 lines. **Zero dependencies.** No PyTorch, no TensorFlow, not even NumPy. Just `os`, `math`, `random`, and `argparse` — standard library only.
 
 He called it an "art project." But it's really **the best AI education that exists on the internet right now.**
 
-![](/images/blog/-243-lines-are-all-you-n-2.webp)
+![](/images/blog/-198-lines-are-all-you-n-2.webp)
 
 ---
 
-## What Fits in 243 Lines
+## What Fits in 198 Lines
 
 microGPT downloads a list of baby names, learns the patterns, then generates new names that sound real but never existed. Same concept as ChatGPT — same attention mechanism, same training loop, same next-token prediction math. Just at micro scale.
 
@@ -89,16 +89,16 @@ The model predicts the next character, computes negative log likelihood against 
 
 Start with BOS, sample next token from probability distribution, feed prediction back in, repeat until EOS. **Autoregressive generation** — the exact same process ChatGPT uses every time you send a message.
 
-![](/images/blog/-243-lines-are-all-you-n-3.webp)
+![](/images/blog/-198-lines-are-all-you-n-3.webp)
 
 ---
 
 ## Why This Matters — By the Numbers
 
-| | PyTorch + HuggingFace | Karpathy's 243 Lines |
+| | PyTorch + HuggingFace | Karpathy's 198 Lines |
 |--|--|--|
 | Dependencies | Dozens | **Zero** (pure Python) |
-| Lines of code | Thousands | 243 |
+| Lines of code | Thousands | 198 |
 | Comprehensibility | Low | High |
 | Performance | Production-grade | Educational |
 | Conceptual clarity | Low | **Maximum** |
@@ -119,7 +119,7 @@ Since we needed deep learning operations to run on *encrypted data*, hiding behi
 
 **Weight initialization** from scratch. Xavier and He init, derived from equations and written directly in C. **Activation functions** linearized — GELU approximated as a polynomial, with careful tracking of how approximation error propagated through training.
 
-![](/images/blog/-243-lines-are-all-you-n-4.webp)
+![](/images/blog/-198-lines-are-all-you-n-4.webp)
 
 Then there was **backpropagation**. Working with the math library, Eigen for matrix ops, and Boost for utilities, I derived gradients by hand and translated them into code. Everything had to account for network communication costs. Compile, build, debug, repeat — in C, considering actual network topology.
 
@@ -137,13 +137,13 @@ Building and debugging in C while accounting for network latency?
 
 This isn't nostalgia. This is a real concern. **As AI tools get more powerful, the gap between people who understand the fundamentals and those who don't will only widen.**
 
-![](/images/blog/-243-lines-are-all-you-n-5.webp)
+![](/images/blog/-198-lines-are-all-you-n-5.webp)
 
 Consider: why does adding attention heads improve performance up to a point, then hurt it? Why do you need learning rate warm-up? What does weight decay actually do to prevent overfitting? If you have genuine intuition about these things, you tune hyperparameters differently. Not "this worked in the experiment" — but "here's *why* this is the right direction."
 
 ---
 
-## What 243 Lines Actually Reveals — Karpathy's 6-Year Compression
+## What 198 Lines Actually Reveals — Karpathy's 6-Year Compression
 
 This didn't come out of nowhere. Karpathy has been peeling away layers of abstraction for six years:
 
@@ -165,7 +165,7 @@ The transformer breakthrough is a combination of a few key ideas:
 
 Once you genuinely understand these four, the difference between GPT-2 and GPT-4 is structural, not conceptual — more layers, more heads, more data. Same ideas, bigger numbers. The industry is spending $400 billion on AI infrastructure this year. But the core algorithm powering all of it fits in a file smaller than most READMEs.
 
-![](/images/blog/-243-lines-are-all-you-n-6.webp)
+![](/images/blog/-198-lines-are-all-you-n-6.webp)
 
 ---
 
@@ -175,11 +175,11 @@ Once you genuinely understand these four, the difference between GPT-2 and GPT-4
 
 Whether you're using AI as a tool, aiming to become an ML researcher, or building on top of LLM frameworks professionally — this code is worth your time.
 
-Karpathy's 243 lines beats most textbooks. You can watch equations become code become output, all in a single file.
+Karpathy's 198 lines beats most textbooks. You can watch equations become code become output, all in a single file.
 
 I'm planning to read through the whole thing this weekend — with the Broad Institute memories running in the background. Back then, I wondered why I was putting myself through all that. Now I'm just glad I did.
 
-![](/images/blog/-243-lines-are-all-you-n-7.webp)
+![](/images/blog/-198-lines-are-all-you-n-7.webp)
 
 ---
 
@@ -189,7 +189,7 @@ AI tooling keeps improving. Copilot writes the code, Claude designs the system, 
 
 But if you're using tools without understanding what they're doing, you eventually hit a wall: "This seems like it should work — why is it producing garbage?" And you have no way to answer that.
 
-**243 lines of Python is the antidote to that wall.**
+**198 lines of Python is the antidote to that wall.**
 
 Go read it. Seriously.
 

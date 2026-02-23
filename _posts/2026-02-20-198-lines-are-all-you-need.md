@@ -1,32 +1,32 @@
 ---
-title: "243줄로 GPT를 구현한다고? Karpathy의 미니멀리즘이 말하는 것"
-description: "Andrej Karpathy가 Python 243줄로 전체 GPT를 구현했다. PyTorch도 NumPy도 없이. 이 코드 한 줄씩 읽다 보면 \"나 GPT 제대로 알고 있던 건 맞나?\"라는 질문이 자연스럽게 나온다."
+title: "198줄로 GPT를 구현한다고? Karpathy의 미니멀리즘이 말하는 것"
+description: "Andrej Karpathy가 Python 198줄로 전체 GPT를 구현했다. PyTorch도 NumPy도 없이. 이 코드 한 줄씩 읽다 보면 \"나 GPT 제대로 알고 있던 건 맞나?\"라는 질문이 자연스럽게 나온다."
 date: 2026-02-20 09:00:00 +0900
-image: /images/blog/-243-lines-are-all-you-n-1.webp
+image: /images/blog/-198-lines-are-all-you-n-1.webp
 tags: ['AI', 'GPT', 'Karpathy', '딥러닝', 'Python', 'transformer']
 categories: [tech]
 author: wonder
 lang: ko
-twin: 243-lines-are-all-you-need-en
+twin: 198-lines-are-all-you-need-en
 ---
 
 GPT-4o를 파인튜닝하고, RAG 파이프라인 깔고, LangChain으로 에이전트 만들고 있는데 — **GPT가 실제로 어떻게 돌아가는지 설명할 수 있나?**
 
-Attention is all you need 논문 읽었다고 해서 이해한 건 아니다. 수식만 봤지 실제 코드로 구현한 사람이 얼마나 될까. Andrej Karpathy는 그냥 보여줬다. 243줄로.
+Attention is all you need 논문 읽었다고 해서 이해한 건 아니다. 수식만 봤지 실제 코드로 구현한 사람이 얼마나 될까. Andrej Karpathy는 그냥 보여줬다. 198줄로.
 
 ---
 
 ## Karpathy가 또 해냈다
 
-2026년 2월 11일, Andrej Karpathy가 Python 파일 하나를 올렸다. 243줄. **의존성 제로.** PyTorch도 없고, TensorFlow도 없고, NumPy조차 없다. `os`, `math`, `random`, `argparse` — 표준 라이브러리만으로 GPT를 처음부터 끝까지 구현했다.
+2026년 2월 11일, Andrej Karpathy가 Python 파일 하나를 올렸다. 198줄. **의존성 제로.** PyTorch도 없고, TensorFlow도 없고, NumPy조차 없다. `os`, `math`, `random`, `argparse` — 표준 라이브러리만으로 GPT를 처음부터 끝까지 구현했다.
 
 Karpathy 본인은 이걸 "아트 프로젝트"라고 불렀다. 하지만 실상은 **지금 존재하는 가장 좋은 AI 교육 자료**다.
 
-![](/images/blog/-243-lines-are-all-you-n-2.webp)
+![](/images/blog/-198-lines-are-all-you-n-2.webp)
 
 ---
 
-## 243줄 안에 뭐가 들어가 있나
+## 198줄 안에 뭐가 들어가 있나
 
 microGPT가 하는 일은 단순하다. 아기 이름 데이터를 다운로드하고, 패턴을 학습한 다음, 실제로 존재하지 않지만 그럴듯한 이름을 생성한다. ChatGPT와 동일한 알고리즘이다. Attention, 학습 루프, 다음 토큰 예측 — 수학이 같다. 스케일만 다를 뿐.
 
@@ -94,16 +94,16 @@ loss = -probs[tokens[pos_id + 1]].log()
 
 BOS 토큰으로 시작, 모델이 확률 분포에서 다음 토큰을 샘플링, 그걸 다시 입력으로 넣고, EOS가 나올 때까지 반복. **이것이 autoregressive generation** — ChatGPT가 메시지 보낼 때마다 하는 바로 그 과정이다.
 
-![](/images/blog/-243-lines-are-all-you-n-3.webp)
+![](/images/blog/-198-lines-are-all-you-n-3.webp)
 
 ---
 
 ## 왜 이게 중요한가 — 데이터로 말하자
 
-| 항목 | PyTorch + HuggingFace | Karpathy 243줄 |
+| 항목 | PyTorch + HuggingFace | Karpathy 198줄 |
 |------|----------------------|----------------|
 | 의존성 | 수십 개 | **제로** (순수 Python) |
-| 코드 줄 수 | 수천 줄 | 243줄 |
+| 코드 줄 수 | 수천 줄 | 198줄 |
 | 이해 가능성 | 낮음 | 높음 |
 | 성능 | 최고 | 학습용 |
 | 개념 전달력 | 낮음 | **최고** |
@@ -122,7 +122,7 @@ Karpathy 본인의 말: *"This is the full algorithmic content of what is needed
 
 암호화된 상태에서 딥러닝 연산을 수행해야 했기 때문에, 프레임워크 추상화 뒤에 숨을 수가 없었다. **weight initialization**부터 다시 시작했다. Xavier init, He init을 수식 그대로 C로 쐈다. **activation function**은 선형 근사로 쪼개야 했다. GELU를 다항식으로 근사하고, 그 오차가 실제 학습에 어떤 영향을 미치는지 하나하나 추적했다.
 
-![](/images/blog/-243-lines-are-all-you-n-4.webp)
+![](/images/blog/-198-lines-are-all-you-n-4.webp)
 
 **backpropagation**은 압권이었다. math 라이브러리, Eigen(행렬 연산), Boost(유틸리티)를 엮어가며 그래디언트를 손으로 유도하고 코드로 옮겼다. 네트워크 레이어 간 통신 비용까지 고려해가며 C로 컴파일, 빌드, 디버깅을 반복했다.
 
@@ -140,13 +140,13 @@ Karpathy 본인의 말: *"This is the full algorithmic content of what is needed
 
 이건 단순한 "옛날 방식 타령"이 아니다. **AI 툴이 발전할수록 원리를 아는 사람과 모르는 사람의 격차는 더 벌어진다.**
 
-![](/images/blog/-243-lines-are-all-you-n-5.webp)
+![](/images/blog/-198-lines-are-all-you-n-5.webp)
 
 예를 들어 attention head 수를 늘리면 왜 성능이 올라가다 갑자기 떨어지는지, learning rate warm-up이 왜 필요한지, weight decay가 어떻게 과적합을 막는지 — 이걸 직관으로 이해하는 사람은 하이퍼파라미터 튜닝을 다르게 접근한다. "해봤더니 좋았다"가 아니라 "이 이유로 이 방향이 맞다"로 간다.
 
 ---
 
-## 243줄이 보여주는 것 — Karpathy의 6년 압축 여정
+## 198줄이 보여주는 것 — Karpathy의 6년 압축 여정
 
 이건 갑자기 나온 게 아니다. Karpathy는 6년에 걸쳐 추상화를 하나씩 벗겨냈다:
 
@@ -168,7 +168,7 @@ Karpathy 본인의 말: *"This is the full algorithmic content of what is needed
 
 이 네 가지를 제대로 이해하면 GPT-2든 GPT-4든 구조적 차이는 "더 크고 더 많이" 수준이다. 올해 AI 인프라에 4,000억 달러가 투입된다. 그런데 그 전부를 움직이는 핵심 알고리즘? README보다 짧은 파일 하나에 들어간다.
 
-![](/images/blog/-243-lines-are-all-you-n-6.webp)
+![](/images/blog/-198-lines-are-all-you-n-6.webp)
 
 ---
 
@@ -178,13 +178,13 @@ Karpathy 본인의 말: *"This is the full algorithmic content of what is needed
 
 AI를 도구로만 쓰는 사람에게도, AI 연구자를 목표로 하는 사람에게도. LLM 프레임워크 위에서 일하는 엔지니어에게도.
 
-Karpathy의 243줄은 교과서보다 낫다. 수식이 코드가 되고, 코드가 결과가 되는 과정을 한 파일 안에서 전부 볼 수 있다.
+Karpathy의 198줄은 교과서보다 낫다. 수식이 코드가 되고, 코드가 결과가 되는 과정을 한 파일 안에서 전부 볼 수 있다.
 
 나는 이번 주말에 이 코드를 처음부터 끝까지 다시 읽어볼 생각이다. 브로드 연구소 시절 C로 구현했던 기억을 떠올리면서.
 
 그때는 "왜 이 고생을 하나" 싶었다. 지금은 그게 있어서 다행이라고 생각한다.
 
-![](/images/blog/-243-lines-are-all-you-n-7.webp)
+![](/images/blog/-198-lines-are-all-you-n-7.webp)
 
 ---
 
@@ -194,7 +194,7 @@ AI 툴은 계속 좋아진다. Copilot이 코드를 쓰고, Claude가 설계를 
 
 그런데 그 도구들이 뭘 하는지 모르는 사람이 그걸 쓰면, 결국 "잘 돌아가는 것 같은데 왜 이상한 결과가 나오지?"에서 멈춘다.
 
-**243줄은 그 물음표를 없애주는 코드다.**
+**198줄은 그 물음표를 없애주는 코드다.**
 
 읽어봐라. 진짜로.
 
