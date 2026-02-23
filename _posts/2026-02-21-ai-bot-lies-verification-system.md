@@ -24,6 +24,8 @@ _posts 폴더를 열어봤다. **파일 자체가 생성되지 않았다.**
 
 AI가 거짓말을 한 거다. 의도적으로? 아니다. 하지만 결과적으로 **"완료했다"는 보고가 완전히 거짓**이었다. 이 일이 한 번이 아니라 반복적으로 벌어졌다.
 
+![](/images/blog/ai-bot-lies-verification-system-2.webp)
+
 ---
 
 ## 왜 AI가 "거짓 완료 보고"를 하는가
@@ -95,6 +97,8 @@ push_verify = await run_claude(
 push_failed = "NOT_PUSHED" in push_verify
 ```
 
+![](/images/blog/ai-bot-lies-verification-system-3.webp)
+
 파일이 있어도 git push가 안 됐을 수 있다. rebase 충돌, 인증 만료, 네트워크 에러 — push가 실패하는 경우는 다양하다. Claude의 "push 완료" 보고를 믿지 않고 `git log`와 `git status`를 별도로 확인한다.
 
 ### Step 3: 상태 이모지 3종 분류
@@ -147,6 +151,8 @@ async def _check_url(session, url):
                 return 404, len(body)  # 실제 404로 재분류
 ```
 
+![](/images/blog/ai-bot-lies-verification-system-4.webp)
+
 GitHub Pages의 커스텀 404 페이지가 200 OK를 반환하는 경우가 있다. URL이 `.webp`로 끝나는데 `Content-Type: text/html`이 오면 — 그건 이미지가 아니라 404 페이지다. 이 한 줄 체크가 없었으면 "이미지 배포 완료"라는 거짓 보고가 계속됐을 것이다.
 
 ---
@@ -171,6 +177,8 @@ AI 도구가 강력해질수록, 역설적으로 **"이게 왜 안 되는지"를
 2. **비동기 감각**: "중간에 잘렸다" → timeout이나 await 누락
 3. **시스템 감각**: "한글 목록에 영문이 보인다" → 필터링 로직 또는 메타데이터 파싱 에러
 4. **네트워크 감각**: "200인데 내용이 이상하다" → 캐시, CDN, 또는 커스텀 에러 페이지
+
+![](/images/blog/ai-bot-lies-verification-system-5.webp)
 
 이런 직관은 직접 삽질해본 사람에게만 생긴다. 프레임워크 안에서만 일하면 안 보이는 것들이다.
 

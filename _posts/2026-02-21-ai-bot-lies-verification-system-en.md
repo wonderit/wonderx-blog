@@ -24,6 +24,8 @@ Opened the `_posts` folder. **The files didn't even exist.**
 
 The AI lied. Not intentionally — but the result was the same. **A completely false completion report.** And this wasn't a one-time thing. It kept happening.
 
+![](/images/blog/ai-bot-lies-verification-system-2.webp)
+
 ---
 
 ## Why AI Produces False Completion Reports
@@ -93,6 +95,8 @@ push_verify = await run_claude(
 push_failed = "NOT_PUSHED" in push_verify
 ```
 
+![](/images/blog/ai-bot-lies-verification-system-3.webp)
+
 Files might exist but git push could have failed — rebase conflicts, auth expiry, network errors. Instead of trusting Claude's "push complete" report, separately verify with `git log` and `git status`.
 
 ### Step 3: Three-State Classification
@@ -145,6 +149,8 @@ async def _check_url(session, url):
                 return 404, len(body)  # Reclassify as 404
 ```
 
+![](/images/blog/ai-bot-lies-verification-system-4.webp)
+
 GitHub Pages' custom 404 page can return 200 OK. If a URL ending in `.webp` returns `Content-Type: text/html` — that's not an image, it's a 404 page. Without this single check, "image deployment complete" would have remained a false report.
 
 ---
@@ -169,6 +175,8 @@ As AI tools get more powerful, paradoxically, **the intuition for "why isn't thi
 2. **Async sense**: "Output got cut off mid-sentence" → timeout or missing await
 3. **Systems sense**: "English showing in Korean list" → filter logic or metadata parsing error
 4. **Network sense**: "200 OK but content looks wrong" → cache, CDN, or custom error page
+
+![](/images/blog/ai-bot-lies-verification-system-5.webp)
 
 This intuition only comes from hands-on experience. You can't see these things if you've only worked within framework abstractions.
 
