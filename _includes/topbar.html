@@ -8,7 +8,7 @@
     <nav id="breadcrumb" aria-label="Breadcrumb">
       {% assign paths = page.url | split: '/' %}
 
-      {% if paths.size == 0 or page.layout == 'home' or page.layout == 'home-en' %}
+      {% if paths.size == 0 or page.layout == 'home' %}
         <!-- index page -->
         <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
 
@@ -45,12 +45,7 @@
     </button>
 
     <div id="topbar-title">
-      {% if include.lang == 'en' %}
-        {% assign home_url = '/en/' | relative_url %}
-      {% else %}
-        {% assign home_url = '/' | relative_url %}
-      {% endif %}
-      <a href="{{ home_url }}">
+      <a href="{{ '/' | relative_url }}">
         {{- site.data.locales[include.lang].title | default: site.title -}}
       </a>
     </div>
@@ -74,15 +69,5 @@
       {{- site.data.locales[include.lang].search.cancel -}}
     </button>
 
-    <!-- Language Switch (text: EN / KO) — desktop: after search, mobile: before search -->
-    {% if include.lang == 'en' %}
-      <a href="{{ '/' | relative_url }}" class="lang-toggle" aria-label="한국어로 전환" title="한국어">
-        <span class="lang-label">KO</span>
-      </a>
-    {% else %}
-      <a href="{{ '/en/' | relative_url }}" class="lang-toggle" aria-label="Switch to English" title="English">
-        <span class="lang-label">EN</span>
-      </a>
-    {% endif %}
   </div>
 </header>
