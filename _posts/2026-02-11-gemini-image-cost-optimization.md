@@ -9,7 +9,6 @@ image:
   width: 800
   height: 800
 author: wonder
-twin: gemini-image-cost-optimization-en
 ---
 
 ## 이미지 1장에 $0.134 — 이게 맞는 건가?

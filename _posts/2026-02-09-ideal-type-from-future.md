@@ -9,7 +9,6 @@ image:
   width: 800
   height: 800
 author: wonder
-twin: ideal-type-from-future-en
 ---
 
 월요일 저녁, 강남.

@@ -9,7 +9,6 @@ image:
   width: 800
   height: 800
 author: wonder
-twin: telegram-bot-setup-en
 ---
 
 ## 결론부터: 30분이면 동작하는 봇이 나온다

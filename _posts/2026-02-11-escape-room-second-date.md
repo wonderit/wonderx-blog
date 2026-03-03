@@ -6,7 +6,6 @@ image: /images/blog/escape-room-second-date-1.webp
 tags: ['연애', '데이팅', '관계', '에세이']
 categories: [essay]
 author: wonder
-twin: escape-room-second-date-en
 ---
 
 화요일 저녁, 영어 스터디 모임.

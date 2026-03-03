@@ -9,7 +9,6 @@ image:
   width: 800
   height: 800
 author: wonder
-twin: telegram-bot-blog-automation-full-pipeline-en
 ---
 
 ## 블로그 쓰는 데 걸리는 시간: 5분

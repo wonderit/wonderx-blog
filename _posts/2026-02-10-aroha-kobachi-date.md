@@ -6,7 +6,6 @@ image: /images/blog/aroha-kobachi-hero-edited-0fb3.webp
 tags: ['결정사', '아로하', '소개팅', '결혼관', '안광', '잠실', '듀오', '클렌베리', '베스트클럽', '한방언니', '매칭서비스']
 categories: [social]
 author: wonder
-twin: aroha-kobachi-date-en
 ---
 
 ## A 결정사, 실물과 사진 사이

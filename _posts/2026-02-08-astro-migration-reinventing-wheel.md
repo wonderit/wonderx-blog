@@ -9,7 +9,6 @@ image:
   width: 800
   height: 800
 author: wonder
-twin: astro-migration-reinventing-wheel-en
 ---
 
 ## Astro에서 Chirpy 스타일을 직접 만들 수 있을까? 만들 수는 있다. 하지만 만들면 안 된다.

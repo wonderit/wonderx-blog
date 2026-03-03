@@ -9,7 +9,6 @@ image:
   width: 800
   height: 800
 author: wonder
-twin: gemini-blog-image-pipeline-en
 ---
 
 ## "이미지 4장 만들어줘"는 자동화가 아니다

@@ -6,7 +6,6 @@ image: /images/blog/ai-coding-manager-developer-identity-1.webp
 tags: ['AI', '개발자', '매니저', '정체성', 'Claude']
 categories: [essay]
 author: wonder
-twin: ai-coding-manager-developer-identity-en
 ---
 
 수요일 밤, 개발자 친구 한 명이 위워크에서 일해서 거기 로비에서 커피를 마시며 이야기를 나누다가 문득 멈췄다.

@@ -9,7 +9,6 @@ image:
   width: 800
   height: 800
 author: wonder
-twin: nanobanana-image-gen-en
 ---
 
 ## 블로그 이미지, 정말 매번 직접 만들어야 하나?

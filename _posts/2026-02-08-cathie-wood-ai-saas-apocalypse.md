@@ -9,7 +9,6 @@ image:
 tags: ['캐시우드', 'ARK-Invest', 'AI투자', 'SaaS', '비트코인', '투자전략']
 categories: [social]
 author: wonder
-twin: cathie-wood-ai-saas-apocalypse-en
 ---
 
 ## 토요일 저녁, 유튜브를 틀었다

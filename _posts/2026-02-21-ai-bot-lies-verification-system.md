@@ -7,7 +7,6 @@ tags: ['AI자동화', 'Claude-Code', '텔레그램봇', 'LLM', '검증시스템'
 categories: [tech]
 author: wonder
 lang: ko
-twin: ai-bot-lies-verification-system-en
 ---
 
 ## "완료했습니다" — 진짜?

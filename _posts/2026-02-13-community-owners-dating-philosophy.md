@@ -6,7 +6,6 @@ image: /images/blog/community-owners-dating-philosophy-1.webp
 tags: ['연애', '자기성장', '심리', '커뮤니티']
 categories: [social]
 author: wonder
-twin: community-owners-dating-philosophy-en
 ---
 
 목요일 오후 7시, 강남의 한 카페.

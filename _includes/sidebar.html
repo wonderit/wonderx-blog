@@ -14,42 +14,21 @@
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
-      {% if include.lang == 'en' %}
-        <!-- English: home -->
-        <li class="nav-item{% if page.layout == 'home-en' %}{{ " active" }}{% endif %}">
-          <a href="{{ '/en/' | relative_url }}" class="nav-link">
-            <i class="fa-fw fas fa-home"></i>
-            <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
+      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+        <a href="{{ '/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
+        </a>
+      </li>
+      {% for tab in site.tabs %}
+        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+          <a href="{{ tab.url | relative_url }}" class="nav-link">
+            <i class="fa-fw {{ tab.icon }}"></i>
+            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
           </a>
         </li>
-        <!-- English: tabs from en_tabs.yml -->
-        {% for tab in site.data.en_tabs %}
-          <li class="nav-item{% if page.url == tab.url %}{{ " active" }}{% endif %}">
-            <a href="{{ tab.url | relative_url }}" class="nav-link">
-              <i class="fa-fw {{ tab.icon }}"></i>
-              <span>{{ tab.title | upcase }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      {% else %}
-        <!-- Korean: home -->
-        <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-          <a href="{{ '/' | relative_url }}" class="nav-link">
-            <i class="fa-fw fas fa-home"></i>
-            <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
-          </a>
-        </li>
-        <!-- Korean: tabs -->
-        {% for tab in site.tabs %}
-          <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-            <a href="{{ tab.url | relative_url }}" class="nav-link">
-              <i class="fa-fw {{ tab.icon }}"></i>
-              {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-              <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      {% endif %}
+      {% endfor %}
     </ul>
   </nav>
 
@@ -156,19 +135,13 @@
         {% endif %}
       {% endfor %}
 
-      <!-- Language switch text -->
+      <!-- LinkedIn -->
       {% if icon_count > 0 %}
         <span class="icon-border"></span>
       {% endif %}
-      {% if include.lang == 'en' %}
-        <a href="{{ '/' | relative_url }}" aria-label="한국어로 전환" class="lang-flag-btn" title="한국어">
-          <span class="lang-label">KO</span>
-        </a>
-      {% else %}
-        <a href="{{ '/en/' | relative_url }}" aria-label="Switch to English" class="lang-flag-btn" title="English">
-          <span class="lang-label">EN</span>
-        </a>
-      {% endif %}
+      <a href="https://www.linkedin.com/in/wonderit/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
     </div>
   </div>
   <!-- .sidebar-bottom -->

@@ -7,7 +7,6 @@ tags: ['AI', 'GPT', 'Karpathy', '딥러닝', 'Python', 'transformer']
 categories: [tech]
 author: wonder
 lang: ko
-twin: 198-lines-are-all-you-need-en
 ---
 
 GPT-4o를 파인튜닝하고, RAG 파이프라인 깔고, LangChain으로 에이전트 만들고 있는데 — **GPT가 실제로 어떻게 돌아가는지 설명할 수 있나?**
