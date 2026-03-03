@@ -157,7 +157,7 @@ layout: default
         {% if prev_page == 1 %}
           {% assign prev_url = '/' | relative_url %}
         {% else %}
-          {% assign prev_url = '/page' | append: prev_page | append: '/' | relative_url %}
+          {% assign prev_url = '/page/' | append: prev_page | append: '/' | relative_url %}
         {% endif %}
         <li class="page-item">
           <a class="page-link" href="{{ prev_url }}" aria-label="previous-page">
@@ -177,7 +177,7 @@ layout: default
         {% if i == 1 %}
           {% assign page_url = '/' | relative_url %}
         {% else %}
-          {% assign page_url = '/page' | append: i | append: '/' | relative_url %}
+          {% assign page_url = '/page/' | append: i | append: '/' | relative_url %}
         {% endif %}
         <li class="page-item{% if i == current_page %} active{% endif %}">
           <a class="page-link" href="{{ page_url }}">{{ i }}</a>
@@ -193,7 +193,7 @@ layout: default
       <!-- right arrow -->
       {% if current_page < total_ko_pages %}
         {% assign next_page = current_page | plus: 1 %}
-        {% assign next_url = '/page' | append: next_page | append: '/' | relative_url %}
+        {% assign next_url = '/page/' | append: next_page | append: '/' | relative_url %}
         <li class="page-item">
           <a class="page-link" href="{{ next_url }}" aria-label="next-page">
             <i class="fas fa-angle-right"></i>

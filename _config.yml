@@ -83,6 +83,7 @@ pwa:
     enabled: false
 
 paginate: 5
+paginate_path: "/page/:num/"
 
 # The base URL of your site
 baseurl: ""
