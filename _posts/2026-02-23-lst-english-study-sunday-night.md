@@ -1,6 +1,6 @@
 ---
-title: '일요일 밤, 영어로 말하는 법을 배운 건 아니었다'
-description: '강남 영어스터디 LST에서 보낸 일요일 저녁. Surfer 수업이 끝나고 Racer 반에 게스트로 들어갔다. 영어를 배우러 갔는데, 사람을 읽고 왔다.'
+title: '월요일 밤, 영어로 말하는 법을 배운 건 아니었다'
+description: '강남 영어스터디 LST에서 보낸 월요일 저녁. Surfer 수업이 끝나고 Racer 반에 게스트로 들어갔다. 영어를 배우러 갔는데, 사람을 읽고 왔다.'
 date: 2026-02-23 23:30:00 +0900
 image:
   path: /images/blog/lst-english-study-table.webp
@@ -11,7 +11,7 @@ categories: [social]
 author: wonder
 ---
 
-일요일 저녁 7시, 강남역 근처 스터디룸.
+월요일 저녁 7시, 강남역 근처 스터디룸.
 
 나는 매주 이 시간에 여기 온다. LST라는 영어스터디 그룹인데, 레벨별로 반이 나뉘어 있다. Beginner, Racer, Runner, Surfer. 나는 Surfer반. 이름만 들으면 서핑하러 가는 것 같지만, 실상은 좁은 방에서 영어로 떠드는 거다.
 
@@ -123,7 +123,7 @@ Glass half full or half empty. Done is better than perfect. Street smart versus 
 
 ---
 
-일요일 밤이 끝나간다.
+월요일 밤이 끝나간다.
 
 "Her existence."
 
