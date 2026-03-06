@@ -41,7 +41,7 @@ MBTI. 좋아하는 색. 좋아하는 음식. 무슨 일을 하는지.
 
 ---
 
-![LST 영어스터디 테이블 풍경](/images/blog/lst-english-study-table.webp)
+![화이트보드에 적힌 아이스브레이커 질문들](/images/blog/lst-english-study-sunday-night-2.webp)
 
 토론 주제가 하나씩 올라왔다.
 
@@ -91,6 +91,8 @@ Glass half full or half empty. Done is better than perfect. Street smart versus 
 
 존재가 선물이라니. 그건 사랑의 언어가 아니라 사랑의 정의에 가까웠다.
 
+![열띤 토론 중인 스터디 테이블](/images/blog/lst-english-study-sunday-night-3.webp)
+
 ---
 
 마지막 주제.
@@ -116,6 +118,8 @@ Glass half full or half empty. Done is better than perfect. Street smart versus 
 영어로 말할 때 사람들은 조금 더 솔직해진다. 모국어의 관성이 없으니까. 습관적으로 쓰던 말투, 사회적으로 학습된 대답 — 그런 게 벗겨진다. 영어라는 불편한 도구를 쓰는 동안 그 사람의 생각이 날것으로 나온다.
 
 그래서 영어스터디가 좋다. 영어를 배우러 가는 건데, 사람을 알게 된다.
+
+![강남역 밤거리를 걸으며](/images/blog/lst-english-study-sunday-night-4.webp)
 
 ---
 
