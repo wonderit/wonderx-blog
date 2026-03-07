@@ -1,7 +1,7 @@
 ---
 title: "추리와 연결 — 머더미스터리 두 판의 기록"
 description: "2월 마지막 주, 머더미스터리 두 판. 오늘 내가 죽었다 5인 머미와 새장 속 제비는 꿈을 꾼다. 추리는 틀렸지만, 사람을 읽는 감각은 조금 늘었다."
-date: 2026-03-07 18:41:13 +0900
+date: 2026-03-03 20:30:00 +0900
 image: /images/blog/murder-mystery-review-deduction-and-connection-1.webp
 tags: ['머더미스터리', '추리', '소셜링', '추리메이트', '취미']
 categories: [life]

@@ -1,7 +1,7 @@
 ---
 title: "코스피 6천, 50일 연속 상승, 그리고 나의 리밸런싱"
 description: "테슬라 집중 포트폴리오에서 AI-에너지-우주-방산 연합군으로의 전환 기록"
-date: 2026-03-07 14:45:58 +0900
+date: 2026-03-05 14:45:58 +0900
 image: /images/blog/kospi-rebalancing-tesla-to-ai-1.webp
 tags: ['투자', '리밸런싱', '포트폴리오', '테슬라', 'AI']
 categories: [life]
