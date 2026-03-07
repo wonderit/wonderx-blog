@@ -1,0 +1,307 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1772849856028,
+  "projectRoot": "/Users/wonderit/workplace/wonderx/wonderx-blog",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "Ruby",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "Gemfile"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "rollup",
+        "version": "4.52.5",
+        "category": "build"
+      }
+    ],
+    "packageManager": "bundler",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": "npm test",
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {
+      "build": "concurrently npm:build:*",
+      "build:css": "node purgecss.js",
+      "build:js": "rollup -c --bundleConfigAsCjs --environment BUILD:production",
+      "watch:js": "rollup -c --bundleConfigAsCjs -w",
+      "lint:js": "eslint",
+      "lint:scss": "stylelint _sass/**/*.scss",
+      "lint:fix:scss": "npm run lint:scss -- --fix",
+      "test": "npm run lint:js && npm run lint:scss",
+      "prepare": "husky"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets",
+      "docs",
+      "public",
+      "scripts",
+      "src"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "_data": {
+      "path": "_data",
+      "purpose": null,
+      "fileCount": 5,
+      "lastAccessed": 1772849856010,
+      "keyFiles": [
+        "authors.yml",
+        "contact.yml",
+        "en_tabs.yml",
+        "media.yml",
+        "share.yml"
+      ]
+    },
+    "_includes": {
+      "path": "_includes",
+      "purpose": null,
+      "fileCount": 30,
+      "lastAccessed": 1772849856010,
+      "keyFiles": [
+        "adsense.html",
+        "comment.html",
+        "datetime.html",
+        "favicons.html",
+        "footer.html"
+      ]
+    },
+    "_javascript": {
+      "path": "_javascript",
+      "purpose": null,
+      "fileCount": 7,
+      "lastAccessed": 1772849856012,
+      "keyFiles": [
+        "categories.js",
+        "commons.js",
+        "home.js",
+        "misc.js",
+        "page.js"
+      ]
+    },
+    "_layouts": {
+      "path": "_layouts",
+      "purpose": null,
+      "fileCount": 10,
+      "lastAccessed": 1772849856013,
+      "keyFiles": [
+        "archives.html",
+        "categories.html",
+        "category.html",
+        "compress.html",
+        "default.html"
+      ]
+    },
+    "_plugins": {
+      "path": "_plugins",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1772849856013,
+      "keyFiles": [
+        "posts-lastmod-hook.rb"
+      ]
+    },
+    "_posts": {
+      "path": "_posts",
+      "purpose": null,
+      "fileCount": 37,
+      "lastAccessed": 1772849856013,
+      "keyFiles": [
+        "2026-01-31-mullae-1212-party-bromance.md",
+        "2026-02-04-after-date-strawberry-villain.md",
+        "2026-02-04-telegram-ai-assistant-intro.md",
+        "2026-02-05-blind-date-bistro-a.md",
+        "2026-02-05-telegram-bot-setup.md"
+      ]
+    },
+    "_sass": {
+      "path": "_sass",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1772849856013,
+      "keyFiles": [
+        "main.bundle.scss",
+        "main.scss"
+      ]
+    },
+    "_site": {
+      "path": "_site",
+      "purpose": null,
+      "fileCount": 11,
+      "lastAccessed": 1772849856013,
+      "keyFiles": [
+        "404.html",
+        "CLAUDE.md",
+        "CNAME",
+        "app.min.js",
+        "edit_grace_club_images.py"
+      ]
+    },
+    "_tabs": {
+      "path": "_tabs",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1772849856013,
+      "keyFiles": [
+        "about.md",
+        "archives.md",
+        "categories.md",
+        "tags.md"
+      ]
+    },
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 4,
+      "lastAccessed": 1772849856014,
+      "keyFiles": [
+        "404.html",
+        "feed.xml",
+        "robots.txt"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 2,
+      "lastAccessed": 1772849856014,
+      "keyFiles": []
+    },
+    "images": {
+      "path": "images",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1772849856014,
+      "keyFiles": [
+        "cathie-wood-youtube-thumb.webp",
+        "jensen-huang-youtube-thumb.jpg",
+        "outsourcing-thinking-youtube-thumb.jpg"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 1,
+      "lastAccessed": 1772849856014,
+      "keyFiles": [
+        "CNAME"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 2,
+      "lastAccessed": 1772849856014,
+      "keyFiles": [
+        "publish-stderr.log",
+        "publish-stdout.log"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1772849856014,
+      "keyFiles": []
+    },
+    "tools": {
+      "path": "tools",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1772849856014,
+      "keyFiles": [
+        "init.sh",
+        "release.sh",
+        "run.sh",
+        "test.sh"
+      ]
+    },
+    "_sass/components": {
+      "path": "_sass/components",
+      "purpose": "UI components",
+      "fileCount": 4,
+      "lastAccessed": 1772849856015,
+      "keyFiles": [
+        "_buttons.scss",
+        "_index.scss",
+        "_popups.scss"
+      ]
+    },
+    "_sass/pages": {
+      "path": "_sass/pages",
+      "purpose": "Page components",
+      "fileCount": 8,
+      "lastAccessed": 1772849856015,
+      "keyFiles": [
+        "_archives.scss",
+        "_categories.scss",
+        "_category-tag.scss"
+      ]
+    },
+    "_site/assets": {
+      "path": "_site/assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1772849856015,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "_posts/2026-03-03-success-disappear-eye-light.md",
+      "accessCount": 2,
+      "lastAccessed": 1772857357407,
+      "type": "file"
+    },
+    {
+      "path": "_posts/2026-03-07-post-26007e.md",
+      "accessCount": 2,
+      "lastAccessed": 1772857423869,
+      "type": "file"
+    },
+    {
+      "path": "_posts/2026-03-02-offnine-blackjack-party-sinsa.md",
+      "accessCount": 1,
+      "lastAccessed": 1772856828836,
+      "type": "file"
+    },
+    {
+      "path": "_posts",
+      "accessCount": 1,
+      "lastAccessed": 1772856947461,
+      "type": "directory"
+    }
+  ],
+  "userDirectives": []
+}
