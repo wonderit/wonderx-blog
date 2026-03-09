@@ -16,6 +16,41 @@
 </script>
 {% endif %}
 
+<!-- Article structured data (Google Rich Results) -->
+{% if page.layout == 'post' %}
+{% assign post_image = page.image.path | default: page.image | default: site.social_preview_image %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title | xml_escape }}",
+  "description": "{{ page.description | default: site.description | strip_newlines | strip | xml_escape }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.social.name }}",
+    "url": "{{ site.social.links[0] }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.social.name }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/"
+  }{% if post_image %},
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ post_image | absolute_url }}"{% if page.image.width %},
+    "width": {{ page.image.width }},
+    "height": {{ page.image.height }}{% endif %}
+  }{% endif %},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+</script>
+{% endif %}
+
 <!-- BreadcrumbList structured data -->
 {% if page.layout == 'post' %}
 <script type="application/ld+json">
