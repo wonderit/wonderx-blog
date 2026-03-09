@@ -6,3 +6,15 @@
 - type: instagram
   icon: "fab fa-instagram"
   url: "https://www.instagram.com/won425/"
+
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/wonderit/"
+
+- type: website
+  icon: "fas fa-globe"
+  url: "https://wonderx.co.kr"
+
+- type: cv
+  icon: "fas fa-file-alt"
+  url: "https://cv.wonderx.co.kr"
