@@ -6,7 +6,7 @@ image:
   path: /images/outsourcing-thinking-youtube-thumb.jpg
   width: 1280
   height: 720
-tags: ['AI', '비판적사고', 'TED', '생각의외주화', '생산성', 'ChatGPT']
+tags: ['AI', '비판적사고', 'TED', '생각의외주화', '생산성', 'ChatGPT', '챗지피티']
 categories: [social]
 author: wonder
 ---

@@ -6,7 +6,7 @@ image:
   path: /images/blog/gamma-claude-ppt-workflow-1.webp
   width: 1280
   height: 720
-tags: ['Gamma AI', 'Claude', '프레젠테이션', '프롬프트엔지니어링', 'AI워크플로우', '강의자료', '생산성']
+tags: ['Gamma AI', '감마AI', 'Claude', '클로드', 'PPT', '프레젠테이션', '프롬프트엔지니어링', 'AI워크플로우', '강의자료']
 categories: [ai-automation]
 author: wonder
 ---

@@ -6,7 +6,7 @@ image:
   path: /images/blog/wonder-note-part1-1.webp
   width: 1280
   height: 720
-tags: ['React Native', 'Expo', 'iOS', '마술앱', '사이드프로젝트', 'Claude Code']
+tags: ['React Native', 'Expo', 'iOS', '마술앱', '사이드프로젝트', 'Claude-Code', '클로드코드']
 categories: [side-project]
 author: wonder
 ---

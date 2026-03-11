@@ -6,7 +6,7 @@ image:
   path: /images/blog/flux-local-m3-1.webp
   width: 1280
   height: 720
-tags: ['FLUX', 'mflux', 'Apple Silicon', 'MLX', '이미지생성', '비용최적화', '텔레그램봇']
+tags: ['FLUX', 'mflux', 'Apple Silicon', 'MLX', '이미지생성', '비용최적화', '텔레그램', '텔레그램봇']
 categories: [dev-log]
 author: wonder
 ---
