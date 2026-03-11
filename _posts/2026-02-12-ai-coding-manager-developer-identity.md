@@ -3,7 +3,7 @@ title: '나는 이제 코더인가, 기획자인가, 실행자인가'
 description: '클로드 에이전트를 다루는 개발자와, 그런 개발자를 다루는 매니저. AI 시대, 내 정체성은 어디쯤 있을까.'
 date: 2026-02-12 17:35:27 +0900
 image: /images/blog/ai-coding-manager-developer-identity-1.webp
-tags: ['AI', '개발자', '매니저', '정체성', 'Claude']
+tags: ['AI', '클로드코드', '개발자', '매니저', '정체성', 'Claude']
 categories: [essay]
 author: wonder
 ---

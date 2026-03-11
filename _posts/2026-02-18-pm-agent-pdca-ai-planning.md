@@ -2,7 +2,7 @@
 title: 'Claude Agent SDK로 PM 에이전트 만들기 — 자연어 한 줄이 GitHub Issue가 되기까지'
 description: '"프로필에 직장 인증 기능 추가해줘" 한 마디를 던지면 AI가 질문하고, 이슈를 나누고, GitHub에 등록까지 해준다. Claude Agent SDK와 PDCA 사이클을 활용해 기획 에이전트를 만든 이야기.'
 date: 2026-02-18 21:00:00 +0900
-tags: ['Claude-Agent-SDK', 'AI에이전트', 'PDCA', 'GitHub', '기획자동화', 'MCP', 'TypeScript']
+tags: ['Claude-Agent-SDK', '클로드코드', 'AI에이전트', 'PDCA', 'GitHub', '기획자동화', 'MCP', 'TypeScript']
 categories: [tech]
 image:
   path: /images/blog/pm-agent-pdca-ai-planning-1.webp

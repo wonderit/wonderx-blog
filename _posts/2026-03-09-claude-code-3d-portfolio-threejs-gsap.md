@@ -6,7 +6,7 @@ image:
   path: /images/blog/claude-code-3d-portfolio-threejs-gsap-1.webp
   width: 1280
   height: 720
-tags: ['포트폴리오', 'Three.js', 'GSAP', 'ClaudeCode', '웹개발', 'GitHub Pages', '개인사이트']
+tags: ['포트폴리오', 'Three.js', 'GSAP', 'Claude-Code', '클로드코드', '웹개발', 'GitHub Pages', '개인사이트']
 categories: [tutorial]
 author: wonder
 ---
