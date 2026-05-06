@@ -8,6 +8,7 @@ lang: ko
 
 # Change to your timezone
 timezone: Asia/Seoul
+future: true
 
 # jekyll-seo-tag settings
 title: WonderX
