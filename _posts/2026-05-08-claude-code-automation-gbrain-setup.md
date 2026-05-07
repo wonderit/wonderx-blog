@@ -1,7 +1,8 @@
 ---
-title: "집에서 자동화 시스템 구축하기"
+title: "gstack으로 5분만에 개발 자동화 완벽 구축!"
 description: "Claude Code + gstack + gbrain Supabase 마이그레이션, makers-log 자동화 시스템 구축 기록."
 date: 2026-05-08 22:00:00 +0900
+image: /images/blog/makers-log-2026-05-08.png
 tags: ['메이커스로그', '데일리로그', 'Claude-Code', '클로드코드', 'gstack', 'gbrain', '자동화']
 categories: [daily-log]
 author: wonder
