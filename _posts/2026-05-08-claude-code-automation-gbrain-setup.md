@@ -1,9 +1,9 @@
 ---
-title: "메이커스로그 2편 — 2026년 5월 8일"
-description: "집 맥 환경 세팅 완료. gstack + gbrain Supabase 마이그레이션, makers-log 자동화 시스템 구축."
+title: "집에서 자동화 시스템 구축하기"
+description: "Claude Code + gstack + gbrain Supabase 마이그레이션, makers-log 자동화 시스템 구축 기록."
 date: 2026-05-08 22:00:00 +0900
-tags: ['메이커스로그', '프라이밋', '사이드프로젝트', 'Claude-Code', '클로드코드', 'gstack', 'gbrain']
-categories: [side-project]
+tags: ['메이커스로그', '데일리로그', 'Claude-Code', '클로드코드', 'gstack', 'gbrain', '자동화']
+categories: [daily-log]
 author: wonder
 ---
 
@@ -13,10 +13,10 @@ author: wonder
 
 ### 🔨 개발·인프라
 
-- `primeet-*` 레포 전체를 `~/workplace/wonderx/primeet/` 아래로 정리
+- `primeet-*` 레포 전체를 `~/workplace/primeet/` 아래로 정리
 - `bun` 설치 → gstack 셋업 (`bash ~/.claude/skills/gstack/setup`)
 - `/setup-gbrain` 실행 — 집 맥에 gbrain 로컬 PGLite 엔진 구성
-- `/sync-gbrain` 실행 — `gstack-artifacts-wonderit` GitHub 레포와 아티팩트 동기화
+- `/sync-gbrain` 실행 — gstack-artifacts GitHub 레포와 아티팩트 동기화
 
 ### 🧠 gbrain Supabase 마이그레이션
 
@@ -38,16 +38,18 @@ author: wonder
 이 메이커스로그 자체를 자동으로 만드는 시스템을 구축했다.
 
 - `~/bin/makers-log` Python 스크립트 작성
-  - 오늘 날짜 git 커밋 자동 수집 (primeet 전 레포 대상)
+  - 오늘 날짜 git 커밋 자동 수집 (전 레포 대상)
   - 커밋을 개발/기획콘텐츠/인사이트로 자동 분류
+  - GPT-4o-mini로 키워드 후킹 제목 자동 생성
+  - DALL-E 3로 썸네일 자동 생성
   - Jekyll 블로그 초안 자동 생성 (`_posts/`)
-  - Telegram 봇(`@wonder_daily_bot`)으로 일일 요약 발송
+  - 텔레그램 봇으로 일일 요약 발송
 - cron 등록: **매일 밤 10시** 자동 실행
 - `--dry-run`, `--date` 플래그 지원
 
 ### 🔐 iCloud Secrets 관리
 
-- `iCloud/01_wonderx/secrets/api-keys.sh` 생성 (chmod 600)
+- `iCloud/secrets/api-keys.sh` 생성 (chmod 600)
 - OpenAI API 키 등 시크릿 한 곳에 관리
 - `~/.zshrc`에 자동 source 추가 → 셸 시작 시 환경변수 자동 로드
 - 회사 맥에서도 iCloud 동기화로 동일하게 사용 가능
