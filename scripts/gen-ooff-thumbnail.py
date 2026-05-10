@@ -51,19 +51,21 @@ image_url = data["data"][0]["url"]
 print(f"✅ 이미지 URL: {image_url[:80]}...")
 
 # 이미지 다운로드 → webp 변환 후 저장
+from PIL import Image
+import io
+
 out_dir = os.path.join(os.path.dirname(__file__), "..", "images", "blog")
 os.makedirs(out_dir, exist_ok=True)
-png_path = os.path.join(out_dir, "ooff-table-book-social-2026-0510.png")
 webp_path = os.path.join(out_dir, "ooff-table-book-social-2026-0510.webp")
 
-urllib.request.urlretrieve(image_url, png_path)
-print(f"✅ PNG 저장: {png_path}")
+print("⬇️  이미지 다운로드 중...")
+with urllib.request.urlopen(image_url) as resp:
+    img_data = resp.read()
 
-# PNG → WebP 변환 (sips 사용, macOS 기본 툴)
-subprocess.run(["sips", "-s", "format", "webp", png_path, "--out", webp_path], check=True)
-os.remove(png_path)
+img = Image.open(io.BytesIO(img_data)).convert("RGB")
+img.save(webp_path, "WEBP", quality=90)
 print(f"✅ WebP 저장: {webp_path}")
-print("\n🎉 완료! 이제 git add + commit + push 해주세요:")
+print("\n🎉 완료! 이제 아래 명령어로 push해주세요:")
 print(f"   git add images/blog/ooff-table-book-social-2026-0510.webp")
 print(f"   git commit -m 'asset: OOFF TABLE 소셜링 썸네일 추가'")
 print(f"   git push origin main")
