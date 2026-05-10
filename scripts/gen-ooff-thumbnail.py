@@ -38,7 +38,7 @@ payload = json.dumps({
 }).encode()
 
 req = urllib.request.Request(
-    "https://api.openai.com/v1/images/generate",
+    "https://api.openai.com/v1/images/generations",
     data=payload,
     headers={"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
 )
