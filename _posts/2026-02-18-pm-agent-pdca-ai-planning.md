@@ -10,6 +10,8 @@ image:
   height: 800
 author: wonder
 lang: ko
+redirect_from:
+  - /posts/pm-agent-pdca-ai-planning-en/
 ---
 
 ## 기획서 쓰기가 싫었다

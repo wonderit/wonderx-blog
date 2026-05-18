@@ -6,6 +6,8 @@ image: /images/blog/makers-log-2026-05-08.png
 tags: ['메이커스로그', '데일리로그', 'Claude-Code', '클로드코드', 'gstack', 'gbrain', '자동화']
 categories: [daily-log]
 author: wonder
+redirect_from:
+  - /posts/makers-log-2/
 ---
 
 ## 2026년 5월 8일 작업 요약

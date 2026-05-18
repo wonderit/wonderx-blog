@@ -9,6 +9,8 @@ image:
   width: 896
   height: 1200
 author: wonder
+redirect_from:
+  - /posts/grace-club-socializing-party-en/
 ---
 
 ## 토요일의 온도

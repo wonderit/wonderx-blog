@@ -9,6 +9,8 @@ image:
   width: 800
   height: 800
 author: wonder
+redirect_from:
+  - /posts/telegram-ai-assistant-intro-en/
 ---
 
 ## $100짜리 구독이 퇴근 후엔 $0의 가치를 만들고 있었다

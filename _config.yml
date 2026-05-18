@@ -3,6 +3,9 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
+plugins:
+  - jekyll-redirect-from
+
 # The language of the webpage
 lang: ko
 

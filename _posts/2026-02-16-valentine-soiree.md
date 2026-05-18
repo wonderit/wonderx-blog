@@ -6,6 +6,8 @@ image: /images/blog/tg-photo-27cc78-edited-5110.webp
 tags: ['소개팅', '발렌타인', '로테이션파티', '더메이', '연애']
 categories: [social]
 author: wonder
+redirect_from:
+  - /posts/valentine-soiree-en/
 ---
 
 발렌타인데이였다.

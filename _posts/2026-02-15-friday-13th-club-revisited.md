@@ -6,6 +6,9 @@ image: /images/blog/IMG_0964-edited-fce5.webp
 tags: ['클럽', '회상', '청춘', '일상', '에세이']
 categories: [social]
 author: wonder
+redirect_from:
+  - /posts/friday-13th-club-en/
+  - /posts/friday-13th-club-revisited-en/
 ---
 
 석양이 뿌옇게 내려앉던 저녁이었다.

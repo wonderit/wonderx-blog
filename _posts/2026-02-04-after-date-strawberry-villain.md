@@ -9,6 +9,8 @@ image:
   width: 800
   height: 800
 author: wonder
+redirect_from:
+  - /posts/after-date-strawberry-villain-en/
 ---
 
 ## 당일, 만나기 전부터

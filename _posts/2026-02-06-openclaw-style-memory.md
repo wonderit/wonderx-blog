@@ -9,6 +9,8 @@ image:
   width: 800
   height: 800
 author: wonder
+redirect_from:
+  - /posts/openclaw-style-memory-en/
 ---
 
 ## 컨텍스트 윈도우가 0인 비서는 비서가 아니다

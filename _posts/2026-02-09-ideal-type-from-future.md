@@ -9,6 +9,8 @@ image:
   width: 800
   height: 800
 author: wonder
+redirect_from:
+  - /posts/ideal-type-from-future-en/
 ---
 
 월요일 저녁, 강남.

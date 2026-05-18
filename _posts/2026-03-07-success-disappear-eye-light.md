@@ -6,6 +6,8 @@ image: /images/blog/success-disappear-eye-light-1.webp
 tags: ['에세이', '자기계발', '연애', '안광', '인스타그램', '성공']
 categories: [essay]
 author: wonder
+redirect_from:
+  - /posts/post-26007e/
 ---
 
 소개팅 자리에서 이상형이 뭐냐는 질문을 받으면, 나는 늘 같은 대답을 했다.

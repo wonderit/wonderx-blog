@@ -10,6 +10,8 @@ image:
   height: 800
 author: wonder
 lang: ko
+redirect_from:
+  - /posts/mitmproxy-app-api-monitoring-en/
 ---
 
 ## 앱을 껐다 켜는 게 일상이 된 순간

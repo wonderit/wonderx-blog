@@ -6,6 +6,8 @@ image: /images/blog/kospi-rebalancing-tesla-to-ai-1.webp
 tags: ['투자', '리밸런싱', '포트폴리오', '테슬라', 'AI']
 categories: [life]
 author: wonder
+redirect_from:
+  - /posts/33-6-fomo-50/
 ---
 
 코스피가 6천을 찍었다. 50일 연속 상승. 삼성전자와 SK하이닉스의 합산 순이익이 257조를 넘기면서 반도체 슈퍼사이클이라는 단어가 다시 돌고 있다. 주변에서 반도체를 사야 하는 거 아니냐는 이야기가 들린다. 나도 흔들렸다. FOMO라는 건 알면서도 걸리는 병이다.
