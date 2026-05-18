@@ -6,7 +6,7 @@ image:
   path: /images/blog/wonder-note-part2-1.webp
   width: 1280
   height: 720
-tags: ['React Native', 'Expo', '번들최적화', 'TypeScript', 'IAP', 'OCR', '사이드프로젝트']
+tags: ['React-Native', 'Expo', '번들최적화', 'TypeScript', 'IAP', 'OCR', '사이드프로젝트']
 categories: [side-project]
 author: wonder
 ---

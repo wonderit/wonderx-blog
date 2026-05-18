@@ -6,7 +6,7 @@ image:
   path: /images/blog/wonder-note-part3-1.webp
   width: 1280
   height: 720
-tags: ['Apple Watch', 'WatchConnectivity', 'React Native', '마술앱', 'IAP', '사이드프로젝트']
+tags: ['Apple-Watch', 'WatchConnectivity', 'React-Native', '마술앱', 'IAP', '사이드프로젝트']
 categories: [side-project]
 author: wonder
 ---

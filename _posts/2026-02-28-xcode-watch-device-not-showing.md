@@ -6,7 +6,7 @@ image:
   path: /images/blog/xcode-watch-fix-1.webp
   width: 1280
   height: 720
-tags: ['Xcode', 'Apple Watch', 'iOS 개발', 'React Native', '트러블슈팅', 'WonderNote']
+tags: ['Xcode', 'Apple-Watch', 'iOS-개발', 'React-Native', '트러블슈팅', 'WonderNote']
 categories: [dev-log]
 author: wonder
 ---
