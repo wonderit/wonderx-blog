@@ -11,6 +11,7 @@ image:
 author: wonder
 redirect_from:
   - /posts/voice-stt-meeting-blog-en/
+  - /posts/voice-af9502-en/
 ---
 
 ## 음성 녹음 하나가 완성된 문서가 되려면 몇 단계가 필요할까?
